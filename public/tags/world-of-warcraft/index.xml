@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>World of Warcraft | Jorge Ruiz Cabrejos</title>
+    <link>http://localhost:4321/tags/world-of-warcraft/</link>
+      <atom:link href="http://localhost:4321/tags/world-of-warcraft/index.xml" rel="self" type="application/rss+xml" />
+    <description>World of Warcraft</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 01 Jan 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
+      <title>World of Warcraft</title>
+      <link>http://localhost:4321/tags/world-of-warcraft/</link>
+    </image>
+    
+    <item>
+      <title>wclR</title>
+      <link>http://localhost:4321/project/pandas/</link>
+      <pubDate>Mon, 01 Jan 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/project/pandas/</guid>
+      <description>&lt;p&gt;Functions to interact with Warcraft Logs API from R.&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>

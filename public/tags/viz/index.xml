@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Viz | Jorge Ruiz Cabrejos</title>
+    <link>http://localhost:4321/tags/viz/</link>
+      <atom:link href="http://localhost:4321/tags/viz/index.xml" rel="self" type="application/rss+xml" />
+    <description>Viz</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
+      <title>Viz</title>
+      <link>http://localhost:4321/tags/viz/</link>
+    </image>
+    
+    <item>
+      <title>Hello World, I guess</title>
+      <link>http://localhost:4321/post/hello-world-i-guess-20241209/</link>
+      <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/hello-world-i-guess-20241209/</guid>
+      <description>&lt;h3 id=&#34;printhello-world&#34;&gt;print(&amp;ldquo;Hello World&amp;rdquo;)&lt;/h3&gt;
+&lt;p&gt;At the time of writing, my web(site) starts with an ominous message:&lt;/p&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;&amp;ldquo;This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?&amp;rdquo;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;And while I do hope this is the last time I am rebuilding this website, I have to recognize that I suffer from a &amp;rsquo;lack of documentation&amp;rsquo; problem. Don&amp;rsquo;t get me wrong though:&lt;/p&gt;
+&lt;p&gt;Everything I have done in the context of &amp;ldquo;academic&amp;rdquo; projects has been meticulously documented and every step is detailed somewhere. Where and when possible, papers and methods are publicly available and are open-source. If you don&amp;rsquo;t know what the &lt;a href=&#34;https://www.nature.com/articles/sdata201618&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;FAIR Principles&lt;/a&gt; are, don&amp;rsquo;t talk to me, etc.&lt;/p&gt;
+&lt;p&gt;I also have the tendency to hoard and take note of every little idea, draft or file that was generated through the ✨process✨just in case we have to &amp;rsquo;look back at it&amp;rsquo;  in the future.&lt;/p&gt;
+&lt;p&gt;I am also a big fan of using diagrams to describe stuff in general.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./methods_slide_lshtm.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;&lt;strong&gt;Figure 1.&lt;/strong&gt; Slide for the course &amp;lsquo;Data Challenge&amp;rsquo;, as part of my MSc programme. Map on the right is my own. Diagram on the left probably not.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;My documentation problem comes down to my &amp;ldquo;personal&amp;rdquo;&lt;sup&gt;(&amp;ldquo;pet&amp;rdquo;?)&lt;/sup&gt; projects. Over the years I have written code for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located &lt;em&gt;somewhere&lt;/em&gt; in the many virtual files I possess, but none of it has been publicly posted anywhere.&lt;/p&gt;
+&lt;p&gt;Some fragments of code lost to time are not impressive (or at least I would not call them as such), but I always think of them whenever I am asked for examples of previous work I have done.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./map_covid_policy_peru.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;&lt;strong&gt;Figure 2.&lt;/strong&gt; Evolution of the different public health measures and policies taken during the COVID-19 pandemic in Perú, Mar-Jun 2020. Made by me.&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;Have I done Shiny apps? Yes. Do I have a Shiny app I can share with the class? No :(.&lt;/p&gt;
+&lt;p&gt;The ✨data collection process✨ to extract &lt;em&gt;price data&lt;/em&gt; from  unstructured texts, tables and images inside Discord chat servers for a videogame community in World of Warcraft: Classic took me about a dozen hours to polish.&lt;/p&gt;
+&lt;p&gt;All I have to show for it is a very simple graphic which I actually really like (the graphic does tell a story, for those who are a bit more familiar with its contents), but in retrospective it falls short when trying to explain the technical aspects behind the data collected.&lt;/p&gt;
+&lt;p&gt;Can I process unstructured chat data containing multiple types of data? Yeah. Can I explain to you how I did it?&lt;/p&gt;
+&lt;p&gt;Uh, kind of?&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./trend_cost_gdkp_items.jpg&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;&lt;strong&gt;Figure 3.&lt;/strong&gt; Price of bids (won) for two items in World of Warcraft: Classic GDKPs&lt;/em&gt;&lt;/p&gt;
+&lt;p&gt;This website is one of those &amp;ldquo;personal projects&amp;rdquo; that at some point existed, got abandoned, and had to be rebuild, over and over, due to a lack of maintenance.&lt;/p&gt;
+&lt;p&gt;I took the jruizcabrejos &amp;rsquo;nickname&amp;rsquo; around 2015, and bought the .com domain at some point in 2018, shortly after having the talk with my supervisor about which &amp;lsquo;scholar/academic&amp;rsquo; name should I choose for my (first) publication(s).&lt;/p&gt;
+&lt;p&gt;It is almost like choosing an appropriate username for a MMORPG videogame. Would you rather be known as the lvl 50 Warrior named as &amp;lsquo;Save&amp;rsquo;? (one word, simple, elegant) Or as the lvl 50 Warrior known as &amp;lsquo;XxAnimeManga01xX&amp;rsquo;? (many words, unhinged, based).&lt;/p&gt;
+&lt;p&gt;In my case, &amp;ldquo;Jorge Ruiz&amp;rdquo; is fairly common and I would like to keep my mother surname, so I ended up using &amp;ldquo;Jorge Ruiz-Cabrejos&amp;rdquo; or jruizcabrejos / J. Ruiz-Cabrejos for most things.&lt;/p&gt;
+&lt;h3 id=&#34;actually-it-is-hello-world&#34;&gt;Actually, it is &amp;ldquo;Hello, World!&amp;rdquo;&lt;/h3&gt;
+&lt;p&gt;These posts are a good excuse for me to document my personal projects and publish somewhere all the &amp;ldquo;waste code&amp;rdquo; that I generate along the way, starting with this website.&lt;/p&gt;
+&lt;p&gt;Finding the figures above (Fig.1, Fig.2 and Fig.3) took me longer than what I actually used to write this post. So I guess it is more of an ’indexing’ problem and not so much a ’lack of documentation’ what I have.&lt;/p&gt;
+&lt;p&gt;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+&lt;figure  &gt;
+  &lt;div class=&#34;flex justify-center	&#34;&gt;
+    &lt;div class=&#34;w-100&#34; &gt;&lt;img src=&#34;./meme_tiktok.png&#34; alt=&#34;&#34; loading=&#34;lazy&#34; data-zoomable /&gt;&lt;/div&gt;
+  &lt;/div&gt;&lt;/figure&gt;
+
+&lt;em&gt;&lt;strong&gt;Figure 4.&lt;/strong&gt; &amp;ldquo;If you see me one day uploading to my tiktok a blog of my day-to-day and saying stuff no one asked with 2 likes, 10 views and 0 comments, leave me alone. I am exactly where I want to be&amp;rdquo; from @desorden-memetico&lt;/em&gt;&lt;/p&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;p&gt;Really helpful resources I used while building this website (and that I am 100% sure I will find myself looking back at them) are:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://connorrothschild.github.io/v4/post/animate-hugo-academic&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://connorrothschild.github.io/v4/post/animate-hugo-academic&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matteocourthoud.github.io/post/website/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://matteocourthoud.github.io/post/website/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.dsquintana.blog/create-an-academic-website-free-easy-2020/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.dsquintana.blog/create-an-academic-website-free-easy-2020/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nickballou.com/blog/custom-wowchemy/#&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://nickballou.com/blog/custom-wowchemy/#&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.emilyzabor.com/tutorials/rmarkdown_websites_tutorial.html&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Some personal websites I looked at for inspiration:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://theo.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://theo.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://nickballou.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://nickballou.com/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://matteocourthoud.github.io/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://matteocourthoud.github.io/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://djnavarro.net/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://djnavarro.net/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;The &amp;ldquo;[&amp;hellip;],I guess&amp;rdquo; in the title is a reference to this &lt;a href=&#34;https://www.youtube.com/watch?v=xuCn8ux2gbs&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;amazing video from bill wurtz&lt;/a&gt;:&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/xuCn8ux2gbs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
