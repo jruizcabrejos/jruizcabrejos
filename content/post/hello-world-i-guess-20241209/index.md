@@ -27,15 +27,15 @@ I also have the tendency to hoard and take note of every little idea, draft or f
 
 I am also a big fan of using diagrams to describe stuff in general.
 
-![](./methods_slide_lshtm.png)
-***Figure 1.** Slide for the course 'Data Challenge', as part of my MSc programme. Map on the right is my own. Diagram on the left probably not.*
+<img src="./methods_slide_lshtm.png" alt="Slide">
+<figcaption>Figure 1. Slide for the course 'Data Challenge', as part of my MSc programme. Map on the right is my own. Diagram on the left probably not.</figcaption>
 
 My documentation problem comes down to my "personal"<sup>("pet"?)</sup> projects. Over the years I have written code for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
 
 Some fragments of code lost to time are not impressive (or at least I would not call them as such), but I always think of them whenever I am asked for examples of previous work I have done. 
 
-![](./map_covid_policy_peru.png)
-***Figure 2.** Evolution of the different public health measures and policies taken during the COVID-19 pandemic in Perú, Mar-Jun 2020. Made by me.*
+<img src="./map_covid_policy_peru.png" alt="COVID-19 Policy Map of Peru">
+<figcaption>Figure 2. Evolution of the different public health measures and policies taken during the COVID-19 pandemic in Perú, Mar-Jun 2020. Made by me.</figcaption>
 
 Have I done Shiny apps? Yes. Do I have a Shiny app I can share with the class? No :(. 
 
@@ -47,8 +47,8 @@ Can I process unstructured chat data containing multiple types of data? Yeah. Ca
 
 Uh, kind of?
 
-![](./trend_cost_gdkp_items.jpg)
-***Figure 3.** Price of bids (won) for two items in World of Warcraft: Classic GDKPs*
+<img src="./trend_cost_gdkp_items.jpg" alt="WoW plot">
+<figcaption>Figure 3. Price of bids (won) for two items in World of Warcraft: Classic GDKPs.</figcaption>
 
 This website is one of those "personal projects" that at some point existed, got abandoned, and had to be rebuild, over and over, due to a lack of maintenance.
 
@@ -63,8 +63,8 @@ These posts are a good excuse for me to document my personal projects and publis
 
 Finding the figures above (Fig.1, Fig.2 and Fig.3) took me longer than what I actually used to write this post. So I guess it is more of an ’indexing’ problem and not so much a ’lack of documentation’ what I have.  
 
-![](./meme_tiktok.png)
-***Figure 4.** "If you see me one day uploading to my tiktok a blog of my day-to-day and saying stuff no one asked with 2 likes, 10 views and 0 comments, leave me alone. I am exactly where I want to be" from @desorden-memetico*
+<img src="./meme_tiktok.png" alt="My brain rot">
+<figcaption>Figure 4. "If you see me one day uploading to my tiktok a blog of my day-to-day and saying stuff no one asked with 2 likes, 10 views and 0 comments, leave me alone. I am exactly where I want to be" from @desorden-memetico on Instagram.</figcaption>
 
 ### References
 
@@ -83,9 +83,8 @@ Some personal websites I looked at for inspiration:
 - https://matteocourthoud.github.io/
 - https://djnavarro.net/
 
+#### Footnote
+
 The "[...],I guess" in the title is a reference to this [amazing video from bill wurtz](https://www.youtube.com/watch?v=xuCn8ux2gbs):
 
 {{< youtube xuCn8ux2gbs >}}
-
-
-
