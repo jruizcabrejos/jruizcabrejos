@@ -1,7 +1,7 @@
 ---
 authors:
 - admin
-date: "2024-12-09"
+date: "2024-12-08"
 image:
   caption: 'La fábula (El Greco): [**El Prado Museum**](https://www.museodelprado.es/aprende/enciclopedia/voz/fabula-una-el-greco/2ffa1a48-8d05-4291-a9eb-d0f5e51e6081)'
 summary: 'This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?'
