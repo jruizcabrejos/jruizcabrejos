@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts | Jorge Ruiz Cabrejos</title>
-    <link>http://localhost:4321/post/</link>
-      <atom:link href="http://localhost:4321/post/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jruizcabrejos.com/post/</link>
+      <atom:link href="https://jruizcabrejos.com/post/index.xml" rel="self" type="application/rss+xml" />
     <description>Posts</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Mon, 09 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
+      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
       <title>Posts</title>
-      <link>http://localhost:4321/post/</link>
+      <link>https://jruizcabrejos.com/post/</link>
     </image>
     
     <item>
       <title>Hello World, I guess</title>
-      <link>http://localhost:4321/post/hello-world-i-guess-20241209/</link>
+      <link>https://jruizcabrejos.com/post/hello-world-i-guess-20241209/</link>
       <pubDate>Mon, 09 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/post/hello-world-i-guess-20241209/</guid>
+      <guid>https://jruizcabrejos.com/post/hello-world-i-guess-20241209/</guid>
       <description>&lt;h3 id=&#34;printhello-world&#34;&gt;print(&amp;ldquo;Hello World&amp;rdquo;)&lt;/h3&gt;
 &lt;p&gt;At the time of writing, my web(site) starts with an ominous message:&lt;/p&gt;
 &lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
