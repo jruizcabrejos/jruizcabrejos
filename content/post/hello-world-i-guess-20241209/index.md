@@ -13,15 +13,15 @@ title: "Hello World, I guess"
 
 ### print("Hello World")
 
-At the time of writing, my web(site) starts with an ominous message: 
+At the time of writing, my web(site) opens with an ominous message: 
 
 {{% callout %}}
-"This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" 
+"This “personal” website has been changed and rebuilt several times over the past few years. Hopefully, this is the last one?" 
 {{% /callout %}}
  
-And while I do hope this is the last time I am rebuilding this website, I have to recognize that I suffer from a 'lack of documentation' problem. Don't get me wrong though: 
+And while I do hope this is the last time I am rebuilding this website, I have to admit that I suffer from a 'lack of documentation' problem. Don't get me wrong, though: 
 
-Everything I have done in the context of "academic" projects has been meticulously documented and every step is detailed somewhere. Where and when possible, papers and methods are publicly available and are open-source. If you don't know what the [FAIR Principles](https://www.nature.com/articles/sdata201618) are, don't talk to me, etc. 
+Everything I have done in the context of "academic" projects has been meticulously documented and every step is detailed somewhere. Where possible, papers and methods are publicly available and open-source. If you don't know what the [FAIR Principles](https://www.nature.com/articles/sdata201618) are, don't talk to me, etc. 
 
 I also have the tendency to hoard and take note of every little idea, draft or file that was generated through the ✨process✨just in case we have to 'look back at it'  in the future.
 
@@ -39,7 +39,7 @@ Some fragments of code lost to time are not impressive (or at least I would not 
 
 Have I done Shiny apps? Yes. Do I have a Shiny app I can share with the class? No :(. 
 
-The ✨data collection process✨ to extract *price data* from  unstructured texts, tables and images inside Discord chat servers for a videogame community in World of Warcraft: Classic took me about a dozen hours to polish. 
+The ✨data collection process✨ to extract price data from unstructured texts, tables, and images in Discord chat servers for a World of Warcraft: Classic community took me about a dozen hours to refine. 
 
 All I have to show for it is a very simple graphic which I actually really like (the graphic does tell a story, for those who are a bit more familiar with its contents), but in retrospective it falls short when trying to explain the technical aspects behind the data collected.
 
@@ -50,18 +50,19 @@ Uh, kind of?
 <img src="./trend_cost_gdkp_items.jpg" alt="WoW plot">
 <figcaption>Figure 3. Price of bids (won) for two items in World of Warcraft: Classic GDKPs.</figcaption>
 
-This website is one of those "personal projects" that at some point existed, got abandoned, and had to be rebuild, over and over, due to a lack of maintenance.
+This website is one of those "personal projects" that at some point existed, got abandoned, and had to be rebuilt over and over again, due to a lack of maintenance.
 
 I took the jruizcabrejos 'nickname' around 2015, and bought the .com domain at some point in 2018, shortly after having the talk with my supervisor about which 'scholar/academic' name should I choose for my (first) publication(s). 
 
-It is almost like choosing an appropriate username for a MMORPG videogame. Would you rather be known as the lvl 50 Warrior named as 'Save'? (one word, simple, elegant) Or as the lvl 50 Warrior known as 'XxAnimeManga01xX'? (many words, unhinged, based).
+It is almost like choosing an appropriate username for a MMORPG videogame. Would you rather be known as the level 50 Warrior named 'Save'? (one word, simple, elegant) Or as the level 50 Warrior known as 'XxAnimeManga01xX'? (many words, unhinged, based).
 
-In my case, "Jorge Ruiz" is fairly common and I would like to keep my mother surname, so I ended up using "Jorge Ruiz-Cabrejos" or jruizcabrejos / J. Ruiz-Cabrejos for most things.  
-### Actually, it is "Hello, World!"
+In my case, "Jorge Ruiz" is fairly common and I would like to keep my mother surname, so I ended up using "Jorge Ruiz-Cabrejos" or jruizcabrejos / J. Ruiz-Cabrejos for most things.
+
+### Actually, it's "Hello, World!"
 
 These posts are a good excuse for me to document my personal projects and publish somewhere all the "waste code" that I generate along the way, starting with this website. 
 
-Finding the figures above (Fig.1, Fig.2 and Fig.3) took me longer than what I actually used to write this post. So I guess it is more of an ’indexing’ problem and not so much a ’lack of documentation’ what I have.  
+Finding the figures above (Fig.1, Fig.2 and Fig.3) took me longer than it took to write this post. So I guess it is more of an ’indexing’ problem and not so much a ’lack of documentation’ what I have.  
 
 <img src="./meme_tiktok.png" alt="My brain rot">
 <figcaption>Figure 4. "If you see me one day uploading to my tiktok a blog of my day-to-day and saying stuff no one asked with 2 likes, 10 views and 0 comments, leave me alone. I am exactly where I want to be" from @desorden-memetico on Instagram.</figcaption>

@@ -156,7 +156,7 @@ work:
 
 ## About Me
 
-This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?
+This “personal” website has been changed and rebuilt several times over the past few years. Hopefully, this is the last one?
 
 My name is Jorge, and currently I am a PhD student researching the impacts of human-induced climate change on population health.
 
