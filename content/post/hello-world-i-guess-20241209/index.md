@@ -30,16 +30,16 @@ I am also a big fan of using diagrams to describe stuff in general.
 <img src="./methods_slide_lshtm.png" alt="Slide">
 <figcaption>Figure 1. Slide for the course 'Data Challenge', as part of my MSc programme. Map on the right is my own. Diagram on the left probably not.</figcaption>
 
-My documentation problem comes down to my "personal"<sup>("pet"?)</sup> projects. Over the years I have written code for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
+My documentation problem comes down to my "personal"<sup>("pet"?)</sup> projects. Over the years I have written code in R for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
 
 Some fragments of code lost to time are not impressive (or at least I would not call them as such), but I always think of them whenever I am asked for examples of previous work I have done. 
 
 <img src="./map_covid_policy_peru.png" alt="COVID-19 Policy Map of Peru">
-<figcaption>Figure 2. Evolution of the different public health measures and policies taken during the COVID-19 pandemic in Perú, Mar-Jun 2020. Made by me using the package ggantrify</figcaption>
+<figcaption>Figure 2. Evolution of the different public health measures and policies taken during the COVID-19 pandemic in Perú, Mar-Jun 2020. Made by me using the package gantrify, from Giorgio Comai </figcaption>
 
-Have I done Shiny apps? Yes. Do I have a Shiny app I can share with the class? No :(. 
+Have I done some very complex Shiny apps? Yes. Do I have a Shiny app I can share with the class? No :(. 
 
-The ✨data collection process✨ to extract price data from unstructured texts, tables, and images in Discord chat servers for a World of Warcraft: Classic community took me about a dozen hours to refine. 
+The ✨data collection process✨ to extract price data from a combination of unstructured texts, tables, and images in Discord chat servers for a World of Warcraft: Classic community took me about a dozen hours to refine. 
 
 All I have to show for it is a very simple graphic which I actually really like (the graphic does tell a story, for those who are a bit more familiar with its contents), but in retrospective it falls short when trying to convey the technical aspects behind the data collected.
 
