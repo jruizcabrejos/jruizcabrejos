@@ -158,10 +158,10 @@ work:
 
 This “personal” website has been changed and rebuilt several times over the past few years. Hopefully, this is the last one?
 
-My name is Jorge, and currently I am a PhD student researching the impacts of human-induced climate change on population health.
+My name is Jorge, and I am currently a PhD student researching the impacts of human-induced climate change on population health.
 
-Health data scientist with experience on infectious diseases, maternal health and healthcare management. Most of my work is focused on the analysis and validation of data collection methods for healthcare research, as well as exploiting novel data sources.
+I have a health data science background with experience on infectious diseases, maternal health and healthcare management. Most of my work is focused on the analysis and validation of data collection methods for healthcare research, as well as exploiting novel data sources.
 
 
-Currently at the Barcelona Institute for Global Health (ISGLOBAL) with Joan Ballester (Early-Adapt group) and the Institute of Tropical Medicine Alexander von Humboldt (IMTAvH) with Gabriel Carrasco-Escobar (Innovalab).
+Currently at ISGLOBAL (Barcelona, Spain) with the [Early-Adapt](https://www.early-adapt.eu/team/) group and IMTAvH (Lima, Perú) with [InnovaLab](https://www.innovalab.info/).
 
