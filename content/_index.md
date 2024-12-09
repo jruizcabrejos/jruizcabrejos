@@ -7,7 +7,7 @@ sections:
   content:
     button:
       text: Download CV
-      url: uploads/resume.pdf
+      url: uploads/Jorge Ruiz-Cabrejos 2024.pdf
     text: ""
     username: admin
   design:
@@ -21,7 +21,7 @@ sections:
         position: center
         size: cover
     css_class: dark
-    spacing: 
+    spacing:
       padding:
       - 0
       - 0
@@ -69,7 +69,7 @@ sections:
       - 0
       - 0
     view: citation
-    
+
 - block: cta-card
   content:
     button:

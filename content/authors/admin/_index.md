@@ -78,21 +78,21 @@ organizations:
 - name: Institute of Tropical Medicine Alexander von Humboldt (IMTAvH)
   url: https://investigacion.cayetano.edu.pe/catalogo/innovalab/
 profiles:
-- icon: at-symbol
-  label: E-mail Me
-  url: mailto:your-email@example.com
-- icon: brands/x
-  url: https://twitter.com/GetResearchDev
-- icon: brands/instagram
-  url: https://www.instagram.com/
+#- icon: at-symbol
+#  label: E-mail Me
+#  url: mailto:your-email@example.com
 - icon: brands/github
-  url: https://github.com/gcushen
+  url: https://github.com/jruizcabrejos
+- icon: brands/discord
+  url: https://discord.gg/efzMK4YfAW
+- icon: brands/bluesky
+  url: https://bsky.app/profile/jruizcabrejos.bsky.social
 - icon: brands/linkedin
-  url: https://www.linkedin.com/
+  url: https://www.linkedin.com/in/jorge-ruiz-cabrejos-4a3230a1/
 - icon: academicons/google-scholar
-  url: https://scholar.google.com/
+  url: https://scholar.google.es/citations?user=lQnRBGcAAAAJ
 - icon: academicons/orcid
-  url: https://orcid.org/
+  url: https://orcid.org/0000-0002-2055-3396
 role: PhD Student
 skills:
 - items:
