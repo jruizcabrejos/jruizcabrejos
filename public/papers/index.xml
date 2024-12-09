@@ -2,61 +2,61 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Publications | Jorge Ruiz Cabrejos</title>
-    <link>https://jruizcabrejos.com/papers/</link>
-      <atom:link href="https://jruizcabrejos.com/papers/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/papers/</link>
+      <atom:link href="http://localhost:4321/papers/index.xml" rel="self" type="application/rss+xml" />
     <description>Publications</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Fri, 02 Feb 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
+      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
       <title>Publications</title>
-      <link>https://jruizcabrejos.com/papers/</link>
+      <link>http://localhost:4321/papers/</link>
     </image>
     
     <item>
       <title>Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-6/</link>
+      <link>http://localhost:4321/papers/journal-article-6/</link>
       <pubDate>Fri, 02 Feb 2024 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-6/</guid>
+      <guid>http://localhost:4321/papers/journal-article-6/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-5/</link>
+      <link>http://localhost:4321/papers/journal-article-5/</link>
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-5/</guid>
+      <guid>http://localhost:4321/papers/journal-article-5/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Quantifying the effect of human population mobility on malaria risk in the Peruvian Amazon</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-4/</link>
+      <link>http://localhost:4321/papers/journal-article-4/</link>
       <pubDate>Wed, 20 Jul 2022 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-4/</guid>
+      <guid>http://localhost:4321/papers/journal-article-4/</guid>
       <description></description>
     </item>
     
     <item>
       <title>The study introduces an open-source, 3D-printable GPS tracker to monitor human movement and its influence on malaria epidemiology in river networks. Tested in the Peruvian Amazon, it provides insights into mobility patterns critical for malaria control strategies.</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-3/</link>
+      <link>http://localhost:4321/papers/journal-article-3/</link>
       <pubDate>Thu, 24 Sep 2020 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-3/</guid>
+      <guid>http://localhost:4321/papers/journal-article-3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Use of open mobile mapping tool to assess human mobility traceability in rural offline populations with contrasting malaria dynamics</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-2/</link>
+      <link>http://localhost:4321/papers/journal-article-2/</link>
       <pubDate>Tue, 22 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-2/</guid>
+      <guid>http://localhost:4321/papers/journal-article-2/</guid>
       <description></description>
     </item>
     
     <item>
       <title>High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-1/</link>
+      <link>http://localhost:4321/papers/journal-article-1/</link>
       <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-1/</guid>
+      <guid>http://localhost:4321/papers/journal-article-1/</guid>
       <description></description>
     </item>
     
