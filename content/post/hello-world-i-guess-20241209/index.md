@@ -45,7 +45,7 @@ All I have to show for it is a very simple graphic which I actually really like 
 
 Can I process unstructured chat data containing multiple types of data? Yeah. Can I explain to you how I did it? 
 
-Uh, kind of?
+Uh, kind of? Let me open the code I did 8 years ago.
 
 <img src="./trend_cost_gdkp_items.jpg" alt="WoW plot">
 <figcaption>Figure 3. Price evolution in GDKPs for two items in World of Warcraft: Classic GDKPs. Servers were selected for the US realm of Pagle, PvE, Alliance side from the list available at the “GDKP/SR Weekly Calendar” from the PPNN and compiled by @Polyadic. Only items sold are considered. Original dataset contains 316 unique items and 10,747 data points. </figcaption>
