@@ -13,7 +13,7 @@ title: "If it is art, it is fair use"
 
 ### Prelude
 
-A week ago, if you had asked me what I'd be writing about, "art wouldn't be on my list."
+A week ago, if you had asked me what I'd be writing about, "art" wouldn't be on my list.
 
 If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from [ENDESA website](https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura)), or maybe vent about [*undefined* geopolitical areas](https://en.wikipedia.org/wiki/List_of_territorial_disputes) and how they can cause issues when plotting them on a map.
 
