@@ -93,7 +93,7 @@ And now this "robot" could in theory use your ID and be able to impersonate you 
 
 I don't know why would someone need this, but might prove useful one day. And while this approach can be useful, one should always follow the websites terms of service. 
 
-### (Health) data gaps
+### Health data gaps
 
 We live on a time of simultaneously having unprecedented amounts of data available, and yet somehow not enough data to answer some very serious (and urgent) questions. 
 
