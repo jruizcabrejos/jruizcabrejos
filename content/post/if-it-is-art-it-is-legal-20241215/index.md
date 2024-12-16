@@ -108,7 +108,7 @@ Dysfunctional systems are unable to register data, and if they do, it is incompl
 <img src="./health_system_peru.jpg" alt="Favicon">
 <figcaption>Figure 5. The peruvian health system, commonly referred as a fragmented and segmented system. From Carrillo-Larco, Rodrigo M. et al. 2022</figcaption>
 
-In other cases, the 'gap' is the result of data that cannot be used because of individual and public ethical or legal aspects. 
+In other cases, the 'gap' is the result of data that cannot be used because of individual privacy, ethical aspects  or legal issues. 
 
 The data 'exists', but we cannot use it (and for good reason). 
 
@@ -120,7 +120,7 @@ In other cases, you might be able to process the data yourself by giving structu
 
 And while scraping data can help overcome some access hurdles, deeper systemic issues often limit the availability and usability of crucial data, particularly in public health, but in other fields as well.
 
-### Gatekeeping art and data
+### Gatekeeping data
 
 I have been mostly talking about health data because that is what I work with most days.
 
@@ -136,7 +136,7 @@ Urban dictionary top definition for "gatekeeping" is:<br>*"When someone takes it
 
 By definition, [street art should be by (and for) the general public](https://journals.ap2.pt/index.php/sauc/article/view/15). But that isn't always the case.
 
-### Graffiti preservation
+### Art and data preservation
 
 As someone who hoards data and is kept awake at night by [the decay of Google Search and the expanding Internet Rot](https://www.youtube.com/watch?v=vwVFzY8XqIo), I love to preserve data and files.
 
