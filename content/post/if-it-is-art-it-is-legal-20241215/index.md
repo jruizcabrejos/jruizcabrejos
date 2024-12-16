@@ -33,7 +33,7 @@ A lot of the work I have been doing lately as part of my doctoral studies involv
 
 This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. Needless to say, I usually don't do that myself and instead I set-up a script to automate the process for me.
 
-Since I primarily use "R", I rely on RSelenium to do my bidding, which is the R implementation of [Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation](https://www.selenium.dev/) and more often than not,'web scrapping'.
+Since I primarily use "R", I rely on RSelenium to do my bidding, which is the R implementation of [Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation](https://www.selenium.dev/) and more often than not, used for 'web scrapping'.
 
 Whenever you open a browser using RSelenium, your browser will be labeled as a "robot" browser.
 
@@ -157,7 +157,7 @@ Anything of cultural or artistic value falls under the category of "POI", graffi
 <img src="./poi_examples.png" alt="Favicon">
 <figcaption>Figure 6. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
 
-But gragfiti were meant to be ephemeral, are they not?  
+But graffiti were meant to be ephemeral, are they not?  
 
 There is a lot that can be said (and discussed) about the graffiti use on these augmented reality games. 
 

@@ -29,7 +29,7 @@
 &lt;h3 id=&#34;data-scrapping&#34;&gt;Data scrapping&lt;/h3&gt;
 &lt;p&gt;A lot of the work I have been doing lately as part of my doctoral studies involves downloading and processing data from a vast selection of (mostly publicly available) sources.&lt;/p&gt;
 &lt;p&gt;This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. Needless to say, I usually don&amp;rsquo;t do that myself and instead I set-up a script to automate the process for me.&lt;/p&gt;
-&lt;p&gt;Since I primarily use &amp;ldquo;R&amp;rdquo;, I rely on RSelenium to do my bidding, which is the R implementation of &lt;a href=&#34;https://www.selenium.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation&lt;/a&gt; and more often than not,&amp;lsquo;web scrapping&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;Since I primarily use &amp;ldquo;R&amp;rdquo;, I rely on RSelenium to do my bidding, which is the R implementation of &lt;a href=&#34;https://www.selenium.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation&lt;/a&gt; and more often than not, used for &amp;lsquo;web scrapping&amp;rsquo;.&lt;/p&gt;
 &lt;p&gt;Whenever you open a browser using RSelenium, your browser will be labeled as a &amp;ldquo;robot&amp;rdquo; browser.&lt;/p&gt;
 &lt;img src=&#34;./firefox_robot_scrapper.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 2. Robot browser indication in Firefox while using RSelenium for automated scraping tasks.&lt;/figcaption&gt;
@@ -110,7 +110,7 @@
 &lt;p&gt;Anything of cultural or artistic value falls under the category of &amp;ldquo;POI&amp;rdquo;, graffiti included.&lt;/p&gt;
 &lt;img src=&#34;./poi_examples.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 6. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.&lt;/figcaption&gt;
-&lt;p&gt;But gragfiti were meant to be ephemeral, are they not?&lt;/p&gt;
+&lt;p&gt;But graffiti were meant to be ephemeral, are they not?&lt;/p&gt;
 &lt;p&gt;There is a lot that can be said (and discussed) about the graffiti use on these augmented reality games.&lt;/p&gt;
 &lt;p&gt;What can these graffiti tell us about the community, the city, and how they build their (virtual) space?&lt;/p&gt;
 &lt;p&gt;Would the authors of these POI&amp;rsquo;s with graffiti in them be ok with their creations being made as public and as accessible as possible?&lt;/p&gt;
