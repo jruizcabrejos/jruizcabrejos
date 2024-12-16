@@ -33,7 +33,7 @@
 &lt;p&gt;Whenever you open a browser using RSelenium, your browser will be labeled as a &amp;ldquo;robot&amp;rdquo; browser.&lt;/p&gt;
 &lt;img src=&#34;./firefox_robot_scrapper.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 2. Robot browser indication in Firefox while using RSelenium for automated scraping tasks.&lt;/figcaption&gt;
-&lt;p&gt;This can sometimes be an &lt;em&gt;issue&lt;/em&gt;. Since a &amp;ldquo;robot&amp;rdquo; browser doesn&amp;rsquo;t&lt;sup&gt;(and maybe should not?)&lt;/sup&gt;have  the same permissions as organic users, websites may block it.&amp;quot;&lt;/p&gt;
+&lt;p&gt;This can sometimes be an &lt;em&gt;issue&lt;/em&gt;. Since a &amp;ldquo;robot&amp;rdquo; browser doesn&amp;rsquo;t&lt;sup&gt;(and maybe should not?)&lt;/sup&gt;have  the same permissions as organic users, websites may block it.&lt;/p&gt;
 &lt;p&gt;&lt;em&gt;(&amp;ldquo;organic&amp;rdquo; as in, non-automated.)&lt;/em&gt;&lt;/p&gt;
 &lt;p&gt;For example. if a website requires an user to log in using a Google Account, the website won&amp;rsquo;t let you do this from a &amp;ldquo;robot&amp;rdquo; browser. &amp;ldquo;Robots&amp;rdquo; do not have Google accounts after all.&lt;/p&gt;
 &lt;img src=&#34;./google_auth.png&#34; alt=&#34;Favicon&#34;&gt;
