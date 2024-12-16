@@ -40,7 +40,7 @@ Whenever you open a browser using RSelenium, your browser will be labeled as a "
 <img src="./firefox_robot_scrapper.png" alt="Favicon">
 <figcaption>Figure 2. Robot browser indication in Firefox while using RSelenium for automated scraping tasks.</figcaption>
 
-This can sometimes be an *issue*. Since a "robot" browser doesn't<sup>(and maybe should not?)</sup>have  the same permissions as organic users, websites may block it."
+This can sometimes be an *issue*. Since a "robot" browser doesn't<sup>(and maybe should not?)</sup>have  the same permissions as organic users, websites may block it.
 
 *("organic" as in, non-automated.)*
 
