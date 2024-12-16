@@ -91,7 +91,7 @@ And now this "robot" could in theory use your ID and be able to impersonate you 
 <img src="./captcha.png" alt="Favicon">
 <figcaption>Figure 4. You are not a robot.</figcaption>
 
-I don't know why would someone need this, but might prove useful one day. And while this approach can be useful, one should always follow the websites terms of service. 
+I don't know why would someone need this, but might prove useful one day. Just make sure you always follow the websites terms of service. 
 
 ### Health data gaps
 
