@@ -88,6 +88,9 @@ remDr <- rD$client
 
 And now this "robot" could in theory use your ID and be able to impersonate you with your Google Account.
 
+<img src="./captcha.png" alt="Favicon">
+<figcaption>Figure 4. You are not a robot.</figcaption>
+
 I don't know why would someone need this, but might prove useful one day. And while this approach can be useful, one should always follow the websites terms of service. 
 
 ### (Health) data gaps
@@ -103,7 +106,7 @@ An example of this are health systems and (their lack of) mortality data, which 
 Dysfunctional systems are unable to register data, and if they do, it is incomplete or not accurate.
 
 <img src="./health_system_peru.jpg" alt="Favicon">
-<figcaption>Figure 4. The peruvian health system, commonly referred as a fragmented and segmented system. From Carrillo-Larco, Rodrigo M. et al. 2022</figcaption>
+<figcaption>Figure 5. The peruvian health system, commonly referred as a fragmented and segmented system. From Carrillo-Larco, Rodrigo M. et al. 2022</figcaption>
 
 In other cases, the 'gap' is the result of data that cannot be used because of individual and public ethical or legal aspects. 
 
@@ -142,7 +145,7 @@ But is it ok to preserve that which was not meant or does not want to be preserv
 'Pokemon Go' is an "augmented reality" game you can play from your cellphone. The 'augmented' and 'reality' part of the game being that the game requires you to 'physically' move towards objectives located on a map. You are forced to interact with your environment. 
 
 <img src="./pokego.jpg" alt="Favicon">
-<figcaption>Figure 5. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
+<figcaption>Figure 6. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
 
 'Ingress', a game of the same nature but probably less well known when compared to the Pokemon franchise, was one of the pioneers [(but not the first)](https://en.wikipedia.org/wiki/List_of_geolocation-based_video_games) to explore the concept of location-based games.  
 
@@ -155,7 +158,7 @@ This database of POI's build by the community is hosted on the platform called '
 Anything of cultural or artistic value falls under the category of "POI", graffiti included.
 
 <img src="./poi_examples.png" alt="Favicon">
-<figcaption>Figure 6. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
+<figcaption>Figure 7. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
 
 But graffiti were meant to be ephemeral, are they not?  
 
@@ -170,7 +173,7 @@ Who really own these? the artist who made it, the player who submitted it, the c
 I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions. 
 
 <img src="./plot_map1.png" alt="Favicon">
-<figcaption>Figure 5. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
+<figcaption>Figure 8. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
 
 Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).
 
