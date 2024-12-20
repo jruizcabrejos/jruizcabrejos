@@ -4,7 +4,7 @@ authors:
 date: "2024-12-15"
 image:
   caption: 'Grafiti Los conejos traviesos (Coords: 41.358247, 2.069731): [**Taken from Niantic Lab games**](https://www.google.com/maps/@41.358247,2.069731,21z)'
-summary: 'Street art from a game rated E for everyone. Data scrapping with RSelenium, data preseveration, art curation.'
+summary: 'Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps, art preseveration.'
 tags:
 - Me
 - Viz
@@ -17,7 +17,7 @@ A week ago, if you had asked me what I'd be writing about, "art" wouldn't be on 
 
 If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from [ENDESA website](https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura)), or maybe vent about [*undefined* geopolitical areas](https://en.wikipedia.org/wiki/List_of_territorial_disputes) and how they can cause issues when plotting them on a map.
 
-But before I start talking about art, graffiti, and by-passing Google Authentication as a "robot", there is something else I want to mention first:
+But before I start talking about art, data gaps, and by-passing Google Authentication as a "robot", there is something else I want to mention first:
 <img src="./icon.png" alt="Favicon">
 <figcaption>Figure 1. Favicon for this website. Self-made. </figcaption>
 
