@@ -4,10 +4,10 @@ authors:
 date: "2024-12-15"
 image:
   caption: 'Grafiti Los conejos traviesos (Coords: 41.358247, 2.069731): [**Taken from Niantic Lab games**](https://www.google.com/maps/@41.358247,2.069731,21z)'
-summary: 'Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps, art preseveration.'
+summary: 'Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preseveration.'
 tags:
 - Me
-- Viz
+- Data
 title: "If it is art, it is fair use"
 ---
 
@@ -128,26 +128,36 @@ But what about other types of 'public data' (or files) that some institutions ho
 
 Maybe out of ignorance, maybe due to technical limitations, but a lot of times data is not made available by policy and by design. 
 
-It is 'kept away' on purpose, or barriers are put in place to make it difficult to access its contents. The data might be obtainable, but it will be annoying to use.
+It could very easily be one (download) button away, but it is 'kept away' on purpose, or barriers are put in place to make it difficult to access its contents. 
+
+The data might be obtainable, but it will be annoying to use.
 
 {{% callout %}}
 Urban dictionary top definition for "gatekeeping" is:<br>*"When someone takes it upon themselves to decide who does or does not have access or rights to a community or identity."</br>*
 {{% /callout %}}
 
-By definition, [street art should be by (and for) the general public](https://journals.ap2.pt/index.php/sauc/article/view/15). But that isn't always the case.
+I understand why this is the case with some information (like health), but what about urban art? 
 
-### Art and data preservation
+By definition art in the form of [street art should be by (and for) the general public](https://journals.ap2.pt/index.php/sauc/article/view/15).
 
-As someone who hoards data and is kept awake at night by [the decay of Google Search and the expanding Internet Rot](https://www.youtube.com/watch?v=vwVFzY8XqIo), I love to preserve data and files.
+### Art preservation, data preservation
 
-But is it ok to preserve that which was not meant or does not want to be preserved?
+As someone who hoards data and is kept awake at night by [the decay of Google Search and the expanding Internet Rot](https://www.youtube.com/watch?v=vwVFzY8XqIo), I love to preserve data in the form of websites and files that might one day disappear.
+
+But with graffiti I have encountered an apparent contradiction: Isn't it meant to be 'ephemeral'? [You do not posses it, nor own it.](https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/)
+
+So, is it ok to preserve that which was not meant to be preserved?
+
+<img src="./graffiti_seta.jpg" alt="Favicon">
+<figcaption>Figure 6. I see you, fungi man.</figcaption>
+
 
 'Pokemon Go' is an "augmented reality" game you can play from your cellphone. The 'augmented' and 'reality' part of the game being that the game requires you to 'physically' move towards objectives located on a map. You are forced to interact with your environment. 
 
-<img src="./pokego.jpg" alt="Favicon">
-<figcaption>Figure 6. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
-
 'Ingress', a game of the same nature but probably less well known when compared to the Pokemon franchise, was one of the pioneers [(but not the first)](https://en.wikipedia.org/wiki/List_of_geolocation-based_video_games) to explore the concept of location-based games.  
+
+<img src="./pokego.jpg" alt="Favicon">
+<figcaption>Figure 7. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
 
 For both of these games, the objectives or locations on a map are not points arbitrarily placed. They are called "points of interest" (POI's) and there is a [list of criteria](https://niantic.helpshift.com/hc/en/21-wayfarer/faq/2770-eligibility-criteria/) for what is considered a POI and what is not. 
 
@@ -158,11 +168,9 @@ This database of POI's build by the community is hosted on the platform called '
 Anything of cultural or artistic value falls under the category of "POI", graffiti included.
 
 <img src="./poi_examples.png" alt="Favicon">
-<figcaption>Figure 7. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
+<figcaption>Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
 
-But graffiti were meant to be ephemeral, are they not?  
-
-There is a lot that can be said (and discussed) about the graffiti use on these augmented reality games. 
+There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games. 
 
 What can these graffiti tell us about the community, the city, and how they build their (virtual) space? 
 
@@ -173,13 +181,19 @@ Who really own these? the artist who made it, the player who submitted it, the c
 I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions. 
 
 <img src="./plot_map1.png" alt="Favicon">
-<figcaption>Figure 8. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
+<figcaption>Figure 9. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
 
 Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).
 
 Whether we're talking about scraping data for health research or preserving street art, the topics of accessibility, ethics, and ownership are present.
 
 As long as it is art we are talking about, in my opinion, everything is fair game and fair use.
+
+### Author Correction
+
+I didn't quite liked some small sentences of the articles, specifically on the latter parts.
+
+I made [some changes]()
 
 ### References
 

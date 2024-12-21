@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: December 17, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: December 21, 2024 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
@@ -41,7 +41,7 @@
   
     
   
-  <meta name="description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data preseveration, art curation." />
+  <meta name="description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preseveration." />
 
   
   <link rel="alternate" hreflang="en-us" href="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/" />
@@ -185,10 +185,10 @@
     <meta property="twitter:site" content="@jruizcabrejos" />
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
-  <meta property="og:site_name" content="Jorge Ruiz Cabrejos" />
+  <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
   <meta property="og:url" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/" />
-  <meta property="og:title" content="If it is art, it is fair use | Jorge Ruiz Cabrejos" />
-  <meta property="og:description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data preseveration, art curation." /><meta property="og:image" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/featured.jpg" />
+  <meta property="og:title" content="If it is art, it is fair use | Jorge Ruiz-Cabrejos" />
+  <meta property="og:description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preseveration." /><meta property="og:image" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/featured.jpg" />
     <meta property="twitter:image" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
@@ -207,7 +207,7 @@
   
 
 
-  <title>If it is art, it is fair use | Jorge Ruiz Cabrejos</title>
+  <title>If it is art, it is fair use | Jorge Ruiz-Cabrejos</title>
 
   
   
@@ -234,6 +234,7 @@
   
 
 
+  
   
   
   
@@ -459,7 +460,7 @@
   <nav class="navbar px-3 flex justify-left">
     <div class="order-0 h-100">
       
-      <a class="navbar-brand" href="/" title="Jorge Ruiz Cabrejos">
+      <a class="navbar-brand" href="/" title="Jorge Ruiz-Cabrejos">
         Jorge R.
       </a>
     </div>
@@ -784,7 +785,10 @@
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#gatekeeping-data">Gatekeeping data</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#art-and-data-preservation">Art and data preservation</a>
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#art-preservation-data-preservation">Art preservation, data preservation</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#author-correction">Author Correction</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#references">References</a>
@@ -891,7 +895,7 @@
         <h3 id="prelude">Prelude</h3>
 <p>A week ago, if you had asked me what I&rsquo;d be writing about, &ldquo;art&rdquo; wouldn&rsquo;t be on my list.</p>
 <p>If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from <a href="https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura" target="_blank" rel="noopener">ENDESA website</a>), or maybe vent about <a href="https://en.wikipedia.org/wiki/List_of_territorial_disputes" target="_blank" rel="noopener"><em>undefined</em> geopolitical areas</a> and how they can cause issues when plotting them on a map.</p>
-<p>But before I start talking about art, graffiti, and by-passing Google Authentication as a &ldquo;robot&rdquo;, there is something else I want to mention first:
+<p>But before I start talking about art, data gaps, and by-passing Google Authentication as a &ldquo;robot&rdquo;, there is something else I want to mention first:
 <img src="./icon.png" alt="Favicon"></p>
 <figcaption>Figure 1. Favicon for this website. Self-made. </figcaption>
 <p>My favicon (that little icon you see on your browser) for this website was inspired by the workshop <a href="https://art-from-code.netlify.app/" target="_blank" rel="noopener">ART FROM CODE from Danielle Navarro</a>, a course on computer-generated artwork using R which has its entire course material <a href="https://github.com/rstudio-conf-2022/art-from-code" target="_blank" rel="noopener">posted online</a>.</p>
@@ -962,38 +966,45 @@
 <p>I have been mostly talking about health data because that is what I work with most days.</p>
 <p>But what about other types of &lsquo;public data&rsquo; (or files) that some institutions hold within them, like art?</p>
 <p>Maybe out of ignorance, maybe due to technical limitations, but a lot of times data is not made available by policy and by design.</p>
-<p>It is &lsquo;kept away&rsquo; on purpose, or barriers are put in place to make it difficult to access its contents. The data might be obtainable, but it will be annoying to use.</p>
+<p>It could very easily be one (download) button away, but it is &lsquo;kept away&rsquo; on purpose, or barriers are put in place to make it difficult to access its contents.</p>
+<p>The data might be obtainable, but it will be annoying to use.</p>
 <div class="flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900">
 <span class="pr-3 pt-1 text-primary-600 dark:text-primary-300">
   <svg height="24" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z"/></svg>
 </span>
   <span class="dark:text-neutral-300">Urban dictionary top definition for &ldquo;gatekeeping&rdquo; is:<br><em>&ldquo;When someone takes it upon themselves to decide who does or does not have access or rights to a community or identity.&quot;</br></em></span>
 </div>
-<p>By definition, <a href="https://journals.ap2.pt/index.php/sauc/article/view/15" target="_blank" rel="noopener">street art should be by (and for) the general public</a>. But that isn&rsquo;t always the case.</p>
-<h3 id="art-and-data-preservation">Art and data preservation</h3>
-<p>As someone who hoards data and is kept awake at night by <a href="https://www.youtube.com/watch?v=vwVFzY8XqIo" target="_blank" rel="noopener">the decay of Google Search and the expanding Internet Rot</a>, I love to preserve data and files.</p>
-<p>But is it ok to preserve that which was not meant or does not want to be preserved?</p>
+<p>I understand why this is the case with some information (like health), but what about urban art?</p>
+<p>By definition art in the form of <a href="https://journals.ap2.pt/index.php/sauc/article/view/15" target="_blank" rel="noopener">street art should be by (and for) the general public</a>.</p>
+<h3 id="art-preservation-data-preservation">Art preservation, data preservation</h3>
+<p>As someone who hoards data and is kept awake at night by <a href="https://www.youtube.com/watch?v=vwVFzY8XqIo" target="_blank" rel="noopener">the decay of Google Search and the expanding Internet Rot</a>, I love to preserve data in the form of websites and files that might one day disappear.</p>
+<p>But with graffiti I have encountered an apparent contradiction: Isn&rsquo;t it meant to be &rsquo;ephemeral&rsquo;? <a href="https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/" target="_blank" rel="noopener">You do not posses it, nor own it.</a></p>
+<p>So, is it ok to preserve that which was not meant to be preserved?</p>
+<img src="./graffiti_seta.jpg" alt="Favicon">
+<figcaption>Figure 6. I see you, fungi man.</figcaption>
 <p>&lsquo;Pokemon Go&rsquo; is an &ldquo;augmented reality&rdquo; game you can play from your cellphone. The &lsquo;augmented&rsquo; and &lsquo;reality&rsquo; part of the game being that the game requires you to &lsquo;physically&rsquo; move towards objectives located on a map. You are forced to interact with your environment.</p>
-<img src="./pokego.jpg" alt="Favicon">
-<figcaption>Figure 6. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
 <p>&lsquo;Ingress&rsquo;, a game of the same nature but probably less well known when compared to the Pokemon franchise, was one of the pioneers <a href="https://en.wikipedia.org/wiki/List_of_geolocation-based_video_games" target="_blank" rel="noopener">(but not the first)</a> to explore the concept of location-based games.</p>
+<img src="./pokego.jpg" alt="Favicon">
+<figcaption>Figure 7. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
 <p>For both of these games, the objectives or locations on a map are not points arbitrarily placed. They are called &ldquo;points of interest&rdquo; (POI&rsquo;s) and there is a <a href="https://niantic.helpshift.com/hc/en/21-wayfarer/faq/2770-eligibility-criteria/" target="_blank" rel="noopener">list of criteria</a> for what is considered a POI and what is not.</p>
 <p>Players submit proposals for new POI&rsquo;s, and the community votes and curates the proposals.</p>
 <p>This database of POI&rsquo;s build by the community is hosted on the platform called &lsquo;Niantic Wayfarer&rsquo; (in which the submission and voting process occur) and is owned by &lsquo;Niantic Labs&rsquo;, a company owned by &lsquo;Google&rsquo;, and producer of both &lsquo;Pokemon Go&rsquo; and &lsquo;Ingress&rsquo;.</p>
 <p>Anything of cultural or artistic value falls under the category of &ldquo;POI&rdquo;, graffiti included.</p>
 <img src="./poi_examples.png" alt="Favicon">
-<figcaption>Figure 7. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
-<p>But graffiti were meant to be ephemeral, are they not?</p>
-<p>There is a lot that can be said (and discussed) about the graffiti use on these augmented reality games.</p>
+<figcaption>Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
+<p>There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games.</p>
 <p>What can these graffiti tell us about the community, the city, and how they build their (virtual) space?</p>
 <p>Would the authors of these POI&rsquo;s with graffiti in them be ok with their creations being made as public and as accessible as possible?</p>
 <p>Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that &lsquo;gatekeep&rsquo; the data?</p>
 <p>I do not have any answers, only more questions. But I also have 8,000 POI&rsquo;s coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.</p>
 <img src="./plot_map1.png" alt="Favicon">
-<figcaption>Figure 8. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
+<figcaption>Figure 9. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
 <p>Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).</p>
 <p>Whether we&rsquo;re talking about scraping data for health research or preserving street art, the topics of accessibility, ethics, and ownership are present.</p>
 <p>As long as it is art we are talking about, in my opinion, everything is fair game and fair use.</p>
+<h3 id="author-correction">Author Correction</h3>
+<p>I didn&rsquo;t quite liked some small sentences of the articles, specifically on the latter parts.</p>
+<p>I made <a href="">some changes</a></p>
 <h3 id="references">References</h3>
 <ul>
 <li><a href="https://github.com/rstudio-conf-2022/art-from-code" target="_blank" rel="noopener">https://github.com/rstudio-conf-2022/art-from-code</a></li>
@@ -1030,7 +1041,7 @@
   
   <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/me/">Me</a>
   
-  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/viz/">Viz</a>
+  <a class="no-underline bg-primary-100 hover:bg-primary-300 text-primary-800 text-xs font-medium mr-2 px-2.5 py-0.5 lg:px-5 lg:py-2 rounded dark:bg-primary-900 dark:hover:bg-primary-700 dark:text-primary-300" href="/tags/data/">Data</a>
   
 </div>
 
