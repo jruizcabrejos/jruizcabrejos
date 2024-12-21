@@ -193,7 +193,7 @@ As long as it is art we are talking about, in my opinion, everything is fair gam
 
 I didn't quite liked some small sentences of the articles, specifically on the latter parts.
 
-I made [some changes]()
+I made [some changes](https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33fa66f3bc215fff4c20bf7e50391b28cdd643#diff-925f9d433a350d9955fe092afd3989796f41a99ddee9415255239947054a04f7)
 
 ### References
 
