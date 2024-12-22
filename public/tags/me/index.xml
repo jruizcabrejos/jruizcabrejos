@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Me | Jorge Ruiz-Cabrejos</title>
-    <link>http://localhost:4321/tags/me/</link>
-      <atom:link href="http://localhost:4321/tags/me/index.xml" rel="self" type="application/rss+xml" />
+    <link>https://jruizcabrejos.com/tags/me/</link>
+      <atom:link href="https://jruizcabrejos.com/tags/me/index.xml" rel="self" type="application/rss+xml" />
     <description>Me</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
+      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
       <title>Me</title>
-      <link>http://localhost:4321/tags/me/</link>
+      <link>https://jruizcabrejos.com/tags/me/</link>
     </image>
     
     <item>
       <title>If it is art, it is fair use</title>
-      <link>http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/</link>
+      <link>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/</guid>
+      <guid>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</guid>
       <description>&lt;h3 id=&#34;prelude&#34;&gt;Prelude&lt;/h3&gt;
 &lt;p&gt;A week ago, if you had asked me what I&amp;rsquo;d be writing about, &amp;ldquo;art&amp;rdquo; wouldn&amp;rsquo;t be on my list.&lt;/p&gt;
 &lt;p&gt;If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from &lt;a href=&#34;https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ENDESA website&lt;/a&gt;), or maybe vent about &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_territorial_disputes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;undefined&lt;/em&gt; geopolitical areas&lt;/a&gt; and how they can cause issues when plotting them on a map.&lt;/p&gt;
@@ -117,8 +117,7 @@
 &lt;p&gt;Anything of cultural or artistic value falls under the category of &amp;ldquo;POI&amp;rdquo;, graffiti included.&lt;/p&gt;
 &lt;img src=&#34;./poi_examples.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.&lt;/figcaption&gt;
-&lt;p&gt;But graffiti were meant to be ephemeral, are they not?&lt;/p&gt;
-&lt;p&gt;There is a lot that can be said (and discussed) about the graffiti use on these augmented reality games.&lt;/p&gt;
+&lt;p&gt;There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games.&lt;/p&gt;
 &lt;p&gt;What can these graffiti tell us about the community, the city, and how they build their (virtual) space?&lt;/p&gt;
 &lt;p&gt;Would the authors of these POI&amp;rsquo;s with graffiti in them be ok with their creations being made as public and as accessible as possible?&lt;/p&gt;
 &lt;p&gt;Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that &amp;lsquo;gatekeep&amp;rsquo; the data?&lt;/p&gt;
@@ -128,6 +127,9 @@
 &lt;p&gt;Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).&lt;/p&gt;
 &lt;p&gt;Whether we&amp;rsquo;re talking about scraping data for health research or preserving street art, the topics of accessibility, ethics, and ownership are present.&lt;/p&gt;
 &lt;p&gt;As long as it is art we are talking about, in my opinion, everything is fair game and fair use.&lt;/p&gt;
+&lt;h3 id=&#34;author-correction&#34;&gt;Author Correction&lt;/h3&gt;
+&lt;p&gt;I didn&amp;rsquo;t quite liked some small sentences of the articles, specifically on the latter parts.&lt;/p&gt;
+&lt;p&gt;I made &lt;a href=&#34;https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33fa66f3bc215fff4c20bf7e50391b28cdd643#diff-925f9d433a350d9955fe092afd3989796f41a99ddee9415255239947054a04f7&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;some changes&lt;/a&gt;&lt;/p&gt;
 &lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href=&#34;https://github.com/rstudio-conf-2022/art-from-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/rstudio-conf-2022/art-from-code&lt;/a&gt;&lt;/li&gt;
@@ -149,9 +151,9 @@
     
     <item>
       <title>Hello World, I guess</title>
-      <link>http://localhost:4321/post/hello-world-i-guess-20241209/</link>
+      <link>https://jruizcabrejos.com/post/hello-world-i-guess-20241209/</link>
       <pubDate>Sun, 08 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>http://localhost:4321/post/hello-world-i-guess-20241209/</guid>
+      <guid>https://jruizcabrejos.com/post/hello-world-i-guess-20241209/</guid>
       <description>&lt;h3 id=&#34;printhello-world&#34;&gt;print(&amp;ldquo;Hello World&amp;rdquo;)&lt;/h3&gt;
 &lt;p&gt;At the time of writing, my web(site) opens with an ominous message:&lt;/p&gt;
 &lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
@@ -213,6 +215,14 @@
     &lt;/div&gt;
 
 </description>
+    </item>
+    
+    <item>
+      <title>Lorem is Ipsum</title>
+      <link>https://jruizcabrejos.com/post/template-19960725/</link>
+      <pubDate>Thu, 25 Jul 1996 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/post/template-19960725/</guid>
+      <description></description>
     </item>
     
   </channel>

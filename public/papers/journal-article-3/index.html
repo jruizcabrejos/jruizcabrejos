@@ -1,9 +1,9 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: December 21, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: December 22, 2024 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,7 +44,7 @@
   <meta name="description" content="The study demonstrates the use of drone-based multispectral imaging to identify malaria vector larval habitats with high accuracy. This innovative approach supports targeted interventions, improving resource allocation for malaria control efforts." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:4321/papers/journal-article-3/" />
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/papers/journal-article-3/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -161,7 +200,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
 
-  <link rel="canonical" href="http://localhost:4321/papers/journal-article-3/" />
+  <link rel="canonical" href="https://jruizcabrejos.com/papers/journal-article-3/" />
 
   
   
@@ -187,10 +226,10 @@
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
   <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
-  <meta property="og:url" content="http://localhost:4321/papers/journal-article-3/" />
+  <meta property="og:url" content="https://jruizcabrejos.com/papers/journal-article-3/" />
   <meta property="og:title" content="The study introduces an open-source, 3D-printable GPS tracker to monitor human movement and its influence on malaria epidemiology in river networks. Tested in the Peruvian Amazon, it provides insights into mobility patterns critical for malaria control strategies. | Jorge Ruiz-Cabrejos" />
-  <meta property="og:description" content="The study demonstrates the use of drone-based multispectral imaging to identify malaria vector larval habitats with high accuracy. This innovative approach supports targeted interventions, improving resource allocation for malaria control efforts." /><meta property="og:image" content="http://localhost:4321/media/icon_hu17613129387521664874.png" />
-    <meta property="twitter:image" content="http://localhost:4321/media/icon_hu17613129387521664874.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="The study demonstrates the use of drone-based multispectral imaging to identify malaria vector larval habitats with high accuracy. This innovative approach supports targeted interventions, improving resource allocation for malaria control efforts." /><meta property="og:image" content="https://jruizcabrejos.com/media/icon_hu17613129387521664874.png" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/media/icon_hu17613129387521664874.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -244,38 +283,6 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
     
       
@@ -296,23 +303,20 @@
         
       
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -334,7 +338,44 @@
     
       
       
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
     
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+    
+  
   
   
   
@@ -428,8 +469,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -656,6 +697,14 @@
     href="/post/hello-world-i-guess-20241209/"
     
   >Hello World, I guess
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/template-19960725/"
+    
+  >Lorem is Ipsum
     </a>
               
             </li></ul>
@@ -953,7 +1002,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fpapers%2Fjournal-article-3%2F&amp;text=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies."
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjruizcabrejos.com%2Fpapers%2Fjournal-article-3%2F&amp;text=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies."
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -971,7 +1020,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fpapers%2Fjournal-article-3%2F&amp;t=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies."
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjruizcabrejos.com%2Fpapers%2Fjournal-article-3%2F&amp;t=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies."
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -991,7 +1040,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=The%20study%20introduces%20an%20open-source%2C%203D-printable%20GPS%20tracker%20to%20monitor%20human%20movement%20and%20its%20influence%20on%20malaria%20epidemiology%20in%20river%20networks.%20Tested%20in%20the%20Peruvian%20Amazon%2C%20it%20provides%20insights%20into%20mobility%20patterns%20critical%20for%20malaria%20control%20strategies.&amp;body=http%3A%2F%2Flocalhost%3A4321%2Fpapers%2Fjournal-article-3%2F"
+    href="mailto:?subject=The%20study%20introduces%20an%20open-source%2C%203D-printable%20GPS%20tracker%20to%20monitor%20human%20movement%20and%20its%20influence%20on%20malaria%20epidemiology%20in%20river%20networks.%20Tested%20in%20the%20Peruvian%20Amazon%2C%20it%20provides%20insights%20into%20mobility%20patterns%20critical%20for%20malaria%20control%20strategies.&amp;body=https%3A%2F%2Fjruizcabrejos.com%2Fpapers%2Fjournal-article-3%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1009,7 +1058,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4321%2Fpapers%2Fjournal-article-3%2F&amp;title=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies."
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjruizcabrejos.com%2Fpapers%2Fjournal-article-3%2F&amp;title=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies."
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1027,7 +1076,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies.%20http%3A%2F%2Flocalhost%3A4321%2Fpapers%2Fjournal-article-3%2F"
+    href="whatsapp://send?text=The&#43;study&#43;introduces&#43;an&#43;open-source%2C&#43;3D-printable&#43;GPS&#43;tracker&#43;to&#43;monitor&#43;human&#43;movement&#43;and&#43;its&#43;influence&#43;on&#43;malaria&#43;epidemiology&#43;in&#43;river&#43;networks.&#43;Tested&#43;in&#43;the&#43;Peruvian&#43;Amazon%2C&#43;it&#43;provides&#43;insights&#43;into&#43;mobility&#43;patterns&#43;critical&#43;for&#43;malaria&#43;control&#43;strategies.%20https%3A%2F%2Fjruizcabrejos.com%2Fpapers%2Fjournal-article-3%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"

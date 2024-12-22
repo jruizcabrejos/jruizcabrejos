@@ -32,8 +32,7 @@
       {{if $profile_url}}<a href="{{$profile_url}}" class="no-underline">{{end}}
       {{if $profile_url}}</a>{{end}}
     </div>
-
-    {{ with $author_page.Params.role }}
+    {{ with $author_page.Params.name_pronunciation }}
     <div class="text-sm font-bold text-neutral-700 dark:text-neutral-300">
     {{. | markdownify | emojify}}
     </div>
