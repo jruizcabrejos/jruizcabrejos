@@ -2,21 +2,29 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Data | Jorge Ruiz-Cabrejos</title>
-    <link>https://jruizcabrejos.com/tags/data/</link>
-      <atom:link href="https://jruizcabrejos.com/tags/data/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/tags/data/</link>
+      <atom:link href="http://localhost:4321/tags/data/index.xml" rel="self" type="application/rss+xml" />
     <description>Data</description>
-    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 22 Dec 2024 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
+      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
       <title>Data</title>
-      <link>https://jruizcabrejos.com/tags/data/</link>
+      <link>http://localhost:4321/tags/data/</link>
     </image>
     
     <item>
+      <title>Playing with colors</title>
+      <link>http://localhost:4321/post/playing-with-colors-20241222/</link>
+      <pubDate>Sun, 22 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>http://localhost:4321/post/playing-with-colors-20241222/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>If it is art, it is fair use</title>
-      <link>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</link>
+      <link>http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/</link>
       <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</guid>
+      <guid>http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/</guid>
       <description>&lt;h3 id=&#34;prelude&#34;&gt;Prelude&lt;/h3&gt;
 &lt;p&gt;A week ago, if you had asked me what I&amp;rsquo;d be writing about, &amp;ldquo;art&amp;rdquo; wouldn&amp;rsquo;t be on my list.&lt;/p&gt;
 &lt;p&gt;If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from &lt;a href=&#34;https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ENDESA website&lt;/a&gt;), or maybe vent about &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_territorial_disputes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;undefined&lt;/em&gt; geopolitical areas&lt;/a&gt; and how they can cause issues when plotting them on a map.&lt;/p&gt;
@@ -151,9 +159,9 @@
     
     <item>
       <title>Lorem is Ipsum</title>
-      <link>https://jruizcabrejos.com/post/template-19960725/</link>
+      <link>http://localhost:4321/post/template-19960725/</link>
       <pubDate>Thu, 25 Jul 1996 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/post/template-19960725/</guid>
+      <guid>http://localhost:4321/post/template-19960725/</guid>
       <description></description>
     </item>
     

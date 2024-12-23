@@ -191,9 +191,7 @@ As long as it is art we are talking about, in my opinion, everything is fair gam
 
 ### Author Correction
 
-I didn't quite liked some small sentences of the articles, specifically on the latter parts.
-
-I made [some changes](https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33fa66f3bc215fff4c20bf7e50391b28cdd643#diff-925f9d433a350d9955fe092afd3989796f41a99ddee9415255239947054a04f7)
+A week after posting this,I made [some very minor changes](https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33fa66f3bc215fff4c20bf7e50391b28cdd643#diff-925f9d433a350d9955fe092afd3989796f41a99ddee9415255239947054a04f7) on some sentences.
 
 ### References
 
@@ -202,6 +200,12 @@ I made [some changes](https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33
 - https://github.com/jruizcabrejos/website_icon
 
 #### Footnote
+
+While downloading images of urban art for Barcelona, my code had a bug that I was not aware of.
+
+I only discovered it after checking "Grafiti Los conejos traviesos".
+
+This song ("to vanish"?) seems appropriate for talking about ephemeral and temporary urban art.
 
 {{< youtube 3F4DZbvqEnI >}}
 
