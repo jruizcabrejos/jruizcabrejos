@@ -56,7 +56,7 @@ Whenever I am able to, I try to make my own palette while playing with [Paletton
 - [Wes Anderson](https://github.com/karthik/wesanderson)
     - Based on: Moonrise Kingdom (2012), The Life Aquatic with Steve Zissou (2004)...
    
-The article on [Coloring for Colorblindness](https://davidmathlogic.com/colorblind) is also a solid resource I tend to use.
+The article on [Coloring for Colorblindness](https://davidmathlogic.com/colorblind) is also a solid resource I tend to use. Likewise, the interactive tool [ColorQuest](https://github.com/lucanelli/colorquest) from [Luca Nelli](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290923) is also helpful. 
 
 ### Image color analysis in R
 
