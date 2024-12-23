@@ -246,7 +246,7 @@ df_final %>%
 
 You can also change the clustering method you are using. Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).
 
-## Interesting things I found while playing colors in R
+## Interesting things I found while playing with colors in R
 
 There is a surprising amount of [environmental information you can extract from paintings](https://acp.copernicus.org/articles/14/2987/2014/). 
 
