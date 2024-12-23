@@ -23,7 +23,7 @@ I had no idea at the time (and realistically, I still probably don't) that there
 
 You mix *materials*, you get dark. You mix *light*, and you get white.
 
-### Colors in R
+## Colors in R
 
 In all of my introductory classes or lectures about R, one of the first documents my students are introduced to is the [2006 R colors cheat-sheet](https://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf) by [Ying Wei](https://yingweistat.com/), which neatly displays the 657 available colors in R base (`colors()`) in *only* 7 pages.
 
@@ -58,7 +58,7 @@ Whenever I am able to, I try to make my own palette while playing with [Paletton
    
 The article on [Coloring for Colorblindness](https://davidmathlogic.com/colorblind) is also a solid resource I tend to use. Likewise, the interactive tool [ColorQuest](https://github.com/lucanelli/colorquest) from [Luca Nelli](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290923) is also helpful. 
 
-### Image color analysis in R
+## Image color analysis in R
 
 The go-to package for image manipulation is ImageMagick or simply known as magick, a free and open-source cross-platform software for image manipulation with commands.
 
@@ -201,7 +201,7 @@ ggplot(PCA_data, aes(x=u, y=v, col=rgb(R,G,B))) +
 <img src="./comparison_2.png" alt="Favicon">
 <figcaption>Figure 8. Comparison of cropped vs non-cropped color values for the Moomin.</figcaption>
 
-## Playing with color analysis results in R
+## Playing with color data in R
 
 Typically, you'd run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of 'K.' However, in my experience, these tests aren’t very useful when working with images—you just have to go with the vibes.
 
