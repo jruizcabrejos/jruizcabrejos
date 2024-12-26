@@ -4,7 +4,7 @@ authors:
 date: "2024-12-15"
 image:
   caption: 'Grafiti Los conejos traviesos (Coords: 41.358247, 2.069731): [**Taken from Niantic Lab games**](https://www.google.com/maps/@41.358247,2.069731,21z)'
-summary: 'Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preseveration.'
+summary: 'Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preservation.'
 tags:
 - Me
 - Data
