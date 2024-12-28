@@ -12,7 +12,9 @@ tags:
 title: "Playing with colors"
 ---
 
-As a kid, whenever I had different colors of paint or colored modelling clay on my hands, I would inevitably end up mixing all of them in an attempt to make this imaginary "super" color.
+## Grey (not the serie)
+
+As a kid, whenever I had different colors of paint or colored modelling clay [(PLAY-DOH®)](https://www.thatsatrademark.com/blog/play-doh-scent) on my hands, I would inevitably end up mixing all of them in an attempt to make this imaginary "super" color.
 
 The result would always end up being the same: An ugly grey-ish dark mud color—the kind you get from such a mix.
 
