@@ -158,7 +158,7 @@ work:
 
 I am a PhD student researching the impacts of human-induced climate change on population health. Here I gather and document some of my current and previous work.
 
-I have a health data science background with experience on infectious diseases, maternal health and healthcare management. Most of my work is focused on the analysis and validation of data collection methods for healthcare research, as well as exploiting novel data sources.
+I have a health data science background with experience on infectious diseases, maternal health and healthcare management. Most of my work is focused on the analysis and validation of data collection methods for healthcare research, as well as exploiting novel data sources for epidemiology.
 
 Currently at [ISGLOBAL](https://www.isglobal.org/en/) (Barcelona, Spain) with the [ADAPTATION](https://www.early-adapt.eu/team/) group and the [IMTAvH](https://imtavh.cayetano.edu.pe/) (Lima, Perú) with [InnovaLab](https://www.innovalab.info/).
 
