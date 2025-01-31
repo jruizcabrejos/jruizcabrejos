@@ -2,6 +2,7 @@
 authors:
 - admin
 date: "2024-12-22"
+featuredImage: "featured.png"
 image:
   caption: 'Illustration by  サクヤ (x.com/7UU61): [**From ノウナイディスコ / IA [CeVIO AI] - By r-906**](https://www.youtube.com/watch?v=NMiQmumW0nI)'
 summary: 'Working with colors as data in R. Palettes, dominant color quantification and K-means.'
@@ -19,9 +20,9 @@ As a kid, whenever I had different colors of paint or colored modelling clay [(P
 The result would always end up being the same: An ugly grey-ish dark mud color—the kind you get from such a mix.
 
 <img src="./greymud.png" alt="Favicon">
-<figcaption>Figure 1. Attempt at recreating the mud-like color I remember as a kid. Done with R and ggplot.</figcaption>
+<figcaption>Figure 1. Attempt at recreating the mud-like color I remember as a kid by overlaying transparent backgrounds of different color.</figcaption>
 
-I had no idea at the time (and realistically, I still probably don't) that there is a whole field dedicated to studying color theory and that the color I was getting is the result of subtractive color mixing. 
+I had no idea at the time (and realistically, I still probably don't) that there is a whole field dedicated to studying color theory and that the color I was getting is the result of subtractive color mixing.
 
 You mix *materials*, you get dark. You mix *light*, and you get white.
 
@@ -42,23 +43,23 @@ Whenever I am able to, I try to make my own palette while playing with [Paletton
 
 - [Scientific Journal and Sci-Fi](https://cran.r-project.org/web/packages/ggsci/vignettes/ggsci.html)
     - Lancet, BMJ, JAMA...
-    
+
 - [ThemePark](https://github.com/MatthewBJane/ThemePark)
     - Themes for Game of Thrones, Barbie, The Simpsons...
 
 - [Innovar](https://github.com/healthinnovation/innovar)
     - Palette collection of the [Health Innovation Lab](https://github.com/healthinnovation)
-    
+
 - [HCL colors](https://colorspace.r-forge.r-project.org/reference/hcl_palettes.html)
     - Based on the HCL (hue-chroma-luminance) color model.
 
 - [Ghibli](https://github.com/ewenme/ghibli)
     - Based on: Spirited Away (2001), Kiki's Delivery Service(1989)...
- 
+
 - [Wes Anderson](https://github.com/karthik/wesanderson)
     - Based on: Moonrise Kingdom (2012), The Life Aquatic with Steve Zissou (2004)...
-   
-The article on [Coloring for Colorblindness](https://davidmathlogic.com/colorblind) is also a solid resource I tend to use. Likewise, the interactive tool [ColorQuest](https://github.com/lucanelli/colorquest) from [Luca Nelli](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290923) is also helpful. 
+
+The article on [Coloring for Colorblindness](https://davidmathlogic.com/colorblind) is also a solid resource I tend to use. Likewise, the interactive tool [ColorQuest](https://github.com/lucanelli/colorquest) from [Luca Nelli](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290923) is also helpful.
 
 ## Image color analysis in R
 
@@ -74,7 +75,7 @@ img_magick.png <- magick::image_read("./6_32_Muumipeikko.png") ## Magick PNG
 
 img_jpg <- jpeg::readJPEG("./6_32_Muumipeikko.jpg") ## JPG as array
 img_png <- png::readPNG("./6_32_Muumipeikko.png") ## PNG as array
-``` 
+```
 
 <img src="./6_32_Muumipeikko.jpg" alt="Favicon">
 <figcaption>Figure 3. Moomin.</figcaption>
@@ -95,7 +96,7 @@ Now that all our objects are arrays, we transform those arrays into a data.frame
 ## i.e. 3 columns for the Red, Green and Blue bands.
 rgb_from_array_to_df <- function(img){
   data.frame(R = as.vector(img[, , 1]),
-             G = as.vector(img[, , 2]), 
+             G = as.vector(img[, , 2]),
              B = as.vector(img[, , 3]))
 }
 ```
@@ -110,7 +111,7 @@ img_jpg_df <- rgb_from_array_to_df(img_jpg)
 img_png_df <- rgb_from_array_to_df(img_png)
 ```
 
-The most common and basic form of analysis for images and colors (that I could find in a non-exhaustive Google Search) is applying a K-means clustering algorithm to find the most "dominant" colors in an image. 
+The most common and basic form of analysis for images and colors (that I could find in a non-exhaustive Google Search) is applying a K-means clustering algorithm to find the most "dominant" colors in an image.
 
 In short, K-means is an unsupervised machine learning technique that groups similar colors based on their cluster centroids until convergence is reached (i.e., until the predefined number of clusters (K) is achieved).
 
@@ -134,9 +135,9 @@ There are a lot of colors coming from the grass and the sky, and while it is tru
 Here we can leverage magick functions and crop our image.
 
 ```r
-##Example using the object loaded as Magick PNG 
+##Example using the object loaded as Magick PNG
 image_info <- image_info(img_magick.png)
-square_size <- min(image_info$width, 
+square_size <- min(image_info$width,
                    image_info$height)
 
 # Calculate the coordinates for cropping from the center
@@ -144,8 +145,8 @@ x_offset <- (image_info$width - square_size) / 2
 y_offset <- (image_info$height - square_size) / 2
 
 # Crop the image to a square from the center
-crop_img_magick.png <- image_crop(img_magick.png, 
-                                  paste0(square_size, "x", square_size, 
+crop_img_magick.png <- image_crop(img_magick.png,
+                                  paste0(square_size, "x", square_size,
                                          "+", x_offset, "+", y_offset))
 ```
 
@@ -154,23 +155,23 @@ crop_img_magick.png <- image_crop(img_magick.png,
 
 The crop isn’t perfect; ideally, I’d remove some of the dry grass still visible on the left and right sides. If we wanted to refine this further, we could automate the cropping by training an AI model using Keras and TensorFlow.
 
-But I will leave it like that for now. 
+But I will leave it like that for now.
 
 Now we re-run the analysis with k-means above for the cropped image, change our code a little bit, and compare results.
 
 ```r
 ## This is how the entire "pipeline" would look like.
 ## We start with an object of class `magick-image`.
-crop_img_magick.png_array <- crop_img_magick.png %>% 
-  image_data('rgb') %>% 
+crop_img_magick.png_array <- crop_img_magick.png %>%
+  image_data('rgb') %>%
   as.integer(.)/255
 
 crop_img_magick.png_clara <- rgb_from_array_to_df(crop_img_magick.png_array) %>%
-  cluster::clara(k = 10) 
+  cluster::clara(k = 10)
 
 ## We add our results to a dataframe for visualization.
 crop_df <- data.frame(colors = rgb(pmax(crop_img_magick.png_clara$medoids)),
-                      size = crop_img_magick.png_clara$clusinfo[,1]) %>% 
+                      size = crop_img_magick.png_clara$clusinfo[,1]) %>%
   arrange(desc(size))
 
 crop_df$colors_factor <- factor(crop_df$colors,
@@ -193,7 +194,7 @@ PCA <- prcomp(PCA_data[,c("R","G","B")], center=TRUE, scale=TRUE)
 PCA_data$u = PCA$x[,1]
 PCA_data$v = PCA$x[,2]
 
-ggplot(PCA_data, aes(x=u, y=v, col=rgb(R,G,B))) + 
+ggplot(PCA_data, aes(x=u, y=v, col=rgb(R,G,B))) +
   geom_point(size=2) + scale_color_identity() + theme_void()
 ```
 
@@ -216,27 +217,27 @@ res_df <- rgb_from_array_to_df(crop_img_magick.png_data)
 ## Set N of K's
 k_values <- 1:500
 
-## Apply clara for each k 
+## Apply clara for each k
 df_final <- map_df(k_values, function(k) {
-  
+
   clara_result <- cluster::clara(res_df, k = k)
-  
+
   res_df_final <- data.frame(
     colors = rgb(pmax(clara_result$medoids)),
     size = clara_result$clusinfo[, 1]
-  ) %>% 
-    arrange(desc(size)) %>% 
+  ) %>%
+    arrange(desc(size)) %>%
     mutate(
       colors_factor = factor(colors, levels = colors, labels = colors),
       category = k
     )
-  
+
   return(res_df_final)
 })
 
 
 ## Plot
-df_final %>% 
+df_final %>%
   ggplot(aes(x=category, y=size, size, fill = colors)) +
   geom_col(width = 1) +
   scale_fill_identity()
@@ -250,7 +251,7 @@ You can also change the clustering method you are using. Instead of K-means you 
 
 ## Interesting things I found while playing with colors in R
 
-There is a surprising amount of [environmental information you can extract from paintings](https://acp.copernicus.org/articles/14/2987/2014/). 
+There is a surprising amount of [environmental information you can extract from paintings](https://acp.copernicus.org/articles/14/2987/2014/).
 
 For example, [paintings by Turner and Monet can tell us a lot about trends in 19th century air pollution](https://www.pnas.org/doi/10.1073/pnas.2219118120).
 
@@ -266,7 +267,7 @@ The picture of this post comes from this song:
 
 I couldn't find a single blog post or page that answered and covered everything I needed for me to write the code to work with colors.
 
-Everything that contributed towards my code is in the references. 
+Everything that contributed towards my code is in the references.
 
 If it was within my tabs in my browser, it was probably important.
 
@@ -306,5 +307,3 @@ https://tatasz.github.io/dominant_colors/
 https://medium.com/@ys3372/deconstructing-an-image-with-pixels-4c65c3a2268c
 
 https://rpubs.com/folwalsh/clusteringimages
-
-

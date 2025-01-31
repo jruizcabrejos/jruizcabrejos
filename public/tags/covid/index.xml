@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>COVID | Jorge Ruiz-Cabrejos</title>
-    <link>https://jruizcabrejos.com/tags/covid/</link>
-      <atom:link href="https://jruizcabrejos.com/tags/covid/index.xml" rel="self" type="application/rss+xml" />
+    <link>http://localhost:4321/tags/covid/</link>
+      <atom:link href="http://localhost:4321/tags/covid/index.xml" rel="self" type="application/rss+xml" />
     <description>COVID</description>
     <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Wed, 07 Dec 2022 00:00:00 +0000</lastBuildDate>
     <image>
-      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
+      <url>http://localhost:4321/media/icon_hu17613129387521664874.png</url>
       <title>COVID</title>
-      <link>https://jruizcabrejos.com/tags/covid/</link>
+      <link>http://localhost:4321/tags/covid/</link>
     </image>
     
     <item>
       <title>Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)</title>
-      <link>https://jruizcabrejos.com/papers/journal-article-5/</link>
+      <link>http://localhost:4321/papers/journal-article-5/</link>
       <pubDate>Wed, 07 Dec 2022 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/papers/journal-article-5/</guid>
+      <guid>http://localhost:4321/papers/journal-article-5/</guid>
       <description></description>
     </item>
     
