@@ -135,7 +135,7 @@ work:
   company_url: ""
   date_end: ""
   date_start: "2021-01-01"
-  position: Director of Cloud Infrastructure
+  position: lorem ipsum dolor sit amet
   summary: |-
     Responsibilities include:
     - lorem ipsum dolor sit amet, consectetur adipiscing elit
@@ -146,22 +146,21 @@ work:
   company_url: ""
   date_end: "2020-12-31"
   date_start: "2016-01-01"
-  position: Backend Software Engineer
+  position: lorem ipsum dolor sit amet
   summary: |
     Responsibilities include:
-    - Migrated infrastructure to a new data center
+    - lorem ipsum dolor sit amet
     - lorem ipsum dolor sit amet, consectetur adipiscing elit
     - lorem ipsum dolor sit amet, consectetur adipiscing elit
 ---
 
 ## About Me
 
-This “personal” website has been changed and rebuilt several times over the past few years. Hopefully, this is the last one?
+In this “personal” website I gather and document some of my work.
+I have changed and rebuilt this site several times over the past few years. Hopefully, this is the last one?
 
-My name is Jorge, and I am currently a PhD student researching the impacts of human-induced climate change on population health.
+I am a PhD student researching the impacts of human-induced climate change on population health.
 
 I have a health data science background with experience on infectious diseases, maternal health and healthcare management. Most of my work is focused on the analysis and validation of data collection methods for healthcare research, as well as exploiting novel data sources.
 
-
-Currently at ISGLOBAL (Barcelona, Spain) with the [Early-Adapt](https://www.early-adapt.eu/team/) group and IMTAvH (Lima, Perú) with [InnovaLab](https://www.innovalab.info/).
-
+Currently at [ISGLOBAL](https://www.isglobal.org/en/) (Barcelona, Spain) with the [ADAPTATION](https://www.early-adapt.eu/team/) group and the [IMTAvH](https://imtavh.cayetano.edu.pe/) (Lima, Perú) with [InnovaLab](https://www.innovalab.info/).
