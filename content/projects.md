@@ -8,8 +8,7 @@ sections:
     filters:
       folders:
       - project
-    text: I enjoy making things. Here are a selection of projects that I have worked
-      on over the years.
+    text: These (this?) project(s) are mostly filler for the moment. Try checking my Posts instead.
     title: Selected Projects
   design:
     columns: 3
