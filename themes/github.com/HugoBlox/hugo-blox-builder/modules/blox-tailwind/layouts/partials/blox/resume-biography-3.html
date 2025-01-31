@@ -134,11 +134,14 @@
     <div class="">
       <div class="section-subheading mb-3">{{ i18n "education" | markdownify }}</div>
       <ul class="">
-        {{ range . }}
-        <li class="flex items-start gap-3">
-          {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" "style=\"\" class='flex-shrink-0 w-5 h-5 me-2 mt-1'") }}
+          {{ range $index, $item := . }}
+            {{ $colors := slice "#e63946" "#457b9d" "#2a9d8f" }}
+            {{ $color := index $colors (mod $index (len $colors)) }}
+
+            <li class="flex items-start gap-3">
+              {{ partial "functions/get_icon" (dict "name" "academic-cap" "attributes" (printf "style='color:%s;' class='flex-shrink-0 w-5 h-5 me-2 mt-1'" $color)) }}
           <div class="description">
-            <p class="course">{{ .area }}{{ with .year }}, {{ . }}{{ end }}</p>
+            <p class="course">{{ .area | safeHTML }}{{ with .year }}, {{ . }}{{ end }}</p>
             <p class="text-sm">{{ .institution }}</p>
           </div>
         </li>

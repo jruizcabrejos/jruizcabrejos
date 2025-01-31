@@ -4,7 +4,7 @@ awards:
   date: "2023-11-25"
   icon: coursera
   summary: |
-    I studied the foundational concept of neural networks and deep learning. By the end, I was familiar with the significant technological trends driving the rise of deep learning; build, train, and apply fully connected deep neural networks; implement efficient (vectorized) neural networks; identify key parameters in a neural network’s architecture; and apply deep learning to your own applications.
+    I studied the foundational concept of lorem ipsum dolor sit amet
   title: Neural Networks and Deep Learning
   url: https://www.coursera.org/learn/neural-networks-deep-learning
 - awarder: edX
@@ -12,9 +12,9 @@ awards:
   icon: edx
   summary: |
     Learned:
-    - Synthesize your own blockchain solutions
-    - Gain an in-depth understanding of the specific mechanics of Bitcoin
-    - Understand Bitcoin’s real-life applications and learn how to attack and destroy Bitcoin, Ethereum, smart contracts and Dapps, and alternatives to Bitcoin’s Proof-of-Work consensus algorithm
+    - Synthesize your own lorem ipsum dolor sit amet
+    - Gain an in-depth understanding of the lorem ipsum dolor sit amet
+    - Understand Bitcoin’s real-life applications lorem ipsum dolor sit amet
   title: Blockchain Fundamentals
   url: https://www.edx.org/professional-certificate/uc-berkeleyx-blockchain-fundamentals
 - awarder: datacamp
@@ -22,11 +22,11 @@ awards:
   date: "2023-01-21"
   icon: datacamp
   summary: |
-    Object-oriented programming (OOP) lets you specify relationships between functions and the objects that they can act on, helping you manage complexity in your code. This is an intermediate level course, providing an introduction to OOP, using the S3 and R6 systems. S3 is a great day-to-day R programming tool that simplifies some of the functions that you write. R6 is especially useful for industry-specific analyses, working with web APIs, and building GUIs.
+    Object-oriented programming lorem ipsum dolor sit amet
   title: Object-Oriented Programming in R
   url: https://www.datacamp.com/courses/object-oriented-programming-with-s3-and-r6-in-r
 education:
-- area: PhD Student in Biomedicine
+- area: PhD Student in Biomedicine <br> (2024-present)
   button:
     text: Read Thesis
     url: https://example.com
@@ -34,7 +34,7 @@ education:
   date_start: "2016-01-01"
   institution: Universitat Pompeu Fabra (UPF)
   summary: |
-    Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 IEEE conferences with the contributions being published in 2 Springer journals.
+    Thesis on _Why LLMs are awesome_. Supervised by [Prof Joe Smith](https://example.com). Presented papers at 5 lorem ipsum dolor sit amet lorem ipsum dolor sit amet
 - area: MSc Health Data Science
   date_end: "2022-12-31"
   date_start: "2020-01-01"
@@ -156,11 +156,10 @@ work:
 
 ## About Me
 
-In this “personal” website I gather and document some of my work.
-I have changed and rebuilt this site several times over the past few years. Hopefully, this is the last one?
-
-I am a PhD student researching the impacts of human-induced climate change on population health.
+I am a PhD student researching the impacts of human-induced climate change on population health. Here I gather and document some of my current and previous work.
 
 I have a health data science background with experience on infectious diseases, maternal health and healthcare management. Most of my work is focused on the analysis and validation of data collection methods for healthcare research, as well as exploiting novel data sources.
 
 Currently at [ISGLOBAL](https://www.isglobal.org/en/) (Barcelona, Spain) with the [ADAPTATION](https://www.early-adapt.eu/team/) group and the [IMTAvH](https://imtavh.cayetano.edu.pe/) (Lima, Perú) with [InnovaLab](https://www.innovalab.info/).
+
+I have changed and rebuilt this site several times over the past few years. Hopefully, this is the last one?
