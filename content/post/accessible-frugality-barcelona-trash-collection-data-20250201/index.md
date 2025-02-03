@@ -3,12 +3,12 @@ authors:
 - admin
 date: "2025-02-01"
 image:
-  caption: 'ipsum lorem something: [**Loren Ipsum**](wwww.google.com)'
-summary: 'This title is all but accessible. Mapping the calendar of of furniture (trastos) and trash collection from Barcelona Ajuntament website.'
+  caption: 'Panel from the webcomic Emmy the Robot by [**Dominic Cellini**](https://www.webtoons.com/en/canvas/emmy-the-robot/list?title_no=402201)'
+summary: 'This title is all but accessible. Mapping the calendar of furniture (trastos) collection from Barcelona Ajuntament website.'
 tags:
 - Me
 - Data
-title: "Accesibble Frugality: Barcelona Trastos Collection Data"
+title: "Accesibble Frugality: Barcelona Trastos Data"
 ---
 
 ### Intro
