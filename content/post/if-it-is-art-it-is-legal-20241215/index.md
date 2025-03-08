@@ -21,15 +21,15 @@ But before I start talking about art, data gaps, and by-passing Google Authentic
 <img src="./icon.png" alt="Favicon">
 <figcaption>Figure 1. Favicon for this website. Self-made. </figcaption>
 
-My favicon (that little icon you see on your browser) for this website was inspired by the workshop [ART FROM CODE from Danielle Navarro](https://art-from-code.netlify.app/), a course on computer-generated artwork using R which has its entire course material [posted online](https://github.com/rstudio-conf-2022/art-from-code). 
+My favicon (that little icon you see on your browser) for this website was inspired by the workshop [ART FROM CODE from Danielle Navarro](https://art-from-code.netlify.app/), a course on computer-generated artwork using R which has its entire course material [posted online](https://github.com/rstudio-conf-2022/art-from-code).
 
 Mind you, what I produced is the result of 10 minutes of work and reading. Which is nothing compared to the 10+ hours the entire course is supposed to take.
 
-I expect to come back and iterate on this icon (favicon) in the future, which is why I have made a [Github Repo](https://github.com/jruizcabrejos/website_icon) to track its change. 
+I expect to come back and iterate on this icon (favicon) in the future, which is why I have made a [Github Repo](https://github.com/jruizcabrejos/website_icon) to track its change.
 
 ### Data scrapping
 
-A lot of the work I have been doing lately as part of my doctoral studies involves downloading and processing data from a vast selection of (mostly publicly available) sources. 
+A lot of the work I have been doing lately as part of my doctoral studies involves downloading and processing data from a vast selection of (mostly publicly available) sources.
 
 This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. Needless to say, I usually don't do that myself and instead I set-up a script to automate the process for me.
 
@@ -79,7 +79,7 @@ firefox_profile <- list(
 rD <- rsDriver(port= sample(7600)[1], browser=c("firefox"),
                chromever = NULL,
                check = F,
-               extraCapabilities = firefox_profile, 
+               extraCapabilities = firefox_profile,
                verbose = FALSE
 )
 
@@ -91,26 +91,26 @@ And now this "robot" could in theory use your ID and be able to impersonate you 
 <img src="./captcha.png" alt="Favicon">
 <figcaption>Figure 4. You are not a robot.</figcaption>
 
-I don't know why would someone need this, but might prove useful one day. Just make sure you always follow the websites terms of service. 
+I don't know why would someone need this, but might prove useful one day. Just make sure you always follow the websites terms of service.
 
 ### Health data gaps
 
-We live on a time of simultaneously having unprecedented amounts of data available, and yet somehow not enough data to answer some very serious (and urgent) questions. 
+We live on a time of simultaneously having unprecedented amounts of data available, and yet somehow not enough data to answer some very serious (and urgent) questions.
 
 There is a 'gap' between the data that exists out there, and the data we can (really) use.
 
 Sometimes this 'gap' is the result of systems not equipped to register the data. They simply lack the capacity to do so.
 
-An example of this are health systems and (their lack of) mortality data, which you can read more about in the comment published in BMJ ['A lack of quality statistics is hiding the real heatwave death toll'](https://www.bmj.com/content/385/bmj.q1052) by Shetty D. 
+An example of this are health systems and (their lack of) mortality data, which you can read more about in the comment published in BMJ ['A lack of quality statistics is hiding the real heatwave death toll'](https://www.bmj.com/content/385/bmj.q1052) by Shetty D.
 
 Dysfunctional systems are unable to register data, and if they do, it is incomplete or not accurate.
 
 <img src="./health_system_peru.jpg" alt="Favicon">
 <figcaption>Figure 5. The peruvian health system, commonly referred as a fragmented and segmented system. From Carrillo-Larco, Rodrigo M. et al. 2022</figcaption>
 
-In other cases, the 'gap' is the result of data that cannot be used because of individual privacy, ethical aspects  or legal issues. 
+In other cases, the 'gap' is the result of data that cannot be used because of individual privacy, ethical aspects or legal issues.
 
-The data 'exists', but we cannot use it (and for good reason). 
+The data 'exists', but we cannot use it (and for good reason).
 
 The comment ['Who owns (or controls) health data?'](https://www.nature.com/articles/s41597-024-02982-1) published in Scientific Data by Kahn, S.D. describes the ongoing debate on who (should?) control secondary use of health data, as well as the issues surrounding its ownership, which has historically been controlled by institutions and is nowadays shifting towards individuals.  
 
@@ -126,9 +126,9 @@ I have been mostly talking about health data because that is what I work with mo
 
 But what about other types of 'public data' (or files) that some institutions hold within them, like art?
 
-Maybe out of ignorance, maybe due to technical limitations, but a lot of times data is not made available by policy and by design. 
+Maybe out of ignorance, maybe due to technical limitations, but a lot of times data is not made available by policy and by design.
 
-It could very easily be one (download) button away, but it is 'kept away' on purpose, or barriers are put in place to make it difficult to access its contents. 
+It could very easily be one (download) button away, but it is 'kept away' on purpose, or barriers are put in place to make it difficult to access its contents.
 
 The data might be obtainable, but it will be annoying to use.
 
@@ -136,7 +136,7 @@ The data might be obtainable, but it will be annoying to use.
 Urban dictionary top definition for "gatekeeping" is:<br>*"When someone takes it upon themselves to decide who does or does not have access or rights to a community or identity."</br>*
 {{% /callout %}}
 
-I understand why this is the case with some information (like health), but what about urban art? 
+I understand why this is the case with some information (like health), but what about urban art?
 
 By definition art in the form of [street art should be by (and for) the general public](https://journals.ap2.pt/index.php/sauc/article/view/15).
 
@@ -152,33 +152,33 @@ So, is it ok to preserve that which was not meant to be preserved?
 <figcaption>Figure 6. I see you, fungi man.</figcaption>
 
 
-'Pokemon Go' is an "augmented reality" game you can play from your cellphone. The 'augmented' and 'reality' part of the game being that the game requires you to 'physically' move towards objectives located on a map. You are forced to interact with your environment. 
+'Pokemon Go' is an "augmented reality" game you can play from your cellphone. The 'augmented' and 'reality' part of the game being that the game requires you to 'physically' move towards objectives located on a map. You are forced to interact with your environment.
 
 'Ingress', a game of the same nature but probably less well known when compared to the Pokemon franchise, was one of the pioneers [(but not the first)](https://en.wikipedia.org/wiki/List_of_geolocation-based_video_games) to explore the concept of location-based games.  
 
 <img src="./pokego.jpg" alt="Favicon">
 <figcaption>Figure 7. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
 
-For both of these games, the objectives or locations on a map are not points arbitrarily placed. They are called "points of interest" (POI's) and there is a [list of criteria](https://niantic.helpshift.com/hc/en/21-wayfarer/faq/2770-eligibility-criteria/) for what is considered a POI and what is not. 
+For both of these games, the objectives or locations on a map are not points arbitrarily placed. They are called "points of interest" (POI's) and there is a [list of criteria](https://niantic.helpshift.com/hc/en/21-wayfarer/faq/2770-eligibility-criteria/) for what is considered a POI and what is not.
 
 Players submit proposals for new POI's, and the community votes and curates the proposals.
 
-This database of POI's build by the community is hosted on the platform called 'Niantic Wayfarer' (in which the submission and voting process occur) and is owned by 'Niantic Labs', a company owned by 'Google', and producer of both 'Pokemon Go' and 'Ingress'.
+This database of POI's build by the community is hosted on the platform called 'Niantic Wayfarer' (in which the submission and voting process occur) and is owned by 'Niantic Labs', a company previously owned by 'Google', and producer of both 'Pokemon Go' and 'Ingress'.
 
 Anything of cultural or artistic value falls under the category of "POI", graffiti included.
 
 <img src="./poi_examples.png" alt="Favicon">
 <figcaption>Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
 
-There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games. 
+There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games.
 
-What can these graffiti tell us about the community, the city, and how they build their (virtual) space? 
+What can these graffiti tell us about the community, the city, and how they build their (virtual) space?
 
 Would the authors of these POI's with graffiti in them be ok with their creations being made as public and as accessible as possible?
 
 Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that 'gatekeep' the data?
 
-I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions. 
+I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.
 
 <img src="./plot_map1.png" alt="Favicon">
 <figcaption>Figure 9. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
