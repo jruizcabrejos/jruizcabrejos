@@ -15,9 +15,9 @@ title: "If it is art, it is fair use"
 
 A week ago, if you had asked me what I'd be writing about, "art" wouldn't be on my list.
 
-If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from [ENDESA website](https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura)), or maybe vent about [*undefined* geopolitical areas](https://en.wikipedia.org/wiki/List_of_territorial_disputes) and how they can cause issues when plotting them on a map.
+If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from [ENDESA website](https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura)), or maybe vent about [*undefined* geopolitical areas](https://en.wikipedia.org/wiki/List_of_territorial_disputes) and how they keep causing me issues anytime I am plotting stuff on maps.
 
-But before I start talking about art, data gaps, and by-passing Google Authentication as a "robot", there is something else I want to mention first:
+But before I start talking about by-passing Google Authentication as a "robot" and data gaps, there is something else I want to mention first:
 <img src="./icon.png" alt="Favicon">
 <figcaption>Figure 1. Favicon for this website. Self-made. </figcaption>
 
@@ -31,25 +31,50 @@ I expect to come back and iterate on this icon (favicon) in the future, which is
 
 A lot of the work I have been doing lately as part of my doctoral studies involves downloading and processing data from a vast selection of (mostly publicly available) sources.
 
-This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. Needless to say, I usually don't do that myself and instead I set-up a script to automate the process for me.
+This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. 
+
+Epidemiological reports can be monthly, sometimes weekly, with no consistency whatsoever on how or where the data is presented. 
+
+Needless to say, I usually don't do that myself and instead I set-up a script to automate the process for me.
 
 Since I primarily use "R", I rely on RSelenium to do my bidding, which is the R implementation of [Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation](https://www.selenium.dev/) and more often than not, used for 'web scrapping'.
+
+In a couple lines of codes, you can open a browser (Chrome, Firefox, Opera, etc.) that you can manage through R.
+
+
+```r
+## RSelenium - Web navigation and manipulation
+if (!requireNamespace("RSelenium", quietly = TRUE)) install.packages("RSelenium")
+library("RSelenium", character.only = TRUE)
+
+## Start driver
+rD <- rsDriver(port= sample(7600)[1], browser=c("firefox"),
+               chromever = NULL,
+               check = F,
+               verbose = FALSE
+)
+remDr <- rD$client
+
+## Example: Navigate to Google
+url <- "google.com"
+remDr$navigate(url)
+```
 
 Whenever you open a browser using RSelenium, your browser will be labeled as a "robot" browser.
 
 <img src="./firefox_robot_scrapper.png" alt="Favicon">
-<figcaption>Figure 2. Robot browser indication in Firefox while using RSelenium for automated scraping tasks.</figcaption>
+<figcaption>Figure 2. Robot browser icon in Firefox while using RSelenium.</figcaption>
 
-This can sometimes be an *issue*. Since a "robot" browser doesn't<sup>(and maybe should not?)</sup>have  the same permissions as organic users, websites may block it.
+This can sometimes be an *issue*. Since a "robot" browser doesn't<sup>(and maybe should not?)</sup>have the same permissions as non-automated users, some websites may block it.
 
-*("organic" as in, non-automated.)*
+For example. if a website requires an user to log in using a Google Account, the website won't let you do this from a "robot" browser.
 
-For example. if a website requires an user to log in using a Google Account, the website won't let you do this from a "robot" browser. "Robots" do not have Google accounts after all.
+"Robots" do not have Google accounts after all.
 
 <img src="./google_auth.png" alt="Favicon">
 <figcaption>Figure 3. What if you wanted data, but God said "Please log in using your Google Account". <br> A) Google Account Sign In pop-up <br>B) Error message when logging from a "robot" browser.</figcaption>
 
-If for some reason you needed to workaround this limitation, you could do so by creating a `profile` in your ("non-robotic") browser, and logging to your desired website with your Google Account while your `profile` is enabled.
+If for some reason you needed to workaround this limitation, you could do so by creating a `profile` in your ("non-robotic") browser, and logging in to the website you want to access while your `profile` is enabled.
 
 By doing this, you make your `profile` 'remember you' (and your credentials), and the next time you use your `profile` from other devices or browsers, it will 'remember you' and not ask for credentials again.
 
@@ -101,7 +126,7 @@ There is a 'gap' between the data that exists out there, and the data we can (re
 
 Sometimes this 'gap' is the result of systems not equipped to register the data. They simply lack the capacity to do so.
 
-An example of this are health systems and (their lack of) mortality data, which you can read more about in the comment published in BMJ ['A lack of quality statistics is hiding the real heatwave death toll'](https://www.bmj.com/content/385/bmj.q1052) by Shetty D.
+The data could be registered, but it isn't detailed or of enough quality to tackle more specific subjects. You can read an example about it in the comment published in BMJ ['A lack of quality statistics is hiding the real heatwave death toll'](https://www.bmj.com/content/385/bmj.q1052) by Shetty D.
 
 Dysfunctional systems are unable to register data, and if they do, it is incomplete or not accurate.
 
@@ -146,7 +171,7 @@ As someone who hoards data and is kept awake at night by [the decay of Google Se
 
 But with graffiti I have encountered an apparent contradiction: Isn't it meant to be 'ephemeral'? [You do not posses it, nor own it.](https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/)
 
-So, is it ok to preserve that which was not meant to be preserved?
+So, is it ok to preserve that which was not meant to be preserved? Would the authors be ok with it?
 
 <img src="./graffiti_seta.jpg" alt="Favicon">
 <figcaption>Figure 6. I see you, fungi man.</figcaption>
@@ -181,7 +206,7 @@ Who really own these? the artist who made it, the player who submitted it, the c
 I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.
 
 <img src="./plot_map1.png" alt="Favicon">
-<figcaption>Figure 9. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
+<figcaption>Figure 9. (Incomplete) Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
 
 Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).
 
@@ -189,9 +214,7 @@ Whether we're talking about scraping data for health research or preserving stre
 
 As long as it is art we are talking about, in my opinion, everything is fair game and fair use.
 
-### Author Correction
-
-A week after posting this,I made [some very minor changes](https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33fa66f3bc215fff4c20bf7e50391b28cdd643#diff-925f9d433a350d9955fe092afd3989796f41a99ddee9415255239947054a04f7) on some sentences.
+(The rabbits you saw at the beginning of this post are one of the many POI's within these games.)
 
 ### References
 
