@@ -7,8 +7,8 @@ main:
   - name: Me
     url: /
     weight: 10
-  - name: Work
-    url: papers/
+  - name: Publications
+    url: publications/
     weight: 11
   - name: Posts
     url: post/

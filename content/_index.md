@@ -58,7 +58,7 @@ sections:
     filters:
       exclude_featured: false
       folders:
-      - papers
+      - publications
     text: ""
     title: Recent Publications
   design:
