@@ -13,6 +13,7 @@
       "em",
       "figcaption",
       "footer",
+      "g",
       "h1",
       "h2",
       "h3",
@@ -503,15 +504,24 @@
       "actually-its-hello-world",
       "art-preservation-data-preservation",
       "colors-in-r",
+      "data-leakage",
+      "data-poisoning",
       "data-scrapping",
       "footnote",
+      "footnote-1",
+      "further-bits-of-interest",
       "gatekeeping-data",
       "grey-not-the-serie",
+      "harvesting-data-leakage",
+      "harvesting-data-leaks",
       "health-data-gaps",
+      "hi-do-you-have-a-moment-to-talk-about-our-lord-and-savior-ai",
       "hide-button",
       "image-color-analysis-in-r",
       "interesting-things-i-found-while-playing-with-colors-in-r",
       "intro",
+      "jailbreaking-and-prompt-injection",
+      "jailbreaking-prompt-injection",
       "map",
       "moon",
       "nav-menu",
@@ -535,7 +545,9 @@
       "show-button",
       "site-header",
       "sun",
-      "top"
+      "the-question",
+      "top",
+      "why"
     ]
   }
 }
