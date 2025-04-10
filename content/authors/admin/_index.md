@@ -156,8 +156,8 @@ work:
 
 ## About Me
 
-I'm a PhD student studying how human-induced climate change impacts the health of communities around the world. On this site I share some of my work, projects and other ideas, both from current and past collaborations.
+I'm a PhD student researching how human-induced climate change impacts the health of communities around the world. This site is a space where I share some of my published work, personal projects, and other ideas that cross my mind, both from current and past collaborations.
 
-I have a background in health data science, where I've worked for projects in infectious diseases, maternal health, and data collection methods. My work has primarily focused on analyzing and validating these methods for healthcare research, as well as exploring novel data sources for epidemiology
+I have a background in health data science, with experience in infectious diseases, maternal health, and data collection methods. My work has primarily focused on analyzing and validating data-driven methods for healthcare research, as well as exploring novel data sources for epidemiology
 
 Currently at [ISGLOBAL](https://www.isglobal.org/en/) (Barcelona, Spain) with the [ADAPTATION](https://www.early-adapt.eu/team/) group, and with the [IMTAvH](https://imtavh.cayetano.edu.pe/) (Lima, Perú) at [InnovaLab](https://www.innovalab.info/).
