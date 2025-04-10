@@ -1,9 +1,9 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: December 23, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: April 10, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,7 +44,7 @@
   <meta name="description" content="Working with colors as data in R. Palettes, dominant color quantification and K-means." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:4321/post/playing-with-colors-20241222/" />
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/post/playing-with-colors-20241222/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -161,7 +200,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
 
-  <link rel="canonical" href="http://localhost:4321/post/playing-with-colors-20241222/" />
+  <link rel="canonical" href="https://jruizcabrejos.com/post/playing-with-colors-20241222/" />
 
   
   
@@ -186,10 +225,10 @@
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
   <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
-  <meta property="og:url" content="http://localhost:4321/post/playing-with-colors-20241222/" />
+  <meta property="og:url" content="https://jruizcabrejos.com/post/playing-with-colors-20241222/" />
   <meta property="og:title" content="Playing with colors | Jorge Ruiz-Cabrejos" />
-  <meta property="og:description" content="Working with colors as data in R. Palettes, dominant color quantification and K-means." /><meta property="og:image" content="http://localhost:4321/post/playing-with-colors-20241222/featured.png" />
-    <meta property="twitter:image" content="http://localhost:4321/post/playing-with-colors-20241222/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Working with colors as data in R. Palettes, dominant color quantification and K-means." /><meta property="og:image" content="https://jruizcabrejos.com/post/playing-with-colors-20241222/featured.png" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/post/playing-with-colors-20241222/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -245,38 +284,6 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
     
       
@@ -297,23 +304,20 @@
         
       
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -335,6 +339,42 @@
     
       
       
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
     
   
   
@@ -345,7 +385,6 @@
   
   
   
-  
 
 
 
@@ -353,10 +392,10 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css" integrity="sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=" />
 
 
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+<script src="/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js" integrity="sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF&#43;uBQUK0m0EqPO&#43;U="></script>
 
 
 <script>window.hbb.pagefind = {"baseUrl":"/"};</script>
@@ -430,8 +469,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -514,8 +553,8 @@
         <a
           class="nav-link "
           
-          href="/papers/"
-        >Work</a
+          href="/publications/"
+        >Publications</a
         >
       </li>
       
@@ -639,7 +678,15 @@
             <svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="h-[18px] min-w-[18px] rounded-sm p-0.5 hover:bg-gray-800/5 dark:hover:bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="origin-center transition-transform rtl:-rotate-180"></path></svg>
         </span>
     </a><div class="ltr:pr-0 overflow-hidden">
-        <ul class="hb-sidebar-list"><li class="flex flex-col open"><a
+        <ul class="hb-sidebar-list"><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/accessible-frugality-barcelona-trash-collection-data-20250201/"
+    
+  >Accesibble Frugality: Barcelona Trastos Data
+    </a>
+              
+            </li><li class="flex flex-col open"><a
     class="hb-sidebar-custom-link
       sidebar-active-item bg-primary-100 font-semibold text-primary-800 dark:bg-primary-300 dark:text-primary-900"
     href="/post/playing-with-colors-20241222/"
@@ -649,21 +696,33 @@
   
     <ul class="hb-sidebar-mobile-toc"><li>
               <a
-                href="#"
+                href="#grey-not-the-serie"
                 class="hb-docs-link"
-              ></a>
+              >Grey (not the serie)</a>
             </li>
           <li>
               <a
-                href="#playing-with-color-analysis-results-in-r"
+                href="#colors-in-r"
                 class="hb-docs-link"
-              >Playing with color analysis results in R</a>
+              >Colors in R</a>
             </li>
           <li>
               <a
-                href="#interesting-things-i-found-while-playing-colors-in-r"
+                href="#image-color-analysis-in-r"
                 class="hb-docs-link"
-              >Interesting things I found while playing colors in R</a>
+              >Image color analysis in R</a>
+            </li>
+          <li>
+              <a
+                href="#playing-with-color-data-in-r"
+                class="hb-docs-link"
+              >Playing with color data in R</a>
+            </li>
+          <li>
+              <a
+                href="#interesting-things-i-found-while-playing-with-colors-in-r"
+                class="hb-docs-link"
+              >Interesting things I found while playing with colors in R</a>
             </li>
           <li>
               <a
@@ -696,14 +755,6 @@
   >Hello World, I guess
     </a>
               
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/template-19960725/"
-    
-  >Lorem is Ipsum
-    </a>
-              
             </li></ul>
       </div></li>
         <li class=""><a
@@ -716,7 +767,7 @@
         <li class=""><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/"
+    href="/publications/"
     
   >Publications
         <span data-hb-sidebar-toggle>
@@ -726,7 +777,7 @@
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-6/"
+    href="/publications/journal-article-6/"
     
   >Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon
     </a>
@@ -734,7 +785,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-5/"
+    href="/publications/journal-article-5/"
     
   >Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)
     </a>
@@ -742,7 +793,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-4/"
+    href="/publications/journal-article-4/"
     
   >Quantifying the effect of human population mobility on malaria risk in the Peruvian Amazon
     </a>
@@ -750,7 +801,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-3/"
+    href="/publications/journal-article-3/"
     
   >The study introduces an open-source, 3D-printable GPS tracker to monitor human movement and its influence on malaria epidemiology in river networks. Tested in the Peruvian Amazon, it provides insights into mobility patterns critical for malaria control strategies.
     </a>
@@ -758,7 +809,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-2/"
+    href="/publications/journal-article-2/"
     
   >Use of open mobile mapping tool to assess human mobility traceability in rural offline populations with contrasting malaria dynamics
     </a>
@@ -766,7 +817,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-1/"
+    href="/publications/journal-article-1/"
     
   >High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery
     </a>
@@ -815,16 +866,19 @@
 
   <div class="hb-scrollbar text-sm [hyphens:auto] sticky top-16 overflow-y-auto pr-4 pt-6 max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] -mr-4 rtl:-ml-4"><p class="mb-4 font-semibold tracking-tight">On this page</p><ul>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#colors-in-r">Colors in R</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#grey-not-the-serie">Grey (not the serie)</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#image-color-analysis-in-r">Image color analysis in R</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#colors-in-r">Colors in R</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#playing-with-color-analysis-results-in-r">Playing with color analysis results in R</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#image-color-analysis-in-r">Image color analysis in R</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#interesting-things-i-found-while-playing-colors-in-r">Interesting things I found while playing colors in R</a>
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#playing-with-color-data-in-r">Playing with color data in R</a>
+      </li>
+      <li class="my-2 scroll-my-6 scroll-py-6">
+        <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#interesting-things-i-found-while-playing-with-colors-in-r">Interesting things I found while playing with colors in R</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="font-semibold inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#footnote">Footnote</a>
@@ -928,13 +982,14 @@
       
 
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
-        <p>As a kid, whenever I had different colors of paint or colored modelling clay on my hands, I would inevitably end up mixing all of them in an attempt to make this imaginary &ldquo;super&rdquo; color.</p>
+        <h2 id="grey-not-the-serie">Grey (not the serie)</h2>
+<p>As a kid, whenever I had different colors of paint or colored modelling clay <a href="https://www.thatsatrademark.com/blog/play-doh-scent" target="_blank" rel="noopener">(PLAY-DOH®)</a> on my hands, I would inevitably end up mixing all of them in an attempt to make this imaginary &ldquo;super&rdquo; color.</p>
 <p>The result would always end up being the same: An ugly grey-ish dark mud color—the kind you get from such a mix.</p>
 <img src="./greymud.png" alt="Favicon">
-<figcaption>Figure 1. Attempt at recreating the mud-like color I remember as a kid. Done with R and ggplot.</figcaption>
+<figcaption>Figure 1. Attempt at recreating the mud-like color I remember as a kid by overlaying transparent backgrounds of different color.</figcaption>
 <p>I had no idea at the time (and realistically, I still probably don&rsquo;t) that there is a whole field dedicated to studying color theory and that the color I was getting is the result of subtractive color mixing.</p>
 <p>You mix <em>materials</em>, you get dark. You mix <em>light</em>, and you get white.</p>
-<h3 id="colors-in-r">Colors in R</h3>
+<h2 id="colors-in-r">Colors in R</h2>
 <p>In all of my introductory classes or lectures about R, one of the first documents my students are introduced to is the <a href="https://www.stat.columbia.edu/~tzheng/files/Rcolor.pdf" target="_blank" rel="noopener">2006 R colors cheat-sheet</a> by <a href="https://yingweistat.com/" target="_blank" rel="noopener">Ying Wei</a>, which neatly displays the 657 available colors in R base (<code>colors()</code>) in <em>only</em> 7 pages.</p>
 <p>For a more diverse selection of colors, palettes, and themes, there is a <a href="https://github.com/EmilHvitfeldt/r-color-palettes" target="_blank" rel="noopener">Comprehensive list of color palettes in R</a> by <a href="https://github.com/EmilHvitfeldt" target="_blank" rel="noopener">Emil Hvitfeldt</a>, which  provides an extensive compilation of packages and resources for colors (in R).</p>
 <img src="./logos_all.png" alt="Favicon">
@@ -984,8 +1039,8 @@
 </ul>
 </li>
 </ul>
-<p>The article on <a href="https://davidmathlogic.com/colorblind" target="_blank" rel="noopener">Coloring for Colorblindness</a> is also a solid resource I tend to use.</p>
-<h3 id="image-color-analysis-in-r">Image color analysis in R</h3>
+<p>The article on <a href="https://davidmathlogic.com/colorblind" target="_blank" rel="noopener">Coloring for Colorblindness</a> is also a solid resource I tend to use. Likewise, the interactive tool <a href="https://github.com/lucanelli/colorquest" target="_blank" rel="noopener">ColorQuest</a> from <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290923" target="_blank" rel="noopener">Luca Nelli</a> is also helpful.</p>
+<h2 id="image-color-analysis-in-r">Image color analysis in R</h2>
 <p>The go-to package for image manipulation is ImageMagick or simply known as magick, a free and open-source cross-platform software for image manipulation with commands.</p>
 <p>A big advantage of magick is being able to read most types of image files with a single function (<code>image_read()</code>), with the alternative being to use <code>jpeg::readJPEG()</code> and <code>png::readPNG()</code> for .jpg and .png files respectively.</p>
 <p>For illustration purposes, I&rsquo;ll read the image in both .jpg and .png formats using both methods.</p>
@@ -1005,7 +1060,7 @@
 </span></span><span class="line"><span class="cl"><span class="c1">## i.e. 3 columns for the Red, Green and Blue bands.</span>
 </span></span><span class="line"><span class="cl"><span class="n">rgb_from_array_to_df</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">img</span><span class="p">){</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">data.frame</span><span class="p">(</span><span class="n">R</span> <span class="o">=</span> <span class="nf">as.vector</span><span class="p">(</span><span class="n">img[</span><span class="p">,</span> <span class="p">,</span> <span class="m">1</span><span class="n">]</span><span class="p">),</span>
-</span></span><span class="line"><span class="cl">             <span class="n">G</span> <span class="o">=</span> <span class="nf">as.vector</span><span class="p">(</span><span class="n">img[</span><span class="p">,</span> <span class="p">,</span> <span class="m">2</span><span class="n">]</span><span class="p">),</span> 
+</span></span><span class="line"><span class="cl">             <span class="n">G</span> <span class="o">=</span> <span class="nf">as.vector</span><span class="p">(</span><span class="n">img[</span><span class="p">,</span> <span class="p">,</span> <span class="m">2</span><span class="n">]</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">             <span class="n">B</span> <span class="o">=</span> <span class="nf">as.vector</span><span class="p">(</span><span class="n">img[</span><span class="p">,</span> <span class="p">,</span> <span class="m">3</span><span class="n">]</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
 </span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## From now on you will notice that all four objects are essentially the same.</span>
@@ -1029,9 +1084,9 @@
 <figcaption>Figure 4. The 10 clustered colors extracted from the Moomin image.  <br>The vector `rgb(pmax(img_og_jpg.clara$medoids))` was used for this plot using ggplot.</figcaption>
 <p>There are a lot of colors coming from the grass and the sky, and while it is true all of it is part of the image as a whole, I am more interested in the (moomin) art itself.</p>
 <p>Here we can leverage magick functions and crop our image.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">##Example using the object loaded as Magick PNG </span>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">##Example using the object loaded as Magick PNG</span>
 </span></span><span class="line"><span class="cl"><span class="n">image_info</span> <span class="o">&lt;-</span> <span class="nf">image_info</span><span class="p">(</span><span class="n">img_magick.png</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">square_size</span> <span class="o">&lt;-</span> <span class="nf">min</span><span class="p">(</span><span class="n">image_info</span><span class="o">$</span><span class="n">width</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="n">square_size</span> <span class="o">&lt;-</span> <span class="nf">min</span><span class="p">(</span><span class="n">image_info</span><span class="o">$</span><span class="n">width</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                   <span class="n">image_info</span><span class="o">$</span><span class="n">height</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Calculate the coordinates for cropping from the center</span>
@@ -1039,8 +1094,8 @@
 </span></span><span class="line"><span class="cl"><span class="n">y_offset</span> <span class="o">&lt;-</span> <span class="p">(</span><span class="n">image_info</span><span class="o">$</span><span class="n">height</span> <span class="o">-</span> <span class="n">square_size</span><span class="p">)</span> <span class="o">/</span> <span class="m">2</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1"># Crop the image to a square from the center</span>
-</span></span><span class="line"><span class="cl"><span class="n">crop_img_magick.png</span> <span class="o">&lt;-</span> <span class="nf">image_crop</span><span class="p">(</span><span class="n">img_magick.png</span><span class="p">,</span> 
-</span></span><span class="line"><span class="cl">                                  <span class="nf">paste0</span><span class="p">(</span><span class="n">square_size</span><span class="p">,</span> <span class="s">&#34;x&#34;</span><span class="p">,</span> <span class="n">square_size</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl"><span class="n">crop_img_magick.png</span> <span class="o">&lt;-</span> <span class="nf">image_crop</span><span class="p">(</span><span class="n">img_magick.png</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                                  <span class="nf">paste0</span><span class="p">(</span><span class="n">square_size</span><span class="p">,</span> <span class="s">&#34;x&#34;</span><span class="p">,</span> <span class="n">square_size</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                                         <span class="s">&#34;+&#34;</span><span class="p">,</span> <span class="n">x_offset</span><span class="p">,</span> <span class="s">&#34;+&#34;</span><span class="p">,</span> <span class="n">y_offset</span><span class="p">))</span>
 </span></span></code></pre></div><img src="./crop_img_magick.png" alt="Favicon">
 <figcaption>Figure 5. Cropped Moomin.</figcaption>
@@ -1049,16 +1104,16 @@
 <p>Now we re-run the analysis with k-means above for the cropped image, change our code a little bit, and compare results.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## This is how the entire &#34;pipeline&#34; would look like.</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## We start with an object of class `magick-image`.</span>
-</span></span><span class="line"><span class="cl"><span class="n">crop_img_magick.png_array</span> <span class="o">&lt;-</span> <span class="n">crop_img_magick.png</span> <span class="o">%&gt;%</span> 
-</span></span><span class="line"><span class="cl">  <span class="nf">image_data</span><span class="p">(</span><span class="s">&#39;rgb&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl"><span class="n">crop_img_magick.png_array</span> <span class="o">&lt;-</span> <span class="n">crop_img_magick.png</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">  <span class="nf">image_data</span><span class="p">(</span><span class="s">&#39;rgb&#39;</span><span class="p">)</span> <span class="o">%&gt;%</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">as.integer</span><span class="p">(</span><span class="n">.)</span><span class="o">/</span><span class="m">255</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">crop_img_magick.png_clara</span> <span class="o">&lt;-</span> <span class="nf">rgb_from_array_to_df</span><span class="p">(</span><span class="n">crop_img_magick.png_array</span><span class="p">)</span> <span class="o">%&gt;%</span>
-</span></span><span class="line"><span class="cl">  <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span> 
+</span></span><span class="line"><span class="cl">  <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">k</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">## We add our results to a dataframe for visualization.</span>
 </span></span><span class="line"><span class="cl"><span class="n">crop_df</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span><span class="n">colors</span> <span class="o">=</span> <span class="nf">rgb</span><span class="p">(</span><span class="nf">pmax</span><span class="p">(</span><span class="n">crop_img_magick.png_clara</span><span class="o">$</span><span class="n">medoids</span><span class="p">)),</span>
-</span></span><span class="line"><span class="cl">                      <span class="n">size</span> <span class="o">=</span> <span class="n">crop_img_magick.png_clara</span><span class="o">$</span><span class="n">clusinfo[</span><span class="p">,</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">                      <span class="n">size</span> <span class="o">=</span> <span class="n">crop_img_magick.png_clara</span><span class="o">$</span><span class="n">clusinfo[</span><span class="p">,</span><span class="m">1</span><span class="n">]</span><span class="p">)</span> <span class="o">%&gt;%</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">size</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">crop_df</span><span class="o">$</span><span class="n">colors_factor</span> <span class="o">&lt;-</span> <span class="nf">factor</span><span class="p">(</span><span class="n">crop_df</span><span class="o">$</span><span class="n">colors</span><span class="p">,</span>
@@ -1074,13 +1129,13 @@
 </span></span><span class="line"><span class="cl"><span class="n">PCA_data</span><span class="o">$</span><span class="n">u</span> <span class="o">=</span> <span class="n">PCA</span><span class="o">$</span><span class="n">x[</span><span class="p">,</span><span class="m">1</span><span class="n">]</span>
 </span></span><span class="line"><span class="cl"><span class="n">PCA_data</span><span class="o">$</span><span class="n">v</span> <span class="o">=</span> <span class="n">PCA</span><span class="o">$</span><span class="n">x[</span><span class="p">,</span><span class="m">2</span><span class="n">]</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">PCA_data</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">u</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">rgb</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">B</span><span class="p">)))</span> <span class="o">+</span> 
+</span></span><span class="line"><span class="cl"><span class="nf">ggplot</span><span class="p">(</span><span class="n">PCA_data</span><span class="p">,</span> <span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">u</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">v</span><span class="p">,</span> <span class="n">col</span><span class="o">=</span><span class="nf">rgb</span><span class="p">(</span><span class="n">R</span><span class="p">,</span><span class="n">G</span><span class="p">,</span><span class="n">B</span><span class="p">)))</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">geom_point</span><span class="p">(</span><span class="n">size</span><span class="o">=</span><span class="m">2</span><span class="p">)</span> <span class="o">+</span> <span class="nf">scale_color_identity</span><span class="p">()</span> <span class="o">+</span> <span class="nf">theme_void</span><span class="p">()</span>
 </span></span></code></pre></div><img src="./PCA_crop_bw.png" alt="Favicon">
 <figcaption>Figure 7. PCA for Cropped Moomin results.</figcaption>
 <img src="./comparison_2.png" alt="Favicon">
 <figcaption>Figure 8. Comparison of cropped vs non-cropped color values for the Moomin.</figcaption>
-<h2 id="playing-with-color-analysis-results-in-r">Playing with color analysis results in R</h2>
+<h2 id="playing-with-color-data-in-r">Playing with color data in R</h2>
 <p>Typically, you&rsquo;d run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of &lsquo;K.&rsquo; However, in my experience, these tests aren’t very useful when working with images—you just have to go with the vibes.</p>
 <p>Or you can plot it.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Convert pre-processed Magick array object to data.frame</span>
@@ -1089,34 +1144,34 @@
 </span></span><span class="line"><span class="cl"><span class="c1">## Set N of K&#39;s</span>
 </span></span><span class="line"><span class="cl"><span class="n">k_values</span> <span class="o">&lt;-</span> <span class="m">1</span><span class="o">:</span><span class="m">500</span>
 </span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c1">## Apply clara for each k </span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Apply clara for each k</span>
 </span></span><span class="line"><span class="cl"><span class="n">df_final</span> <span class="o">&lt;-</span> <span class="nf">map_df</span><span class="p">(</span><span class="n">k_values</span><span class="p">,</span> <span class="kr">function</span><span class="p">(</span><span class="n">k</span><span class="p">)</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="n">clara_result</span> <span class="o">&lt;-</span> <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">res_df</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="n">k</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="n">res_df_final</span> <span class="o">&lt;-</span> <span class="nf">data.frame</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">    <span class="n">colors</span> <span class="o">=</span> <span class="nf">rgb</span><span class="p">(</span><span class="nf">pmax</span><span class="p">(</span><span class="n">clara_result</span><span class="o">$</span><span class="n">medoids</span><span class="p">)),</span>
 </span></span><span class="line"><span class="cl">    <span class="n">size</span> <span class="o">=</span> <span class="n">clara_result</span><span class="o">$</span><span class="n">clusinfo[</span><span class="p">,</span> <span class="m">1</span><span class="n">]</span>
-</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span> 
-</span></span><span class="line"><span class="cl">    <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">size</span><span class="p">))</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl">  <span class="p">)</span> <span class="o">%&gt;%</span>
+</span></span><span class="line"><span class="cl">    <span class="nf">arrange</span><span class="p">(</span><span class="nf">desc</span><span class="p">(</span><span class="n">size</span><span class="p">))</span> <span class="o">%&gt;%</span>
 </span></span><span class="line"><span class="cl">    <span class="nf">mutate</span><span class="p">(</span>
 </span></span><span class="line"><span class="cl">      <span class="n">colors_factor</span> <span class="o">=</span> <span class="nf">factor</span><span class="p">(</span><span class="n">colors</span><span class="p">,</span> <span class="n">levels</span> <span class="o">=</span> <span class="n">colors</span><span class="p">,</span> <span class="n">labels</span> <span class="o">=</span> <span class="n">colors</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">      <span class="n">category</span> <span class="o">=</span> <span class="n">k</span>
 </span></span><span class="line"><span class="cl">    <span class="p">)</span>
-</span></span><span class="line"><span class="cl">  
+</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kr">return</span><span class="p">(</span><span class="n">res_df_final</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="p">})</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="c1">## Plot</span>
-</span></span><span class="line"><span class="cl"><span class="n">df_final</span> <span class="o">%&gt;%</span> 
+</span></span><span class="line"><span class="cl"><span class="n">df_final</span> <span class="o">%&gt;%</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">ggplot</span><span class="p">(</span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">category</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">size</span><span class="p">,</span> <span class="n">size</span><span class="p">,</span> <span class="n">fill</span> <span class="o">=</span> <span class="n">colors</span><span class="p">))</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">geom_col</span><span class="p">(</span><span class="n">width</span> <span class="o">=</span> <span class="m">1</span><span class="p">)</span> <span class="o">+</span>
 </span></span><span class="line"><span class="cl">  <span class="nf">scale_fill_identity</span><span class="p">()</span>
 </span></span></code></pre></div><img src="./k_100.png" alt="Favicon">
 <figcaption>Figure 9. Clustering colors for K from 1 to 100.</figcaption>
 <p>You can also change the clustering method you are using. Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).</p>
-<h2 id="interesting-things-i-found-while-playing-colors-in-r">Interesting things I found while playing colors in R</h2>
+<h2 id="interesting-things-i-found-while-playing-with-colors-in-r">Interesting things I found while playing with colors in R</h2>
 <p>There is a surprising amount of <a href="https://acp.copernicus.org/articles/14/2987/2014/" target="_blank" rel="noopener">environmental information you can extract from paintings</a>.</p>
 <p>For example, <a href="https://www.pnas.org/doi/10.1073/pnas.2219118120" target="_blank" rel="noopener">paintings by Turner and Monet can tell us a lot about trends in 19th century air pollution</a>.</p>
 <p>Cath Sleeman did an <a href="https://lab.sciencemuseum.org.uk/colour-shape-using-computer-vision-to-explore-the-science-museum-c4b4f1cbd72c" target="_blank" rel="noopener">amazing visualization</a> on how the colors used in every day objects has evolved over the past 2 centuries. Spoilers: <a href="https://www.thecollector.com/minimalism-color-grey/" target="_blank" rel="noopener">Life is getting grey</a>.</p>
@@ -1190,7 +1245,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fplaying-with-colors-20241222%2F&amp;text=Playing&#43;with&#43;colors"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fplaying-with-colors-20241222%2F&amp;text=Playing&#43;with&#43;colors"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1208,7 +1263,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fplaying-with-colors-20241222%2F&amp;t=Playing&#43;with&#43;colors"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fplaying-with-colors-20241222%2F&amp;t=Playing&#43;with&#43;colors"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1228,7 +1283,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Playing%20with%20colors&amp;body=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fplaying-with-colors-20241222%2F"
+    href="mailto:?subject=Playing%20with%20colors&amp;body=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fplaying-with-colors-20241222%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1246,7 +1301,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fplaying-with-colors-20241222%2F&amp;title=Playing&#43;with&#43;colors"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fplaying-with-colors-20241222%2F&amp;title=Playing&#43;with&#43;colors"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1264,7 +1319,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Playing&#43;with&#43;colors%20http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fplaying-with-colors-20241222%2F"
+    href="whatsapp://send?text=Playing&#43;with&#43;colors%20https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fplaying-with-colors-20241222%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1314,7 +1369,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:4321/" class="no-underline">
+      <a href="https://jruizcabrejos.com/" class="no-underline">
       </a>
     </div>
     
@@ -1443,6 +1498,22 @@
   <div class="flex flex-col md:flex-row flex-nowrap justify-between gap-5 pt-2">
     <div class="">
       
+        <a class="group flex no-underline" href="/post/accessible-frugality-barcelona-trash-collection-data-20250201/">
+          <span
+            class="mt-[-0.3rem] me-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
+          ><span class="ltr:inline rtl:hidden">&larr;</span></span>
+          <span class="flex flex-col">
+            <span
+              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
+            >Accesibble Frugality: Barcelona Trastos Data</span>
+            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
+              
+                Feb 1, 2025
+              
+            </span>
+          </span>
+        </a>
+      
     </div>
     <div class="">
       
@@ -1536,7 +1607,7 @@
 
   
   <p class="powered-by text-center">
-    © 2024 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2025 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 

@@ -1,9 +1,9 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: December 23, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: April 10, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" />
+  <meta name="description" content="Documenting the site  - This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:4321/post/hello-world-i-guess-20241209/" />
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -161,7 +200,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
 
-  <link rel="canonical" href="http://localhost:4321/post/hello-world-i-guess-20241209/" />
+  <link rel="canonical" href="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/" />
 
   
   
@@ -186,10 +225,10 @@
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
   <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
-  <meta property="og:url" content="http://localhost:4321/post/hello-world-i-guess-20241209/" />
+  <meta property="og:url" content="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/" />
   <meta property="og:title" content="Hello World, I guess | Jorge Ruiz-Cabrejos" />
-  <meta property="og:description" content="This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" /><meta property="og:image" content="http://localhost:4321/post/hello-world-i-guess-20241209/featured.jpg" />
-    <meta property="twitter:image" content="http://localhost:4321/post/hello-world-i-guess-20241209/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Documenting the site  - This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" /><meta property="og:image" content="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/featured.jpg" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -245,38 +284,6 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
     
       
@@ -297,23 +304,20 @@
         
       
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -335,6 +339,42 @@
     
       
       
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
     
   
   
@@ -345,7 +385,6 @@
   
   
   
-  
 
 
 
@@ -353,10 +392,10 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css" integrity="sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=" />
 
 
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+<script src="/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js" integrity="sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF&#43;uBQUK0m0EqPO&#43;U="></script>
 
 
 <script>window.hbb.pagefind = {"baseUrl":"/"};</script>
@@ -430,8 +469,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -514,8 +553,8 @@
         <a
           class="nav-link "
           
-          href="/papers/"
-        >Work</a
+          href="/publications/"
+        >Publications</a
         >
       </li>
       
@@ -642,6 +681,14 @@
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/accessible-frugality-barcelona-trash-collection-data-20250201/"
+    
+  >Accesibble Frugality: Barcelona Trastos Data
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/post/playing-with-colors-20241222/"
     
   >Playing with colors
@@ -672,14 +719,6 @@
           </ul>
   
               
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/template-19960725/"
-    
-  >Lorem is Ipsum
-    </a>
-              
             </li></ul>
       </div></li>
         <li class=""><a
@@ -692,7 +731,7 @@
         <li class=""><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/"
+    href="/publications/"
     
   >Publications
         <span data-hb-sidebar-toggle>
@@ -702,7 +741,7 @@
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-6/"
+    href="/publications/journal-article-6/"
     
   >Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon
     </a>
@@ -710,7 +749,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-5/"
+    href="/publications/journal-article-5/"
     
   >Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)
     </a>
@@ -718,7 +757,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-4/"
+    href="/publications/journal-article-4/"
     
   >Quantifying the effect of human population mobility on malaria risk in the Peruvian Amazon
     </a>
@@ -726,7 +765,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-3/"
+    href="/publications/journal-article-3/"
     
   >The study introduces an open-source, 3D-printable GPS tracker to monitor human movement and its influence on malaria epidemiology in river networks. Tested in the Peruvian Amazon, it provides insights into mobility patterns critical for malaria control strategies.
     </a>
@@ -734,7 +773,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-2/"
+    href="/publications/journal-article-2/"
     
   >Use of open mobile mapping tool to assess human mobility traceability in rural offline populations with contrasting malaria dynamics
     </a>
@@ -742,7 +781,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-1/"
+    href="/publications/journal-article-1/"
     
   >High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery
     </a>
@@ -922,7 +961,7 @@
 <p>Can I process unstructured chat data containing multiple types of data? Yeah. Can I explain to you how I did it?</p>
 <p>Uh, kind of? Let me open the code I did 8 years ago.</p>
 <img src="./trend_cost_gdkp_items.jpg" alt="WoW plot">
-<figcaption>Figure 3. Price evolution in GDKPs for two items in World of Warcraft: Classic. Servers were selected for the US realm of Pagle, PvE, Alliance side from the list available at the “GDKP/SR Weekly Calendar” from the PPNN and compiled by @Polyadic. Only items sold are considered. Original dataset contains 316 unique items and 10,747 data points. </figcaption>
+<figcaption>Figure 3. Price evolution in GDKPs for two items in the game "World of Warcraft: Classic". Discord Servers were selected for the US realm of Pagle, PvE, Alliance side from the list available at the “GDKP/SR Weekly Calendar” from the PPNN and compiled by @Polyadic. Only items sold are considered. Original dataset contains 316 unique items and 10,747 data points. </figcaption>
 <p>This &ldquo;personal&rdquo; website is one of those &ldquo;personal projects&rdquo; that at some point existed, got abandoned, and had to be rebuilt over and over again, due to a lack of maintenance.</p>
 <p>I took the <code>jruizcabrejos</code> &rsquo;nickname&rsquo; around 2015, and bought the .com domain at some point in 2018, shortly after having the talk with my supervisor about which &lsquo;scholar/academic&rsquo; name should I choose for my (first) publication(s).</p>
 <p>It is almost like choosing an appropriate username for a MMORPG videogame. Would you rather be known as the level 50 Warrior named <code>Save</code>? (one word, simple, elegant) Or as the level 50 Warrior known as <code>XxAnimeManga01xX</code>? (many words, unhinged, based).</p>
@@ -996,7 +1035,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;text=Hello&#43;World%2C&#43;I&#43;guess"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;text=Hello&#43;World%2C&#43;I&#43;guess"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1014,7 +1053,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;t=Hello&#43;World%2C&#43;I&#43;guess"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;t=Hello&#43;World%2C&#43;I&#43;guess"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1034,7 +1073,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Hello%20World%2C%20I%20guess&amp;body=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F"
+    href="mailto:?subject=Hello%20World%2C%20I%20guess&amp;body=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1052,7 +1091,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;title=Hello&#43;World%2C&#43;I&#43;guess"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;title=Hello&#43;World%2C&#43;I&#43;guess"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1070,7 +1109,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Hello&#43;World%2C&#43;I&#43;guess%20http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F"
+    href="whatsapp://send?text=Hello&#43;World%2C&#43;I&#43;guess%20https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1120,7 +1159,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:4321/" class="no-underline">
+      <a href="https://jruizcabrejos.com/" class="no-underline">
       </a>
     </div>
     
@@ -1268,23 +1307,6 @@
     </div>
     <div class="">
       
-        <a class="group flex text-right no-underline" href="/post/template-19960725/">
-          <span class="flex flex-col">
-            <span
-              class="mt-[0.1rem] leading-6 group-hover:underline group-hover:decoration-primary-500"
-            >Lorem is Ipsum</span
-            >
-            <span class="mt-[0.1rem] text-xs text-neutral-500 dark:text-neutral-400">
-              
-                Jul 25, 1996
-              
-            </span>
-          </span>
-          <span
-            class="mt-[-0.3rem] ms-2 text-neutral-700 transition-transform group-hover:-translate-x-[2px] group-hover:text-primary-600 dark:text-neutral dark:group-hover:text-primary-400"
-          ><span class="ltr:inline">&rarr;</span></span>
-        </a>
-      
     </div>
   </div>
 </div>
@@ -1358,7 +1380,7 @@
 
   
   <p class="powered-by text-center">
-    © 2024 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2025 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 

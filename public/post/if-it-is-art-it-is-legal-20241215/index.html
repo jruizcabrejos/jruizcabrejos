@@ -1,9 +1,9 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: December 23, 2024 --><html lang="en-us" dir="ltr"
+<!-- Last Published: April 10, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -41,10 +41,10 @@
   
     
   
-  <meta name="description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preseveration." />
+  <meta name="description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preservation." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/" />
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -161,7 +200,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
 
-  <link rel="canonical" href="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/" />
+  <link rel="canonical" href="https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/" />
 
   
   
@@ -186,10 +225,10 @@
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
   <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
-  <meta property="og:url" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/" />
+  <meta property="og:url" content="https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/" />
   <meta property="og:title" content="If it is art, it is fair use | Jorge Ruiz-Cabrejos" />
-  <meta property="og:description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preseveration." /><meta property="og:image" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/featured.jpg" />
-    <meta property="twitter:image" content="http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Street art from a game rated E for everyone. Data scrapping with RSelenium, data gaps and art preservation." /><meta property="og:image" content="https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/featured.jpg" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -245,38 +284,6 @@
   
   
   
-    
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
-    
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
-  
   
     
       
@@ -297,23 +304,20 @@
         
       
     
-      
-      
-        
-        
-          
-        
-          
-        
-          
-        
-          
-        
-          
-        
-        
-        
-      
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
     
       
       
@@ -335,6 +339,42 @@
     
       
       
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
     
   
   
@@ -345,7 +385,6 @@
   
   
   
-  
 
 
 
@@ -353,10 +392,10 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
+<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css" integrity="sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=" />
 
 
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
+<script src="/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js" integrity="sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF&#43;uBQUK0m0EqPO&#43;U="></script>
 
 
 <script>window.hbb.pagefind = {"baseUrl":"/"};</script>
@@ -430,8 +469,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -514,8 +553,8 @@
         <a
           class="nav-link "
           
-          href="/papers/"
-        >Work</a
+          href="/publications/"
+        >Publications</a
         >
       </li>
       
@@ -642,6 +681,14 @@
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
+    href="/post/accessible-frugality-barcelona-trash-collection-data-20250201/"
+    
+  >Accesibble Frugality: Barcelona Trastos Data
+    </a>
+              
+            </li><li class="flex flex-col "><a
+    class="hb-sidebar-custom-link
+      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
     href="/post/playing-with-colors-20241222/"
     
   >Playing with colors
@@ -672,14 +719,6 @@
   >Hello World, I guess
     </a>
               
-            </li><li class="flex flex-col "><a
-    class="hb-sidebar-custom-link
-      text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/post/template-19960725/"
-    
-  >Lorem is Ipsum
-    </a>
-              
             </li></ul>
       </div></li>
         <li class=""><a
@@ -692,7 +731,7 @@
         <li class=""><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/"
+    href="/publications/"
     
   >Publications
         <span data-hb-sidebar-toggle>
@@ -702,7 +741,7 @@
         <ul class="hb-sidebar-list"><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-6/"
+    href="/publications/journal-article-6/"
     
   >Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon
     </a>
@@ -710,7 +749,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-5/"
+    href="/publications/journal-article-5/"
     
   >Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)
     </a>
@@ -718,7 +757,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-4/"
+    href="/publications/journal-article-4/"
     
   >Quantifying the effect of human population mobility on malaria risk in the Peruvian Amazon
     </a>
@@ -726,7 +765,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-3/"
+    href="/publications/journal-article-3/"
     
   >The study introduces an open-source, 3D-printable GPS tracker to monitor human movement and its influence on malaria epidemiology in river networks. Tested in the Peruvian Amazon, it provides insights into mobility patterns critical for malaria control strategies.
     </a>
@@ -734,7 +773,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-2/"
+    href="/publications/journal-article-2/"
     
   >Use of open mobile mapping tool to assess human mobility traceability in rural offline populations with contrasting malaria dynamics
     </a>
@@ -742,7 +781,7 @@
             </li><li class="flex flex-col "><a
     class="hb-sidebar-custom-link
       text-gray-500 hover:bg-gray-100 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-primary-800 dark:hover:text-gray-50"
-    href="/papers/journal-article-1/"
+    href="/publications/journal-article-1/"
     
   >High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery
     </a>
@@ -806,9 +845,6 @@
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#art-preservation-data-preservation">Art preservation, data preservation</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
-        <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#author-correction">Author Correction</a>
-      </li>
-      <li class="my-2 scroll-my-6 scroll-py-6">
         <a class="pl-4 rtl:pr-4 inline-block text-gray-500 hover:text-gray-900 dark:text-gray-400 dark:hover:text-gray-300 w-full break-words" href="#references">References</a>
       </li>
       <li class="my-2 scroll-my-6 scroll-py-6">
@@ -865,7 +901,7 @@
         
         <span class="mx-1">·</span>
         <span class="mx-1">
-          9 min read
+          10 min read
         </span>
         
         </div>
@@ -912,8 +948,8 @@
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
         <h3 id="prelude">Prelude</h3>
 <p>A week ago, if you had asked me what I&rsquo;d be writing about, &ldquo;art&rdquo; wouldn&rsquo;t be on my list.</p>
-<p>If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from <a href="https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura" target="_blank" rel="noopener">ENDESA website</a>), or maybe vent about <a href="https://en.wikipedia.org/wiki/List_of_territorial_disputes" target="_blank" rel="noopener"><em>undefined</em> geopolitical areas</a> and how they can cause issues when plotting them on a map.</p>
-<p>But before I start talking about art, data gaps, and by-passing Google Authentication as a &ldquo;robot&rdquo;, there is something else I want to mention first:
+<p>If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from <a href="https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura" target="_blank" rel="noopener">ENDESA website</a>), or maybe vent about <a href="https://en.wikipedia.org/wiki/List_of_territorial_disputes" target="_blank" rel="noopener"><em>undefined</em> geopolitical areas</a> and how they keep causing me issues anytime I am plotting stuff on maps.</p>
+<p>But before I start talking about by-passing Google Authentication as a &ldquo;robot&rdquo; and data gaps, there is something else I want to mention first:
 <img src="./icon.png" alt="Favicon"></p>
 <figcaption>Figure 1. Favicon for this website. Self-made. </figcaption>
 <p>My favicon (that little icon you see on your browser) for this website was inspired by the workshop <a href="https://art-from-code.netlify.app/" target="_blank" rel="noopener">ART FROM CODE from Danielle Navarro</a>, a course on computer-generated artwork using R which has its entire course material <a href="https://github.com/rstudio-conf-2022/art-from-code" target="_blank" rel="noopener">posted online</a>.</p>
@@ -921,17 +957,35 @@
 <p>I expect to come back and iterate on this icon (favicon) in the future, which is why I have made a <a href="https://github.com/jruizcabrejos/website_icon" target="_blank" rel="noopener">Github Repo</a> to track its change.</p>
 <h3 id="data-scrapping">Data scrapping</h3>
 <p>A lot of the work I have been doing lately as part of my doctoral studies involves downloading and processing data from a vast selection of (mostly publicly available) sources.</p>
-<p>This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. Needless to say, I usually don&rsquo;t do that myself and instead I set-up a script to automate the process for me.</p>
+<p>This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for.</p>
+<p>Epidemiological reports can be monthly, sometimes weekly, with no consistency whatsoever on how or where the data is presented.</p>
+<p>Needless to say, I usually don&rsquo;t do that myself and instead I set-up a script to automate the process for me.</p>
 <p>Since I primarily use &ldquo;R&rdquo;, I rely on RSelenium to do my bidding, which is the R implementation of <a href="https://www.selenium.dev/" target="_blank" rel="noopener">Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation</a> and more often than not, used for &lsquo;web scrapping&rsquo;.</p>
-<p>Whenever you open a browser using RSelenium, your browser will be labeled as a &ldquo;robot&rdquo; browser.</p>
+<p>In a couple lines of codes, you can open a browser (Chrome, Firefox, Opera, etc.) that you can manage through R.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## RSelenium - Web navigation and manipulation</span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">requireNamespace</span><span class="p">(</span><span class="s">&#34;RSelenium&#34;</span><span class="p">,</span> <span class="n">quietly</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;RSelenium&#34;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="nf">library</span><span class="p">(</span><span class="s">&#34;RSelenium&#34;</span><span class="p">,</span> <span class="n">character.only</span> <span class="o">=</span> <span class="kc">TRUE</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Start driver</span>
+</span></span><span class="line"><span class="cl"><span class="n">rD</span> <span class="o">&lt;-</span> <span class="nf">rsDriver</span><span class="p">(</span><span class="n">port</span><span class="o">=</span> <span class="nf">sample</span><span class="p">(</span><span class="m">7600</span><span class="p">)</span><span class="n">[1]</span><span class="p">,</span> <span class="n">browser</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;firefox&#34;</span><span class="p">),</span>
+</span></span><span class="line"><span class="cl">               <span class="n">chromever</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="n">check</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">               <span class="n">verbose</span> <span class="o">=</span> <span class="kc">FALSE</span>
+</span></span><span class="line"><span class="cl"><span class="p">)</span>
+</span></span><span class="line"><span class="cl"><span class="n">remDr</span> <span class="o">&lt;-</span> <span class="n">rD</span><span class="o">$</span><span class="n">client</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">## Example: Navigate to Google</span>
+</span></span><span class="line"><span class="cl"><span class="n">url</span> <span class="o">&lt;-</span> <span class="s">&#34;google.com&#34;</span>
+</span></span><span class="line"><span class="cl"><span class="n">remDr</span><span class="o">$</span><span class="nf">navigate</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+</span></span></code></pre></div><p>Whenever you open a browser using RSelenium, your browser will be labeled as a &ldquo;robot&rdquo; browser.</p>
 <img src="./firefox_robot_scrapper.png" alt="Favicon">
-<figcaption>Figure 2. Robot browser indication in Firefox while using RSelenium for automated scraping tasks.</figcaption>
-<p>This can sometimes be an <em>issue</em>. Since a &ldquo;robot&rdquo; browser doesn&rsquo;t<sup>(and maybe should not?)</sup>have  the same permissions as organic users, websites may block it.</p>
-<p><em>(&ldquo;organic&rdquo; as in, non-automated.)</em></p>
-<p>For example. if a website requires an user to log in using a Google Account, the website won&rsquo;t let you do this from a &ldquo;robot&rdquo; browser. &ldquo;Robots&rdquo; do not have Google accounts after all.</p>
+<figcaption>Figure 2. Robot browser icon in Firefox while using RSelenium.</figcaption>
+<p>This can sometimes be an <em>issue</em>. Since a &ldquo;robot&rdquo; browser doesn&rsquo;t<sup>(and maybe should not?)</sup>have the same permissions as non-automated users, some websites may block it.</p>
+<p>For example. if a website requires an user to log in using a Google Account, the website won&rsquo;t let you do this from a &ldquo;robot&rdquo; browser.</p>
+<p>&ldquo;Robots&rdquo; do not have Google accounts after all.</p>
 <img src="./google_auth.png" alt="Favicon">
 <figcaption>Figure 3. What if you wanted data, but God said "Please log in using your Google Account". <br> A) Google Account Sign In pop-up <br>B) Error message when logging from a "robot" browser.</figcaption>
-<p>If for some reason you needed to workaround this limitation, you could do so by creating a <code>profile</code> in your (&ldquo;non-robotic&rdquo;) browser, and logging to your desired website with your Google Account while your <code>profile</code> is enabled.</p>
+<p>If for some reason you needed to workaround this limitation, you could do so by creating a <code>profile</code> in your (&ldquo;non-robotic&rdquo;) browser, and logging in to the website you want to access while your <code>profile</code> is enabled.</p>
 <p>By doing this, you make your <code>profile</code> &lsquo;remember you&rsquo; (and your credentials), and the next time you use your <code>profile</code> from other devices or browsers, it will &lsquo;remember you&rsquo; and not ask for credentials again.</p>
 <p>We can pass this <code>profile</code> as an argument for the function <code>rsDriver()</code> when initiating your &ldquo;robot&rdquo; browser with Rselenium.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1"># Setup profile to bypass Google Auth</span>
@@ -957,7 +1011,7 @@
 </span></span><span class="line"><span class="cl"><span class="n">rD</span> <span class="o">&lt;-</span> <span class="nf">rsDriver</span><span class="p">(</span><span class="n">port</span><span class="o">=</span> <span class="nf">sample</span><span class="p">(</span><span class="m">7600</span><span class="p">)</span><span class="n">[1]</span><span class="p">,</span> <span class="n">browser</span><span class="o">=</span><span class="nf">c</span><span class="p">(</span><span class="s">&#34;firefox&#34;</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">               <span class="n">chromever</span> <span class="o">=</span> <span class="kc">NULL</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">               <span class="n">check</span> <span class="o">=</span> <span class="bp">F</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl">               <span class="n">extraCapabilities</span> <span class="o">=</span> <span class="n">firefox_profile</span><span class="p">,</span> 
+</span></span><span class="line"><span class="cl">               <span class="n">extraCapabilities</span> <span class="o">=</span> <span class="n">firefox_profile</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">               <span class="n">verbose</span> <span class="o">=</span> <span class="kc">FALSE</span>
 </span></span><span class="line"><span class="cl"><span class="p">)</span>
 </span></span><span class="line"><span class="cl">
@@ -970,11 +1024,11 @@
 <p>We live on a time of simultaneously having unprecedented amounts of data available, and yet somehow not enough data to answer some very serious (and urgent) questions.</p>
 <p>There is a &lsquo;gap&rsquo; between the data that exists out there, and the data we can (really) use.</p>
 <p>Sometimes this &lsquo;gap&rsquo; is the result of systems not equipped to register the data. They simply lack the capacity to do so.</p>
-<p>An example of this are health systems and (their lack of) mortality data, which you can read more about in the comment published in BMJ <a href="https://www.bmj.com/content/385/bmj.q1052" target="_blank" rel="noopener">&lsquo;A lack of quality statistics is hiding the real heatwave death toll&rsquo;</a> by Shetty D.</p>
+<p>The data could be registered, but it isn&rsquo;t detailed or of enough quality to tackle more specific subjects. You can read an example about it in the comment published in BMJ <a href="https://www.bmj.com/content/385/bmj.q1052" target="_blank" rel="noopener">&lsquo;A lack of quality statistics is hiding the real heatwave death toll&rsquo;</a> by Shetty D.</p>
 <p>Dysfunctional systems are unable to register data, and if they do, it is incomplete or not accurate.</p>
 <img src="./health_system_peru.jpg" alt="Favicon">
 <figcaption>Figure 5. The peruvian health system, commonly referred as a fragmented and segmented system. From Carrillo-Larco, Rodrigo M. et al. 2022</figcaption>
-<p>In other cases, the &lsquo;gap&rsquo; is the result of data that cannot be used because of individual privacy, ethical aspects  or legal issues.</p>
+<p>In other cases, the &lsquo;gap&rsquo; is the result of data that cannot be used because of individual privacy, ethical aspects or legal issues.</p>
 <p>The data &rsquo;exists&rsquo;, but we cannot use it (and for good reason).</p>
 <p>The comment <a href="https://www.nature.com/articles/s41597-024-02982-1" target="_blank" rel="noopener">&lsquo;Who owns (or controls) health data?&rsquo;</a> published in Scientific Data by Kahn, S.D. describes the ongoing debate on who (should?) control secondary use of health data, as well as the issues surrounding its ownership, which has historically been controlled by institutions and is nowadays shifting towards individuals.</p>
 <p>One can overcome some of these &lsquo;gaps&rsquo; by developing new methods of analysis and leverage what little <em>imperfect</em> data you might have. Continuing with the example of mortality data, the article published in Lancet Regional Health Europe  <a href="https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762%2823%2900198-9/fulltext" target="_blank" rel="noopener">&lsquo;The effect of temporal data aggregation to assess the impact of changing temperatures in Europe: an epidemiological modelling study&rsquo;</a> by Ballester, J. does precisely that by demonstrating you can use weekly data, instead of daily data, to obtain similar estimations of heat and cold related mortality.</p>
@@ -997,7 +1051,7 @@
 <h3 id="art-preservation-data-preservation">Art preservation, data preservation</h3>
 <p>As someone who hoards data and is kept awake at night by <a href="https://www.youtube.com/watch?v=vwVFzY8XqIo" target="_blank" rel="noopener">the decay of Google Search and the expanding Internet Rot</a>, I love to preserve data in the form of websites and files that might one day disappear.</p>
 <p>But with graffiti I have encountered an apparent contradiction: Isn&rsquo;t it meant to be &rsquo;ephemeral&rsquo;? <a href="https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/" target="_blank" rel="noopener">You do not posses it, nor own it.</a></p>
-<p>So, is it ok to preserve that which was not meant to be preserved?</p>
+<p>So, is it ok to preserve that which was not meant to be preserved? Would the authors be ok with it?</p>
 <img src="./graffiti_seta.jpg" alt="Favicon">
 <figcaption>Figure 6. I see you, fungi man.</figcaption>
 <p>&lsquo;Pokemon Go&rsquo; is an &ldquo;augmented reality&rdquo; game you can play from your cellphone. The &lsquo;augmented&rsquo; and &lsquo;reality&rsquo; part of the game being that the game requires you to &lsquo;physically&rsquo; move towards objectives located on a map. You are forced to interact with your environment.</p>
@@ -1006,7 +1060,7 @@
 <figcaption>Figure 7. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.</figcaption>
 <p>For both of these games, the objectives or locations on a map are not points arbitrarily placed. They are called &ldquo;points of interest&rdquo; (POI&rsquo;s) and there is a <a href="https://niantic.helpshift.com/hc/en/21-wayfarer/faq/2770-eligibility-criteria/" target="_blank" rel="noopener">list of criteria</a> for what is considered a POI and what is not.</p>
 <p>Players submit proposals for new POI&rsquo;s, and the community votes and curates the proposals.</p>
-<p>This database of POI&rsquo;s build by the community is hosted on the platform called &lsquo;Niantic Wayfarer&rsquo; (in which the submission and voting process occur) and is owned by &lsquo;Niantic Labs&rsquo;, a company owned by &lsquo;Google&rsquo;, and producer of both &lsquo;Pokemon Go&rsquo; and &lsquo;Ingress&rsquo;.</p>
+<p>This database of POI&rsquo;s build by the community is hosted on the platform called &lsquo;Niantic Wayfarer&rsquo; (in which the submission and voting process occur) and is owned by &lsquo;Niantic Labs&rsquo;, a company previously owned by &lsquo;Google&rsquo;, and producer of both &lsquo;Pokemon Go&rsquo; and &lsquo;Ingress&rsquo;.</p>
 <p>Anything of cultural or artistic value falls under the category of &ldquo;POI&rdquo;, graffiti included.</p>
 <img src="./poi_examples.png" alt="Favicon">
 <figcaption>Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
@@ -1016,12 +1070,11 @@
 <p>Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that &lsquo;gatekeep&rsquo; the data?</p>
 <p>I do not have any answers, only more questions. But I also have 8,000 POI&rsquo;s coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.</p>
 <img src="./plot_map1.png" alt="Favicon">
-<figcaption>Figure 9. Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
+<figcaption>Figure 9. (Incomplete) Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
 <p>Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).</p>
 <p>Whether we&rsquo;re talking about scraping data for health research or preserving street art, the topics of accessibility, ethics, and ownership are present.</p>
 <p>As long as it is art we are talking about, in my opinion, everything is fair game and fair use.</p>
-<h3 id="author-correction">Author Correction</h3>
-<p>A week after posting this,I made <a href="https://github.com/jruizcabrejos/jruizcabrejos/commit/ef33fa66f3bc215fff4c20bf7e50391b28cdd643#diff-925f9d433a350d9955fe092afd3989796f41a99ddee9415255239947054a04f7" target="_blank" rel="noopener">some very minor changes</a> on some sentences.</p>
+<p>(The rabbits you saw at the beginning of this post are one of the many POI&rsquo;s within these games.)</p>
 <h3 id="references">References</h3>
 <ul>
 <li><a href="https://github.com/rstudio-conf-2022/art-from-code" target="_blank" rel="noopener">https://github.com/rstudio-conf-2022/art-from-code</a></li>
@@ -1079,7 +1132,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F&amp;text=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F&amp;text=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1097,7 +1150,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F&amp;t=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F&amp;t=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1117,7 +1170,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=If%20it%20is%20art%2C%20it%20is%20fair%20use&amp;body=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F"
+    href="mailto:?subject=If%20it%20is%20art%2C%20it%20is%20fair%20use&amp;body=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1135,7 +1188,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F&amp;title=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F&amp;title=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1153,7 +1206,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use%20http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F"
+    href="whatsapp://send?text=If&#43;it&#43;is&#43;art%2C&#43;it&#43;is&#43;fair&#43;use%20https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fif-it-is-art-it-is-legal-20241215%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1203,7 +1256,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:4321/" class="no-underline">
+      <a href="https://jruizcabrejos.com/" class="no-underline">
       </a>
     </div>
     
@@ -1441,7 +1494,7 @@
 
   
   <p class="powered-by text-center">
-    © 2024 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+    © 2025 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
   </p>
   
 

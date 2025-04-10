@@ -2,108 +2,108 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:4321/tags/data/</loc>
+    <loc>https://jruizcabrejos.com/post/accessible-frugality-barcelona-trash-collection-data-20250201/</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/tags/data/</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/tags/me/</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/post/</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/tags/</loc>
+    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/post/playing-with-colors-20241222/</loc>
     <lastmod>2024-12-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/me/</loc>
+    <loc>https://jruizcabrejos.com/tags/viz/</loc>
     <lastmod>2024-12-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/post/playing-with-colors-20241222/</loc>
-    <lastmod>2024-12-22T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:4321/post/</loc>
-    <lastmod>2024-12-22T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:4321/tags/</loc>
-    <lastmod>2024-12-22T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:4321/post/if-it-is-art-it-is-legal-20241215/</loc>
+    <loc>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</loc>
     <lastmod>2024-12-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/post/hello-world-i-guess-20241209/</loc>
+    <loc>https://jruizcabrejos.com/post/hello-world-i-guess-20241209/</loc>
     <lastmod>2024-12-08T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/viz/</loc>
-    <lastmod>2024-12-08T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:4321/projects/</loc>
+    <loc>https://jruizcabrejos.com/projects/</loc>
     <lastmod>2024-05-19T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/publication_types/article-journal/</loc>
+    <loc>https://jruizcabrejos.com/publication_types/article-journal/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/malaria/</loc>
+    <loc>https://jruizcabrejos.com/tags/malaria/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/journal-article-6/</loc>
+    <loc>https://jruizcabrejos.com/publications/journal-article-6/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/publication_types/</loc>
+    <loc>https://jruizcabrejos.com/publication_types/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/</loc>
+    <loc>https://jruizcabrejos.com/publications/</loc>
     <lastmod>2024-02-02T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/project/</loc>
+    <loc>https://jruizcabrejos.com/project/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/r-library/</loc>
+    <loc>https://jruizcabrejos.com/tags/r-library/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/project/pandas/</loc>
+    <loc>https://jruizcabrejos.com/project/pandas/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/world-of-warcraft/</loc>
+    <loc>https://jruizcabrejos.com/tags/world-of-warcraft/</loc>
     <lastmod>2024-01-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/journal-article-5/</loc>
+    <loc>https://jruizcabrejos.com/publications/journal-article-5/</loc>
     <lastmod>2022-12-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/tags/covid/</loc>
+    <loc>https://jruizcabrejos.com/tags/covid/</loc>
     <lastmod>2022-12-07T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/</loc>
+    <loc>https://jruizcabrejos.com/</loc>
     <lastmod>2022-10-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/journal-article-4/</loc>
+    <loc>https://jruizcabrejos.com/publications/journal-article-4/</loc>
     <lastmod>2022-07-20T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/journal-article-3/</loc>
+    <loc>https://jruizcabrejos.com/publications/journal-article-3/</loc>
     <lastmod>2020-09-24T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/journal-article-2/</loc>
+    <loc>https://jruizcabrejos.com/publications/journal-article-2/</loc>
     <lastmod>2019-01-22T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>http://localhost:4321/papers/journal-article-1/</loc>
+    <loc>https://jruizcabrejos.com/publications/journal-article-1/</loc>
     <lastmod>2019-01-17T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>http://localhost:4321/post/template-19960725/</loc>
-    <lastmod>1996-07-25T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>
