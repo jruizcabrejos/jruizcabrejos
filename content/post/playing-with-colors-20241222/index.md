@@ -10,7 +10,7 @@ tags:
 - Me
 - Data
 - Viz
-title: "Playing with colors"
+title: "Playing with colors in R"
 ---
 
 ## Grey (not the serie)
