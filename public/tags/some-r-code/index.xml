@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Some R Code | Jorge Ruiz-Cabrejos</title>
+    <link>https://jruizcabrejos.com/tags/some-r-code/</link>
+      <atom:link href="https://jruizcabrejos.com/tags/some-r-code/index.xml" rel="self" type="application/rss+xml" />
+    <description>Some R Code</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sun, 15 Dec 2024 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
+      <title>Some R Code</title>
+      <link>https://jruizcabrejos.com/tags/some-r-code/</link>
+    </image>
+    
+    <item>
+      <title>If it is art, it is fair use</title>
+      <link>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</link>
+      <pubDate>Sun, 15 Dec 2024 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/post/if-it-is-art-it-is-legal-20241215/</guid>
+      <description>&lt;h3 id=&#34;prelude&#34;&gt;Prelude&lt;/h3&gt;
+&lt;p&gt;A week ago, if you had asked me what I&amp;rsquo;d be writing about, &amp;ldquo;art&amp;rdquo; wouldn&amp;rsquo;t be on my list.&lt;/p&gt;
+&lt;p&gt;If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from &lt;a href=&#34;https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ENDESA website&lt;/a&gt;), or maybe vent about &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_territorial_disputes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;undefined&lt;/em&gt; geopolitical areas&lt;/a&gt; and how they keep causing me issues anytime I am plotting stuff on maps.&lt;/p&gt;
+&lt;p&gt;But before I start talking about by-passing Google Authentication as a &amp;ldquo;robot&amp;rdquo; and data gaps, there is something else I want to mention first:
+&lt;img src=&#34;./icon.png&#34; alt=&#34;Favicon&#34;&gt;&lt;/p&gt;
+&lt;figcaption&gt;Figure 1. Favicon for this website. Self-made. &lt;/figcaption&gt;
+&lt;p&gt;My favicon (that little icon you see on your browser) for this website was inspired by the workshop &lt;a href=&#34;https://art-from-code.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ART FROM CODE from Danielle Navarro&lt;/a&gt;, a course on computer-generated artwork using R which has its entire course material &lt;a href=&#34;https://github.com/rstudio-conf-2022/art-from-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posted online&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Mind you, what I produced is the result of 10 minutes of work and reading. Which is nothing compared to the 10+ hours the entire course is supposed to take.&lt;/p&gt;
+&lt;p&gt;I expect to come back and iterate on this icon (favicon) in the future, which is why I have made a &lt;a href=&#34;https://github.com/jruizcabrejos/website_icon&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Github Repo&lt;/a&gt; to track its change.&lt;/p&gt;
+&lt;h3 id=&#34;data-scrapping&#34;&gt;Data scrapping&lt;/h3&gt;
+&lt;p&gt;A lot of the work I have been doing lately as part of my doctoral studies involves downloading and processing data from a vast selection of (mostly publicly available) sources.&lt;/p&gt;
+&lt;p&gt;This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for.&lt;/p&gt;
+&lt;p&gt;Epidemiological reports can be monthly, sometimes weekly, with no consistency whatsoever on how or where the data is presented.&lt;/p&gt;
+&lt;p&gt;Needless to say, I usually don&amp;rsquo;t do that myself and instead I set-up a script to automate the process for me.&lt;/p&gt;
+&lt;p&gt;Since I primarily use &amp;ldquo;R&amp;rdquo;, I rely on RSelenium to do my bidding, which is the R implementation of &lt;a href=&#34;https://www.selenium.dev/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation&lt;/a&gt; and more often than not, used for &amp;lsquo;web scrapping&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;In a couple lines of codes, you can open a browser (Chrome, Firefox, Opera, etc.) that you can manage through R.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## RSelenium - Web navigation and manipulation&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;kr&#34;&gt;if&lt;/span&gt; &lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;!&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;requireNamespace&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;RSelenium&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;quietly&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;))&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;install.packages&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;RSelenium&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;nf&#34;&gt;library&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;RSelenium&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;character.only&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;TRUE&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Start driver&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rsDriver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7600&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;[1]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;browser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;firefox&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;chromever&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;verbose&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remDr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Example: Navigate to Google&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;google.com&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remDr&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;navigate&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;url&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;Whenever you open a browser using RSelenium, your browser will be labeled as a &amp;ldquo;robot&amp;rdquo; browser.&lt;/p&gt;
+&lt;img src=&#34;./firefox_robot_scrapper.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 2. Robot browser icon in Firefox while using RSelenium.&lt;/figcaption&gt;
+&lt;p&gt;This can sometimes be an &lt;em&gt;issue&lt;/em&gt;. Since a &amp;ldquo;robot&amp;rdquo; browser doesn&amp;rsquo;t&lt;sup&gt;(and maybe should not?)&lt;/sup&gt;have the same permissions as non-automated users, some websites may block it.&lt;/p&gt;
+&lt;p&gt;For example. if a website requires an user to log in using a Google Account, the website won&amp;rsquo;t let you do this from a &amp;ldquo;robot&amp;rdquo; browser.&lt;/p&gt;
+&lt;p&gt;&amp;ldquo;Robots&amp;rdquo; do not have Google accounts after all.&lt;/p&gt;
+&lt;img src=&#34;./google_auth.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 3. What if you wanted data, but God said &#34;Please log in using your Google Account&#34;. &lt;br&gt; A) Google Account Sign In pop-up &lt;br&gt;B) Error message when logging from a &#34;robot&#34; browser.&lt;/figcaption&gt;
+&lt;p&gt;If for some reason you needed to workaround this limitation, you could do so by creating a &lt;code&gt;profile&lt;/code&gt; in your (&amp;ldquo;non-robotic&amp;rdquo;) browser, and logging in to the website you want to access while your &lt;code&gt;profile&lt;/code&gt; is enabled.&lt;/p&gt;
+&lt;p&gt;By doing this, you make your &lt;code&gt;profile&lt;/code&gt; &amp;lsquo;remember you&amp;rsquo; (and your credentials), and the next time you use your &lt;code&gt;profile&lt;/code&gt; from other devices or browsers, it will &amp;lsquo;remember you&amp;rsquo; and not ask for credentials again.&lt;/p&gt;
+&lt;p&gt;We can pass this &lt;code&gt;profile&lt;/code&gt; as an argument for the function &lt;code&gt;rsDriver()&lt;/code&gt; when initiating your &amp;ldquo;robot&amp;rdquo; browser with Rselenium.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Setup profile to bypass Google Auth&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Enter &amp;#39;about:profiles&amp;#39; on your browser to find your profile path.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Replace USERNAME and xxxxxxxx with your data.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;profile_path&lt;/span&gt;  &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;s&#34;&gt;&amp;#34;C:\\Users\\USERNAME\\AppData\\Roaming\\Mozilla\\Firefox\\Profiles\\xxxxxxxx.default-release&amp;#34;&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Setup profile config&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;firefox_profile&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;n&#34;&gt;`moz:firefoxOptions`&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;    &lt;span class=&#34;n&#34;&gt;args&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;list&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;--profile&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;profile_path&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# Start RSelenium Driver&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## The extraCapabilities argument is what sets the profile up.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Everything else are arguments I personally need to be able to run my own RSelenium.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## i.e. What argument you use might change depending on your own computer requirements.&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;rD&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rsDriver&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;port&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;sample&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;m&#34;&gt;7600&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;[1]&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;browser&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;=&lt;/span&gt;&lt;span class=&#34;nf&#34;&gt;c&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;s&#34;&gt;&amp;#34;firefox&amp;#34;&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;),&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;chromever&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;NULL&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;check&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;bp&#34;&gt;F&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;extraCapabilities&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;firefox_profile&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;,&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;               &lt;span class=&#34;n&#34;&gt;verbose&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;=&lt;/span&gt; &lt;span class=&#34;kc&#34;&gt;FALSE&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;remDr&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;n&#34;&gt;rD&lt;/span&gt;&lt;span class=&#34;o&#34;&gt;$&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;client&lt;/span&gt;
+&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;And now this &amp;ldquo;robot&amp;rdquo; could in theory use your ID and be able to impersonate you with your Google Account.&lt;/p&gt;
+&lt;img src=&#34;./captcha.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 4. You are not a robot.&lt;/figcaption&gt;
+&lt;p&gt;I don&amp;rsquo;t know why would someone need this, but might prove useful one day. Just make sure you always follow the websites terms of service.&lt;/p&gt;
+&lt;h3 id=&#34;health-data-gaps&#34;&gt;Health data gaps&lt;/h3&gt;
+&lt;p&gt;We live on a time of simultaneously having unprecedented amounts of data available, and yet somehow not enough data to answer some very serious (and urgent) questions.&lt;/p&gt;
+&lt;p&gt;There is a &amp;lsquo;gap&amp;rsquo; between the data that exists out there, and the data we can (really) use.&lt;/p&gt;
+&lt;p&gt;Sometimes this &amp;lsquo;gap&amp;rsquo; is the result of systems not equipped to register the data. They simply lack the capacity to do so.&lt;/p&gt;
+&lt;p&gt;The data could be registered, but it isn&amp;rsquo;t detailed or of enough quality to tackle more specific subjects. You can read an example about it in the comment published in BMJ &lt;a href=&#34;https://www.bmj.com/content/385/bmj.q1052&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;lsquo;A lack of quality statistics is hiding the real heatwave death toll&amp;rsquo;&lt;/a&gt; by Shetty D.&lt;/p&gt;
+&lt;p&gt;Dysfunctional systems are unable to register data, and if they do, it is incomplete or not accurate.&lt;/p&gt;
+&lt;img src=&#34;./health_system_peru.jpg&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 5. The peruvian health system, commonly referred as a fragmented and segmented system. From Carrillo-Larco, Rodrigo M. et al. 2022&lt;/figcaption&gt;
+&lt;p&gt;In other cases, the &amp;lsquo;gap&amp;rsquo; is the result of data that cannot be used because of individual privacy, ethical aspects or legal issues.&lt;/p&gt;
+&lt;p&gt;The data &amp;rsquo;exists&amp;rsquo;, but we cannot use it (and for good reason).&lt;/p&gt;
+&lt;p&gt;The comment &lt;a href=&#34;https://www.nature.com/articles/s41597-024-02982-1&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;lsquo;Who owns (or controls) health data?&amp;rsquo;&lt;/a&gt; published in Scientific Data by Kahn, S.D. describes the ongoing debate on who (should?) control secondary use of health data, as well as the issues surrounding its ownership, which has historically been controlled by institutions and is nowadays shifting towards individuals.&lt;/p&gt;
+&lt;p&gt;One can overcome some of these &amp;lsquo;gaps&amp;rsquo; by developing new methods of analysis and leverage what little &lt;em&gt;imperfect&lt;/em&gt; data you might have. Continuing with the example of mortality data, the article published in Lancet Regional Health Europe  &lt;a href=&#34;https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762%2823%2900198-9/fulltext&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;lsquo;The effect of temporal data aggregation to assess the impact of changing temperatures in Europe: an epidemiological modelling study&amp;rsquo;&lt;/a&gt; by Ballester, J. does precisely that by demonstrating you can use weekly data, instead of daily data, to obtain similar estimations of heat and cold related mortality.&lt;/p&gt;
+&lt;p&gt;In other cases, you might be able to process the data yourself by giving structure to what is otherwise unstructured and disorganized information. An example of this is the article published in PLOS Global Public Health &lt;a href=&#34;https://journals.plos.org/globalpublichealth/article?id=10.1371/journal.pgph.0001083&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&amp;lsquo;The World Health Organization’s Disease Outbreak News: A retrospective database&amp;rsquo;&lt;/a&gt; by Carlson CJ., in which the authors developed an annotated database of the subjective and often inconsistent information the Word Health Organization publishes in their Disease Outbreak News (as bunch of .pdf files).&lt;/p&gt;
+&lt;p&gt;And while scraping data can help overcome some access hurdles, deeper systemic issues often limit the availability and usability of crucial data, particularly in public health, but in other fields as well.&lt;/p&gt;
+&lt;h3 id=&#34;gatekeeping-data&#34;&gt;Gatekeeping data&lt;/h3&gt;
+&lt;p&gt;I have been mostly talking about health data because that is what I work with most days.&lt;/p&gt;
+&lt;p&gt;But what about other types of &amp;lsquo;public data&amp;rsquo; (or files) that some institutions hold within them, like art?&lt;/p&gt;
+&lt;p&gt;Maybe out of ignorance, maybe due to technical limitations, but a lot of times data is not made available by policy and by design.&lt;/p&gt;
+&lt;p&gt;It could very easily be one (download) button away, but it is &amp;lsquo;kept away&amp;rsquo; on purpose, or barriers are put in place to make it difficult to access its contents.&lt;/p&gt;
+&lt;p&gt;The data might be obtainable, but it will be annoying to use.&lt;/p&gt;
+&lt;div class=&#34;flex px-4 py-3 mb-6 rounded-md bg-primary-100 dark:bg-primary-900&#34;&gt;
+&lt;span class=&#34;pr-3 pt-1 text-primary-600 dark:text-primary-300&#34;&gt;
+  &lt;svg height=&#34;24&#34; xmlns=&#34;http://www.w3.org/2000/svg&#34; viewBox=&#34;0 0 24 24&#34;&gt;&lt;path fill=&#34;none&#34; stroke=&#34;currentColor&#34; stroke-linecap=&#34;round&#34; stroke-linejoin=&#34;round&#34; stroke-width=&#34;1.5&#34; d=&#34;m11.25 11.25l.041-.02a.75.75 0 0 1 1.063.852l-.708 2.836a.75.75 0 0 0 1.063.853l.041-.021M21 12a9 9 0 1 1-18 0a9 9 0 0 1 18 0m-9-3.75h.008v.008H12z&#34;/&gt;&lt;/svg&gt;
+&lt;/span&gt;
+  &lt;span class=&#34;dark:text-neutral-300&#34;&gt;Urban dictionary top definition for &amp;ldquo;gatekeeping&amp;rdquo; is:&lt;br&gt;&lt;em&gt;&amp;ldquo;When someone takes it upon themselves to decide who does or does not have access or rights to a community or identity.&amp;quot;&lt;/br&gt;&lt;/em&gt;&lt;/span&gt;
+&lt;/div&gt;
+&lt;p&gt;I understand why this is the case with some information (like health), but what about urban art?&lt;/p&gt;
+&lt;p&gt;By definition art in the form of &lt;a href=&#34;https://journals.ap2.pt/index.php/sauc/article/view/15&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;street art should be by (and for) the general public&lt;/a&gt;.&lt;/p&gt;
+&lt;h3 id=&#34;art-preservation-data-preservation&#34;&gt;Art preservation, data preservation&lt;/h3&gt;
+&lt;p&gt;As someone who hoards data and is kept awake at night by &lt;a href=&#34;https://www.youtube.com/watch?v=vwVFzY8XqIo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;the decay of Google Search and the expanding Internet Rot&lt;/a&gt;, I love to preserve data in the form of websites and files that might one day disappear.&lt;/p&gt;
+&lt;p&gt;But with graffiti I have encountered an apparent contradiction: Isn&amp;rsquo;t it meant to be &amp;rsquo;ephemeral&amp;rsquo;? &lt;a href=&#34;https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;You do not posses it, nor own it.&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;So, is it ok to preserve that which was not meant to be preserved? Would the authors be ok with it?&lt;/p&gt;
+&lt;img src=&#34;./graffiti_seta.jpg&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 6. I see you, fungi man.&lt;/figcaption&gt;
+&lt;p&gt;&amp;lsquo;Pokemon Go&amp;rsquo; is an &amp;ldquo;augmented reality&amp;rdquo; game you can play from your cellphone. The &amp;lsquo;augmented&amp;rsquo; and &amp;lsquo;reality&amp;rsquo; part of the game being that the game requires you to &amp;lsquo;physically&amp;rsquo; move towards objectives located on a map. You are forced to interact with your environment.&lt;/p&gt;
+&lt;p&gt;&amp;lsquo;Ingress&amp;rsquo;, a game of the same nature but probably less well known when compared to the Pokemon franchise, was one of the pioneers &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_geolocation-based_video_games&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;(but not the first)&lt;/a&gt; to explore the concept of location-based games.&lt;/p&gt;
+&lt;img src=&#34;./pokego.jpg&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 7. Pokemon Go User Interface - Player, pokemons, pokestops and a park can be seen, among the different buildings and roads that make up this virtual map.&lt;/figcaption&gt;
+&lt;p&gt;For both of these games, the objectives or locations on a map are not points arbitrarily placed. They are called &amp;ldquo;points of interest&amp;rdquo; (POI&amp;rsquo;s) and there is a &lt;a href=&#34;https://niantic.helpshift.com/hc/en/21-wayfarer/faq/2770-eligibility-criteria/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;list of criteria&lt;/a&gt; for what is considered a POI and what is not.&lt;/p&gt;
+&lt;p&gt;Players submit proposals for new POI&amp;rsquo;s, and the community votes and curates the proposals.&lt;/p&gt;
+&lt;p&gt;This database of POI&amp;rsquo;s build by the community is hosted on the platform called &amp;lsquo;Niantic Wayfarer&amp;rsquo; (in which the submission and voting process occur) and is owned by &amp;lsquo;Niantic Labs&amp;rsquo;, a company previously owned by &amp;lsquo;Google&amp;rsquo;, and producer of both &amp;lsquo;Pokemon Go&amp;rsquo; and &amp;lsquo;Ingress&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;Anything of cultural or artistic value falls under the category of &amp;ldquo;POI&amp;rdquo;, graffiti included.&lt;/p&gt;
+&lt;img src=&#34;./poi_examples.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.&lt;/figcaption&gt;
+&lt;p&gt;There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games.&lt;/p&gt;
+&lt;p&gt;What can these graffiti tell us about the community, the city, and how they build their (virtual) space?&lt;/p&gt;
+&lt;p&gt;Would the authors of these POI&amp;rsquo;s with graffiti in them be ok with their creations being made as public and as accessible as possible?&lt;/p&gt;
+&lt;p&gt;Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that &amp;lsquo;gatekeep&amp;rsquo; the data?&lt;/p&gt;
+&lt;p&gt;I do not have any answers, only more questions. But I also have 8,000 POI&amp;rsquo;s coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.&lt;/p&gt;
+&lt;img src=&#34;./plot_map1.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 9. (Incomplete) Distribution of POI&#39;s across Barcelona from the game &#39;Ingress&#39;.&lt;/figcaption&gt;
+&lt;p&gt;Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).&lt;/p&gt;
+&lt;p&gt;Whether we&amp;rsquo;re talking about scraping data for health research or preserving street art, the topics of accessibility, ethics, and ownership are present.&lt;/p&gt;
+&lt;p&gt;As long as it is art we are talking about, in my opinion, everything is fair game and fair use.&lt;/p&gt;
+&lt;p&gt;(The rabbits you saw at the beginning of this post are one of the many POI&amp;rsquo;s within these games.)&lt;/p&gt;
+&lt;h3 id=&#34;references&#34;&gt;References&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/rstudio-conf-2022/art-from-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/rstudio-conf-2022/art-from-code&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://art-from-code.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://art-from-code.netlify.app/&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://github.com/jruizcabrejos/website_icon&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/jruizcabrejos/website_icon&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h4 id=&#34;footnote&#34;&gt;Footnote&lt;/h4&gt;
+&lt;p&gt;While downloading images of urban art for Barcelona, my code had a bug that I was not aware of.&lt;/p&gt;
+&lt;p&gt;I only discovered it after checking &amp;ldquo;Grafiti Los conejos traviesos&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;This song (&amp;ldquo;to vanish&amp;rdquo;?) seems appropriate for talking about ephemeral and temporary urban art.&lt;/p&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/3F4DZbvqEnI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+&lt;p&gt;Alternative footnote on robots is &lt;a href=&#34;https://www.youtube.com/watch?v=sqK-jh4TDXo&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -7,7 +7,7 @@ image:
   caption: 'Illustration by  サクヤ (x.com/7UU61): [**From ノウナイディスコ / IA [CeVIO AI] - By r-906**](https://www.youtube.com/watch?v=NMiQmumW0nI)'
 summary: 'Working with colors as data in R. Palettes, dominant color quantification and K-means.'
 tags:
-- Me
+- R code
 - Data
 - Viz
 title: "Playing with colors in R"

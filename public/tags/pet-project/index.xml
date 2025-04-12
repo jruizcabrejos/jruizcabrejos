@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Pet Project | Jorge Ruiz-Cabrejos</title>
+    <link>https://jruizcabrejos.com/tags/pet-project/</link>
+      <atom:link href="https://jruizcabrejos.com/tags/pet-project/index.xml" rel="self" type="application/rss+xml" />
+    <description>Pet Project</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Sat, 01 Feb 2025 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
+      <title>Pet Project</title>
+      <link>https://jruizcabrejos.com/tags/pet-project/</link>
+    </image>
+    
+    <item>
+      <title>Accesibble Frugality: Barcelona Trastos Data</title>
+      <link>https://jruizcabrejos.com/post/accessible-frugality-barcelona-trash-collection-data-20250201/</link>
+      <pubDate>Sat, 01 Feb 2025 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/post/accessible-frugality-barcelona-trash-collection-data-20250201/</guid>
+      <description>&lt;h3 id=&#34;intro&#34;&gt;Intro&lt;/h3&gt;
+&lt;p&gt;[Text goes here].&lt;/p&gt;
+&lt;p&gt;You are here early - For now, information is located at:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://github.com/jruizcabrejos/barcelona_trastos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://github.com/jruizcabrejos/barcelona_trastos&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;map&#34;&gt;Map&lt;/h3&gt;
+&lt;img src=&#34;./Barcelona_Basura_Muebles_Mapa_Dias_AEB.png&#34; alt=&#34;barcelona_map_trastos&#34;&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -6,6 +6,7 @@ image:
   caption: 'Panel from the webcomic Emmy the Robot by [**Dominic Cellini**](https://www.webtoons.com/en/canvas/emmy-the-robot/list?title_no=402201)'
 summary: 'This title is all but accessible. Mapping the calendar of furniture (trastos) collection from Barcelona Ajuntament website.'
 tags:
+- Pet project
 - Me
 - Data
 title: "Accesibble Frugality: Barcelona Trastos Data"
