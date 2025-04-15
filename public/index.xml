@@ -13,6 +13,53 @@
     </image>
     
     <item>
+      <title>Sci-Hub and its alternatives: How to access and download research papers for free</title>
+      <link>https://jruizcabrejos.com/post/scihub/</link>
+      <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/post/scihub/</guid>
+      <description>&lt;p&gt;&lt;strong&gt;[NOTE: This is a live WIP/Draft and subejct to a lot of changes]&lt;/strong&gt;&lt;/p&gt;
+&lt;h2 id=&#34;you-are-a-pirate&#34;&gt;You are a pirate&lt;/h2&gt;
+&lt;p&gt;It is no secret that Sci-Hub has been fundamental to the research process for thousands (perhaps millions?) of researchers.&lt;/p&gt;
+&lt;p&gt;Who is downloading pirated papers? Well, &lt;a href=&#34;https://www.science.org/doi/10.1126/science.352.6285.508&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;everyone&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;search-based-platforms&#34;&gt;Search based platforms&lt;/h2&gt;
+&lt;p&gt;Sci-hub/Anna&amp;rsquo;s Archive = Search platforms&lt;/p&gt;
+&lt;p&gt;Wosonhj / SmartQuantAi = Forum based requests&lt;/p&gt;
+&lt;p&gt;Nexus Bot = In the middle of both&lt;/p&gt;
+&lt;h3 id=&#34;sci-hub&#34;&gt;Sci-Hub&lt;/h3&gt;
+&lt;p&gt;Sci-hub was founded on XXX by Alexandra Elbakyan.&lt;/p&gt;
+&lt;p&gt;Despite the database not being up-to-date since 2021, it remains a foundational tool for any researcher. It is a household name that everyone has encountered at some point.&lt;/p&gt;
+&lt;h3 id=&#34;annas-archive&#34;&gt;Anna&amp;rsquo;s Archive&lt;/h3&gt;
+&lt;h2 id=&#34;points-based-platforms&#34;&gt;Points based platforms&lt;/h2&gt;
+&lt;h3 id=&#34;nexus-bot&#34;&gt;Nexus Bot&lt;/h3&gt;
+&lt;p&gt;here are 2 ways which you can access an article through Nexus&lt;/p&gt;
+&lt;p&gt;Using the Telegram bots - this is my primary choice as it fetches the articles using realtime institutional access&lt;/p&gt;
+&lt;p&gt;The STC website (updated on 22/02/2024 to libstcc website) - my secondary choice. If you see try a DOI and see this globe emoji, it means the article is available to be downloaded.&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/scihub/comments/13cms8m/how_to_use_nexus_bots_or_stc_to_download_the/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.reddit.com/r/scihub/comments/13cms8m/how_to_use_nexus_bots_or_stc_to_download_the/&lt;/a&gt;&lt;/p&gt;
+&lt;h3 id=&#34;wosonhj--smartquantai&#34;&gt;Wosonhj / SmartQuantAi&lt;/h3&gt;
+&lt;p&gt;Great forum, quick turn around:&lt;/p&gt;
+&lt;p&gt;&lt;a href=&#34;https://www.smartquantai.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.smartquantai.com/&lt;/a&gt;&lt;/p&gt;
+&lt;h2 id=&#34;state-of-the-art-sci-net&#34;&gt;State of the art: Sci-Net&lt;/h2&gt;
+&lt;p&gt;&lt;a href=&#34;https://sci-net.xyz/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://sci-net.xyz/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;The next sci-hub, same creator.&lt;/p&gt;
+&lt;p&gt;Currently invitation only&lt;/p&gt;
+&lt;img src=&#34;./scinet_main.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure X. Main screen of Sci-Net.&lt;/figcaption&gt;
+&lt;h2 id=&#34;words-of-caution&#34;&gt;Words of caution&lt;/h2&gt;
+&lt;img src=&#34;./laced_with_drugs.jpg&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure X. Your files could be laced with virus.&lt;/figcaption&gt;
+&lt;h2 id=&#34;footnote&#34;&gt;Footnote&lt;/h2&gt;
+
+
+    
+    &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/J0e9UiXbd5o?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &gt;&lt;/iframe&gt;
+    &lt;/div&gt;
+
+</description>
+    </item>
+    
+    <item>
       <title>Subverting and exploiting ChatGPT-like applications in a post-LLM world</title>
       <link>https://jruizcabrejos.com/post/subverting-and-exploiting-artificial-intelligence-20250410/</link>
       <pubDate>Thu, 10 Apr 2025 00:00:00 +0000</pubDate>
@@ -636,14 +683,6 @@
       <link>https://jruizcabrejos.com/publications/journal-article-1/</link>
       <pubDate>Thu, 17 Jan 2019 00:00:00 +0000</pubDate>
       <guid>https://jruizcabrejos.com/publications/journal-article-1/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Lorem is Ipsum</title>
-      <link>https://jruizcabrejos.com/post/template-19960725/</link>
-      <pubDate>Thu, 25 Jul 1996 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/post/template-19960725/</guid>
       <description></description>
     </item>
     

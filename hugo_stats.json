@@ -501,6 +501,7 @@
     "ids": [
       "about-me",
       "actually-its-hello-world",
+      "annas-archive",
       "art-preservation-data-preservation",
       "colors-in-r",
       "data-poisoning",
@@ -522,13 +523,17 @@
       "nav-menu",
       "nav-toggle",
       "news",
+      "nexus-bot",
       "page-bg",
       "playing-with-color-data-in-r",
+      "points-based-platforms",
       "prelude",
       "printhello-world",
       "profile",
       "references",
+      "sci-hub",
       "search",
+      "search-based-platforms",
       "search_toggle",
       "section-collection",
       "section-resume-biography-3",
@@ -539,9 +544,13 @@
       "share-link-x",
       "show-button",
       "site-header",
+      "state-of-the-art-sci-net",
       "sun",
       "top",
-      "why"
+      "why",
+      "words-of-caution",
+      "wosonhj--smartquantai",
+      "you-are-a-pirate"
     ]
   }
 }
