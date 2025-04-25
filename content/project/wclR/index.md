@@ -4,9 +4,8 @@ external_link: https://github.com/jruizcabrejos/wclR
 tags:
 - R Library
 - World of Warcraft
-title: wclR
+title: "wclR"
 ---
-
-Functions to interact with Warcraft Logs API from R.
+Author - Functions to interact with Warcraft Logs API from R.
 
 <!--more-->
