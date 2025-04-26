@@ -13,7 +13,7 @@
     </image>
     
     <item>
-      <title>Sci-Hub and its alternatives: How to access and download research papers for free</title>
+      <title>Colorful Open Access: A Hitchhiker&#39;s Tour of Free Libraries and Open Knowledge</title>
       <link>https://jruizcabrejos.com/post/scihub/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://jruizcabrejos.com/post/scihub/</guid>
@@ -21,9 +21,11 @@
 &lt;h2 id=&#34;you-are-a-pirate&#34;&gt;You are a pirate&lt;/h2&gt;
 &lt;p&gt;It doesn&amp;rsquo;t matter what education level, titles attained, or how far into your professional or academic career you are.&lt;/p&gt;
 &lt;p&gt;Knowingly, unknowingly, from a friend, or a colleague of a friend.&lt;/p&gt;
-&lt;p&gt;You have, most definitively, read an article, paper or book that is paywalled, but was obtained and shared from &lt;em&gt;unconventional&lt;/em&gt; methods.&lt;/p&gt;
-&lt;p&gt;[Resident Evil 4 Buhonero]&lt;/p&gt;
-&lt;p&gt;Here, I lay out these methods, the platforms, and other tools that have been, and are currently used, to access articles and books (as of April 2025).&lt;/p&gt;
+&lt;p&gt;You have, most definitively, read an article, paper or book that is behind a paywall and required a payment, but neither you nor the person who shared it with you paid for it.&lt;/p&gt;
+&lt;p&gt;It was obtained and shared from &lt;em&gt;unconventional&lt;/em&gt; methods.&lt;/p&gt;
+&lt;img src=&#34;./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 1. &#34;Got something that might interest ya!&#34; - Quote from the first time you meet The Buhonero&#39;s (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. &lt;/figcaption&gt;
+&lt;p&gt;Here, I lay out these methods, the platforms, and other tools that have been, and are currently used, to access articles and books (accurate as of May 2025).&lt;/p&gt;
 &lt;p&gt;This text is for educational and research purposes only, similarly to the many other articles talking about this topic in prestigious scientific journals such as Nature, Science, among others.&lt;/p&gt;
 &lt;p&gt;So, you need to access an article, or perhaps a book.&lt;/p&gt;
 &lt;p&gt;These are your options:&lt;/p&gt;
@@ -40,7 +42,8 @@
 &lt;ul&gt;
 &lt;li&gt;The DOI of the article&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;[Example figure]&lt;/p&gt;
+&lt;img src=&#34;./scihub_example_search_article.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 2. Example of how to search an article on Sci-hub using either the full title or the DOI.&lt;/figcaption&gt;
 &lt;p&gt;Unfortunately Sci-hub only has articles up until ~2022, which means you won&amp;rsquo;t be able to access most of the recent literature in here.&lt;/p&gt;
 &lt;p&gt;Additionally, you will only find scientific papers with a valid DOI. For books, you would need to use LibGen and search with a IBN code instead of a DOI.&lt;/p&gt;
 &lt;h2 id=&#34;annas-archive&#34;&gt;Anna&amp;rsquo;s Archive&lt;/h2&gt;
@@ -53,7 +56,8 @@
 &lt;p&gt;In this forum you make a public request for the article you want in exchange for points (coin emoji).&lt;/p&gt;
 &lt;p&gt;You get for free 50 points by making an account and 20 points for every day you log in.&lt;/p&gt;
 &lt;p&gt;Requesting an article takes at least 10 points and more often than not, a good Samaritan will share it with you within a few minutes, given that the paywalled article is from a well-known library or journal.  (Elsevier, Willey, etc.)&lt;/p&gt;
-&lt;p&gt;[Hulk figure]&lt;/p&gt;
+&lt;img src=&#34;./hulk_with_full_access_to_all_scientific_articles_shares_a_pdf_with_little_guy.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt; Figure X. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. &lt;/figcaption&gt;
 &lt;p&gt;First you make an account, next you post the article you are looking for, set a reward and you are done.&lt;/p&gt;
 &lt;p&gt;[Step by step image]&lt;/p&gt;
 &lt;p&gt;In my experience, it takes a couple minutes, if not seconds, for someone to share the article with you.&lt;/p&gt;
@@ -84,6 +88,8 @@
 &lt;p&gt;If none if these options are appealing to you, you can always ask the Corresponding Author either directly through mail, or through other social networks like ResearchGate or LinkedIn.&lt;/p&gt;
 &lt;p&gt;Finally, I encourage you to pay for the article if you really want to :)&lt;/p&gt;
 &lt;p&gt;[Image of Nature barriers paywalled article]&lt;/p&gt;
+&lt;img src=&#34;./the-growing-inaccessibility-of-science.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure X. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.&lt;/figcaption&gt;
 &lt;h2 id=&#34;words-of-caution&#34;&gt;Words of caution&lt;/h2&gt;
 &lt;p&gt;Limewire was, and now is once again, a peer-to-peer platform to share files, in this case, specifically for music.&lt;/p&gt;
 &lt;p&gt;The disadvantage with this and the many other platforms that were mentioned is that malicious actors could upload malicious files or replace hyperlinks within the article that redirect to pishing websites.&lt;/p&gt;
@@ -664,6 +670,14 @@
     &lt;/div&gt;
 
 </description>
+    </item>
+    
+    <item>
+      <title>Lorem is Ipsum</title>
+      <link>https://jruizcabrejos.com/post/template-19960725/</link>
+      <pubDate>Thu, 25 Jul 1996 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/post/template-19960725/</guid>
+      <description></description>
     </item>
     
   </channel>

@@ -8,7 +8,7 @@ image:
 summary: 'A guide to Sci-hub, Sci-net, Nexus, Wosonhj and SmartQuantAi, because paywalls are meant to be climbed.'
 tags:
 - No-code
-title: "Sci-Hub and its alternatives: How to access and download research papers for free"
+title: "Colorful Open Access: A Hitchhiker's Tour of Free Libraries and Open Knowledge"
 ---
 
 **[NOTE: This is a live WIP/Draft and subejct to a lot of changes]**
@@ -19,11 +19,14 @@ It doesn't matter what education level, titles attained, or how far into your pr
 
 Knowingly, unknowingly, from a friend, or a colleague of a friend.
 
-You have, most definitively, read an article, paper or book that is paywalled, but was obtained and shared from _unconventional_ methods.
+You have, most definitively, read an article, paper or book that is behind a paywall and required a payment, but neither you nor the person who shared it with you paid for it.
 
-[Resident Evil 4 Buhonero]
+It was obtained and shared from _unconventional_ methods.
 
-Here, I lay out these methods, the platforms, and other tools that have been, and are currently used, to access articles and books (as of April 2025).
+<img src="./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png" alt="Favicon">
+<figcaption>Figure 1. "Got something that might interest ya!" - Quote from the first time you meet The Buhonero's (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. </figcaption>
+
+Here, I lay out these methods, the platforms, and other tools that have been, and are currently used, to access articles and books (accurate as of May 2025).
 
 This text is for educational and research purposes only, similarly to the many other articles talking about this topic in prestigious scientific journals such as Nature, Science, among others.
 
@@ -49,7 +52,11 @@ OR
 
 - The DOI of the article
 
-[Example figure]
+
+<img src="./scihub_example_search_article.png" alt="Favicon">
+<figcaption>Figure 2. Example of how to search an article on Sci-hub using either the full title or the DOI.</figcaption>
+
+
 
 Unfortunately Sci-hub only has articles up until ~2022, which means you won't be able to access most of the recent literature in here.
 
@@ -75,7 +82,9 @@ You get for free 50 points by making an account and 20 points for every day you 
 
 Requesting an article takes at least 10 points and more often than not, a good Samaritan will share it with you within a few minutes, given that the paywalled article is from a well-known library or journal.  (Elsevier, Willey, etc.)
 
-[Hulk figure]
+<img src="./hulk_with_full_access_to_all_scientific_articles_shares_a_pdf_with_little_guy.png" alt="Favicon">
+<figcaption> Figure X. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. </figcaption>
+
 
 First you make an account, next you post the article you are looking for, set a reward and you are done.
 
@@ -136,6 +145,11 @@ If none if these options are appealing to you, you can always ask the Correspond
 Finally, I encourage you to pay for the article if you really want to :)
 
 [Image of Nature barriers paywalled article]
+
+
+<img src="./the-growing-inaccessibility-of-science.png" alt="Favicon">
+<figcaption>Figure X. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
+
 
 ## Words of caution
 
