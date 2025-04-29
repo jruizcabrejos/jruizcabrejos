@@ -13,91 +13,153 @@
     </image>
     
     <item>
-      <title>Colorful Open Access: A Hitchhiker&#39;s Tour of Free Libraries and Open Knowledge</title>
+      <title>Colorful Open Access: Sci-Hub, Free Libraries, Open Knowledge, and their alternatives</title>
       <link>https://jruizcabrejos.com/post/scihub/</link>
       <pubDate>Tue, 15 Apr 2025 00:00:00 +0000</pubDate>
       <guid>https://jruizcabrejos.com/post/scihub/</guid>
       <description>&lt;p&gt;&lt;strong&gt;[NOTE: This is a live WIP/Draft and subejct to a lot of changes]&lt;/strong&gt;&lt;/p&gt;
 &lt;h2 id=&#34;you-are-a-pirate&#34;&gt;You are a pirate&lt;/h2&gt;
 &lt;p&gt;It doesn&amp;rsquo;t matter what education level, titles attained, or how far into your professional or academic career you are.&lt;/p&gt;
-&lt;p&gt;Knowingly, unknowingly, from a friend, or a colleague of a friend.&lt;/p&gt;
-&lt;p&gt;You have, most definitively, read an article, paper or book that is behind a paywall and required a payment, but neither you nor the person who shared it with you paid for it.&lt;/p&gt;
-&lt;p&gt;It was obtained and shared from &lt;em&gt;unconventional&lt;/em&gt; methods.&lt;/p&gt;
+&lt;p&gt;Knowingly or unknowingly, through a friend or a colleague of a friend.&lt;/p&gt;
+&lt;p&gt;You have almost certainly read an article, paper, or book that was behind a paywall and required payment to access.&lt;/p&gt;
+&lt;p&gt;But neither you nor the person who shared it with you paid for it. It was obtained and shared through &lt;em&gt;unconventional&lt;/em&gt; methods.&lt;/p&gt;
 &lt;img src=&#34;./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 1. &#34;Got something that might interest ya!&#34; - Quote from the first time you meet The Buhonero&#39;s (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. &lt;/figcaption&gt;
-&lt;p&gt;Here, I lay out these methods, the platforms, and other tools that have been, and are currently used, to access articles and books (accurate as of May 2025).&lt;/p&gt;
-&lt;p&gt;This text is for educational and research purposes only, similarly to the many other articles talking about this topic in prestigious scientific journals such as Nature, Science, among others.&lt;/p&gt;
-&lt;p&gt;So, you need to access an article, or perhaps a book.&lt;/p&gt;
+&lt;p&gt;Here, I &lt;a href=&#34;https://dictionary.cambridge.org/dictionary/english/yap&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;yap&lt;/a&gt; about these platforms and tools that have been, and are still, used to access articles and books &lt;em&gt;unconventionally&lt;/em&gt; (as of May 2025).&lt;/p&gt;
+&lt;p&gt;More specifically, I will describe how to use:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Sci-Hub&lt;/li&gt;
+&lt;li&gt;Anna&amp;rsquo;s Archive&lt;/li&gt;
+&lt;li&gt;Wosonhj / SmartQuantAi&lt;/li&gt;
+&lt;li&gt;Nexus Project&lt;/li&gt;
+&lt;li&gt;Sci-Net&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;This text is for educational and research purposes only, similar to the many articles discussing this topic in prestigious journals such as &lt;a href=&#34;https://www.nature.com/articles/nature.2016.19841&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Nature&lt;/a&gt;, &lt;a href=&#34;https://www.science.org/doi/10.1126/science.aaf9419&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Science&lt;/a&gt;, &lt;a href=&#34;https://www.thelancet.com/journals/langlo/article/PIIS2214-109X%2816%2930188-7/fulltext&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Lancet&lt;/a&gt;, and many more.&lt;/p&gt;
+&lt;img src=&#34;./references_discussing_scihub_and_shadow_libraries.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 2. References I make in the text, because God knows you probably won&#39;t click them. Note that most of them are from 2016.&lt;/figcaption&gt;
+&lt;p&gt;So, you need to access an article, or maybe a book.&lt;/p&gt;
 &lt;p&gt;These are your options:&lt;/p&gt;
 &lt;h2 id=&#34;sci-hub&#34;&gt;Sci-Hub&lt;/h2&gt;
-&lt;p&gt;Launched in 20XX by Alexandra &amp;hellip;, sci-hub is the most-well known website for the purposes of accessing pay-walled articles.&lt;/p&gt;
-&lt;p&gt;It is no secret that Sci-Hub has been fundamental to the research process for thousands (perhaps millions?) of researchers.&lt;/p&gt;
-&lt;p&gt;Who is downloading pirated papers from sci-hub?&lt;/p&gt;
-&lt;p&gt;Well, &lt;a href=&#34;https://www.science.org/doi/10.1126/science.352.6285.508&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;everyone&lt;/a&gt;.&lt;/p&gt;
-&lt;p&gt;Using sci-hub is straightforward. You access the website, and in the search bar you provide either:&lt;/p&gt;
+&lt;p&gt;Launched in 2011 by Alexandra Elbakyan, Sci-Hub is the most-well known website for the purpose of accessing paywalled academic articles. It is no secret that this platform has been fundamental to the research process for thousands (perhaps millions?) of researchers.&lt;/p&gt;
+&lt;p&gt;Who downloads pirated papers from Sci-Hub?&lt;/p&gt;
+&lt;p&gt;Everyone, &lt;a href=&#34;https://www.science.org/doi/10.1126/science.352.6285.508&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;and that&amp;rsquo;s no exaggeration&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;Using Sci-Hub is straightforward. You access the website (you&amp;rsquo;ll have to Google it, sorry) and in the search bar provide either:&lt;/p&gt;
 &lt;ul&gt;
 &lt;li&gt;The full title of the article&lt;/li&gt;
 &lt;/ul&gt;
 &lt;p&gt;OR&lt;/p&gt;
 &lt;ul&gt;
-&lt;li&gt;The DOI of the article&lt;/li&gt;
+&lt;li&gt;The Digital Object Identifier (DOI) of the article&lt;/li&gt;
 &lt;/ul&gt;
-&lt;img src=&#34;./scihub_example_search_article.png&#34; alt=&#34;Favicon&#34;&gt;
-&lt;figcaption&gt;Figure 2. Example of how to search an article on Sci-hub using either the full title or the DOI.&lt;/figcaption&gt;
-&lt;p&gt;Unfortunately Sci-hub only has articles up until ~2022, which means you won&amp;rsquo;t be able to access most of the recent literature in here.&lt;/p&gt;
-&lt;p&gt;Additionally, you will only find scientific papers with a valid DOI. For books, you would need to use LibGen and search with a IBN code instead of a DOI.&lt;/p&gt;
-&lt;h2 id=&#34;annas-archive&#34;&gt;Anna&amp;rsquo;s Archive&lt;/h2&gt;
-&lt;p&gt;If you are looking for a wider range of texts, including books, comics, magazines, newspapers, among others, Anna&amp;rsquo;s Archive should be the next place you should look into.&lt;/p&gt;
-&lt;p&gt;[Main image for anna&amp;rsquo;s archive]&lt;/p&gt;
-&lt;p&gt;Unlike Sci-hub, which will return you an error if you don&amp;rsquo;t carefully specify the title, here you can type the partial title or keywords of interest and it will return a list of options that match your query.&lt;/p&gt;
-&lt;p&gt;[Search example]&lt;/p&gt;
+&lt;img src=&#34;./scihub_example_search_article_v2.jpg&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 3. Example of how to search an article on Sci-hub using either the full title or the DOI. Image above shows the article name and DOI. Below, how to search for the article with both (through title or DOI)&lt;/figcaption&gt;
+&lt;p&gt;Unfortunately Sci-Hub&amp;rsquo;s collection has not been significantly updated since ~2022, meaning you won&amp;rsquo;t find much post-2022 literature there.&lt;/p&gt;
+&lt;img src=&#34;./scihub_total_available_articles.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 4. Articles available in Sci-Hub database vs. total number of articles according to Crossref index. Taken from Elbakyan, A. (2025). &#34;From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science&#34;&lt;/figcaption&gt;
+&lt;p&gt;For books, unless they have a DOI, you won&amp;rsquo;t find them on Sci-Hub. For books you need to use LibGen and search with an International Standard Book Number (ISBN) code.&lt;/p&gt;
+&lt;p&gt;Finally, I strongly suggest always searching with the DOI of an article.&lt;/p&gt;
+&lt;p&gt;If the title isn&amp;rsquo;t an exact, word-by-word match, your search will fail.&lt;/p&gt;
+&lt;img src=&#34;./scihub_failed_search_example.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 5. Failed search example on Sci-Hub. I removed some words from the title of this article on purpose. &lt;/figcaption&gt;
+&lt;h2 id=&#34;nexus-project&#34;&gt;Nexus Project&lt;/h2&gt;
+&lt;p&gt;If Sci-Hub doesn&amp;rsquo;t have the article you are searching for, a great next option is the Nexus Project library, accessible through either Telegram or their STC / Libstcc website.&lt;/p&gt;
+&lt;p&gt;In short, Nexus is a &lt;a href=&#34;https://github.com/nexus-stc/stc&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;non-centralized (IPFS) database&lt;/a&gt; that aggregates from Z-Library, LibGen, millions of user-uploaded papers, and Sci-Hub itself. Similarly, you can search by article title (not recommended) or article DOI (recommended).&lt;/p&gt;
+&lt;p&gt;The platform can be accessed by different means, but I will focus on the two (2) most accessible for an average user (Telegram and Website).&lt;/p&gt;
+&lt;h3 id=&#34;telegram-nexus-bots&#34;&gt;Telegram Nexus Bots&lt;/h3&gt;
+&lt;p&gt;On Telegram, you begin by chatting with a Nexus Bot.&lt;/p&gt;
+&lt;p&gt;The accounts and name of these bots are constantly changing, but searching for &amp;ldquo;Nexus Bot&amp;rdquo; or &amp;ldquo;Nexus Paper&amp;rdquo; in the Telegram search bar should do the trick.&lt;/p&gt;
+&lt;img src=&#34;./searching_nexus_bots_telegram.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 6. Searching and finding working Nexus bots in Telegram. At the time of writing, all of them worked. I did not try with the NFT bot, because it was beyond the scope of this post. &lt;/figcaption&gt;
+&lt;p&gt;Once you start a chat, you search for the article and download it if it&amp;rsquo;s available.&lt;/p&gt;
+&lt;img src=&#34;./nexus_bot_search_example.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 7. Once again, I strongly suggest always searching by DOI. Unlike Sci-Hub, searching with a partial title here will work, but the results won&#39;t be good.&lt;/figcaption&gt;
+&lt;p&gt;If the article is NOT available, you will see a request button. Clicking adds a 1-point reward for the article, claimable by whoever uploads it first.&lt;/p&gt;
+&lt;p&gt;Once an user provides the article, you’ll be notified, and the article will stay in the Nexus Library for everyone else to search and download in the future.&lt;/p&gt;
+&lt;img src=&#34;./nexus_bot_telegram_request_example.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure 8. Left, button to make an article request. Top right, the bot confirms the request has been successful. Bottom right, notification confirming someone has uploaded the article I requested.&lt;/figcaption&gt;
+&lt;h3 id=&#34;nexus-points&#34;&gt;Nexus Points&lt;/h3&gt;
+&lt;p&gt;Points are the internal currency within Nexus to encourage users to upload articles.&lt;/p&gt;
+&lt;p&gt;The more points an article&amp;rsquo;s reward is worth, the more likely it is for it to be uploaded by another user.&lt;/p&gt;
+&lt;p&gt;You start with 10 points. These are replenished daily.&lt;/p&gt;
+&lt;p&gt;With them you can either:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Request ten (10) articles and offer 1 point for each&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;OR&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Make one (1) request and offer 10 points for it.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Finally, if you need more points, you can always upload articles others have requested in the &lt;em&gt;pool&lt;/em&gt;.&lt;/p&gt;
+&lt;img src=&#34;./nexus_pool_request.jpg&#34; alt=&#34;Favicon&#34; width=&#34;400&#34;&gt;
+&lt;figcaption&gt;Figure 9. Telegram channel containing the pool of requests made by users.&lt;/figcaption&gt;
+&lt;h3 id=&#34;stc-website&#34;&gt;STC Website&lt;/h3&gt;
+&lt;p&gt;If you don&amp;rsquo;t have Telegram (and refuse to use it), you can still access the Nexus Database through their STC/Libstcc website.&lt;/p&gt;
+&lt;p&gt;You can search for an article with their DOI, and if you see a globe emoji next to the result, it means the article is available.&lt;/p&gt;
+&lt;p&gt;[Here would go the image of the website, but at the time of writing it was down. The bot on Telegram works though!]&lt;/p&gt;
+&lt;p&gt;That said, I strongly recommend using the Telegram bots instead of the website.&lt;/p&gt;
 &lt;h2 id=&#34;wosonhj--smartquantai&#34;&gt;Wosonhj / SmartQuantAi&lt;/h2&gt;
-&lt;p&gt;If what you are looking for isn&amp;rsquo;t in Sci-hub or Anna&amp;rsquo;s Archive, Wosonhj AKA Smartquantai is your next best bet.&lt;/p&gt;
-&lt;p&gt;In this forum you make a public request for the article you want in exchange for points (coin emoji).&lt;/p&gt;
-&lt;p&gt;You get for free 50 points by making an account and 20 points for every day you log in.&lt;/p&gt;
-&lt;p&gt;Requesting an article takes at least 10 points and more often than not, a good Samaritan will share it with you within a few minutes, given that the paywalled article is from a well-known library or journal.  (Elsevier, Willey, etc.)&lt;/p&gt;
+&lt;p&gt;If your article isn&amp;rsquo;t on Sci-hub or Nexus databases, your best chance at obtaining the article you need is Wosonhj (also known as Smartquantai), which unlike previous alternatives, it works entirely as a forum.&lt;/p&gt;
+&lt;p&gt;Here, you make a public request for an article in exchange for points. You get these points by:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Creating an account: 50 points&lt;/li&gt;
+&lt;li&gt;Daily logins (clicking the &amp;ldquo;check-in&amp;rdquo; button): 20 points / day&lt;/li&gt;
+&lt;li&gt;Completing requests of other users: At least 10 points&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;[Account creation and check-in button]&lt;/p&gt;
+&lt;p&gt;Requesting an article typically costs (a minimum of) 10 points.&lt;/p&gt;
+&lt;p&gt;More often than not, in my experience, a good Samaritan will share the PDF file within minutes (or seconds!) of making a request.&lt;/p&gt;
 &lt;img src=&#34;./hulk_with_full_access_to_all_scientific_articles_shares_a_pdf_with_little_guy.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt; Figure X. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. &lt;/figcaption&gt;
-&lt;p&gt;First you make an account, next you post the article you are looking for, set a reward and you are done.&lt;/p&gt;
+&lt;p&gt;After creating an account:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Click &amp;ldquo;Make a post&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;Enter the DOI and click &amp;ldquo;Check&amp;rdquo;&lt;/li&gt;
+&lt;li&gt;If the fields don&amp;rsquo;t autofill, manually add in the description:
+&lt;ul&gt;
+&lt;li&gt;Title&lt;/li&gt;
+&lt;li&gt;Link to the article&lt;/li&gt;
+&lt;/ul&gt;
+&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;If you wish, you can also increase the reward to encourage a faster response.&lt;/p&gt;
+&lt;p&gt;Once your request is fulfilled and you verified it is the right one, you must &amp;ldquo;Adopt&amp;rdquo; (accept) the file.&lt;/p&gt;
 &lt;p&gt;[Step by step image]&lt;/p&gt;
-&lt;p&gt;In my experience, it takes a couple minutes, if not seconds, for someone to share the article with you.&lt;/p&gt;
-&lt;p&gt;[Example of nature article submission]&lt;/p&gt;
-&lt;p&gt;No one else can access this file. Only you, the one requesting it, will be able to download it.&lt;/p&gt;
-&lt;p&gt;After 10 days, the file is deleted from the website.&lt;/p&gt;
-&lt;p&gt;You may also get points from sharing articles you have access to with others, fulfilling their requests and obtaining the rewards.&lt;/p&gt;
-&lt;h2 id=&#34;nexus-bots&#34;&gt;Nexus Bots&lt;/h2&gt;
-&lt;p&gt;If you have Telegram, another alternative is to access the library hosted by the Nexus project.&lt;/p&gt;
-&lt;p&gt;In short, this library contains data from the Z-Library, LibGen, and millions of other scientific papers uploaded by the users.&lt;/p&gt;
-&lt;p&gt;Similarly to Sci-hub and Anna&amp;rsquo;s Library, you can search for your article of interest based on title or DOI.&lt;/p&gt;
-&lt;p&gt;[Example 1]&lt;/p&gt;
-&lt;p&gt;And if the article you need is not yet available, you can request it.&lt;/p&gt;
-&lt;p&gt;Same as the Wosonhj / SmartQuantAi Forums, you use points in your request. The key difference being that once an article is uploaded to the Nexus ecosystem, it remains accessible for everyone else in the future.&lt;/p&gt;
-&lt;p&gt;If you don&amp;rsquo;t have telegram, you can access the STC website (updated on 22/02/2024 to libstcc website).&lt;/p&gt;
-&lt;p&gt;If you see try a DOI and see this globe emoji, it means the article is available to be downloaded.&lt;/p&gt;
-&lt;p&gt;&lt;a href=&#34;https://www.reddit.com/r/scihub/comments/13cms8m/how_to_use_nexus_bots_or_stc_to_download_the/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;https://www.reddit.com/r/scihub/comments/13cms8m/how_to_use_nexus_bots_or_stc_to_download_the/&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;Unlike other platforms, in here only you (the one requesting the file) will be able to download it. And after 10 days, the file is deleted from the website.&lt;/p&gt;
 &lt;h2 id=&#34;sci-net&#34;&gt;Sci-net&lt;/h2&gt;
-&lt;p&gt;The most recent platform to be added to this list is Sci-net, which was launched at the same time as I was writing this post.&lt;/p&gt;
-&lt;p&gt;You can think of Sci-net as a Sci-hub 2.0, both because it is the same founder, and because it implements the point system by taking it a step further with the implementation of cryptocurrencies.&lt;/p&gt;
-&lt;p&gt;In order to access the platform, first you have to acquire the points (cryptocurrency) by downloading&amp;hellip;&lt;/p&gt;
+&lt;p&gt;The newest platform on this list is Sci-Net, launched while I was writing this post.&lt;/p&gt;
+&lt;p&gt;Think of it as a Sci-Hub 2.0.&lt;/p&gt;
+&lt;p&gt;It&amp;rsquo;s created by the same person and combines a point system like Nexus/Wosonhj but pushes it further with a cryptocurrency (Sci-Hub coin).&lt;/p&gt;
+&lt;p&gt;In order to access the platform, first you have to acquire the Sci-Hub coin by downloading&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Next, you&amp;hellip;&lt;/p&gt;
 &lt;p&gt;Finally, once inside the platform, you can search for your article of interest.&lt;/p&gt;
 &lt;p&gt;[Imagen]&lt;/p&gt;
 &lt;p&gt;Or request it if not available.&lt;/p&gt;
 &lt;p&gt;[Imagen]&lt;/p&gt;
+&lt;h2 id=&#34;annas-archive&#34;&gt;Anna&amp;rsquo;s Archive&lt;/h2&gt;
+&lt;p&gt;If you are looking for a broader range of texts (books, comics, magazines, newspapers, etc), Anna&amp;rsquo;s Archive should be your next stop.&lt;/p&gt;
+&lt;p&gt;[Main image for anna&amp;rsquo;s archive]&lt;/p&gt;
+&lt;p&gt;Anna’s Archive allows keyword and partial title searches, returning a list of matching results.&lt;/p&gt;
+&lt;p&gt;[Search example]&lt;/p&gt;
+&lt;p&gt;The platform also has search filters and other search options which makes it handy for text-heavy queries.&lt;/p&gt;
 &lt;h2 id=&#34;straight-from-the-source&#34;&gt;Straight from the source&lt;/h2&gt;
-&lt;p&gt;If none if these options are appealing to you, you can always ask the Corresponding Author either directly through mail, or through other social networks like ResearchGate or LinkedIn.&lt;/p&gt;
+&lt;p&gt;If none if these options are appealing to you, you can always ask the Corresponding Author of the article either directly through email, or send a Direct Message (DM) to the author(s) through ResearchGate or LinkedIn.&lt;/p&gt;
 &lt;p&gt;Finally, I encourage you to pay for the article if you really want to :)&lt;/p&gt;
-&lt;p&gt;[Image of Nature barriers paywalled article]&lt;/p&gt;
 &lt;img src=&#34;./the-growing-inaccessibility-of-science.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure X. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.&lt;/figcaption&gt;
-&lt;h2 id=&#34;words-of-caution&#34;&gt;Words of caution&lt;/h2&gt;
-&lt;p&gt;Limewire was, and now is once again, a peer-to-peer platform to share files, in this case, specifically for music.&lt;/p&gt;
-&lt;p&gt;The disadvantage with this and the many other platforms that were mentioned is that malicious actors could upload malicious files or replace hyperlinks within the article that redirect to pishing websites.&lt;/p&gt;
+&lt;h2 id=&#34;colorful-open-access&#34;&gt;Colorful Open Access&lt;/h2&gt;
+&lt;p&gt;All the platforms above are often labeled as in the literature as &amp;ldquo;Shadow Libraries&amp;rdquo; or examples of &amp;ldquo;Black Open Access&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;I avoid using those terms because they stigmatize and marginalize them into the realm of the &amp;ldquo;obscure&amp;rdquo;. Moreover, it is a generalization of what ultimately is a wide variety of approaches to handle and workaround the growing inaccessibility of science.&lt;/p&gt;
+&lt;p&gt;Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorful open access framework. Because even black has many shades of grey.&lt;/p&gt;
+&lt;img src=&#34;./graphic_abstract_Elbakyan_2025.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;figcaption&gt;Figure X. Graphical abstract of Elbakyan, A. (2025) paper &#34;From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science&#34;.&lt;/figcaption&gt;
+&lt;h2 id=&#34;footnote&#34;&gt;Footnote&lt;/h2&gt;
+&lt;p&gt;Limewire was (and now is again?), a peer-to-peer file-sharing platform, mainly used for music.&lt;/p&gt;
+&lt;p&gt;The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.&lt;/p&gt;
 &lt;img src=&#34;./laced_with_drugs.jpg&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure X. Your files could be laced with virus.&lt;/figcaption&gt;
-&lt;p&gt;Being a pirate is great, but it does come with some risks and you should be careful out there not to click files called &amp;ldquo;not-a-virus.exe&amp;rdquo;.&lt;/p&gt;
+&lt;p&gt;Being a pirate is fun, but it does come with risks.&lt;/p&gt;
+&lt;p&gt;Be careful out there not to click or download files called &amp;ldquo;not-a-virus.exe&amp;rdquo;.&lt;/p&gt;
 &lt;p&gt;[Image dolphin not a virus]&lt;/p&gt;
-&lt;h2 id=&#34;footnote&#34;&gt;Footnote&lt;/h2&gt;
 
 
     
@@ -670,14 +732,6 @@
     &lt;/div&gt;
 
 </description>
-    </item>
-    
-    <item>
-      <title>Lorem is Ipsum</title>
-      <link>https://jruizcabrejos.com/post/template-19960725/</link>
-      <pubDate>Thu, 25 Jul 1996 00:00:00 +0000</pubDate>
-      <guid>https://jruizcabrejos.com/post/template-19960725/</guid>
-      <description></description>
     </item>
     
   </channel>

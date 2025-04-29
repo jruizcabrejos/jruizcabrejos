@@ -7,8 +7,9 @@ image:
   caption: 'LOL, Limewire animation. The name of the original author has been lost to time. [**From LOL! LIMEWIRE! - By iamapirate**](https://www.youtube.com/watch?v=Th6PW5VwDFI)'
 summary: 'A guide to Sci-hub, Sci-net, Nexus, Wosonhj and SmartQuantAi, because paywalls are meant to be climbed.'
 tags:
-- No-code
-title: "Colorful Open Access: A Hitchhiker's Tour of Free Libraries and Open Knowledge"
+- Guide
+- No-Code
+title: "Colorful Open Access: Sci-Hub, Free Libraries, Open Knowledge, and their alternatives"
 ---
 
 **[NOTE: This is a live WIP/Draft and subejct to a lot of changes]**
@@ -17,116 +18,172 @@ title: "Colorful Open Access: A Hitchhiker's Tour of Free Libraries and Open Kno
 
 It doesn't matter what education level, titles attained, or how far into your professional or academic career you are.
 
-Knowingly, unknowingly, from a friend, or a colleague of a friend.
+Knowingly or unknowingly, through a friend or a colleague of a friend.
 
-You have, most definitively, read an article, paper or book that is behind a paywall and required a payment, but neither you nor the person who shared it with you paid for it.
+You have almost certainly read an article, paper, or book that was behind a paywall and required payment to access.
 
-It was obtained and shared from _unconventional_ methods.
+But neither you nor the person who shared it with you paid for it. It was obtained and shared through _unconventional_ methods.
 
 <img src="./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png" alt="Favicon">
 <figcaption>Figure 1. "Got something that might interest ya!" - Quote from the first time you meet The Buhonero's (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. </figcaption>
 
-Here, I lay out these methods, the platforms, and other tools that have been, and are currently used, to access articles and books (accurate as of May 2025).
+Here, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about these platforms and tools that have been, and are still, used to access articles and books _unconventionally_ (as of May 2025).
 
-This text is for educational and research purposes only, similarly to the many other articles talking about this topic in prestigious scientific journals such as Nature, Science, among others.
+More specifically, I will describe how to use:
 
-So, you need to access an article, or perhaps a book. 
+- Sci-Hub
+- Anna's Archive
+- Wosonhj / SmartQuantAi
+- Nexus Project
+- Sci-Net
+
+This text is for educational and research purposes only, similar to the many articles discussing this topic in prestigious journals such as [Nature](https://www.nature.com/articles/nature.2016.19841), [Science](https://www.science.org/doi/10.1126/science.aaf9419), [Lancet](https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(16)30188-7/fulltext), and many more.
+
+
+<img src="./references_discussing_scihub_and_shadow_libraries.png" alt="Favicon">
+<figcaption>Figure 2. References I make in the text, because God knows you probably won't click them. Note that most of them are from 2016.</figcaption>
+
+So, you need to access an article, or maybe a book. 
 
 These are your options:
 
 ## Sci-Hub
 
-Launched in 20XX by Alexandra ..., sci-hub is the most-well known website for the purposes of accessing pay-walled articles.
+Launched in 2011 by Alexandra Elbakyan, Sci-Hub is the most-well known website for the purpose of accessing paywalled academic articles. It is no secret that this platform has been fundamental to the research process for thousands (perhaps millions?) of researchers.
 
-It is no secret that Sci-Hub has been fundamental to the research process for thousands (perhaps millions?) of researchers.
+Who downloads pirated papers from Sci-Hub? 
 
-Who is downloading pirated papers from sci-hub? 
+Everyone, [and that's no exaggeration](https://www.science.org/doi/10.1126/science.352.6285.508).
 
-Well, [everyone](https://www.science.org/doi/10.1126/science.352.6285.508).
-
-Using sci-hub is straightforward. You access the website, and in the search bar you provide either:
+Using Sci-Hub is straightforward. You access the website (you'll have to Google it, sorry) and in the search bar provide either:
 
 - The full title of the article
 
 OR
 
-- The DOI of the article
+- The Digital Object Identifier (DOI) of the article
 
+<img src="./scihub_example_search_article_v2.jpg" alt="Favicon">
+<figcaption>Figure 3. Example of how to search an article on Sci-hub using either the full title or the DOI. Image above shows the article name and DOI. Below, how to search for the article with both (through title or DOI)</figcaption>
 
-<img src="./scihub_example_search_article.png" alt="Favicon">
-<figcaption>Figure 2. Example of how to search an article on Sci-hub using either the full title or the DOI.</figcaption>
+Unfortunately Sci-Hub's collection has not been significantly updated since ~2022, meaning you won't find much post-2022 literature there.
 
+<img src="./scihub_total_available_articles.png" alt="Favicon">
+<figcaption>Figure 4. Articles available in Sci-Hub database vs. total number of articles according to Crossref index. Taken from Elbakyan, A. (2025). "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science"</figcaption>
 
+For books, unless they have a DOI, you won't find them on Sci-Hub. For books you need to use LibGen and search with an International Standard Book Number (ISBN) code.
 
-Unfortunately Sci-hub only has articles up until ~2022, which means you won't be able to access most of the recent literature in here.
+Finally, I strongly suggest always searching with the DOI of an article. 
 
-Additionally, you will only find scientific papers with a valid DOI. For books, you would need to use LibGen and search with a IBN code instead of a DOI.
+If the title isn't an exact, word-by-word match, your search will fail.
 
-## Anna's Archive
+<img src="./scihub_failed_search_example.png" alt="Favicon">
+<figcaption>Figure 5. Failed search example on Sci-Hub. I removed some words from the title of this article on purpose. </figcaption>
 
-If you are looking for a wider range of texts, including books, comics, magazines, newspapers, among others, Anna's Archive should be the next place you should look into.
+## Nexus Project
 
-[Main image for anna's archive]
+If Sci-Hub doesn't have the article you are searching for, a great next option is the Nexus Project library, accessible through either Telegram or their STC / Libstcc website.
 
-Unlike Sci-hub, which will return you an error if you don't carefully specify the title, here you can type the partial title or keywords of interest and it will return a list of options that match your query.
+In short, Nexus is a [non-centralized (IPFS) database](https://github.com/nexus-stc/stc) that aggregates from Z-Library, LibGen, millions of user-uploaded papers, and Sci-Hub itself. Similarly, you can search by article title (not recommended) or article DOI (recommended).
 
-[Search example]
+The platform can be accessed by different means, but I will focus on the two (2) most accessible for an average user (Telegram and Website). 
+
+### Telegram Nexus Bots
+
+On Telegram, you begin by chatting with a Nexus Bot.
+
+The accounts and name of these bots are constantly changing, but searching for "Nexus Bot" or "Nexus Paper" in the Telegram search bar should do the trick.
+
+<img src="./searching_nexus_bots_telegram.png" alt="Favicon">
+<figcaption>Figure 6. Searching and finding working Nexus bots in Telegram. At the time of writing, all of them worked. I did not try with the NFT bot, because it was beyond the scope of this post. </figcaption>
+
+Once you start a chat, you search for the article and download it if it's available. 
+
+<img src="./nexus_bot_search_example.png" alt="Favicon">
+<figcaption>Figure 7. Once again, I strongly suggest always searching by DOI. Unlike Sci-Hub, searching with a partial title here will work, but the results won't be good.</figcaption>
+
+If the article is NOT available, you will see a request button. Clicking adds a 1-point reward for the article, claimable by whoever uploads it first.
+
+Once an user provides the article, you’ll be notified, and the article will stay in the Nexus Library for everyone else to search and download in the future.
+
+<img src="./nexus_bot_telegram_request_example.png" alt="Favicon">
+<figcaption>Figure 8. Left, button to make an article request. Top right, the bot confirms the request has been successful. Bottom right, notification confirming someone has uploaded the article I requested.</figcaption>
+
+### Nexus Points
+
+Points are the internal currency within Nexus to encourage users to upload articles.
+
+The more points an article's reward is worth, the more likely it is for it to be uploaded by another user.
+
+You start with 10 points. These are replenished daily.
+
+With them you can either:
+
+- Request ten (10) articles and offer 1 point for each
+
+OR
+
+- Make one (1) request and offer 10 points for it.
+
+Finally, if you need more points, you can always upload articles others have requested in the _pool_.
+
+<img src="./nexus_pool_request.jpg" alt="Favicon" width="400">
+<figcaption>Figure 9. Telegram channel containing the pool of requests made by users.</figcaption>
+
+### STC Website
+
+If you don't have Telegram (and refuse to use it), you can still access the Nexus Database through their STC/Libstcc website.
+
+You can search for an article with their DOI, and if you see a globe emoji next to the result, it means the article is available.
+
+[Here would go the image of the website, but at the time of writing it was down. The bot on Telegram works though!]
+
+That said, I strongly recommend using the Telegram bots instead of the website.
 
 ## Wosonhj / SmartQuantAi
 
-If what you are looking for isn't in Sci-hub or Anna's Archive, Wosonhj AKA Smartquantai is your next best bet.
+If your article isn't on Sci-hub or Nexus databases, your best chance at obtaining the article you need is Wosonhj (also known as Smartquantai), which unlike previous alternatives, it works entirely as a forum.
 
-In this forum you make a public request for the article you want in exchange for points (coin emoji).
+Here, you make a public request for an article in exchange for points. You get these points by:
 
-You get for free 50 points by making an account and 20 points for every day you log in. 
+- Creating an account: 50 points 
+- Daily logins (clicking the "check-in" button): 20 points / day
+- Completing requests of other users: At least 10 points
 
-Requesting an article takes at least 10 points and more often than not, a good Samaritan will share it with you within a few minutes, given that the paywalled article is from a well-known library or journal.  (Elsevier, Willey, etc.)
+[Account creation and check-in button]
+
+Requesting an article typically costs (a minimum of) 10 points.
+
+More often than not, in my experience, a good Samaritan will share the PDF file within minutes (or seconds!) of making a request.
 
 <img src="./hulk_with_full_access_to_all_scientific_articles_shares_a_pdf_with_little_guy.png" alt="Favicon">
 <figcaption> Figure X. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. </figcaption>
 
+After creating an account:
 
-First you make an account, next you post the article you are looking for, set a reward and you are done.
+- Click "Make a post"
+- Enter the DOI and click "Check"
+- If the fields don't autofill, manually add in the description:
+    - Title
+    - Link to the article
+    
+If you wish, you can also increase the reward to encourage a faster response.
+
+Once your request is fulfilled and you verified it is the right one, you must "Adopt" (accept) the file.
 
 [Step by step image]
 
-In my experience, it takes a couple minutes, if not seconds, for someone to share the article with you.
-
-[Example of nature article submission]
-
-No one else can access this file. Only you, the one requesting it, will be able to download it. 
-
-After 10 days, the file is deleted from the website.
-
-You may also get points from sharing articles you have access to with others, fulfilling their requests and obtaining the rewards. 
-
-## Nexus Bots
-
-If you have Telegram, another alternative is to access the library hosted by the Nexus project.
-
-In short, this library contains data from the Z-Library, LibGen, and millions of other scientific papers uploaded by the users.
-
-Similarly to Sci-hub and Anna's Library, you can search for your article of interest based on title or DOI.
-
-[Example 1]
-
-And if the article you need is not yet available, you can request it.
-
-Same as the Wosonhj / SmartQuantAi Forums, you use points in your request. The key difference being that once an article is uploaded to the Nexus ecosystem, it remains accessible for everyone else in the future.
-
-If you don't have telegram, you can access the STC website (updated on 22/02/2024 to libstcc website). 
-
-If you see try a DOI and see this globe emoji, it means the article is available to be downloaded.
-
-https://www.reddit.com/r/scihub/comments/13cms8m/how_to_use_nexus_bots_or_stc_to_download_the/
+Unlike other platforms, in here only you (the one requesting the file) will be able to download it. And after 10 days, the file is deleted from the website.
 
 ## Sci-net
 
-The most recent platform to be added to this list is Sci-net, which was launched at the same time as I was writing this post.
+The newest platform on this list is Sci-Net, launched while I was writing this post.
 
-You can think of Sci-net as a Sci-hub 2.0, both because it is the same founder, and because it implements the point system by taking it a step further with the implementation of cryptocurrencies. 
+Think of it as a Sci-Hub 2.0.
 
-In order to access the platform, first you have to acquire the points (cryptocurrency) by downloading...
+It's created by the same person and combines a point system like Nexus/Wosonhj but pushes it further with a cryptocurrency (Sci-Hub coin). 
+
+In order to access the platform, first you have to acquire the Sci-Hub coin by downloading...
 
 Next, you...
 
@@ -138,33 +195,53 @@ Or request it if not available.
 
 [Imagen]
 
+## Anna's Archive
+
+If you are looking for a broader range of texts (books, comics, magazines, newspapers, etc), Anna's Archive should be your next stop.
+
+[Main image for anna's archive]
+
+Anna’s Archive allows keyword and partial title searches, returning a list of matching results.
+
+[Search example]
+
+The platform also has search filters and other search options which makes it handy for text-heavy queries. 
+
 ## Straight from the source
 
-If none if these options are appealing to you, you can always ask the Corresponding Author either directly through mail, or through other social networks like ResearchGate or LinkedIn.
+If none if these options are appealing to you, you can always ask the Corresponding Author of the article either directly through email, or send a Direct Message (DM) to the author(s) through ResearchGate or LinkedIn.
 
 Finally, I encourage you to pay for the article if you really want to :)
-
-[Image of Nature barriers paywalled article]
-
 
 <img src="./the-growing-inaccessibility-of-science.png" alt="Favicon">
 <figcaption>Figure X. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
 
+## Colorful Open Access
 
-## Words of caution
+All the platforms above are often labeled as in the literature as "Shadow Libraries" or examples of "Black Open Access". 
 
-Limewire was, and now is once again, a peer-to-peer platform to share files, in this case, specifically for music. 
+I avoid using those terms because they stigmatize and marginalize them into the realm of the "obscure". Moreover, it is a generalization of what ultimately is a wide variety of approaches to handle and workaround the growing inaccessibility of science.
 
-The disadvantage with this and the many other platforms that were mentioned is that malicious actors could upload malicious files or replace hyperlinks within the article that redirect to pishing websites.
+Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorful open access framework. Because even black has many shades of grey.
+
+<img src="./graphic_abstract_Elbakyan_2025.png" alt="Favicon">
+<figcaption>Figure X. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
+
+
+## Footnote
+
+Limewire was (and now is again?), a peer-to-peer file-sharing platform, mainly used for music. 
+
+The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.
 
 <img src="./laced_with_drugs.jpg" alt="Favicon">
 <figcaption>Figure X. Your files could be laced with virus.</figcaption>
 
-Being a pirate is great, but it does come with some risks and you should be careful out there not to click files called "not-a-virus.exe".
+Being a pirate is fun, but it does come with risks.
+
+Be careful out there not to click or download files called "not-a-virus.exe".
 
 [Image dolphin not a virus]
-
-## Footnote
 
 {{< youtube J0e9UiXbd5o >}}
 
