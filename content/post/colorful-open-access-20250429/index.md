@@ -9,7 +9,7 @@ summary: 'A guide to Sci-hub, Sci-net, Nexus, Wosonhj and SmartQuantAi, because 
 tags:
 - Guide
 - No-Code
-title: "Colorful Open Access: Sci-Hub, Free Libraries, Open Knowledge, and their alternatives"
+title: "Colorful Open Access: Sci-Hub, Free Libraries, and Their Alternatives"
 ---
 
 **[NOTE: This is a live WIP/Draft and subejct to a lot of changes]**
