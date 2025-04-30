@@ -268,6 +268,11 @@ Being a pirate is fun, but it does come with risks.
 
 Be careful out there not to click or download files called "not-a-virus.exe".
 
+<img src="./not_a_virus_dolphin.png" alt="Favicon">
+<figcaption>Figure 19. A dolphin file you can fully trust with your most sensitive files.</figcaption>
+
+
+
 [Image dolphin not a virus]
 
 {{< youtube J0e9UiXbd5o >}}
