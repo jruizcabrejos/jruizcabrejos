@@ -12,7 +12,7 @@ tags:
 title: "Colorful Open Access: Sci-Hub, Free Libraries, and Their Alternatives"
 ---
 
-**[NOTE: This is a live WIP/Draft and subejct to a lot of changes]**
+**[NOTE: This is a live WIP/Draft and subject to some changes]**
 
 ## You are a pirate
 
@@ -111,13 +111,9 @@ Once an user provides the article, you’ll be notified, and the article will st
 
 ### Nexus Points
 
-Points are the internal currency within Nexus to encourage users to upload articles.
+Points are the internal currency within Nexus to encourage users to upload articles. The more points an article's reward is worth, the more likely it is for it to be uploaded by another user.
 
-The more points an article's reward is worth, the more likely it is for it to be uploaded by another user.
-
-You start with 10 points. These are replenished daily.
-
-With them you can either:
+You start with 10 points. These are replenished daily. With them you can either:
 
 - Request ten (10) articles and offer 1 point for each
 
@@ -125,9 +121,9 @@ OR
 
 - Make one (1) request and offer 10 points for it.
 
-Finally, if you need more points, you can always upload articles others have requested in the _pool_.
+Finally, if you need more points, you can always upload articles others have requested. You can check the list of requested articles in the _request channel_.
 
-<img src="./nexus_pool_request.jpg" alt="Favicon" width="400">
+<img src="./nexus_pool_request.png" alt="Favicon" width="400">
 <figcaption>Figure 9. Telegram channel containing the pool of requests made by users.</figcaption>
 
 ### STC Website
@@ -144,34 +140,52 @@ That said, I strongly recommend using the Telegram bots instead of the website.
 
 If your article isn't on Sci-hub or Nexus databases, your best chance at obtaining the article you need is Wosonhj (also known as Smartquantai), which unlike previous alternatives, it works entirely as a forum.
 
-Here, you make a public request for an article in exchange for points. You get these points by:
+Here, you always make a public request for an article in exchange for points. You get these points by:
 
 - Creating an account: 50 points 
-- Daily logins (clicking the "check-in" button): 20 points / day
-- Completing requests of other users: At least 10 points
+- Logging in daily: 20 points / day
+- Completing requests of other users
 
-[Account creation and check-in button]
+<img src="./smartquantai_instructions_account_creation.png" alt="Favicon">
+<figcaption> Figure 10. Account creation process for Wosonhj / SmartQuantAi </figcaption>
 
 Requesting an article typically costs (a minimum of) 10 points.
 
 More often than not, in my experience, a good Samaritan will share the PDF file within minutes (or seconds!) of making a request.
 
 <img src="./hulk_with_full_access_to_all_scientific_articles_shares_a_pdf_with_little_guy.png" alt="Favicon">
-<figcaption> Figure X. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. </figcaption>
+<figcaption> Figure 11. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. </figcaption>
 
-After creating an account:
+### Forum Request
 
-- Click "Make a post"
-- Enter the DOI and click "Check"
-- If the fields don't autofill, manually add in the description:
-    - Title
+After creating an account, you request an article following this steps:
+
+- Click "Post"
+- Enter the DOI
+- Click "Quick Check"
+
+<img src="./smartquantai_post_article_request.png" alt="Favicon">
+<figcaption> Figure 12. Article request process for Wosonhj / SmartQuantAi </figcaption>
+
+Now, one of two things will happen:
+
+- Your request is automatically filled. 
+
+OR
+
+- You have to manually type-in your request, at the very least, with this information:
+    - Article Title
     - Link to the article
-    
+
 If you wish, you can also increase the reward to encourage a faster response.
 
-Once your request is fulfilled and you verified it is the right one, you must "Adopt" (accept) the file.
+<img src="./article_request_contents_others.png" alt="Favicon">
+<figcaption> Figure 13. Example of information needed to request an article in Wosonhj / SmartQuantAi</figcaption>
 
-[Step by step image]
+Once your request is fulfilled and you have verified the contents of the pdf file, you must "Adopt" (accept) the file.
+
+<img src="./adopt_request_smartquantai.png" alt="Favicon">
+<figcaption> Figure 14. Do NOT forget to "adopt" your article. </figcaption>
 
 Unlike other platforms, in here only you (the one requesting the file) will be able to download it. And after 10 days, the file is deleted from the website.
 
@@ -181,19 +195,32 @@ The newest platform on this list is Sci-Net, launched while I was writing this p
 
 Think of it as a Sci-Hub 2.0.
 
-It's created by the same person and combines a point system like Nexus/Wosonhj but pushes it further with a cryptocurrency (Sci-Hub coin). 
+It's created by the same person, and it uses cryptocurrency (Sci-Hub coin) as a point system similar to Nexus/Wosonhj.
 
-In order to access the platform, first you have to acquire the Sci-Hub coin by downloading...
+The site is invitation-only. Now, in order to obtain an invite code and access, you must obtain Sci-Hub tokens first.
 
-Next, you...
+### Sci-Hub Tokens
 
-Finally, once inside the platform, you can search for your article of interest.
+If you have reached this part, unfortunately it is incomplete.
 
-[Imagen]
+The steps you should follow to get an invite code for Sci-Net are on their website.
 
-Or request it if not available.
+Basically, you have to:
 
-[Imagen]
+- Install Solflare Wallet on a mobile phone. This application is used to store, send and exchange tokens.
+
+- Next, you buy SOL tokens on your Solflare Wallet (the minimun amount is worth around ~7 euros or ~8 dollars at the time of writing)
+
+- Then, you convert from SOL tokens to Sci-Hub Tokens
+
+- Finally, with Sci-Hub tokens on hand, you scan a QR and obtain your Invite Code.
+
+Important: Within the Solflare Wallet, there are 2-3 "sci-hub" tokens. 
+
+The one you are looking for is the FIRST one.
+
+<img src="./scihub_token_in_solflare_app.png" alt="Favicon">
+<figcaption> Figure 15. Sci-Hub token. </figcaption>
 
 ## Anna's Archive
 
@@ -209,12 +236,12 @@ The platform also has search filters and other search options which makes it han
 
 ## Straight from the source
 
-If none if these options are appealing to you, you can always ask the Corresponding Author of the article either directly through email, or send a Direct Message (DM) to the author(s) through ResearchGate or LinkedIn.
+If none if the options above are appealing to you, you can always ask the Corresponding Author of the article either directly through email, or by sending a Direct Message (DM) to the author(s) through ResearchGate or LinkedIn.
 
 Finally, I encourage you to pay for the article if you really want to :)
 
 <img src="./the-growing-inaccessibility-of-science.png" alt="Favicon">
-<figcaption>Figure X. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
+<figcaption>Figure 16. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
 
 ## Colorful Open Access
 
@@ -225,7 +252,7 @@ I avoid using those terms because they stigmatize and marginalize them into the 
 Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorful open access framework. Because even black has many shades of grey.
 
 <img src="./graphic_abstract_Elbakyan_2025.png" alt="Favicon">
-<figcaption>Figure X. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
+<figcaption>Figure 17. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
 
 
 ## Footnote
@@ -235,7 +262,7 @@ Limewire was (and now is again?), a peer-to-peer file-sharing platform, mainly u
 The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.
 
 <img src="./laced_with_drugs.jpg" alt="Favicon">
-<figcaption>Figure X. Your files could be laced with virus.</figcaption>
+<figcaption>Figure 18. Your files could be laced with virus.</figcaption>
 
 Being a pirate is fun, but it does come with risks.
 
