@@ -500,12 +500,15 @@
     "ids": [
       "about-me",
       "actually-its-hello-world",
+      "advanced-text-search",
       "annas-archive",
       "art-preservation-data-preservation",
       "colorful-open-access",
       "colors-in-r",
       "data-poisoning",
       "data-scrapping",
+      "disclaimer",
+      "doi-search",
       "footnote",
       "forum-request",
       "further-bits-of-interest",
@@ -526,6 +529,7 @@
       "news",
       "nexus-points",
       "nexus-project",
+      "nothing-worked-what-do",
       "page-bg",
       "playing-with-color-data-in-r",
       "prelude",
@@ -547,12 +551,12 @@
       "show-button",
       "site-header",
       "stc-website",
-      "straight-from-the-source",
       "sun",
-      "telegram-nexus-bots",
+      "telegram-bots",
       "top",
       "why",
       "wosonhj--smartquantai",
+      "yes-you",
       "you-are-a-pirate"
     ]
   }

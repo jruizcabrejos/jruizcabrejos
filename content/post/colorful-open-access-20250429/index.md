@@ -12,9 +12,9 @@ tags:
 title: "Colorful Open Access: Sci-Hub, Free Libraries, and Their Alternatives"
 ---
 
-**[NOTE: This is a live WIP/Draft and subject to some changes]**
-
 ## You are a pirate
+
+### Yes, you
 
 It doesn't matter what education level, titles attained, or how far into your professional or academic career you are.
 
@@ -27,27 +27,32 @@ But neither you nor the person who shared it with you paid for it. It was obtain
 <img src="./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png" alt="Favicon">
 <figcaption>Figure 1. "Got something that might interest ya!" - Quote from the first time you meet The Buhonero's (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. </figcaption>
 
-Here, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about these platforms and tools that have been, and are still, used to access articles and books _unconventionally_ (as of May 2025).
+In this post, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about the platforms and tools that have been (and are still) used to access articles and books _unconventionally_ and for free (as of May 2025).
 
 More specifically, I will describe how to use:
 
 - Sci-Hub
-- Anna's Archive
-- Wosonhj / SmartQuantAi
 - Nexus Project
+- Wosonhj / SmartQuantAi
 - Sci-Net
+- Anna's Archive
 
-This text is for educational and research purposes only, similar to the many articles discussing this topic in prestigious journals such as [Nature](https://www.nature.com/articles/nature.2016.19841), [Science](https://www.science.org/doi/10.1126/science.aaf9419), [Lancet](https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(16)30188-7/fulltext), and many more.
+This list is somewhat arranged in order, from "easiest platform to use" to "you need to read a little bit to properly use this".
 
+### Disclaimer
+
+Needless to say, this text is for educational and research purposes only, similar to the many articles discussing this topic in prestigious journals such as [Nature](https://www.nature.com/articles/nature.2016.19841), [Science](https://www.science.org/doi/10.1126/science.aaf9419), [Lancet](https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(16)30188-7/fulltext), and many more.
 
 <img src="./references_discussing_scihub_and_shadow_libraries.png" alt="Favicon">
 <figcaption>Figure 2. References I make in the text, because God knows you probably won't click them. Note that most of them are from 2016.</figcaption>
 
-So, you need to access an article, or maybe a book. 
+So, you are here because you need to access an article, or maybe a book. 
 
 These are your options:
 
 ## Sci-Hub
+
+### DOI Search
 
 Launched in 2011 by Alexandra Elbakyan, Sci-Hub is the most-well known website for the purpose of accessing paywalled academic articles. It is no secret that this platform has been fundamental to the research process for thousands (perhaps millions?) of researchers.
 
@@ -75,7 +80,7 @@ For books, unless they have a DOI, you won't find them on Sci-Hub. For books you
 
 Finally, I strongly suggest always searching with the DOI of an article. 
 
-If the title isn't an exact, word-by-word match, your search will fail.
+If the title you wrote isn't an exact, word-by-word match, your search will fail.
 
 <img src="./scihub_failed_search_example.png" alt="Favicon">
 <figcaption>Figure 5. Failed search example on Sci-Hub. I removed some words from the title of this article on purpose. </figcaption>
@@ -88,7 +93,7 @@ In short, Nexus is a [non-centralized (IPFS) database](https://github.com/nexus-
 
 The platform can be accessed by different means, but I will focus on the two (2) most accessible for an average user (Telegram and Website). 
 
-### Telegram Nexus Bots
+### Telegram Bots
 
 On Telegram, you begin by chatting with a Nexus Bot.
 
@@ -201,28 +206,30 @@ The site is invitation-only. Now, in order to obtain an invite code and access, 
 
 ### Sci-Hub Tokens
 
-If you have reached this part, unfortunately it is incomplete.
+If you have reached this part, unfortunately this section is incomplete.
 
-The steps you should follow to get an invite code for Sci-Net are on their website.
+The steps you should follow to get an invite code for Sci-Net are on their website (and yes, it is easy to Google).
 
 Basically, you have to:
 
-- Install Solflare Wallet on a mobile phone. This application is used to store, send and exchange tokens.
+- Install Solflare Wallet on a mobile phone. This application is used to store, send and exchange Crypto tokens
 
-- Next, you buy SOL tokens on your Solflare Wallet (the minimun amount is worth around ~7 euros or ~8 dollars at the time of writing)
+- Next, you buy SOL tokens on your Solflare Wallet (the minimum purchase required is worth ~7 euros/~8 dollars at the time of writing)
 
-- Then, you convert from SOL tokens to Sci-Hub Tokens
+- Convert your SOL tokens into Sci-Hub tokens
 
-- Finally, with Sci-Hub tokens on hand, you scan a QR and obtain your Invite Code.
+- Finally, with Sci-Hub tokens on your wallet, you scan a QR and obtain your Invite Code.
 
-Important: Within the Solflare Wallet, there are 2-3 "sci-hub" tokens. 
+Important: Within the Solflare Wallet, there are 3 options of "sci-hub" tokens. 
 
-The one you are looking for is the FIRST one.
+The one you are looking for is the FIRST one on the following image.
 
 <img src="./scihub_token_in_solflare_app.png" alt="Favicon">
 <figcaption> Figure 15. Sci-Hub token. </figcaption>
 
-## Anna's Archive
+## Advanced Text Search
+
+### Anna's Archive
 
 If you are looking for a broader range of texts (books, comics, magazines, newspapers, etc), Anna's Archive should be your next stop.
 
@@ -234,9 +241,9 @@ Anna’s Archive allows keyword and partial title searches, returning a list of 
 
 The platform also has search filters and other search options which makes it handy for text-heavy queries. 
 
-## Straight from the source
+## Nothing worked, what do?
 
-If none if the options above are appealing to you, you can always ask the Corresponding Author of the article either directly through email, or by sending a Direct Message (DM) to the author(s) through ResearchGate or LinkedIn.
+If none if the options above are appealing to you (or somehow they didn't work) you can always ask the Corresponding Author of the article either directly through email, or by sending a Direct Message (DM) to the author(s) through ResearchGate or LinkedIn.
 
 Finally, I encourage you to pay for the article if you really want to :)
 
