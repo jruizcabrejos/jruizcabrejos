@@ -58,6 +58,7 @@ sections:
     filters:
       exclude_featured: false
       exclude_future: false
+      exclude_past: false
       folders:
       - publications
     text: ""
