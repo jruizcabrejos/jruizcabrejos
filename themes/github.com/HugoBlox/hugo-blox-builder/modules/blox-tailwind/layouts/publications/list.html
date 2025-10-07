@@ -26,14 +26,18 @@
           <em>{{ $page.Params.publication }}</em>, {{ $page.Date.Format "2006" }}
         </p>
 
-        <p class="text-sm">
-          {{ with $page.Params.doi }}
-            <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
-          {{ end }}
-          {{ with $page.Params.url_pdf }}
-            | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
-          {{ end }}
-        </p>
+      <p class="text-sm">
+  {{ if or $page.Params.doi $page.Params.url_pdf }}
+    {{ with $page.Params.doi }}
+      <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
+    {{ end }}
+    {{ with $page.Params.url_pdf }}
+      | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
+    {{ end }}
+  {{ else }}
+    <span class="italic text-gray-500">IN PRESS</span>
+  {{ end }}
+</p>
       </div>
     </div>
   {{ end }}

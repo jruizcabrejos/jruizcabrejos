@@ -7,7 +7,7 @@ date: "2022-07-20T00:00:00Z"
 doi: ""
 featured: false
 projects: []
-publication: '*R. Soc. Open Sci.9*'
+publication: 'R. Soc. Open Sci.9'
 publication_short: ""
 publication_types:
 - article-journal
@@ -19,11 +19,11 @@ tags:
 title: Quantifying the effect of human population mobility on malaria risk in the Peruvian Amazon
 url_code: 
 url_dataset: ""
-url_pdf: https://doi.org/10.1098/rsos.211611
+url_pdf: "https://doi.org/10.1098/rsos.211611"
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: 
+url_source: "https://doi.org/10.1098/rsos.211611"
 url_video: ""
 ---
 

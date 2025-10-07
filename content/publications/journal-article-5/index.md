@@ -7,7 +7,7 @@ date: "2022-12-07T00:00:00Z"
 doi: ""
 featured: false
 projects: []
-publication: '*Biometals 36*'
+publication: 'Biometals 36'
 publication_short: ""
 publication_types:
 - article-journal
@@ -18,11 +18,11 @@ tags:
 title: Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)
 url_code: 
 url_dataset: ""
-url_pdf: https://doi.org/10.1007/s10534-022-00477-3
+url_pdf: "https://doi.org/10.1007/s10534-022-00477-3"
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: 
+url_source: "https://doi.org/10.1007/s10534-022-00477-3"
 url_video: ""
 ---
 

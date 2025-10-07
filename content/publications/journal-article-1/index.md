@@ -7,7 +7,7 @@ date: "2019-01-17T00:00:00Z"
 doi: ""
 featured: true
 projects: []
-publication: '*PLoS Negl Trop Dis 13*(1)'
+publication: 'PLoS Negl Trop Dis 13(1)'
 publication_short: ""
 publication_types:
 - article-journal
@@ -19,7 +19,7 @@ tags:
 title: High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery
 url_code: ""
 url_dataset: ""
-url_pdf: https://doi.org/10.1371/journal.pntd.0007105
+url_pdf: "https://doi.org/10.1371/journal.pntd.0007105"
 url_poster: ""
 url_project: ""
 url_slides: ""

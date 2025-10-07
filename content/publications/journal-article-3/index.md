@@ -7,7 +7,7 @@ date: "2020-09-24T00:00:00Z"
 doi: ""
 featured: false
 projects: []
-publication: '*Frontiers in Public Health 8*(1)'
+publication: 'Frontiers in Public Health 8(1)'
 publication_short: ""
 publication_types:
 - article-journal
@@ -19,11 +19,11 @@ tags:
 title: Open-Source 3D Printable GPS Tracker to Characterize the Role of Human Population Movement on Malaria Epidemiology in River Networks A Proof-of-Concept Study in the Peruvian Amazon
 url_code: 
 url_dataset: ""
-url_pdf: https://doi.org/10.3389/fpubh.2020.526468
+url_pdf: "https://doi.org/10.3389/fpubh.2020.526468"
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: 
+url_source: "https://doi.org/10.3389/fpubh.2020.526468"
 url_video: ""
 ---
 

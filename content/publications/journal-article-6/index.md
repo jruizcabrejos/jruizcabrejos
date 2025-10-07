@@ -6,7 +6,7 @@ date: "2024-02-02T00:00:00Z"
 doi: ""
 featured: false
 projects: []
-publication: '*Sci Rep 14*'
+publication: 'Sci Rep 14'
 publication_short: ""
 publication_types:
 - article-journal
@@ -18,10 +18,10 @@ tags:
 title: Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon
 url_code:
 url_dataset: ""
-url_pdf: https://doi.org/10.1038/s41598-024-52239-5
+url_pdf: "https://doi.org/10.1038/s41598-024-52239-5"
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: 
+url_source: "https://doi.org/10.1038/s41598-024-52239-5"
 url_video: ""
 ---

@@ -7,7 +7,7 @@ date: "2019-01-22T00:00:00Z"
 doi: ""
 featured: false
 projects: []
-publication: '*PeerJ 7*'
+publication: 'PeerJ 7'
 publication_short: ""
 publication_types:
 - article-journal
@@ -19,11 +19,11 @@ tags:
 title: Use of open mobile mapping tool to assess human mobility traceability in rural offline populations with contrasting malaria dynamics
 url_code: 
 url_dataset: ""
-url_pdf: 10.7717/peerj.6298
+url_pdf: "https://peerj.com/articles/6298/"
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: 
+url_source: "https://peerj.com/articles/6298/"
 url_video: ""
 ---
 

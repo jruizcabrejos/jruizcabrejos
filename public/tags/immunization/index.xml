@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Immunization | Jorge Ruiz-Cabrejos</title>
+    <link>https://jruizcabrejos.com/tags/immunization/</link>
+      <atom:link href="https://jruizcabrejos.com/tags/immunization/index.xml" rel="self" type="application/rss+xml" />
+    <description>Immunization</description>
+    <generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><lastBuildDate>Thu, 01 Dec 2016 00:00:00 +0000</lastBuildDate>
+    <image>
+      <url>https://jruizcabrejos.com/media/icon_hu17613129387521664874.png</url>
+      <title>Immunization</title>
+      <link>https://jruizcabrejos.com/tags/immunization/</link>
+    </image>
+    
+    <item>
+      <title>Strengthening Immunization Records in Peru with the ODK Mobile App</title>
+      <link>https://jruizcabrejos.com/publications/journal-article-0/</link>
+      <pubDate>Thu, 01 Dec 2016 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/publications/journal-article-0/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
