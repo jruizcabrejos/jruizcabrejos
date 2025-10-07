@@ -14,7 +14,7 @@ publishDate: "2026-01-01T00:00:00Z"
 slides: example
 summary: 
 tags:
-- Malaria
+- Temperatures
 title: Rethinking early warning systems for the health effects of extreme heat.
 url_code:
 url_dataset: ""
@@ -22,7 +22,7 @@ url_pdf: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: ""
+url_source: "https://lancetcountdown.org/"
 url_video: ""
 _build:
     list: always
