@@ -7,7 +7,7 @@ sections:
   content:
     button:
       text: Download CV
-      url: uploads/Jorge Ruiz-Cabrejos 2024.pdf
+      url: uploads/Jorge Ruiz Cabrejos 2025.pdf
     text: ""
     username: admin
   design:
