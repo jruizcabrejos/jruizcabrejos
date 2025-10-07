@@ -125,13 +125,17 @@
           </p>
 
           <p class="text-sm mt-1">
-            {{ with $item.Params.doi }}
-              <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
-            {{ end }}
-            {{ with $item.Params.url_pdf }}
-              | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
-            {{ end }}
-          </p>
+  {{ if or $item.Params.doi $item.Params.url_pdf }}
+    {{ with $item.Params.doi }}
+      <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
+    {{ end }}
+    {{ with $item.Params.url_pdf }}
+      | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
+    {{ end }}
+  {{ else }}
+    <span class="italic text-gray-500">IN PRESS</span>
+  {{ end }}
+</p>
         </div>
       </div>
       {{ else if eq $item.Section "post" }}
