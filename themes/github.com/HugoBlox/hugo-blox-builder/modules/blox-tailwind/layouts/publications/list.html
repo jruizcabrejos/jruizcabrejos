@@ -1,0 +1,41 @@
+{{ define "main" }}
+<section id="publications" class="max-w-3xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6">{{ .Title }}</h1>
+
+  {{ range .Pages.ByDate.Reverse }}
+    {{ $page := . }}
+
+    <div class="flex gap-4 mb-4 border-b border-gray-300 pb-2">
+      {{ with $page.Resources.GetMatch "featured*" }}
+        <img src="{{ .RelPermalink }}" class="w-24 h-24 object-cover rounded" alt="">
+      {{ end }}
+
+      <div>
+        <p class="text-lg font-semibold">
+          {{ with $page.Params.url_source }}
+            <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">
+              {{ $page.Title }}
+            </a>
+          {{ else }}
+            {{ $page.Title }}
+          {{ end }}
+        </p>
+
+        <p class="text-sm text-gray-600">
+          {{ with $page.Params.authors }}{{ delimit . ", " }}{{ end }}<br>
+          <em>{{ $page.Params.publication }}</em>, {{ $page.Date.Format "2006" }}
+        </p>
+
+        <p class="text-sm">
+          {{ with $page.Params.doi }}
+            <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
+          {{ end }}
+          {{ with $page.Params.url_pdf }}
+            | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
+          {{ end }}
+        </p>
+      </div>
+    </div>
+  {{ end }}
+</section>
+{{ end }}

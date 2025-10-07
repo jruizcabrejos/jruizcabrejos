@@ -5,7 +5,7 @@ authors:
 -  Carrasco-Escobar G, Manrique E, Ruiz-Cabrejos J, Saavedra M, Alava F, Bickersmith S, et al.
 date: "2019-01-17T00:00:00Z"
 doi: ""
-featured: false
+featured: true
 projects: []
 publication: '*PLoS Negl Trop Dis 13*(1)'
 publication_short: ""
@@ -17,13 +17,13 @@ summary: The study demonstrates the use of drone-based multispectral imaging to 
 tags:
 - Malaria
 title: High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery
-url_code: 
+url_code: ""
 url_dataset: ""
 url_pdf: https://doi.org/10.1371/journal.pntd.0007105
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: 
+url_source: "https://doi.org/10.1371/journal.pntd.0007105"
 url_video: ""
 ---
 

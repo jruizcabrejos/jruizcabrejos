@@ -83,11 +83,9 @@
 
 {{ if $block.content.title }}
 <div class="flex flex-col items-center max-w-prose mx-auto gap-3 justify-center px-6 md:px-0">
-
   <div class="mb-6 text-3xl font-bold text-gray-900 dark:text-white">
     {{ $block.content.title | emojify | $page.RenderString }}
   </div>
-
   {{ with $block.content.text }}<p>{{ . | emojify | $page.RenderString }}</p>{{ end }}
 </div>
 {{ end }}
@@ -98,8 +96,73 @@
   {{ partial "functions/render_view" (dict "fragment" "start" "page" $block "item" . "view" $view "config" $config) }}
 
   {{ range $index, $item := $query }}
-    {{ partial "functions/render_view" (dict "page" $block "item" . "view" $view "index" $index "config" $config) }}
-  {{end}}
+    {{ if eq $item.Section "publications" }}
+      {{/* --- Custom layout for publications --- */}}
+      {{ $featured := $item.Resources.GetMatch "featured*" }}
+      <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
+        {{ with $featured }}
+          <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" class="w-24 h-24 object-cover rounded-md">
+        {{ else }}
+          <div class="w-24 h-24 bg-gray-200 rounded-md flex items-center justify-center text-gray-500 text-sm">
+            No image
+          </div>
+        {{ end }}
+
+        <div class="flex flex-col justify-center">
+          <p class="text-lg font-semibold mb-1">
+            {{ with $item.Params.url_source }}
+              <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">
+                {{ $item.Title }}
+              </a>
+            {{ else }}
+              {{ $item.Title }}
+            {{ end }}
+          </p>
+
+          <p class="text-sm text-gray-600">
+            {{ with $item.Params.authors }}{{ delimit . ", " }}{{ end }}<br>
+            <em>{{ $item.Params.publication }}</em>{{ with $item.Date }}{{ if . }}, {{ .Format "2006" }}{{ end }}{{ end }}
+          </p>
+
+          <p class="text-sm mt-1">
+            {{ with $item.Params.doi }}
+              <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
+            {{ end }}
+            {{ with $item.Params.url_pdf }}
+              | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
+            {{ end }}
+          </p>
+        </div>
+      </div>
+      {{ else if eq $item.Section "post" }}
+      {{/* --- Post: Show featured image to the right of the content --- */}}
+      {{ $featured := or ($item.Resources.GetMatch "featured*") ($item.Params.image) }}
+      <div class="w-full max-w-3xl mb-8 border-b border-gray-300 pb-4">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+    
+          <!-- Left: Post content -->
+          <div class="flex-1">
+            {{ partial "functions/render_view" (dict "page" $block "item" $item "view" $view "index" $index "config" $config) }}
+          </div>
+    
+          <!-- Right: Featured image -->
+          {{ with $featured }}
+            <div class="md:w-48 md:h-32 w-full">
+              <a href="{{ $item.RelPermalink }}">
+                <img src="{{ if .RelPermalink }}{{ .RelPermalink }}{{ else }}{{ . }}{{ end }}"
+                     alt="{{ $item.Title }}"
+                     class="w-full h-full object-cover rounded-lg shadow-sm">
+              </a>
+            </div>
+          {{ end }}
+    
+        </div>
+      </div>
+    {{ else }}
+      {{/* --- Default layout for all other sections --- */}}
+      {{ partial "functions/render_view" (dict "page" $block "item" $item "view" $view "index" $index "config" $config) }}
+    {{ end }}
+  {{ end }}
 
   {{ partial "functions/render_view" (dict "fragment" "end" "page" $block "item" . "view" $view) }}
 
@@ -120,7 +183,7 @@
   {{ $items_type := $archive_page.Type }}
   {{ $i18n := "" }}
   {{ if eq $items_type "blog" }}
-    {{ $i18n = "more_posts" }}
+    {{ $i18n = "more_post" }}
   {{ else if eq $items_type "event" }}
     {{ $i18n = "more_talks" }}
   {{ else if eq $items_type "publication" }}
@@ -136,9 +199,9 @@
       <a
         class="relative inline-flex items-center gap-1 rounded-md border border-gray-300 bg-white px-3 py-2 pl-4 text-sm font-medium text-gray-500 hover:bg-gray-50 focus:z-20 dark:border-gray-500 dark:bg-gray-800 dark:text-gray-300"
         href="{{ $archive_link }}">
-          <span>{{ $archive_text | emojify }}</span>
-        </a>
-      </div>
+        <span>{{ $archive_text | emojify }}</span>
+      </a>
+    </div>
   </div>
 
 {{ end }}

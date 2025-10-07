@@ -16,7 +16,7 @@ slides: example
 summary: The study demonstrates the use of drone-based multispectral imaging to identify malaria vector larval habitats with high accuracy. This innovative approach supports targeted interventions, improving resource allocation for malaria control efforts.
 tags:
 - Malaria
-title: The study introduces an open-source, 3D-printable GPS tracker to monitor human movement and its influence on malaria epidemiology in river networks. Tested in the Peruvian Amazon, it provides insights into mobility patterns critical for malaria control strategies.
+title: Open-Source 3D Printable GPS Tracker to Characterize the Role of Human Population Movement on Malaria Epidemiology in River Networks A Proof-of-Concept Study in the Peruvian Amazon
 url_code: 
 url_dataset: ""
 url_pdf: https://doi.org/10.3389/fpubh.2020.526468
