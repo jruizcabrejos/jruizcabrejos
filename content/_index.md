@@ -57,6 +57,7 @@ sections:
   content:
     filters:
       exclude_featured: false
+      exclude_future: false
       folders:
       - publications
     text: ""
