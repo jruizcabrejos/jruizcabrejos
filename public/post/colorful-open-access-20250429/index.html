@@ -3,7 +3,7 @@
 <!-- Last Published: October 7, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,7 +44,7 @@
   <meta name="description" content="A guide to Sci-hub, Sci-net, Nexus, Wosonhj and SmartQuantAi, because paywalls are meant to be climbed." />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:4321/post/colorful-open-access-20250429/" />
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/post/colorful-open-access-20250429/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -161,7 +200,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
 
-  <link rel="canonical" href="http://localhost:4321/post/colorful-open-access-20250429/" />
+  <link rel="canonical" href="https://jruizcabrejos.com/post/colorful-open-access-20250429/" />
 
   
   
@@ -186,10 +225,10 @@
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
   <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
-  <meta property="og:url" content="http://localhost:4321/post/colorful-open-access-20250429/" />
+  <meta property="og:url" content="https://jruizcabrejos.com/post/colorful-open-access-20250429/" />
   <meta property="og:title" content="Colorful Open Access: Sci-Hub, Free Libraries, and Their Alternatives | Jorge Ruiz-Cabrejos" />
-  <meta property="og:description" content="A guide to Sci-hub, Sci-net, Nexus, Wosonhj and SmartQuantAi, because paywalls are meant to be climbed." /><meta property="og:image" content="http://localhost:4321/post/colorful-open-access-20250429/featured.png" />
-    <meta property="twitter:image" content="http://localhost:4321/post/colorful-open-access-20250429/featured.png" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="A guide to Sci-hub, Sci-net, Nexus, Wosonhj and SmartQuantAi, because paywalls are meant to be climbed." /><meta property="og:image" content="https://jruizcabrejos.com/post/colorful-open-access-20250429/featured.png" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/post/colorful-open-access-20250429/featured.png" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -356,9 +395,6 @@
   
   
   
-  
-  
-  
 
 
 
@@ -443,8 +479,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -1258,7 +1294,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fcolorful-open-access-20250429%2F&amp;text=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fcolorful-open-access-20250429%2F&amp;text=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1276,7 +1312,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fcolorful-open-access-20250429%2F&amp;t=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fcolorful-open-access-20250429%2F&amp;t=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1296,7 +1332,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Colorful%20Open%20Access%3A%20Sci-Hub%2C%20Free%20Libraries%2C%20and%20Their%20Alternatives&amp;body=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fcolorful-open-access-20250429%2F"
+    href="mailto:?subject=Colorful%20Open%20Access%3A%20Sci-Hub%2C%20Free%20Libraries%2C%20and%20Their%20Alternatives&amp;body=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fcolorful-open-access-20250429%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1314,7 +1350,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fcolorful-open-access-20250429%2F&amp;title=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fcolorful-open-access-20250429%2F&amp;title=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1332,7 +1368,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives%20http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fcolorful-open-access-20250429%2F"
+    href="whatsapp://send?text=Colorful&#43;Open&#43;Access%3A&#43;Sci-Hub%2C&#43;Free&#43;Libraries%2C&#43;and&#43;Their&#43;Alternatives%20https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fcolorful-open-access-20250429%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1382,7 +1418,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:4321/" class="no-underline">
+      <a href="https://jruizcabrejos.com/" class="no-underline">
       </a>
     </div>
     

@@ -3,7 +3,7 @@
 <!-- Last Published: October 7, 2025 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
-<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=4321&amp;path=livereload" data-no-instant defer></script>
+<head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,7 +44,7 @@
   <meta name="description" content="Documenting the site  - This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" />
 
   
-  <link rel="alternate" hreflang="en-us" href="http://localhost:4321/post/hello-world-i-guess-20241209/" />
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/" />
 
   
   
@@ -130,6 +130,45 @@
 
 
 
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
 
 
 
@@ -161,7 +200,7 @@
   <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
   <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
 
-  <link rel="canonical" href="http://localhost:4321/post/hello-world-i-guess-20241209/" />
+  <link rel="canonical" href="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/" />
 
   
   
@@ -186,10 +225,10 @@
     <meta property="twitter:creator" content="@jruizcabrejos" />
   
   <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
-  <meta property="og:url" content="http://localhost:4321/post/hello-world-i-guess-20241209/" />
+  <meta property="og:url" content="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/" />
   <meta property="og:title" content="Hello World, I guess | Jorge Ruiz-Cabrejos" />
-  <meta property="og:description" content="Documenting the site  - This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" /><meta property="og:image" content="http://localhost:4321/post/hello-world-i-guess-20241209/featured.jpg" />
-    <meta property="twitter:image" content="http://localhost:4321/post/hello-world-i-guess-20241209/featured.jpg" /><meta property="og:locale" content="en-us" />
+  <meta property="og:description" content="Documenting the site  - This “personal” website has been changed and rebuild several times over the past few years. Hopefully this is the last one?" /><meta property="og:image" content="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/featured.jpg" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/post/hello-world-i-guess-20241209/featured.jpg" /><meta property="og:locale" content="en-us" />
   
     
       <meta
@@ -356,9 +395,6 @@
   
   
   
-  
-  
-  
 
 
 
@@ -443,8 +479,8 @@
   
   <script
     defer
-    src="/js/hugo-blox-en.min.js"
-    integrity=""
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
   ></script>
 
   
@@ -1043,7 +1079,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://twitter.com/intent/tweet?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;text=Hello&#43;World%2C&#43;I&#43;guess"
+    href="https://twitter.com/intent/tweet?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;text=Hello&#43;World%2C&#43;I&#43;guess"
     title="X"
     aria-label="X"
     id="share-link-x"
@@ -1061,7 +1097,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.facebook.com/sharer.php?u=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;t=Hello&#43;World%2C&#43;I&#43;guess"
+    href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;t=Hello&#43;World%2C&#43;I&#43;guess"
     title="Facebook"
     aria-label="Facebook"
     id="share-link-facebook"
@@ -1081,7 +1117,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="mailto:?subject=Hello%20World%2C%20I%20guess&amp;body=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F"
+    href="mailto:?subject=Hello%20World%2C%20I%20guess&amp;body=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F"
     title="Email"
     aria-label="Email"
     id="share-link-email"
@@ -1099,7 +1135,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="https://www.linkedin.com/shareArticle?url=http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;title=Hello&#43;World%2C&#43;I&#43;guess"
+    href="https://www.linkedin.com/shareArticle?url=https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F&amp;title=Hello&#43;World%2C&#43;I&#43;guess"
     title="LinkedIn"
     aria-label="LinkedIn"
     id="share-link-linkedin"
@@ -1117,7 +1153,7 @@
   <a
     target="_blank" rel="noopener"
     class="m-1 rounded-md bg-neutral-300 p-1.5 text-neutral-700 hover:bg-primary-500 hover:text-neutral-300 dark:bg-neutral-700 dark:text-neutral-300 dark:hover:bg-primary-400 dark:hover:text-neutral-800"
-    href="whatsapp://send?text=Hello&#43;World%2C&#43;I&#43;guess%20http%3A%2F%2Flocalhost%3A4321%2Fpost%2Fhello-world-i-guess-20241209%2F"
+    href="whatsapp://send?text=Hello&#43;World%2C&#43;I&#43;guess%20https%3A%2F%2Fjruizcabrejos.com%2Fpost%2Fhello-world-i-guess-20241209%2F"
     title="WhatsApp"
     aria-label="WhatsApp"
     id="share-link-whatsapp"
@@ -1167,7 +1203,7 @@
       Authors
     </div>
     <div class="font-semibold leading-6 text-neutral-800 dark:text-neutral-300">
-      <a href="http://localhost:4321/" class="no-underline">
+      <a href="https://jruizcabrejos.com/" class="no-underline">
       </a>
     </div>
     
