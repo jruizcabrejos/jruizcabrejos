@@ -18,11 +18,11 @@ tags:
 title: Rethinking early warning systems for the health effects of extreme heat.
 url_code:
 url_dataset: ""
-url_pdf: ""
+url_pdf: "https://www.nature.com/naturehealth/"
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: "https://lancetcountdown.org/"
+url_source: "https://www.nature.com/naturehealth/"
 url_video: ""
 _build:
     list: always

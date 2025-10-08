@@ -18,7 +18,7 @@ tags:
 title: The 2025 Report of the Lancet Countdown on Health and Climate Change.
 url_code:
 url_dataset: ""
-url_pdf: ""
+url_pdf: "https://lancetcountdown.org/"
 url_poster: ""
 url_project: ""
 url_slides: ""
