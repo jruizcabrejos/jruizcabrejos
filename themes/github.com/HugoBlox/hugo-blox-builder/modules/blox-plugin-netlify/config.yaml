@@ -1,3 +1,4 @@
+buildFuture: true
 module:
   mounts:
     - source: src/layouts
