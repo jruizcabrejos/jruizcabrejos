@@ -11,7 +11,7 @@ publication_short: ""
 publication_types:
 - article-journal
 slides: example
-summary: 
+summary: abstract
 tags:
 - Temperatures
 title: The 2025 Report of the Lancet Countdown on Health and Climate Change.

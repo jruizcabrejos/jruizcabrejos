@@ -11,7 +11,7 @@ publication_short: ""
 publication_types:
 - article-journal
 slides: example
-summary: 
+summary: abstract
 tags:
 - Temperatures
 title: Rethinking early warning systems for the health effects of extreme heat.

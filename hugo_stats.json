@@ -236,6 +236,7 @@
       "hover:underline",
       "inline-block",
       "inline-flex",
+      "italic",
       "items-center",
       "items-start",
       "justify-between",
