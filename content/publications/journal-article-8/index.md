@@ -10,7 +10,6 @@ publication: 'The Lancet'
 publication_short: ""
 publication_types:
 - article-journal
-publishDate: "2025-10-29T00:00:00Z"
 slides: example
 summary: 
 tags:
@@ -18,10 +17,10 @@ tags:
 title: The 2025 Report of the Lancet Countdown on Health and Climate Change.
 url_code:
 url_dataset: ""
-url_pdf: "https://lancetcountdown.org/"
+url_pdf: ""
 url_poster: ""
 url_project: ""
 url_slides: ""
-url_source: "https://lancetcountdown.org/"
+url_source: ""
 url_video: ""
 ---
