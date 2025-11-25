@@ -259,7 +259,7 @@ Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorf
 
 ## Footnote
 
-Limewire was (and now is again?), a peer-to-peer file-sharing platform, mainly used for music. 
+Limewire was ([and now is again?](https://www.rollingstone.com/music/music-news/limewire-artificial-intelligence-music-generator-1234924461/)), a peer-to-peer file-sharing platform, mainly used for music. 
 
 The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.
 
@@ -273,9 +273,8 @@ Be careful out there not to click or download files called "not-a-virus.exe".
 <img src="./not_a_virus_dolphin.png" alt="Favicon">
 <figcaption>Figure 18. A dolphin file you can fully trust with your most sensitive files.</figcaption>
 
-
-
-[Image dolphin not a virus]
+<br>
+<br>
 
 {{< youtube J0e9UiXbd5o >}}
 
