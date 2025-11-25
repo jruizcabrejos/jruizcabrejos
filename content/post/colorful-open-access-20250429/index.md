@@ -31,11 +31,11 @@ In this post, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) a
 
 More specifically, I will describe how to use:
 
-- Sci-Hub
-- Nexus Project
-- Wosonhj / SmartQuantAi
-- Sci-Net
-- Anna's Archive
+- [Sci-Hub](#sci-hub)
+- [Nexus Project](##nexus-project)
+- [Wosonhj / SmartQuantAi / Pidantuan](#wosonhj--smartquantai--pidantuan)
+- [Sci-Net](#sci-net)
+- [Anna's Archive](#annas-archive)
 
 This list is somewhat arranged in order, from "easiest platform to use" to "you need to read a little bit to properly use this".
 
@@ -60,7 +60,7 @@ Who downloads pirated papers from Sci-Hub?
 
 Everyone, [and that's no exaggeration](https://www.science.org/doi/10.1126/science.352.6285.508).
 
-Using Sci-Hub is straightforward. You access the website (you'll have to Google it, sorry) and in the search bar provide either:
+Using Sci-Hub is straightforward. You access the website (you'll have to Google it, sorry) and in the search bar you provide either:
 
 - The full title of the article
 
@@ -76,7 +76,9 @@ Unfortunately Sci-Hub's collection has not been significantly updated since ~202
 <img src="./scihub_total_available_articles.png" alt="Favicon">
 <figcaption>Figure 4. Articles available in Sci-Hub database vs. total number of articles according to Crossref index. Taken from Elbakyan, A. (2025). "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science"</figcaption>
 
-For books, unless they have a DOI, you won't find them on Sci-Hub. For books you need to use LibGen and search with an International Standard Book Number (ISBN) code.
+For books, unless they have a DOI, you won't find them on Sci-Hub. 
+
+If what you are looking is books you need to use LibGen and, instead of a DOI, you search with the International Standard Book Number (ISBN) code.
 
 Finally, I strongly suggest always searching with the DOI of an article. 
 
@@ -109,10 +111,14 @@ Once you start a chat, you search for the article and download it if it's availa
 
 If the article is NOT available, you will see a request button. Clicking adds a 1-point reward for the article, claimable by whoever uploads it first.
 
+Effectively, this is a "bounty" for the article.
+
 Once an user provides the article, you’ll be notified, and the article will stay in the Nexus Library for everyone else to search and download in the future.
 
 <img src="./nexus_bot_telegram_request_example.png" alt="Favicon">
 <figcaption>Figure 8. Left, button to make an article request. Top right, the bot confirms the request has been successful. Bottom right, notification confirming someone has uploaded the article I requested.</figcaption>
+
+You can increase the reward for the "bounty" by making multiple requests for that article.
 
 ### Nexus Points
 
@@ -124,42 +130,42 @@ You start with 10 points. These are replenished daily. With them you can either:
 
 OR
 
-- Make one (1) request and offer 10 points for it.
+- Make 10 requests for one (1) article.
 
 Finally, if you need more points, you can always upload articles others have requested. You can check the list of requested articles in the _request channel_.
 
 <img src="./nexus_pool_request.png" alt="Favicon" width="400">
 <figcaption>Figure 9. Telegram channel containing the pool of requests made by users.</figcaption>
 
-### STC Website
+### (Nexus) STC Website
 
 If you don't have Telegram (and refuse to use it), you can still access the Nexus Database through their STC/Libstcc website.
 
 You can search for an article with their DOI, and if you see a globe emoji next to the result, it means the article is available.
 
-[Here would go the image of the website, but at the time of writing it was down. The bot on Telegram works though!]
+[Here would go the image of the website, but at the time of writing it was down. I tried again some months later and it didn't load. The bot on Telegram works though!]
 
 That said, I strongly recommend using the Telegram bots instead of the website.
 
-## Wosonhj / SmartQuantAi
+## Wosonhj / SmartQuantAi / Pidantuan
 
-If your article isn't on Sci-hub or Nexus databases, your best chance at obtaining the article you need is Wosonhj (also known as Smartquantai), which unlike previous alternatives, it works entirely as a forum.
+If your article isn't on Sci-hub or Nexus databases, your best chance at obtaining the article you need is Wosonhj (also known as Smartquantai, or Pidantuan), which unlike previous alternatives, it works entirely as a forum.
 
-Here, you always make a public request for an article in exchange for points. You get these points by:
+Here, you **always** make a public request for an article in exchange for points. You get these points by:
 
 - Creating an account: 50 points 
 - Logging in daily: 20 points / day
 - Completing requests of other users
 
 <img src="./smartquantai_instructions_account_creation.png" alt="Favicon">
-<figcaption> Figure 10. Account creation process for Wosonhj / SmartQuantAi </figcaption>
+<figcaption> Figure 10. Account creation process for Wosonhj / SmartQuantAi / Pidantuan </figcaption>
 
 Requesting an article typically costs (a minimum of) 10 points.
 
-More often than not, in my experience, a good Samaritan will share the PDF file within minutes (or seconds!) of making a request.
+More often than not, in my experience, a good Samaritan will share the PDF file within minutes (or seconds!) of making a request. Making it a very efficient method to obtain articles if you invest the few minutes it takes to understand the platform.
 
 <img src="./hulk_with_full_access_to_all_scientific_articles_shares_a_pdf_with_little_guy.png" alt="Favicon">
-<figcaption> Figure 11. User from Wosonhj / SmartQuantAi shares a pdf with someone that does not have access to a paywalled scientific article. </figcaption>
+<figcaption> Figure 11. User from Wosonhj / SmartQuantAi / Pidantuan shares a pdf with someone that does not have access to a paywalled scientific article. </figcaption>
 
 ### Forum Request
 
@@ -170,7 +176,7 @@ After creating an account, you request an article following this steps:
 - Click "Quick Check"
 
 <img src="./smartquantai_post_article_request.png" alt="Favicon">
-<figcaption> Figure 12. Article request process for Wosonhj / SmartQuantAi </figcaption>
+<figcaption> Figure 12. Article request process for Wosonhj / SmartQuantAi / Pidantuan </figcaption>
 
 Now, one of two things will happen:
 
@@ -185,14 +191,14 @@ OR
 If you wish, you can also increase the reward to encourage a faster response.
 
 <img src="./article_request_contents_others.png" alt="Favicon">
-<figcaption> Figure 13. Example of information needed to request an article in Wosonhj / SmartQuantAi</figcaption>
+<figcaption> Figure 13. Example of information needed to request an article in Wosonhj / SmartQuantAi / Pidantuan </figcaption>
 
-Once your request is fulfilled and you have verified the contents of the pdf file, you must "Adopt" (accept) the file.
+Once your request is fulfilled, and you have verified the contents of the pdf file, you must "Adopt" ("Accept") the file.
 
 <img src="./adopt_request_smartquantai.png" alt="Favicon">
 <figcaption> Figure 14. Do NOT forget to "adopt" your article. </figcaption>
 
-Unlike other platforms, in here only you (the one requesting the file) will be able to download it. And after 10 days, the file is deleted from the website.
+Unlike other platforms, here only you (the one requesting the file) will be able to download the file. And after 10 days, the file is deleted from the website.
 
 ## Sci-net
 
@@ -200,32 +206,21 @@ The newest platform on this list is Sci-Net, launched while I was writing this p
 
 Think of it as a Sci-Hub 2.0.
 
-It's created by the same person, and it uses cryptocurrency (Sci-Hub coin) as a point system similar to Nexus/Wosonhj.
+It's created by the same person, and it uses cryptocurrency (Sci-Hub coin) as a point system similar to Nexus and Wosonhj.
 
-The site is invitation-only. Now, in order to obtain an invite code and access, you must obtain Sci-Hub tokens first.
+The site is "invitation-only". You obtain an invite code by obtaining Sci-Hub tokens first.
 
 ### Sci-Hub Tokens
 
-If you have reached this part, unfortunately this section is incomplete.
+The steps you should follow to get an invite code for Sci-Net are on their website (and yes, it is easy to Google, I promise).
 
-The steps you should follow to get an invite code for Sci-Net are on their website (and yes, it is easy to Google).
+You can find those same instructions here:
 
-Basically, you have to:
-
-- Install Solflare Wallet on a mobile phone. This application is used to store, send and exchange Crypto tokens
-
-- Next, you buy SOL tokens on your Solflare Wallet (the minimum purchase required is worth ~7 euros/~8 dollars at the time of writing)
-
-- Convert your SOL tokens into Sci-Hub tokens
-
-- Finally, with Sci-Hub tokens on your wallet, you scan a QR and obtain your Invite Code.
-
-Important: Within the Solflare Wallet, there are 3 options of "sci-hub" tokens. 
-
-The one you are looking for is the FIRST one on the following image.
-
-<img src="./scihub_token_in_solflare_app.png" alt="Favicon">
-<figcaption> Figure 15. Sci-Hub token. </figcaption>
+<iframe 
+  src="/SCI_with_Phantom.pdf" 
+  width="100%" 
+  height="800px">
+</iframe>
 
 ## Advanced Text Search
 
@@ -248,7 +243,7 @@ If none if the options above are appealing to you (or somehow they didn't work) 
 Finally, I encourage you to pay for the article if you really want to :)
 
 <img src="./the-growing-inaccessibility-of-science.png" alt="Favicon">
-<figcaption>Figure 16. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
+<figcaption>Figure 15. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
 
 ## Colorful Open Access
 
@@ -259,7 +254,7 @@ I avoid using those terms because they stigmatize and marginalize them into the 
 Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorful open access framework. Because even black has many shades of grey.
 
 <img src="./graphic_abstract_Elbakyan_2025.png" alt="Favicon">
-<figcaption>Figure 17. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
+<figcaption>Figure 16. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
 
 
 ## Footnote
@@ -269,14 +264,14 @@ Limewire was (and now is again?), a peer-to-peer file-sharing platform, mainly u
 The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.
 
 <img src="./laced_with_drugs.jpg" alt="Favicon">
-<figcaption>Figure 18. Your files could be laced with virus.</figcaption>
+<figcaption>Figure 17. Your files could be laced with virus.</figcaption>
 
 Being a pirate is fun, but it does come with risks.
 
 Be careful out there not to click or download files called "not-a-virus.exe".
 
 <img src="./not_a_virus_dolphin.png" alt="Favicon">
-<figcaption>Figure 19. A dolphin file you can fully trust with your most sensitive files.</figcaption>
+<figcaption>Figure 18. A dolphin file you can fully trust with your most sensitive files.</figcaption>
 
 
 

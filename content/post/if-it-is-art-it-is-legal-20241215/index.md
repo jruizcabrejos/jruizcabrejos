@@ -34,9 +34,9 @@ A lot of the work I have been doing lately as part of my doctoral studies involv
 
 This can be as simple as clicking one or two buttons to download the dataset containing all the variables I want, or it can involve clicking 1,600 times for each combination of year, location, and variable I am looking for. 
 
-Epidemiological reports can be monthly, sometimes weekly, with no consistency whatsoever on how or where the data is presented. 
+Epidemiological reports across countries, and within regions inside countries, can be monthly, sometimes weekly, with no consistency whatsoever on how or where the data is presented. 
 
-Needless to say, I usually don't do that myself and instead I set-up a script to automate the process for me.
+Needless to say, I usually try to not do all the clicking by myself and instead I set-up a script to automate the process for me.
 
 Since I primarily use "R", I rely on RSelenium to do my bidding, which is the R implementation of [Selenium, an open source umbrella project for a range of tools and libraries aimed at supporting browser automation](https://www.selenium.dev/) and more often than not, used for 'web scrapping'.
 
@@ -49,7 +49,8 @@ if (!requireNamespace("RSelenium", quietly = TRUE)) install.packages("RSelenium"
 library("RSelenium", character.only = TRUE)
 
 ## Start driver
-rD <- rsDriver(port= sample(7600)[1], browser=c("firefox"),
+rD <- rsDriver(port= sample(7600)[1], 
+               browser=c("firefox"), # Using Firefox
                chromever = NULL,
                check = F,
                verbose = FALSE
@@ -66,7 +67,7 @@ Whenever you open a browser using RSelenium, your browser will be labeled as a "
 <img src="./firefox_robot_scrapper.png" alt="Favicon">
 <figcaption>Figure 2. Robot browser icon in Firefox while using RSelenium.</figcaption>
 
-This can sometimes be an *issue*. Since a "robot" browser doesn't<sup>(and maybe should not?)</sup>have the same permissions as non-automated users, some websites may block it.
+This can sometimes be an *issue*. Since a "robot" browser doesn't<sup>(and maybe should not?)</sup>have the same permissions as "normal" non-automated users, some websites may block it.
 
 For example. if a website requires an user to log in using a Google Account, the website won't let you do this from a "robot" browser.
 
@@ -75,9 +76,9 @@ For example. if a website requires an user to log in using a Google Account, the
 <img src="./google_auth.png" alt="Favicon">
 <figcaption>Figure 3. What if you wanted data, but God said "Please log in using your Google Account". <br> A) Google Account Sign In pop-up <br>B) Error message when logging from a "robot" browser.</figcaption>
 
-If for some reason you needed to workaround this limitation, you could do so by creating a `profile` in your ("non-robotic") browser, and logging in to the website you want to access while your `profile` is enabled.
+If for some reason you needed to workaround this limitation, you could do so by creating a `profile` in your ("normal") browser, and while this `profile` is active you log in into the website restricted for "robots".
 
-By doing this, you make your `profile` 'remember you' (and your credentials), and the next time you use your `profile` from other devices or browsers, it will 'remember you' and not ask for credentials again.
+By doing this, you make your `profile` 'remember you' (and your "normal" credentials), and the next time you use your `profile` from other devices or browsers, it will 'remember you' and not ask for credentials again.
 
 We can pass this `profile` as an argument for the function `rsDriver()` when initiating your "robot" browser with Rselenium.
 
@@ -117,7 +118,9 @@ And now this "robot" could in theory use your ID and be able to impersonate you 
 <img src="./captcha.png" alt="Favicon">
 <figcaption>Figure 4. You are not a robot.</figcaption>
 
-I don't know why would someone need this, but might prove useful one day. Just make sure you always follow the websites terms of service.
+I don't know why would someone need this, but might prove useful one day. 
+
+Just make sure you always follow the websites terms of service (this is not legal advice).
 
 ### Health data gaps
 
@@ -127,7 +130,7 @@ There is a 'gap' between the data that exists out there, and the data we can (re
 
 Sometimes this 'gap' is the result of systems not equipped to register the data. They simply lack the capacity to do so.
 
-The data could be registered, but it isn't detailed or of enough quality to tackle more specific subjects. You can read an example about it in the comment published in BMJ ['A lack of quality statistics is hiding the real heatwave death toll'](https://www.bmj.com/content/385/bmj.q1052) by Shetty D.
+The data could be registered, but it isn't detailed or of enough quality to address some questions with enough certainty. You can read an example about it in the comment published in BMJ ['A lack of quality statistics is hiding the real heatwave death toll'](https://www.bmj.com/content/385/bmj.q1052) by Shetty D.
 
 Dysfunctional systems are unable to register data, and if they do, it is incomplete or not accurate.
 
@@ -138,7 +141,7 @@ In other cases, the 'gap' is the result of data that cannot be used because of i
 
 The data 'exists', but we cannot use it (and for good reason).
 
-The comment ['Who owns (or controls) health data?'](https://www.nature.com/articles/s41597-024-02982-1) published in Scientific Data by Kahn, S.D. describes the ongoing debate on who (should?) control secondary use of health data, as well as the issues surrounding its ownership, which has historically been controlled by institutions and is nowadays shifting towards individuals.  
+The comment ['Who owns (or controls) health data?'](https://www.nature.com/articles/s41597-024-02982-1) published in Scientific Data by Kahn, S.D. describes the ongoing debate on who (should?) control secondary use of health data, as well as the issues surrounding its ownership, which has historically been controlled by institutions (and which at the time of writing, seems to be shifting towards individuals).  
 
 One can overcome some of these 'gaps' by developing new methods of analysis and leverage what little *imperfect* data you might have. Continuing with the example of mortality data, the article published in Lancet Regional Health Europe  ['The effect of temporal data aggregation to assess the impact of changing temperatures in Europe: an epidemiological modelling study'](https://www.thelancet.com/journals/lanepe/article/PIIS2666-7762(23)00198-9/fulltext) by Ballester, J. does precisely that by demonstrating you can use weekly data, instead of daily data, to obtain similar estimations of heat and cold related mortality.
 
@@ -162,17 +165,23 @@ The data might be obtainable, but it will be annoying to use.
 Urban dictionary top definition for "gatekeeping" is:<br>*"When someone takes it upon themselves to decide who does or does not have access or rights to a community or identity."</br>*
 {{% /callout %}}
 
-I understand why this is the case with some information (like health), but what about urban art?
+I understand this being the case for health data and information, in which individual privacy is of the outmost importance.
 
-By definition art in the form of [street art should be by (and for) the general public](https://journals.ap2.pt/index.php/sauc/article/view/15).
+But what if we talk about urban art?
+
+By definition art in the form of [street art should be by (and for) the general public](https://journals.ap2.pt/index.php/sauc/article/view/15). Right?
 
 ### Art preservation, data preservation
 
-As someone who hoards data and is kept awake at night by [the decay of Google Search and the expanding Internet Rot](https://www.youtube.com/watch?v=vwVFzY8XqIo), I love to preserve data in the form of websites and files that might one day disappear.
+I tend to hoard a lot of *data*, and as someone who is kept awake at night by [the decay of Google Search and the expanding Internet Rot](https://www.youtube.com/watch?v=vwVFzY8XqIo), from time to time I help with my little grain of sand by saving some websites and files that might one day disappear.
 
-But with graffiti I have encountered an apparent contradiction: Isn't it meant to be 'ephemeral'? [You do not posses it, nor own it.](https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/)
+However, a few days ago this urge I have found an apparent contradiction: At their core, graffiti and other Street Art assets should be 'ephemeral'. [You do not posses it, nor own it.](https://ketworks.com/2019/03/26/the-ephemeral-nature-of-the-graffiti-art/)
 
-So, is it ok to preserve that which was not meant to be preserved? Would the authors be ok with it?
+So, if someone were to make a collection of digitized urban art images, would that be ok? 
+
+Is it really ok to preserve that which was not meant to be preserved? 
+
+(Would the authors be ok with it?)
 
 <img src="./graffiti_seta.jpg" alt="Favicon">
 <figcaption>Figure 6. I see you, fungi man.</figcaption>
@@ -196,13 +205,13 @@ Anything of cultural or artistic value falls under the category of "POI", graffi
 <img src="./poi_examples.png" alt="Favicon">
 <figcaption>Figure 8. Small selection of POIs from Niantic Wayfarer. A graffiti, a water fountain, a building, a neighboors association, a kids park, a park, and a esculpture.</figcaption>
 
-There is a lot that can be said (and discussed) about, on, and around the urban art (graffiti, street art, etc) that is used on these augmented reality games.
+Given everything I have said in this post, there is a lot that can be said (and discussed) about, on, and around the urban art assets found in these augmented reality games.
 
 What can these graffiti tell us about the community, the city, and how they build their (virtual) space?
 
 Would the authors of these POI's with graffiti in them be ok with their creations being made as public and as accessible as possible?
 
-Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that 'gatekeep' the data?
+Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that 'gatekeep' this data?
 
 I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.
 
@@ -227,10 +236,10 @@ As long as it is art we are talking about, in my opinion, everything is fair gam
 
 While downloading images of urban art for Barcelona, my code had a bug that I was not aware of.
 
-I only discovered it after checking "Grafiti Los conejos traviesos".
+The bug was found thanks to the "Grafiti Los conejos traviesos".
 
-This song ("to vanish"?) seems appropriate for talking about ephemeral and temporary urban art.
+This song ("to vanish"?) seems appropriate for talking about the ephemeral and urban art in general.
 
 {{< youtube 3F4DZbvqEnI >}}
 
-Alternative footnote on robots is [here](https://www.youtube.com/watch?v=sqK-jh4TDXo).
+Alternative footnote song on robots is [here](https://www.youtube.com/watch?v=sqK-jh4TDXo).
