@@ -27,21 +27,27 @@ But neither you nor the person who shared it with you paid for it. It was obtain
 <img src="./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png" alt="Favicon">
 <figcaption>Figure 1. "Got something that might interest ya!" - Quote from the first time you meet The Buhonero's (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. </figcaption>
 
-In this post, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about the platforms and tools that have been (and are still) used to access articles and books _unconventionally_ and for free (as of May 2025).
+In this post, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about the platforms and tools that have been (and are still) used to access articles and books _unconventionally_ and for free (as of Jan 2026).
 
 More specifically, I will describe how to use:
 
 - [Sci-Hub](#sci-hub)
-- [Nexus Project](##nexus-project)
+- [Nexus Project](#nexus-project)
 - [Wosonhj / SmartQuantAi / Pidantuan](#wosonhj--smartquantai--pidantuan)
 - [Sci-Net](#sci-net)
 - [Anna's Archive](#annas-archive)
 
 This list is somewhat arranged in order, from "easiest platform to use" to "you need to read a little bit to properly use this".
 
+<img src="./difficulty_graph_oa_platforms_v2.jpg" alt="Favicon">
+<figcaption>Figure 2. I am proficient in paint.exe </figcaption>
+
+
 ### Disclaimer
 
 Needless to say, this text is for educational and research purposes only, similar to the many articles discussing this topic in prestigious journals such as [Nature](https://www.nature.com/articles/nature.2016.19841), [Science](https://www.science.org/doi/10.1126/science.aaf9419), [Lancet](https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(16)30188-7/fulltext), and many more.
+
+You won't find here a direct link towards these website. However, it is fairly easy to search for them on normal Search Engines (e.g. Google). The focus of this text is on how to use each platform.
 
 <img src="./references_discussing_scihub_and_shadow_libraries.png" alt="Favicon">
 <figcaption>Figure 2. References I make in the text, because God knows you probably won't click them. Note that most of them are from 2016.</figcaption>
@@ -202,7 +208,7 @@ Unlike other platforms, here only you (the one requesting the file) will be able
 
 ## Sci-net
 
-The newest platform on this list is Sci-Net, launched while I was writing this post.
+The newest platform on this list is Sci-Net, launched as I was writing this post.
 
 Think of it as a Sci-Hub 2.0.
 
@@ -212,9 +218,7 @@ The site is "invitation-only". You obtain an invite code by obtaining Sci-Hub to
 
 ### Sci-Hub Tokens
 
-The steps you should follow to get an invite code for Sci-Net are on their website (and yes, it is easy to Google, I promise).
-
-You can find those same instructions here:
+The steps you should follow to get an invite code for Sci-Net are on their website, but you can also find those same instructions here:
 
 <iframe 
   src="/SCI_with_Phantom.pdf" 
@@ -222,7 +226,7 @@ You can find those same instructions here:
   height="800px">
 </iframe>
 
-## Advanced Text Search
+## Beyond scientific publications
 
 ### Anna's Archive
 
