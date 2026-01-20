@@ -1216,7 +1216,8 @@
 <img src="./comparison_2.png" alt="Favicon">
 <figcaption>Figure 8. Comparison of cropped vs non-cropped color values for the Moomin.</figcaption>
 <h2 id="playing-with-color-data-in-r">Playing with color data in R</h2>
-<p>Typically, you&rsquo;d run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of &lsquo;K.&rsquo; However, in my experience, these tests aren’t very useful when working with images—you just have to go with the vibes.</p>
+<p>Typically, you&rsquo;d run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of &lsquo;K&rsquo;.</p>
+<p>In my short experience, these tests weren’t very useful when working with images, so you can go with the vibes.</p>
 <p>Or you can plot it.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Convert pre-processed Magick array object to data.frame</span>
 </span></span><span class="line"><span class="cl"><span class="n">res_df</span> <span class="o">&lt;-</span> <span class="nf">rgb_from_array_to_df</span><span class="p">(</span><span class="n">crop_img_magick.png_data</span><span class="p">)</span>
@@ -1250,7 +1251,8 @@
 </span></span><span class="line"><span class="cl">  <span class="nf">scale_fill_identity</span><span class="p">()</span>
 </span></span></code></pre></div><img src="./k_100.png" alt="Favicon">
 <figcaption>Figure 9. Clustering colors for K from 1 to 100.</figcaption>
-<p>You can also change the clustering method you are using. Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).</p>
+<p>You can also change the clustering method you are using.</p>
+<p>Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).</p>
 <h2 id="interesting-things-i-found-while-playing-with-colors-in-r">Interesting things I found while playing with colors in R</h2>
 <p>There is a surprising amount of <a href="https://acp.copernicus.org/articles/14/2987/2014/" target="_blank" rel="noopener">environmental information you can extract from paintings</a>.</p>
 <p>For example, <a href="https://www.pnas.org/doi/10.1073/pnas.2219118120" target="_blank" rel="noopener">paintings by Turner and Monet can tell us a lot about trends in 19th century air pollution</a>.</p>

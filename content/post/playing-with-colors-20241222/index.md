@@ -214,7 +214,9 @@ ggplot(PCA_data, aes(x=u, y=v, col=rgb(R,G,B))) +
 
 ## Playing with color data in R
 
-Typically, you'd run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of 'K.' However, in my experience, these tests aren’t very useful when working with images—you just have to go with the vibes.
+Typically, you'd run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of 'K'.
+
+In my short experience, these tests weren’t very useful when working with images, so you can go with the vibes.
 
 Or you can plot it.
 
@@ -255,7 +257,9 @@ df_final %>%
 <figcaption>Figure 9. Clustering colors for K from 1 to 100.</figcaption>
 
 
-You can also change the clustering method you are using. Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).
+You can also change the clustering method you are using. 
+
+Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).
 
 ## Interesting things I found while playing with colors in R
 

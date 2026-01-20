@@ -189,7 +189,8 @@
 &lt;img src=&#34;./comparison_2.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 8. Comparison of cropped vs non-cropped color values for the Moomin.&lt;/figcaption&gt;
 &lt;h2 id=&#34;playing-with-color-data-in-r&#34;&gt;Playing with color data in R&lt;/h2&gt;
-&lt;p&gt;Typically, you&amp;rsquo;d run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of &amp;lsquo;K.&amp;rsquo; However, in my experience, these tests aren’t very useful when working with images—you just have to go with the vibes.&lt;/p&gt;
+&lt;p&gt;Typically, you&amp;rsquo;d run tests like the Elbow, Silhouette, or Variance Ratio methods to determine the optimal value of &amp;lsquo;K&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;In my short experience, these tests weren’t very useful when working with images, so you can go with the vibes.&lt;/p&gt;
 &lt;p&gt;Or you can plot it.&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-r&#34; data-lang=&#34;r&#34;&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;c1&#34;&gt;## Convert pre-processed Magick array object to data.frame&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;n&#34;&gt;res_df&lt;/span&gt; &lt;span class=&#34;o&#34;&gt;&amp;lt;-&lt;/span&gt; &lt;span class=&#34;nf&#34;&gt;rgb_from_array_to_df&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;crop_img_magick.png_data&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;)&lt;/span&gt;
@@ -223,7 +224,8 @@
 &lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;  &lt;span class=&#34;nf&#34;&gt;scale_fill_identity&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;()&lt;/span&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;img src=&#34;./k_100.png&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 9. Clustering colors for K from 1 to 100.&lt;/figcaption&gt;
-&lt;p&gt;You can also change the clustering method you are using. Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).&lt;/p&gt;
+&lt;p&gt;You can also change the clustering method you are using.&lt;/p&gt;
+&lt;p&gt;Instead of K-means you could try Hierarchical Clustering or Density-Based Spatial Clustering of Applications with Noise (DBSCAN).&lt;/p&gt;
 &lt;h2 id=&#34;interesting-things-i-found-while-playing-with-colors-in-r&#34;&gt;Interesting things I found while playing with colors in R&lt;/h2&gt;
 &lt;p&gt;There is a surprising amount of &lt;a href=&#34;https://acp.copernicus.org/articles/14/2987/2014/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;environmental information you can extract from paintings&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;For example, &lt;a href=&#34;https://www.pnas.org/doi/10.1073/pnas.2219118120&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;paintings by Turner and Monet can tell us a lot about trends in 19th century air pollution&lt;/a&gt;.&lt;/p&gt;
