@@ -17,7 +17,7 @@ title: "Playing with colors in R"
 
 As a kid, whenever I had different colors of paint or colored modelling clay [(PLAY-DOH®)](https://www.thatsatrademark.com/blog/play-doh-scent) on my hands, I would inevitably end up mixing all of them in an attempt to make this imaginary "super" color.
 
-The result would always end up being the same: An ugly grey-ish dark mud color—the kind you get from such a mix.
+The result would always end up being the same: An ugly grey-ish dark mud color, the kind you get from such a mix.
 
 <img src="./greymud.png" alt="Favicon">
 <figcaption>Figure 1. Attempt at recreating the mud-like color I remember as a kid by overlaying transparent backgrounds of different color.</figcaption>
@@ -63,9 +63,15 @@ The article on [Coloring for Colorblindness](https://davidmathlogic.com/colorbli
 
 ## Image color analysis in R
 
-The go-to package for image manipulation is ImageMagick or simply known as magick, a free and open-source cross-platform software for image manipulation with commands.
+The go-to package for image manipulation is ImageMagick® or simply known as magick 🎩, a free and open-source cross-platform software for image manipulation with commands.
 
-A big advantage of magick is being able to read most types of image files with a single function (`image_read()`), with the alternative being to use `jpeg::readJPEG()` and `png::readPNG()` for .jpg and .png files respectively.
+```r
+## This will detect if you have the package installed.
+## If not, it will install it. 
+if (!require("magick")) install.packages("magick") 
+```
+
+A big advantage of magick 🎩 is being able to read most types of image files with a single function (`image_read()`), with the alternative being to use `jpeg::readJPEG()` and `png::readPNG()` for .jpg and .png files respectively.
 
 For illustration purposes, I'll read the image in both .jpg and .png formats using both methods.
 
@@ -75,21 +81,30 @@ img_magick.png <- magick::image_read("./6_32_Muumipeikko.png") ## Magick PNG
 
 img_jpg <- jpeg::readJPEG("./6_32_Muumipeikko.jpg") ## JPG as array
 img_png <- png::readPNG("./6_32_Muumipeikko.png") ## PNG as array
+## Note: You need the 'png' and 'jpeg' package to try the latter lines.
 ```
 
 <img src="./6_32_Muumipeikko.jpg" alt="Favicon">
 <figcaption>Figure 3. Moomin.</figcaption>
 
-With magick you will notice you get an image alongside some metadata (e.g. width and height). With the other methods, you get an array of 4 values per pixel, corresponding to the sRGB values for that image.
+With magick 🎩 you will notice you get an image object with some metadata (e.g. width and height). 
 
-For us to work with the magick file, we will need to first extract its data with `image_data()`, convert those values to numbers with `as.integer()` and finally divide by 255 (If you start countring from 0 to 255, you get 256 values, or what 8 bits are able to hold)
+With the functions from other packages, you get an array of 4 values per pixel, corresponding to the sRGB values for that image.
 
+For us to work with the magick 🎩 object, first we extract its data with `image_data()`, convert those values to numbers with `as.integer()` and finally divide by 255 (If you start counting from 0 to 255, you get 256 values, or what 8 bits are able to hold).
+
+(If you read the image with either the jpge or png packages, you can skip this step).
 ```r
+## Note: Here I work with both the .jpg and .png objects.
+##       Both are read with Magick.
+##       You do NOT need to do this.
+##       (I do it to show both are valid files).
+
 img_magick.jpg_array <- as.integer(image_data(img_magick.jpg, 'rgb'))/255 ## Magick JPG as array
 img_magick.png_array <- as.integer(image_data(img_magick.png, 'rgb'))/255 ## Magick PNG as array
 ```
 
-Now that all our objects are arrays, we transform those arrays into a data.frame for analysis and quantification.
+Now that all our objects are valid arrays, we transform those arrays into a data.frame for analysis and quantification.
 
 ```r
 ## Function to transform our arrays into a 3 variable data.frame.
@@ -102,13 +117,9 @@ rgb_from_array_to_df <- function(img){
 ```
 
 ```r
-## From now on you will notice that all four objects are essentially the same.
-## With maybe some differences between jpg and png files.
+## The function also works with non-magick objects
 img_magick.jpg_df <- rgb_from_array_to_df(img_magick.jpg_array)
 img_magick.png_df <- rgb_from_array_to_df(img_magick.png_array)
-
-img_jpg_df <- rgb_from_array_to_df(img_jpg)
-img_png_df <- rgb_from_array_to_df(img_png)
 ```
 
 The most common and basic form of analysis for images and colors (that I could find in a non-exhaustive Google Search) is applying a K-means clustering algorithm to find the most "dominant" colors in an image.
@@ -122,9 +133,6 @@ Here I will go for 10 clusters using the function `clara()`. You will notice thi
 ## And to check that they are read the same by the 2 functions.
 img_magick.jpg_clara <- cluster::clara(img_magick.jpg_df, k = 10)
 img_magick.png_clara <- cluster::clara(img_magick.png_df, k = 10)
-
-img_jpg_df_clara <- cluster::clara(img_jpg_df, k = 10)
-img_png_df_clara <- cluster::clara(img_png_df, k = 10)
 ```
 
 <img src="./plot_colors.png" alt="Favicon">
@@ -132,10 +140,10 @@ img_png_df_clara <- cluster::clara(img_png_df, k = 10)
 
 There are a lot of colors coming from the grass and the sky, and while it is true all of it is part of the image as a whole, I am more interested in the (moomin) art itself.
 
-Here we can leverage magick functions and crop our image.
+Here we can leverage magick 🎩 functions and crop our image.
 
 ```r
-##Example using the object loaded as Magick PNG
+## Example using the object loaded as Magick PNG
 image_info <- image_info(img_magick.png)
 square_size <- min(image_info$width,
                    image_info$height)

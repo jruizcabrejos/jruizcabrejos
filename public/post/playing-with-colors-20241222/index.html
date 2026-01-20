@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: January 14, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: January 20, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -1060,7 +1060,7 @@
       <div class="prose prose-slate lg:prose-xl dark:prose-invert">
         <h2 id="grey-not-the-serie">Grey (not the serie)</h2>
 <p>As a kid, whenever I had different colors of paint or colored modelling clay <a href="https://www.thatsatrademark.com/blog/play-doh-scent" target="_blank" rel="noopener">(PLAY-DOH®)</a> on my hands, I would inevitably end up mixing all of them in an attempt to make this imaginary &ldquo;super&rdquo; color.</p>
-<p>The result would always end up being the same: An ugly grey-ish dark mud color—the kind you get from such a mix.</p>
+<p>The result would always end up being the same: An ugly grey-ish dark mud color, the kind you get from such a mix.</p>
 <img src="./greymud.png" alt="Favicon">
 <figcaption>Figure 1. Attempt at recreating the mud-like color I remember as a kid by overlaying transparent backgrounds of different color.</figcaption>
 <p>I had no idea at the time (and realistically, I still probably don&rsquo;t) that there is a whole field dedicated to studying color theory and that the color I was getting is the result of subtractive color mixing.</p>
@@ -1117,21 +1117,32 @@
 </ul>
 <p>The article on <a href="https://davidmathlogic.com/colorblind" target="_blank" rel="noopener">Coloring for Colorblindness</a> is also a solid resource I tend to use. Likewise, the interactive tool <a href="https://github.com/lucanelli/colorquest" target="_blank" rel="noopener">ColorQuest</a> from <a href="https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0290923" target="_blank" rel="noopener">Luca Nelli</a> is also helpful.</p>
 <h2 id="image-color-analysis-in-r">Image color analysis in R</h2>
-<p>The go-to package for image manipulation is ImageMagick or simply known as magick, a free and open-source cross-platform software for image manipulation with commands.</p>
-<p>A big advantage of magick is being able to read most types of image files with a single function (<code>image_read()</code>), with the alternative being to use <code>jpeg::readJPEG()</code> and <code>png::readPNG()</code> for .jpg and .png files respectively.</p>
+<p>The go-to package for image manipulation is ImageMagick® or simply known as magick 🎩, a free and open-source cross-platform software for image manipulation with commands.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## This will detect if you have the package installed.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## If not, it will install it. </span>
+</span></span><span class="line"><span class="cl"><span class="kr">if</span> <span class="p">(</span><span class="o">!</span><span class="nf">require</span><span class="p">(</span><span class="s">&#34;magick&#34;</span><span class="p">))</span> <span class="nf">install.packages</span><span class="p">(</span><span class="s">&#34;magick&#34;</span><span class="p">)</span> 
+</span></span></code></pre></div><p>A big advantage of magick 🎩 is being able to read most types of image files with a single function (<code>image_read()</code>), with the alternative being to use <code>jpeg::readJPEG()</code> and <code>png::readPNG()</code> for .jpg and .png files respectively.</p>
 <p>For illustration purposes, I&rsquo;ll read the image in both .jpg and .png formats using both methods.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">img_magick.jpg</span> <span class="o">&lt;-</span> <span class="n">magick</span><span class="o">::</span><span class="nf">image_read</span><span class="p">(</span><span class="s">&#34;./6_32_Muumipeikko.jpg&#34;</span><span class="p">)</span> <span class="c1">## Magick JPG</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_magick.png</span> <span class="o">&lt;-</span> <span class="n">magick</span><span class="o">::</span><span class="nf">image_read</span><span class="p">(</span><span class="s">&#34;./6_32_Muumipeikko.png&#34;</span><span class="p">)</span> <span class="c1">## Magick PNG</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="n">img_jpg</span> <span class="o">&lt;-</span> <span class="n">jpeg</span><span class="o">::</span><span class="nf">readJPEG</span><span class="p">(</span><span class="s">&#34;./6_32_Muumipeikko.jpg&#34;</span><span class="p">)</span> <span class="c1">## JPG as array</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_png</span> <span class="o">&lt;-</span> <span class="n">png</span><span class="o">::</span><span class="nf">readPNG</span><span class="p">(</span><span class="s">&#34;./6_32_Muumipeikko.png&#34;</span><span class="p">)</span> <span class="c1">## PNG as array</span>
+</span></span><span class="line"><span class="cl"><span class="c1">## Note: You need the &#39;png&#39; and &#39;jpeg&#39; package to try the latter lines.</span>
 </span></span></code></pre></div><img src="./6_32_Muumipeikko.jpg" alt="Favicon">
 <figcaption>Figure 3. Moomin.</figcaption>
-<p>With magick you will notice you get an image alongside some metadata (e.g. width and height). With the other methods, you get an array of 4 values per pixel, corresponding to the sRGB values for that image.</p>
-<p>For us to work with the magick file, we will need to first extract its data with <code>image_data()</code>, convert those values to numbers with <code>as.integer()</code> and finally divide by 255 (If you start countring from 0 to 255, you get 256 values, or what 8 bits are able to hold)</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="n">img_magick.jpg_array</span> <span class="o">&lt;-</span> <span class="nf">as.integer</span><span class="p">(</span><span class="nf">image_data</span><span class="p">(</span><span class="n">img_magick.jpg</span><span class="p">,</span> <span class="s">&#39;rgb&#39;</span><span class="p">))</span><span class="o">/</span><span class="m">255</span> <span class="c1">## Magick JPG as array</span>
+<p>With magick 🎩 you will notice you get an image object with some metadata (e.g. width and height).</p>
+<p>With the functions from other packages, you get an array of 4 values per pixel, corresponding to the sRGB values for that image.</p>
+<p>For us to work with the magick 🎩 object, first we extract its data with <code>image_data()</code>, convert those values to numbers with <code>as.integer()</code> and finally divide by 255 (If you start counting from 0 to 255, you get 256 values, or what 8 bits are able to hold).</p>
+<p>(If you read the image with either the jpge or png packages, you can skip this step).</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Note: Here I work with both the .jpg and .png objects.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##       Both are read with Magick.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##       You do NOT need to do this.</span>
+</span></span><span class="line"><span class="cl"><span class="c1">##       (I do it to show both are valid files).</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="n">img_magick.jpg_array</span> <span class="o">&lt;-</span> <span class="nf">as.integer</span><span class="p">(</span><span class="nf">image_data</span><span class="p">(</span><span class="n">img_magick.jpg</span><span class="p">,</span> <span class="s">&#39;rgb&#39;</span><span class="p">))</span><span class="o">/</span><span class="m">255</span> <span class="c1">## Magick JPG as array</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_magick.png_array</span> <span class="o">&lt;-</span> <span class="nf">as.integer</span><span class="p">(</span><span class="nf">image_data</span><span class="p">(</span><span class="n">img_magick.png</span><span class="p">,</span> <span class="s">&#39;rgb&#39;</span><span class="p">))</span><span class="o">/</span><span class="m">255</span> <span class="c1">## Magick PNG as array</span>
-</span></span></code></pre></div><p>Now that all our objects are arrays, we transform those arrays into a data.frame for analysis and quantification.</p>
+</span></span></code></pre></div><p>Now that all our objects are valid arrays, we transform those arrays into a data.frame for analysis and quantification.</p>
 <div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Function to transform our arrays into a 3 variable data.frame.</span>
 </span></span><span class="line"><span class="cl"><span class="c1">## i.e. 3 columns for the Red, Green and Blue bands.</span>
 </span></span><span class="line"><span class="cl"><span class="n">rgb_from_array_to_df</span> <span class="o">&lt;-</span> <span class="kr">function</span><span class="p">(</span><span class="n">img</span><span class="p">){</span>
@@ -1139,13 +1150,9 @@
 </span></span><span class="line"><span class="cl">             <span class="n">G</span> <span class="o">=</span> <span class="nf">as.vector</span><span class="p">(</span><span class="n">img[</span><span class="p">,</span> <span class="p">,</span> <span class="m">2</span><span class="n">]</span><span class="p">),</span>
 </span></span><span class="line"><span class="cl">             <span class="n">B</span> <span class="o">=</span> <span class="nf">as.vector</span><span class="p">(</span><span class="n">img[</span><span class="p">,</span> <span class="p">,</span> <span class="m">3</span><span class="n">]</span><span class="p">))</span>
 </span></span><span class="line"><span class="cl"><span class="p">}</span>
-</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## From now on you will notice that all four objects are essentially the same.</span>
-</span></span><span class="line"><span class="cl"><span class="c1">## With maybe some differences between jpg and png files.</span>
+</span></span></code></pre></div><div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## The function also works with non-magick objects</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_magick.jpg_df</span> <span class="o">&lt;-</span> <span class="nf">rgb_from_array_to_df</span><span class="p">(</span><span class="n">img_magick.jpg_array</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_magick.png_df</span> <span class="o">&lt;-</span> <span class="nf">rgb_from_array_to_df</span><span class="p">(</span><span class="n">img_magick.png_array</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">img_jpg_df</span> <span class="o">&lt;-</span> <span class="nf">rgb_from_array_to_df</span><span class="p">(</span><span class="n">img_jpg</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">img_png_df</span> <span class="o">&lt;-</span> <span class="nf">rgb_from_array_to_df</span><span class="p">(</span><span class="n">img_png</span><span class="p">)</span>
 </span></span></code></pre></div><p>The most common and basic form of analysis for images and colors (that I could find in a non-exhaustive Google Search) is applying a K-means clustering algorithm to find the most &ldquo;dominant&rdquo; colors in an image.</p>
 <p>In short, K-means is an unsupervised machine learning technique that groups similar colors based on their cluster centroids until convergence is reached (i.e., until the predefined number of clusters (K) is achieved).</p>
 <p>Here I will go for 10 clusters using the function <code>clara()</code>. You will notice this works on all four examples of the same image.</p>
@@ -1153,14 +1160,11 @@
 </span></span><span class="line"><span class="cl"><span class="c1">## And to check that they are read the same by the 2 functions.</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_magick.jpg_clara</span> <span class="o">&lt;-</span> <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">img_magick.jpg_df</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">img_magick.png_clara</span> <span class="o">&lt;-</span> <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">img_magick.png_df</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="n">img_jpg_df_clara</span> <span class="o">&lt;-</span> <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">img_jpg_df</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
-</span></span><span class="line"><span class="cl"><span class="n">img_png_df_clara</span> <span class="o">&lt;-</span> <span class="n">cluster</span><span class="o">::</span><span class="nf">clara</span><span class="p">(</span><span class="n">img_png_df</span><span class="p">,</span> <span class="n">k</span> <span class="o">=</span> <span class="m">10</span><span class="p">)</span>
 </span></span></code></pre></div><img src="./plot_colors.png" alt="Favicon">
 <figcaption>Figure 4. The 10 clustered colors extracted from the Moomin image.  <br>The vector `rgb(pmax(img_og_jpg.clara$medoids))` was used for this plot using ggplot.</figcaption>
 <p>There are a lot of colors coming from the grass and the sky, and while it is true all of it is part of the image as a whole, I am more interested in the (moomin) art itself.</p>
-<p>Here we can leverage magick functions and crop our image.</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">##Example using the object loaded as Magick PNG</span>
+<p>Here we can leverage magick 🎩 functions and crop our image.</p>
+<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-r" data-lang="r"><span class="line"><span class="cl"><span class="c1">## Example using the object loaded as Magick PNG</span>
 </span></span><span class="line"><span class="cl"><span class="n">image_info</span> <span class="o">&lt;-</span> <span class="nf">image_info</span><span class="p">(</span><span class="n">img_magick.png</span><span class="p">)</span>
 </span></span><span class="line"><span class="cl"><span class="n">square_size</span> <span class="o">&lt;-</span> <span class="nf">min</span><span class="p">(</span><span class="n">image_info</span><span class="o">$</span><span class="n">width</span><span class="p">,</span>
 </span></span><span class="line"><span class="cl">                   <span class="n">image_info</span><span class="o">$</span><span class="n">height</span><span class="p">)</span>
