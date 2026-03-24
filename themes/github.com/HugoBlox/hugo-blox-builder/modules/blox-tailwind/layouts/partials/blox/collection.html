@@ -141,8 +141,8 @@
       {{ else if eq $item.Section "post" }}
       {{/* --- Post: Show featured image to the right of the content --- */}}
       {{ $featured := or ($item.Resources.GetMatch "featured*") ($item.Params.image) }}
-      <div class="w-full max-w-3xl mb-8 border-b border-gray-300 pb-4">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
+      <div class="w-full max-w-3xl border-b border-gray-300 pb-6">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-5 md:gap-6">
     
           <!-- Left: Post content -->
           <div class="flex-1">
@@ -151,7 +151,7 @@
     
           <!-- Right: Featured image -->
           {{ with $featured }}
-            <div class="w-24 h-24 shrink-0">
+            <div class="w-28 h-28 shrink-0 self-start">
               <a href="{{ $item.RelPermalink }}" class="block w-full h-full overflow-hidden rounded-md">
                 <img src="{{ if .RelPermalink }}{{ .RelPermalink }}{{ else }}{{ . }}{{ end }}"
                      alt="{{ $item.Title }}"

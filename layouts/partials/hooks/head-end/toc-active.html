@@ -1,0 +1,82 @@
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = Array.from(
+      document.querySelectorAll('.hb-toc a[href^="#"], .hb-sidebar-mobile-toc a[href^="#"]')
+    );
+
+    if (!links.length) {
+      return;
+    }
+
+    const groups = new Map();
+    const orderedIds = [];
+
+    links.forEach((link) => {
+      const id = decodeURIComponent(link.getAttribute('href').slice(1));
+      const target = document.getElementById(id);
+
+      if (!target) {
+        return;
+      }
+
+      if (!groups.has(id)) {
+        groups.set(id, { target, links: [] });
+        orderedIds.push(id);
+      }
+
+      groups.get(id).links.push(link);
+    });
+
+    if (!orderedIds.length) {
+      return;
+    }
+
+    const setActive = (id) => {
+      links.forEach((link) => {
+        const linkId = decodeURIComponent(link.getAttribute('href').slice(1));
+        link.classList.toggle('is-active', linkId === id);
+      });
+    };
+
+    const visibleIds = new Set();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleIds.add(entry.target.id);
+          } else {
+            visibleIds.delete(entry.target.id);
+          }
+        });
+
+        const currentId = orderedIds.find((id) => visibleIds.has(id));
+        if (currentId) {
+          setActive(currentId);
+        }
+      },
+      {
+        rootMargin: '0px 0px -70% 0px',
+        threshold: [0, 1],
+      }
+    );
+
+    orderedIds.forEach((id) => {
+      observer.observe(groups.get(id).target);
+    });
+
+    const syncHash = () => {
+      const id = decodeURIComponent(window.location.hash.replace(/^#/, ''));
+      if (id && groups.has(id)) {
+        setActive(id);
+      }
+    };
+
+    window.addEventListener('hashchange', syncHash);
+
+    if (window.location.hash) {
+      syncHash();
+    } else {
+      setActive(orderedIds[0]);
+    }
+  });
+</script>

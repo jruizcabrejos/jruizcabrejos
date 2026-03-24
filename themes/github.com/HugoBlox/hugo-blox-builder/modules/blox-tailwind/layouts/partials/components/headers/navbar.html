@@ -53,16 +53,26 @@
       class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
       {{ if in (slice "l" "left") $align_menu }}mr-auto ml-6{{ else if (in (slice "r" "right") $align_menu) }}ml-auto mr-6{{end}}">
       {{ $currentPage := . }}
+      {{ $pagePath := $currentPage.RelPermalink }}
+      {{ $disableActive := $currentPage.IsHome }}
       {{ range site.Menus.main }}
       {{ $menuURL := .URL | absLangURL }}
+      {{ $menuPath := .URL | relLangURL }}
       {{ $pageURL:= $currentPage.Permalink | absLangURL }}
-      {{ $active := eq $menuURL $pageURL }}
+      {{ $is_internal_section := and (not $disableActive) (not (strings.HasPrefix .URL "#")) (not (strings.HasPrefix .URL "http")) }}
+      {{ $active := and (not $disableActive) (eq $menuPath $pagePath) }}
+      {{ if and (not $disableActive) (not $active) $is_internal_section (ne $menuPath "/") (strings.HasPrefix $pagePath $menuPath) }}
+        {{ $active = true }}
+      {{ end }}
       {{ if .HasChildren }}
       <li class="nav-item nav-dropdown group relative">
             <span
               class="nav-link {{ range .Children }}
-                {{ $childURL := .URL | absLangURL }}
-                {{ $active := eq $childURL $pageURL }}
+                {{ $childURL := .URL | relLangURL }}
+                {{ $active := and (not $disableActive) (eq $childURL $pagePath) }}
+                {{ if and (not $disableActive) (not $active) (not (strings.HasPrefix .URL "#")) (not (strings.HasPrefix .URL "http")) (ne $childURL "/") (strings.HasPrefix $pagePath $childURL) }}
+                  {{ $active = true }}
+                {{ end }}
                 {{ if $active }}active{{ end }}
               {{ end }} inline-flex items-center">
               {{ .Name }}
@@ -74,8 +84,11 @@
         <ul
           class="nav-dropdown-list lg:group-hover:visible lg:group-hover:opacity-100">
           {{ range .Children }}
-          {{ $childURL := .URL | absLangURL }}
-          {{ $active := eq $childURL $pageURL }}
+          {{ $childURL := .URL | relLangURL }}
+          {{ $active := and (not $disableActive) (eq $childURL $pagePath) }}
+          {{ if and (not $disableActive) (not $active) (not (strings.HasPrefix .URL "#")) (not (strings.HasPrefix .URL "http")) (ne $childURL "/") (strings.HasPrefix $pagePath $childURL) }}
+            {{ $active = true }}
+          {{ end }}
           {{ $url := "" }}
           {{- if findRE `^#` .URL -}}
             {{- if not $.IsHome -}}

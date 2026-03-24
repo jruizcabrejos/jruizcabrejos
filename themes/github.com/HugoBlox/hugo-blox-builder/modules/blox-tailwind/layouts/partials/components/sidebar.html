@@ -59,7 +59,7 @@
     {{- $items = where $items "Params.sidebar.hidden" "!=" true -}}
     {{- if eq $level 0 -}}
       {{- range $items.ByWeight }}
-        {{- $active := eq $page_url .RelPermalink -}}
+        {{- $active := or (eq $page_url .RelPermalink) (.IsAncestor $page) -}}
         {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
         <li class="{{ if $is_expanded }}open{{ end }}">
           {{- template "custom-menu-link" dict "context" . "active" $active "title" .LinkTitle "link" .RelPermalink -}}
@@ -73,7 +73,7 @@
       <div class="ltr:pr-0 overflow-hidden">
         <ul class="hb-sidebar-list">
           {{- range $items.ByWeight }}
-            {{- $active := eq $page_url .RelPermalink -}}
+            {{- $active := or (eq $page_url .RelPermalink) (.IsAncestor $page) -}}
             {{- $is_expanded := or (.Params.sidebar.open) (.IsAncestor $page) $active | default false }}
             {{- $title := .LinkTitle | default .File.BaseFileName -}}
             <li class="flex flex-col {{ if $is_expanded }}open{{ end }}">

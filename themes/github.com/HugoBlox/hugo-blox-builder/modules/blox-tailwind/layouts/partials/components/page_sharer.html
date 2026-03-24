@@ -1,5 +1,9 @@
 {{ if ne .Params.share false }}
-<section class="flex flex-row flex-wrap justify-center pt-4 text-xl">
+<section class="flex flex-col items-center pt-4">
+  <p class="mb-3 text-center text-sm font-semibold uppercase tracking-[0.2em] text-gray-500 dark:text-gray-400">
+    Share with:
+  </p>
+  <div class="flex flex-row flex-wrap justify-center text-xl">
   {{ range where site.Data.page_sharer.links "enable" true }}
 
   {{/* Utilise `urlquery` over `htmlEscape` to encode sharing URL */}}
@@ -21,5 +25,6 @@
     {{ partial "functions/get_icon" (dict "name" .icon "attributes" "style=\"height: 1em;\"") }}
   </a>
   {{ end }}
+  </div>
 </section>
 {{ end }}

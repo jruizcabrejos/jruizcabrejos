@@ -71,6 +71,7 @@ sections:
       - 0
       - 0
     view: citation
+  id: publications-home
 
 - block: cta-card
   content:
