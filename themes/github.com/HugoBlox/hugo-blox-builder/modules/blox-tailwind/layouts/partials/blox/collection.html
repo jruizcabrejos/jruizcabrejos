@@ -151,11 +151,11 @@
     
           <!-- Right: Featured image -->
           {{ with $featured }}
-            <div class="md:w-48 md:h-32 w-full">
-              <a href="{{ $item.RelPermalink }}">
+            <div class="w-24 h-24 shrink-0">
+              <a href="{{ $item.RelPermalink }}" class="block w-full h-full overflow-hidden rounded-md">
                 <img src="{{ if .RelPermalink }}{{ .RelPermalink }}{{ else }}{{ . }}{{ end }}"
                      alt="{{ $item.Title }}"
-                     class="w-full h-full object-cover rounded-lg shadow-sm">
+                     class="w-full h-full object-cover">
               </a>
             </div>
           {{ end }}
