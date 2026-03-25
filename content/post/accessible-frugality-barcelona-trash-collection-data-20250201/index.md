@@ -23,7 +23,7 @@ In the city of Barcelona, Catalonia, every day is a good opportunity to find som
 
 On the streets, people tend to pick up from the trash for a few reasons.
 
-Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) _'trash scavengers'_<sub>(English)</sub> roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
+Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) <em>'trash scavengers'</em>{{< pagenote "English" />}} roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
 
 This is for many a profession, often informal, and nowadays predominantly associated with immigrants, despite the trade having [a long history within locals](https://www.youtube.com/watch?v=LbjgCCcCOl4) going back centuries, with some _'drapaires'_<sub>(Catalan)</sub> having achieved [long-lasting cultural legacies](https://catalunyaplural.cat/ca/cal-drapaire-o-la-genesis-duna-llegenda/).
 

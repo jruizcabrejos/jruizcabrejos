@@ -257,3 +257,261 @@
 .dark .publication-detail-card dt {
   color: rgb(var(--color-neutral-400));
 }
+
+.post-page {
+  color: rgb(31 41 55);
+}
+
+.dark .post-page {
+  color: rgb(226 232 240);
+}
+
+.post-title {
+  font-size: clamp(2.4rem, 5vw, 4rem);
+  line-height: 1.02;
+  color: rgb(15 23 42);
+  letter-spacing: -0.035em;
+}
+
+.dark .post-title {
+  color: rgb(248 250 252);
+}
+
+.post-meta {
+  color: rgb(107 114 128);
+}
+
+.dark .post-meta {
+  color: rgb(var(--color-neutral-400));
+}
+
+.post-featured-block {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-header-block,
+.post-supporting-shell,
+.post-footer-shell {
+  max-width: 44rem;
+}
+
+.post-content-shell {
+  max-width: 46rem;
+}
+
+.post-content-shell,
+.post-supporting-shell,
+.post-footer-shell,
+.post-header-block {
+  overflow: visible;
+}
+
+.post-body {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.08rem;
+  line-height: 1.92;
+  color: rgb(55 65 81);
+}
+
+@media (min-width: 1024px) {
+  .post-body {
+    font-size: 1.15rem;
+  }
+}
+
+.dark .post-body {
+  color: rgb(226 232 240);
+}
+
+.post-body p,
+.post-body ul,
+.post-body ol,
+.post-body blockquote,
+.post-body dl {
+  margin-top: 1.35em;
+  margin-bottom: 1.35em;
+}
+
+.post-body h2,
+.post-body h3,
+.post-body h4 {
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+.post-body h2 {
+  margin-top: 2.4em;
+  margin-bottom: 0.7em;
+  font-size: 2.1rem;
+}
+
+.post-body h3 {
+  margin-top: 2.1em;
+  margin-bottom: 0.7em;
+  font-size: 1.6rem;
+}
+
+.post-body h4 {
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+  font-size: 1.25rem;
+}
+
+.post-body ul,
+.post-body ol {
+  padding-left: 1.35em;
+}
+
+.post-body li {
+  margin-top: 0.45em;
+  margin-bottom: 0.45em;
+}
+
+.post-body img:not(.featured-image),
+.post-body picture {
+  margin-top: 2rem;
+  margin-bottom: 0.35rem;
+}
+
+.post-body figure {
+  margin-top: 2rem;
+  margin-bottom: 1.35rem;
+}
+
+.post-body figure img:not(.featured-image),
+.post-body figure picture {
+  margin-top: 0;
+  margin-bottom: 0.35rem;
+}
+
+.post-body figcaption {
+  margin-top: 0.3rem;
+  margin-bottom: 1.35rem;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: rgb(107 114 128);
+}
+
+.dark .post-body figcaption {
+  color: rgb(var(--color-neutral-400));
+}
+
+.post-body img + figcaption,
+.post-body picture + figcaption {
+  margin-top: 0.25rem;
+}
+
+.post-body .page-note-anchor {
+  display: inline;
+}
+
+.post-body .page-note-ref {
+  display: inline-block;
+  margin-left: 0.18rem;
+  color: rgb(100 116 139);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+  vertical-align: baseline;
+}
+
+.post-body .page-note-ref:hover {
+  color: rgb(51 65 85);
+}
+
+.post-body .page-note-ref sup {
+  font-size: 0.72em;
+}
+
+.dark .post-body .page-note-ref {
+  color: rgb(148 163 184);
+}
+
+.dark .post-body .page-note-ref:hover {
+  color: rgb(226 232 240);
+}
+
+.post-body .page-note {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin-left: 0.35rem;
+  padding: 0.18rem 0.55rem;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 0.8rem;
+  background-color: rgb(248 250 252);
+  color: rgb(71 85 105);
+  font-size: 0.77em;
+  line-height: 1.35;
+  vertical-align: middle;
+}
+
+.post-body .page-note-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 1.35rem;
+  height: 1.35rem;
+  padding: 0 0.3rem;
+  border-radius: 9999px;
+  background-color: rgb(226 232 240);
+  color: rgb(51 65 85);
+  font-size: 0.88em;
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+
+.post-body .page-note-content {
+  display: inline;
+}
+
+.dark .post-body .page-note {
+  border-color: rgb(71 85 105 / 0.85);
+  background-color: rgb(30 41 59 / 0.42);
+  color: rgb(226 232 240);
+}
+
+.dark .post-body .page-note-number {
+  background-color: rgb(71 85 105);
+  color: rgb(248 250 252);
+}
+
+@media (min-width: 1280px) {
+  .post-body .page-note {
+    display: flex;
+    float: left;
+    clear: left;
+    width: 10rem;
+    align-items: flex-start;
+    gap: 0.6rem;
+    margin-top: 0.2rem;
+    margin-right: 1rem;
+    margin-left: -11.25rem;
+    padding: 0;
+    border: 0;
+    border-radius: 0;
+    background: none;
+    color: rgb(100 116 139);
+    white-space: normal;
+    font-size: 0.82rem;
+    line-height: 1.45;
+  }
+
+  .post-body .page-note-number {
+    flex-shrink: 0;
+    margin-top: 0.05rem;
+  }
+
+  .post-body .page-note-content {
+    display: block;
+  }
+
+  .dark .post-body .page-note {
+    background: none;
+    color: rgb(148 163 184);
+  }
+}

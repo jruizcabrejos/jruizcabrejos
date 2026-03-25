@@ -1,0 +1,24 @@
+{{- $text := "" -}}
+{{- if .Inner -}}
+  {{- $text = trim .Inner "\r\n\t " -}}
+{{- else -}}
+  {{- $text = .Get 0 | default (.Get "text") -}}
+{{- end -}}
+{{- if $text -}}
+  {{- $count := .Page.Store.Get "pagenote-count" | default 0 -}}
+  {{- $count = add $count 1 -}}
+  {{- .Page.Store.Set "pagenote-count" $count -}}
+  {{- $rendered := $text | markdownify -}}
+  {{- $rendered = replaceRE "^<p>(.*)</p>$" "$1" $rendered -}}
+  {{- $noteID := printf "page-note-%d" $count -}}
+  {{- $refID := printf "page-note-ref-%d" $count -}}
+  <span class="page-note-anchor">
+    <a class="page-note-ref" id="{{ $refID }}" href="#{{ $noteID }}" aria-label="See note {{ $count }}">
+      <sup>{{ $count }}</sup>
+    </a>
+    <span class="page-note" id="{{ $noteID }}" role="note">
+      <a class="page-note-number" href="#{{ $refID }}" aria-label="Back to reference {{ $count }}">{{ $count }}</a>
+      <span class="page-note-content">{{ $rendered | safeHTML }}</span>
+    </span>
+  </span>
+{{- end -}}
