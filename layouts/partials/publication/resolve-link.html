@@ -1,0 +1,15 @@
+{{- $page := .page -}}
+{{- $url := .url | default "" -}}
+{{- if $url -}}
+  {{- $resource := $page.Resources.GetMatch $url -}}
+  {{- if $resource -}}
+    {{- $resource.RelPermalink -}}
+  {{- else -}}
+    {{- $scheme := (urls.Parse $url).Scheme -}}
+    {{- if $scheme -}}
+      {{- $url -}}
+    {{- else -}}
+      {{- $url | relURL -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}

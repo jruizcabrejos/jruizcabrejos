@@ -1,0 +1,210 @@
+{{ define "main" }}
+
+{{ $pub_type_display := "Publication" }}
+{{ if .Params.publication_types }}
+  {{ if reflect.IsSlice .Params.publication_types }}
+    {{ $pub_type_csl := index .Params.publication_types 0 }}
+    {{ $pub_type_display = i18n (printf "pub_%s" (strings.Replace $pub_type_csl "-" "_")) | default (strings.Title $pub_type_csl) }}
+  {{ end }}
+{{ end }}
+
+{{ $authors := "" }}
+{{ with .Params.authors }}
+  {{ if reflect.IsSlice . }}
+    {{ $authors = delimit . ", " }}
+  {{ else }}
+    {{ $authors = . }}
+  {{ end }}
+{{ end }}
+
+{{ $source_url := partial "publication/resolve-link.html" (dict "page" . "url" .Params.url_source) }}
+{{ $pdf_url := partial "publication/resolve-link.html" (dict "page" . "url" .Params.url_pdf) }}
+{{ $primary_url := $source_url }}
+{{ if not $primary_url }}
+  {{ $primary_url = $pdf_url }}
+{{ end }}
+
+{{ $cite_url := "" }}
+{{ with (.Resources.GetMatch "cite.bib") }}
+  {{ $cite_url = .RelPermalink }}
+{{ end }}
+
+{{ $abstract_plain := "" }}
+{{ with .Params.abstract }}
+  {{ $abstract_plain = . | plainify }}
+{{ end }}
+{{ $overview := "" }}
+{{ if $abstract_plain }}
+  {{ $overview = truncate 340 $abstract_plain }}
+{{ end }}
+
+{{ $featured := partial "functions/get_featured_image.html" . }}
+{{ $publications_page := site.GetPage "Section" "publications" }}
+{{ $back_url := "/publications/" | relLangURL }}
+{{ with $publications_page }}
+  {{ $back_url = .RelPermalink }}
+{{ end }}
+
+<article class="publication-page mx-auto w-full max-w-5xl px-6 py-10 md:px-10 lg:py-14">
+  <div class="mx-auto max-w-4xl">
+    <a href="{{ $back_url }}" class="publication-back-link inline-flex items-center gap-2 text-sm font-medium">
+      {{ partial "functions/get_icon" (dict "name" "arrow-left" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+      Back to Publications
+    </a>
+  </div>
+
+  <section class="publication-surface mx-auto mt-6 max-w-4xl rounded-3xl border p-6 shadow-sm md:p-8">
+    <div class="grid gap-8 {{ if $featured }}md:grid-cols-[minmax(0,1fr)_220px] md:items-start{{ end }}">
+      <div>
+        <p class="publication-kicker text-xs font-semibold uppercase tracking-wider">
+          {{ $pub_type_display }}
+        </p>
+
+        <h1 class="publication-title mt-3 text-3xl font-bold tracking-tight md:text-4xl">
+          {{ .Title }}
+        </h1>
+
+        <div class="publication-meta mt-4 text-sm leading-7 md:text-base">
+          {{ with .Params.publication }}
+            <p class="publication-journal font-semibold">
+              {{ . }}{{ with $.Date }}<span class="publication-journal-year font-normal"> &middot; {{ .Format "2006" }}</span>{{ end }}
+            </p>
+          {{ else }}
+            {{ with .Date }}
+              <p class="publication-journal font-semibold">{{ .Format "2006" }}</p>
+            {{ end }}
+          {{ end }}
+          {{ with $authors }}
+            <p class="mt-2">{{ . }}</p>
+          {{ end }}
+        </div>
+
+        <div class="publication-hero-note mt-5 rounded-2xl p-4 text-sm leading-6">
+          <p class="font-semibold">This page is a publication record.</p>
+          <p class="mt-1">The full article lives on the journal or source site. Use the main button below to open it directly, or contact me if you want a full copy.</p>
+        </div>
+
+        {{ with $overview }}
+          <div class="mt-6">
+            <p class="publication-section-label text-xs font-semibold uppercase tracking-wider">Overview</p>
+            <p class="publication-overview mt-2 text-base leading-7">{{ . }}</p>
+          </div>
+        {{ end }}
+
+        <div class="mt-6 flex flex-wrap gap-3">
+          {{ with $primary_url }}
+            <a href="{{ . }}" target="_blank" rel="noopener" class="publication-primary-action">
+              {{ partial "functions/get_icon" (dict "name" "arrow-top-right-on-square" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+              Read Article
+            </a>
+          {{ else }}
+            <span class="publication-secondary-action opacity-70">External article link unavailable</span>
+          {{ end }}
+
+          {{ if and $pdf_url (ne $pdf_url $primary_url) }}
+            <a href="{{ $pdf_url }}" target="_blank" rel="noopener" class="publication-secondary-action">
+              {{ partial "functions/get_icon" (dict "name" "document-text" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+              PDF
+            </a>
+          {{ end }}
+
+          {{ if and $source_url (ne $source_url $primary_url) }}
+            <a href="{{ $source_url }}" target="_blank" rel="noopener" class="publication-secondary-action">
+              {{ partial "functions/get_icon" (dict "name" "link" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+              Source
+            </a>
+          {{ end }}
+
+          {{ with $cite_url }}
+            <a href="{{ . }}" target="_blank" data-filename="{{ . }}" class="publication-secondary-action">
+              {{ partial "functions/get_icon" (dict "name" "document-duplicate" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+              Cite
+            </a>
+          {{ end }}
+        </div>
+      </div>
+
+      {{ with $featured }}
+        {{ $thumb := .Fit "440x520" }}
+        {{ if ne $thumb.MediaType.SubType "gif" }}
+          {{ $thumb = $thumb.Process "webp" }}
+        {{ end }}
+        <div class="publication-featured-art overflow-hidden rounded-2xl border border-gray-200 bg-gray-50 dark:border-neutral-700 dark:bg-neutral-800">
+          <img
+            src="{{ $thumb.RelPermalink }}"
+            width="{{ $thumb.Width }}"
+            height="{{ $thumb.Height }}"
+            alt="{{ $.Title }}"
+            class="h-full w-full object-cover">
+        </div>
+      {{ end }}
+    </div>
+  </section>
+
+  <section class="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-[150px_minmax(0,1fr)]">
+    <div>
+      <h2 class="publication-section-label text-xs font-semibold uppercase tracking-wider">Details</h2>
+    </div>
+    <dl class="publication-card publication-detail-card grid gap-4 rounded-3xl border p-6 shadow-sm sm:grid-cols-2">
+      <div>
+        <dt>Type</dt>
+        <dd>{{ $pub_type_display }}</dd>
+      </div>
+
+      {{ with .Date }}
+        <div>
+          <dt>Published</dt>
+          <dd>{{ .Format "Jan 2, 2006" }}</dd>
+        </div>
+      {{ end }}
+
+      {{ with .Params.publication }}
+        <div>
+          <dt>Publication</dt>
+          <dd>{{ . }}</dd>
+        </div>
+      {{ end }}
+
+      {{ with .Params.tags }}
+        <div>
+          <dt>Topics</dt>
+          <dd>{{ delimit . ", " }}</dd>
+        </div>
+      {{ end }}
+    </dl>
+  </section>
+
+  {{ with .Params.abstract }}
+    <section class="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-[150px_minmax(0,1fr)]">
+      <div>
+        <h2 class="publication-section-label text-xs font-semibold uppercase tracking-wider">Abstract</h2>
+      </div>
+      <div class="publication-card rounded-3xl border p-6 shadow-sm">
+        <div class="prose prose-slate max-w-none dark:prose-invert">
+          {{ . | markdownify }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if gt (len (.Content | plainify)) 0 }}
+    <section class="mx-auto mt-8 grid max-w-4xl gap-6 md:grid-cols-[150px_minmax(0,1fr)]">
+      <div>
+        <h2 class="publication-section-label text-xs font-semibold uppercase tracking-wider">Notes</h2>
+      </div>
+      <div class="publication-card rounded-3xl border p-6 shadow-sm">
+        <div class="prose prose-slate max-w-none dark:prose-invert">
+          {{ .Content }}
+        </div>
+      </div>
+    </section>
+  {{ end }}
+
+  <div class="mx-auto mt-10 flex max-w-4xl justify-start">
+    <a href="{{ $back_url }}" class="publication-back-link inline-flex items-center gap-2 text-sm font-medium">
+      {{ partial "functions/get_icon" (dict "name" "arrow-left" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+      Browse all publications
+    </a>
+  </div>
+</article>
+{{ end }}
