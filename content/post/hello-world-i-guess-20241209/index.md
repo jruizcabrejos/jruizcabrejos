@@ -22,7 +22,7 @@ At the time of writing, my web(site) opens with an ominous message:
 
 And while I do hope this is the last time I am rebuilding this website, I have to admit that I suffer from a 'lack of documentation' problem. Don't get me wrong though:
 
-Everything I have done in the context of "academic" projects has been meticulously documented and every step is detailed somewhere. Where possible, papers and methods are publicly available and 'open access'. If you don't know what the [FAIR Principles](https://www.nature.com/articles/sdata201618) are, [don't talk to me](https://en.wikipedia.org/wiki/Don%27t_talk_to_me_or_my_son_ever_again), etc.
+Everything I have done in the context of "academic" projects has been meticulously documented and every step is detailed somewhere. Where possible, papers and methods are publicly available and 'open access'. If you don't know what the [FAIR Principles](https://www.nature.com/articles/sdata201618){{< pagenote "Data should be: **F**indable, **A**ccessible, **I**nteroperable, **R**eusable" />}} are, [don't talk to me](https://en.wikipedia.org/wiki/Don%27t_talk_to_me_or_my_son_ever_again), etc.
 
 I also have the tendency to hoard and take note of every little idea, draft or file that was generated through the ✨process✨of a project just in case we have to 'take a look back' and reflect on it in the future.
 
@@ -31,7 +31,7 @@ I am also a big fan of using diagrams to describe stuff in general.
 <img src="./methods_slide_lshtm.png" alt="Slide">
 <figcaption>Figure 1. Slide from a presentation for the course 'Data Challenge', as part of my MSc programme. Map on the right is my own. Diagram on the left probably not.</figcaption>
 
-My documentation problem comes down to my "personal" projects ([pet projects?](https://www.urbandictionary.com/define.php?term=pet%20project)). Over the years I have written code in R for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
+My documentation problem comes down to my "personal" projects {{< pagenote "[_pet projects_ (?)](https://www.urbandictionary.com/define.php?term=pet%20project)"/>}}. Over the years I have written code in R for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
 
 Some fragments of code lost to time are not impressive (or at least I would not call them as such), but I always think of them whenever I am asked for examples of previous work I have done.
 

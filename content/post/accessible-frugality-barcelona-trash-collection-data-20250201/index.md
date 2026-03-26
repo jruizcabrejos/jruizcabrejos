@@ -23,13 +23,13 @@ In the city of Barcelona, Catalonia, every day is a good opportunity to find som
 
 On the streets, people tend to pick up from the trash for a few reasons.
 
-Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) <em>'trash scavengers'</em>{{< pagenote "English" />}} roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
+Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) <em>'trash scavengers'</em>{{< pagenote "_English_" />}} roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
 
-This is for many a profession, often informal, and nowadays predominantly associated with immigrants, despite the trade having [a long history within locals](https://www.youtube.com/watch?v=LbjgCCcCOl4) going back centuries, with some _'drapaires'_<sub>(Catalan)</sub> having achieved [long-lasting cultural legacies](https://catalunyaplural.cat/ca/cal-drapaire-o-la-genesis-duna-llegenda/).
+This is for many a profession, often informal, and nowadays predominantly associated with immigrants, despite the trade having [a long history within locals](https://www.youtube.com/watch?v=LbjgCCcCOl4) going back centuries, with some <em>'drapaires'</em>{{< pagenote "_Catalan_" />}} having achieved [long-lasting cultural legacies](https://catalunyaplural.cat/ca/cal-drapaire-o-la-genesis-duna-llegenda/).
 
 And it is also a business worth almost 10,000 million euros, in which recycling is estimated to move [1% of the country GDP every year](https://distintaslatitudes.net/indispensables-pero-invisibles/migrantes-chatarreros-en-barcelona).
 
-Chances are, you have also seen or met your local _'chatarrero'_<sub>(Spanish)</sub> at one time or another.
+Chances are, you have also seen or met your local <em>'chatarrero'</em>{{< pagenote "_Spanish_" />}} at one time or another.
 
 <img src="./.png" alt="Chatarrero picture google">
 <figcaption>Figure 2. </figcaption>

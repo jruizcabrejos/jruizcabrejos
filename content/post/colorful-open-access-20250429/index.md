@@ -263,7 +263,7 @@ Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorf
 
 ## Footnote
 
-Limewire was ([and now is again?](https://www.rollingstone.com/music/music-news/limewire-artificial-intelligence-music-generator-1234924461/)), a peer-to-peer file-sharing platform, mainly used for music. 
+Limewire was {{< pagenote "[and now is, again?](https://www.rollingstone.com/music/music-news/limewire-artificial-intelligence-music-generator-1234924461/)"/>}}, a peer-to-peer file-sharing platform, mainly used for music. 
 
 The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.
 
