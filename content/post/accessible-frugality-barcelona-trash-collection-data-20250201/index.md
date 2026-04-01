@@ -14,31 +14,31 @@ title: "Accesibble Frugality: Barcelona Trastos Map and Data"
 
 ### Proverb
 
-"One man's trash is another man's treasure" is a ~~proverb~~ [pithicism](https://wordlust.blogspot.com/2006/10/pithicism.html) that, when taken literally, could lead you to some interesting finds.
+"One man's trash is another man's treasure" is a ~~proverb~~ [pithicism](https://wordlust.blogspot.com/2006/10/pithicism.html){{< pagenote "Play on words from a 'euphemism-collector'"/>}} that I have, over time, grown to be fond of.
 
-<img src="./.png" alt="Me on the garbage">
+<div style="display: flex; justify-content: center;">
+  <img src="./figure1_me.png" alt="Me on the garbage" style="width: 60%; height: auto;">
+</div>
 <figcaption>Figure 1. The beer was not found in the trash. Taken in Paris, France, 2022.</figcaption>
 
-In the city of Barcelona, Catalonia, every day is a good opportunity to find something interesting among the junk and laid waste.
-
-On the streets, people tend to pick up from the trash for a few reasons.
+In the city of Barcelona, Catalonia, there is a good chance you will find something interesting between the junk and laid waste. Every day people transiting the streets tend to partake on this activity (picking up "trash") for a few reasons.
 
 Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) <em>'trash scavengers'</em>{{< pagenote "_English_" />}} roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
 
-This is for many a profession, often informal, and nowadays predominantly associated with immigrants, despite the trade having [a long history within locals](https://www.youtube.com/watch?v=LbjgCCcCOl4) going back centuries, with some <em>'drapaires'</em>{{< pagenote "_Catalan_" />}} having achieved [long-lasting cultural legacies](https://catalunyaplural.cat/ca/cal-drapaire-o-la-genesis-duna-llegenda/).
+This is for many a profession, often informal, and nowadays predominantly associated with immigrants, despite the trade having [a long history within locals](https://www.youtube.com/watch?v=LbjgCCcCOl4) going back [centuries](https://eltranvia48.blogspot.com/2015/03/los-traperos-en-la-historia-de-barcelona.html), with some <em>'drapaires'</em>{{< pagenote "_Catalan_" />}} having achieved [long-lasting cultural legacies](https://catalunyaplural.cat/ca/cal-drapaire-o-la-genesis-duna-llegenda/).
 
-And it is also a business worth almost 10,000 million euros, in which recycling is estimated to move [1% of the country GDP every year](https://distintaslatitudes.net/indispensables-pero-invisibles/migrantes-chatarreros-en-barcelona).
+And, because nothing is sacred under capitalism, it is also a business worth almost 10,000 million euros, in which recycling is estimated to move [1% of the country GDP every year](https://distintaslatitudes.net/indispensables-pero-invisibles/migrantes-chatarreros-en-barcelona).
 
 Chances are, you have also seen or met your local <em>'chatarrero'</em>{{< pagenote "_Spanish_" />}} at one time or another.
 
-<img src="./.png" alt="Chatarrero picture google">
+<img src="./figure2_chatarrero_google_search.png" alt="Chatarrero picture google">
 <figcaption>Figure 2. </figcaption>
 
 Other individuals pick up trash in a more recreational manner, almost as if it were a sport, or some form of [safari](https://web.archive.org/web/20090520052742/http://www.basurama.org/safaribasura.htm) in which you are hunting for furniture that could be salvaged or restored. 
 
-Among privileged immigrants, furnishing your new apartment with something found on the streets tends to be almost an universal experience.
+Among privileged immigrants, furnishing your new apartment with something found on the streets tends to be almost an universal experience and shared by many in social media.
 
-<img src="./.png" alt="Instagram Reels with the average immigrant experience">
+<img src="./figure3_instareels.jpg" alt="Instagram Reels with the average immigrant experience">
 <figcaption>Figure 3. </figcaption>
 
 Similar to thrifting clothes, sometimes all it takes is one thrifted treasure to change everything.
@@ -49,14 +49,14 @@ Similar to thrifting clothes, sometimes all it takes is one thrifted treasure to
 
 This is a question that my friends, friends of friends, coworkers and myself have asked from time to time (as unlikely as it may sound).
 
-Unfortunately, the town hall (Ajuntament/Municipality) of Barcelona only displays this information for individual street searches.
+Unfortunately, the town hall (Ajuntament/Municipality) of Barcelona only provides this information for individual street searches.
 
-<img src="./.png" alt="UI of the website">
+<img src="./figure4_barcelona_trastos_UI.png" alt="UI of the website" style="width: 60%; height: auto;">
 <figcaption>Figure 4. </figcaption>
 
 This makes it ~~impossible~~ annoyingly difficult to have a simple map with exact locations and dates in order to plan for any trash rummaging expedition. 
 
-And although some maps exist for specific districts, a single image containing all of the information remains elusive.
+And although some maps exist for specific districts, a single image containing all of the information for the whole of Barcelona remains elusive.
 
 
 ### A picture is worth a thousand words
@@ -82,14 +82,11 @@ A second map, of low resolution and similarly outdated, sometimes also [makes th
 
 Since I couldn't find a complete map of Barcelona with the days of the week in which furniture/trastos is collected, I have compiled the data from the Ajuntament website and made my own maps.
 
-For this the 
 
 
 ### It is what it is
 
 And if you are reading this, they are now yours too.
-
-You are here early - For now, information is located at:
 
 https://github.com/jruizcabrejos/barcelona_trastos
 
@@ -98,4 +95,5 @@ https://github.com/jruizcabrejos/barcelona_trastos
 
 ### Pithicism
 
-It took me almost a year to finish properly writing this blog post.
+It took me more than a year to finish writing properly this blog post.
+
