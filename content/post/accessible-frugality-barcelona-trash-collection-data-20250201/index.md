@@ -21,7 +21,7 @@ title: "Accesibble Frugality: Barcelona Trastos Map and Data"
 </div>
 <figcaption>Figure 1. The beer was not found in the trash. Taken in Paris, France, 2022.</figcaption>
 
-In the city of Barcelona, Catalonia, there is a good chance you will find something interesting between the junk and laid waste. Every day people transiting the streets tend to partake on this activity (picking up "trash") for a few reasons.
+In the city of Barcelona, Catalonia, there is a good chance you will find something interesting in between the junk and laid waste. Every day people transiting the streets tend to partake on this activity (picking up "trash") for a few reasons.
 
 Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) <em>'trash scavengers'</em>{{< pagenote "_English_" />}} roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
 
@@ -80,20 +80,30 @@ A second map, of low resolution and similarly outdated, sometimes also [makes th
 
 ### There is more than one way to skin a cat
 
-Since I couldn't find a complete map of Barcelona with the days of the week in which furniture/trastos is collected, I have compiled the data from the Ajuntament website and made my own maps.
+Since I couldn't find a complete, up-to-date map of Barcelona with the days of the week in which furniture/trastos are collected, I compiled the data from the Ajuntament website and made my own maps. 
 
+I did this in two steps:
 
+- First, I downloaded a dataset containing all of the street names within the city of Barcelona from the portal ["Open Data Barcelona"](https://opendata-ajuntament.barcelona.cat/data/es/dataset/carrerer). With this information, I then set up a data scrapper with RSelenium. This scrapper looped through all the streets available in the website.
+
+<img src="./firefox_hYxHdfeUpx.gif" alt="Animation of data scrapping" style="width: 60%; height: auto;">
+<figcaption>Figure 7 </figcaption>
+
+- Then, once all the data for each street/number is collected, I geocoded{{< pagenote "gave them a latitude/longitude coordinate" />}} each street name with OpenStreet Map API.
+
+This two-step procedure is [documented in the github for this project](https://github.com/jruizcabrejos/barcelona_trastos).
 
 ### It is what it is
 
-And if you are reading this, they are now yours too.
-
-https://github.com/jruizcabrejos/barcelona_trastos
+And if you are reading this, these maps are now yours too, and I hope you find something nice in the trash.
 
 <img src="./Barcelona_Basura_Muebles_Mapa_Dias_AEB.png" alt="barcelona_map_trastos">
 
 
 ### Pithicism
 
-It took me more than a year to finish writing properly this blog post.
+It took me more than a year to finish writing this blog post properly. The scrapping script went through several iterations until I had something that worked "cleanly" enough{{< pagenote " or that I liked enough" />}}.
 
+Did you know, read, or heard about _frugality_ before?
+
+{{< youtube RoP5MdpMBc4 >}}
