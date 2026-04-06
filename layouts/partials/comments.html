@@ -1,0 +1,27 @@
+{{ $provider := trim (site.Params.features.comment.provider | lower) " " }}
+
+{{ if $provider }}
+  {{ $provider_tpl := printf "partials/comments/%s.html" $provider }}
+  {{ $provider_exists := templates.Exists $provider_tpl }}
+  {{ if not $provider_exists }}
+    {{ errorf "The '%s' comment provider was not found." $provider }}
+  {{ end }}
+
+  {{ $commentable_page := .Params.commentable }}
+
+  {{ if $commentable_page }}
+    {{ $giscus := site.Params.features.comment.giscus }}
+    {{ $giscus_ready := or (ne $provider "giscus") (and $giscus.repo $giscus.repo_id $giscus.category $giscus.category_id) }}
+    <section id="comments" class="post-comments-section mt-16">
+      <h2 class="post-comments-title mb-6 text-3xl font-bold tracking-tight">Comments</h2>
+
+      {{ if $giscus_ready }}
+        {{ partial $provider_tpl . }}
+      {{ else }}
+        <p class="post-comments-note text-sm leading-7">
+          Comments are being wired through GitHub Discussions and will appear here once the final giscus install step is completed for the comment repository.
+        </p>
+      {{ end }}
+    </section>
+  {{ end }}
+{{ end }}

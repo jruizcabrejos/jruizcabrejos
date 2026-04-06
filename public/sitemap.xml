@@ -2,15 +2,15 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jruizcabrejos.com/publications/</loc>
+    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://jruizcabrejos.com/publication_types/article-journal/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://jruizcabrejos.com/publication_types/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://jruizcabrejos.com/publications/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -172,6 +172,9 @@
   </url><url>
     <loc>https://jruizcabrejos.com/publications/journal-article-0/</loc>
     <lastmod>2016-12-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/collections/</loc>
     <changefreq>weekly</changefreq>
   </url>
 </urlset>

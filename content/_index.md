@@ -62,7 +62,7 @@ sections:
       folders:
       - publications
     text: ""
-    title: Recent Publications
+    title: Recent Research
   design:
     spacing:
       padding:

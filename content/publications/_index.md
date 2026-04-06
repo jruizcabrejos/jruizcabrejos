@@ -1,6 +1,5 @@
----
-title: "Publications"
-summary: "List of my publications."
+title: "Research"
+summary: "List of my research outputs."
 layout: "list"
 view: "compact"
 header:

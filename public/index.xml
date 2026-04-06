@@ -1024,5 +1024,24 @@
       <description></description>
     </item>
     
+    <item>
+      <title>Collections</title>
+      <link>https://jruizcabrejos.com/collections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://jruizcabrejos.com/collections/</guid>
+      <description>&lt;details class=&#34;spoiler collections-accordion&#34;  id=&#34;spoiler-0&#34;&gt;
+  &lt;summary class=&#34;cursor-pointer&#34;&gt;Personal Websites&lt;/summary&gt;
+  &lt;div class=&#34;rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2&#34;&gt;
+    &lt;ul&gt;
+&lt;li&gt;&lt;a href=&#34;https://near.blog/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;nearcyan&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://www.andrewheiss.com/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Andrew Heiss&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href=&#34;https://leviv.cool/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;Levi Villarreal&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/details&gt;
+</description>
+    </item>
+    
   </channel>
 </rss>

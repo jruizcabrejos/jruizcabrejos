@@ -58,6 +58,16 @@ features:
     enable: false
   privacy_pack:
     enable: false
+  comment:
+    provider: giscus
+    giscus:
+      repo: 'jruizcabrejos/jruizcabrejos-comments'
+      repo_id: 'R_kgDOR7e3ng'
+      category: 'Comments'
+      category_id: 'DIC_kwDOR7e3ns4C6MuR'
+      mapping: url
+      theme: dark
+      language_code: es
 
 
 plugins_css: ["custom","codefolding"]

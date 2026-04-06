@@ -7,7 +7,7 @@ main:
   - name: Me
     url: /
     weight: 10
-  - name: Publications
+  - name: Research
     url: publications/
     weight: 11
   - name: Posts
@@ -15,4 +15,7 @@ main:
     weight: 13
   - name: Projects
     url: projects/
+    weight: 20
+  - name: Collections
+    url: collections/
     weight: 30

@@ -510,8 +510,141 @@
     display: block;
   }
 
-  .dark .post-body .page-note {
+.dark .post-body .page-note {
     background: none;
     color: rgb(148 163 184);
   }
+}
+
+.post-comments-section {
+  max-width: 44rem;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.post-comments-title {
+  color: rgb(15 23 42);
+}
+
+.dark .post-comments-title {
+  color: rgb(248 250 252);
+}
+
+.post-comments-note {
+  color: rgb(71 85 105);
+}
+
+.dark .post-comments-note {
+  color: rgb(203 213 225);
+}
+
+.post-comments-section .giscus,
+.post-comments-section iframe.giscus-frame {
+  width: 100%;
+}
+
+.collections-page {
+  color: rgb(31 41 55);
+}
+
+.dark .collections-page {
+  color: rgb(226 232 240);
+}
+
+.collections-body {
+  font-size: 1.03rem;
+  line-height: 1.85;
+}
+
+.collections-body .spoiler.collections-accordion {
+  overflow: hidden;
+  margin-top: 1.35rem;
+  border: 1px solid rgb(226 232 240);
+  border-radius: 1.25rem;
+  background-color: rgb(255 255 255);
+  box-shadow: 0 18px 48px -40px rgb(15 23 42 / 0.4);
+}
+
+.dark .collections-body .spoiler.collections-accordion {
+  border-color: rgb(var(--color-neutral-700));
+  background-color: rgb(15 23 42 / 0.78);
+  box-shadow: none;
+}
+
+.collections-body .spoiler.collections-accordion summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.15rem 1.25rem;
+  cursor: pointer;
+  list-style: none;
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: rgb(15 23 42);
+}
+
+.collections-body .spoiler.collections-accordion summary::-webkit-details-marker {
+  display: none;
+}
+
+.collections-body .spoiler.collections-accordion summary::after {
+  content: "+";
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.85rem;
+  height: 1.85rem;
+  border-radius: 9999px;
+  background-color: rgb(var(--color-primary-100));
+  color: rgb(var(--color-primary-800));
+  font-size: 1.05rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.collections-body .spoiler.collections-accordion[open] summary::after {
+  content: "-";
+}
+
+.dark .collections-body .spoiler.collections-accordion summary {
+  color: rgb(248 250 252);
+}
+
+.dark .collections-body .spoiler.collections-accordion summary::after {
+  background-color: rgb(var(--color-primary-900) / 0.82);
+  color: rgb(var(--color-primary-100));
+}
+
+.collections-body .spoiler.collections-accordion > div {
+  padding: 0 1.25rem 1.25rem;
+  background: transparent;
+}
+
+.collections-body .spoiler.collections-accordion p,
+.collections-body .spoiler.collections-accordion ul {
+  margin-top: 0.85rem;
+  margin-bottom: 0;
+}
+
+.collections-body .spoiler.collections-accordion ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+.collections-body .spoiler.collections-accordion li {
+  margin-top: 0.7rem;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.collections-body .spoiler.collections-accordion li::before {
+  content: "";
+  position: absolute;
+  top: 0.78rem;
+  left: 0;
+  width: 0.4rem;
+  height: 0.4rem;
+  border-radius: 9999px;
+  background-color: rgb(var(--color-primary-500));
 }
