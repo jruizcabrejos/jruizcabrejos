@@ -16,12 +16,12 @@ title: "Accesibble Frugality: Barcelona Trastos Map and Data"
 
 "One man's trash is another man's treasure" is a ~~proverb~~ [pithicism](https://wordlust.blogspot.com/2006/10/pithicism.html){{< pagenote "Play on words from a 'euphemism-collector'"/>}} that I have, over time, grown to be fond of.
 
+In the city of Barcelona, Catalonia, there is a good chance you will find something interesting in between the junk and laid waste. Every day people transiting the streets tend to partake on this activity (picking up "trash") for a few reasons.
+
 <div style="display: flex; justify-content: center;">
   <img src="./figure1_me.png" alt="Me on the garbage" style="width: 60%; height: auto;">
 </div>
 <figcaption>Figure 1. The beer was not found in the trash. Taken in Paris, France, 2022.</figcaption>
-
-In the city of Barcelona, Catalonia, there is a good chance you will find something interesting in between the junk and laid waste. Every day people transiting the streets tend to partake on this activity (picking up "trash") for a few reasons.
 
 Some do it out of necessity, or desperation, as is the case of the [more than ~3,000](https://www.ecologiapolitica.info/recicladores-informales-barcelona/) <em>'trash scavengers'</em>{{< pagenote "_English_" />}} roaming among containers for pieces of metal and other scraps to make a living out of recycling. 
 

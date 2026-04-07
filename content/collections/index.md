@@ -4,6 +4,14 @@ summary: "This is a curated list of references, personal sites, creators, and co
 layout: "collections"
 ---
 
+{{< spoiler text="Writers and Texts" class="collections-accordion" >}}
+
+- [Brunella Tipismana Urbano](https://www.queverguenza.com/): Writer. Better known for other work, probably.
+    - "[terminalmente online](https://www.queverguenza.com/p/harakiri-dox)"
+
+{{< /spoiler >}}
+
+
 {{< spoiler text="Personal Websites" class="collections-accordion" >}}
 
 - [Andrew Heiss](https://www.andrewheiss.com/): Policy Researcher. Really nice and kept-up website + blog. I am particularly interested in the graphics he makes.
