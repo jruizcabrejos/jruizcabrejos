@@ -26,6 +26,7 @@ layout: "collections"
 
 {{< spoiler text="YouTube Content Creators" class="collections-accordion" >}}
 
+- ["violin plots should not exist"" - Angela Collier](https://www.youtube.com/watch?v=_0QMKFzW9fw)
 - ["The Lithium Triangle" - brain4breakfast](https://www.youtube.com/watch?v=7GmkUEmeLko)
 - ["Someone Dead Ruined My Life... Again" - CGP Grey](https://www.youtube.com/watch?v=qEV9qoup2mQ)
 - ["The image you can't submit to journals anymore" - BobbyBroccoli](https://www.youtube.com/watch?v=yCdwm2vo09I)
