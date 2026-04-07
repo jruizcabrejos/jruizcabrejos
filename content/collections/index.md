@@ -1,6 +1,6 @@
 ---
 title: "Collections"
-summary: "Curated references, personal sites, creators, and data corners I keep coming back to. These are inspirations, not blanket endorsements."
+summary: "This is a curated list of some references, personal sites, creators, and corners of the internet that I like to go back to from time to time. I do not necessarily endorse all of the content of these authors."
 layout: "collections"
 ---
 

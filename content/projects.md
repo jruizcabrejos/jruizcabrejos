@@ -8,7 +8,7 @@ sections:
     filters:
       folders:
       - project
-    text: These (this?) project(s) are mostly filler for the moment. Try checking my Posts instead.
+    text: These are some of my personal projects and other collaborations _outside_ my main research area.
     title: Selected Projects
   design:
     columns: 3
