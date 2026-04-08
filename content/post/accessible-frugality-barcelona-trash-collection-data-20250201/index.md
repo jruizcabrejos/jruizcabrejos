@@ -36,12 +36,12 @@ Chances are, you have also seen or met your local <em>'chatarrero'</em>{{< pagen
 
 Other individuals pick up trash in a more recreational manner, almost as if it were a sport, or some form of [safari](https://web.archive.org/web/20090520052742/http://www.basurama.org/safaribasura.htm) in which you are hunting for furniture that could be salvaged or restored. 
 
-Among privileged immigrants, furnishing your new apartment with something found on the streets tends to be almost an universal experience and shared by many in social media.
+Among privileged immigrants, furnishing your new apartment with something found on the streets tends to be an experience shared by many{{< pagenote "I wanted to call it an 'almost universal experience', but I digress, I need data to prove that"/>}} in social media.
 
 <img src="./figure3_instareels.jpg" alt="Instagram Reels with the average immigrant experience">
 <figcaption>Figure 3. </figcaption>
 
-Similar to thrifting clothes, sometimes all it takes is one thrifted treasure to change everything.
+Similar to thrifting clothes, sometimes all it takes is one really good find.
 
 ### Beggars can't be choosers
 
@@ -61,7 +61,7 @@ And although some maps exist for specific districts, a single image containing a
 
 ### A picture is worth a thousand words
 
-In 2010 Zara Patterson was the first to make a public online map with information regarding when, and where, one could throw (or in this case, find) old furniture in the streets of Barcelona.
+In 2010 Zara Patterson was the first to make a [public online map](https://www.google.com/maps/d/u/0/viewer?mid=1l2VAhplHwkWYhNi6WOcDeqnxPoE&shorturl=1&ll=41.396674791413474%2C2.1627183782959447&z=13) with information regarding when, and where, one could throw (or in this case, find) old furniture in the streets of Barcelona.
 
 She did so as part of her blog ["Caer en Gracia"](https://caerengracia.wordpress.com/) where she ["lists resources to carry on restoration and renovation works ecologically"](https://caerengracia.wordpress.com/eco-recursos/).
 
@@ -89,7 +89,7 @@ I did this in two steps:
 <img src="./firefox_hYxHdfeUpx.gif" alt="Animation of data scrapping" style="width: 60%; height: auto;">
 <figcaption>Figure 7 </figcaption>
 
-- Then, once all the data for each street/number is collected, I geocoded{{< pagenote "gave them a latitude/longitude coordinate" />}} each street name with OpenStreet Map API.
+- Then, once all the data for each street/number is collected, I geocoded{{< pagenote "gave them a latitude/longitude coordinate" />}} each street name with the OpenStreet Map API, using the httr2 package.
 
 This two-step procedure is [documented in the github for this project](https://github.com/jruizcabrejos/barcelona_trastos).
 
@@ -97,12 +97,14 @@ This two-step procedure is [documented in the github for this project](https://g
 
 And if you are reading this, these maps are now yours too, and I hope you find something nice in the trash.
 
-<img src="./Barcelona_Basura_Muebles_Mapa_Dias_AEB.png" alt="barcelona_map_trastos">
+<img src="./eng_Map_Barcelona_Furniture_Junk_Map_days.png" alt="barcelona_map_trastos">
 
 
 ### Pithicism
 
-It took me more than a year to finish writing this blog post properly. The scrapping script went through several iterations until I had something that worked "cleanly" enough{{< pagenote " or that I liked enough" />}}.
+It took me more than a year to finish writing this blog post properly. The scrapping script went through several iterations until I had something that worked "cleanly" enough{{< pagenote " or that I liked enough" />}}. 
+
+As of April 5, 2026, I can call this done.
 
 Did you know, read, or heard about _frugality_ before?
 
