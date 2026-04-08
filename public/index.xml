@@ -439,7 +439,7 @@
     &lt;/span&gt;
   &lt;/span&gt; each street name with the OpenStreet Map API, using the httr2 package.&lt;/li&gt;
 &lt;/ul&gt;
-&lt;p&gt;This two-step procedure is &lt;a href=&#34;https://github.com/jruizcabrejos/barcelona_trastos&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documented in the github for this project&lt;/a&gt;.&lt;/p&gt;
+&lt;p&gt;This two-step procedure is &lt;a href=&#34;https://github.com/jruizcabrejos/barcelona_trastos_eng&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documented in the github for this project&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;it-is-what-it-is&#34;&gt;It is what it is&lt;/h3&gt;
 &lt;p&gt;And if you are reading this, these maps are now yours too, and I hope you find something nice in the trash.&lt;/p&gt;
 &lt;img src=&#34;./eng_Map_Barcelona_Furniture_Junk_Map_days.png&#34; alt=&#34;barcelona_map_trastos&#34;&gt;

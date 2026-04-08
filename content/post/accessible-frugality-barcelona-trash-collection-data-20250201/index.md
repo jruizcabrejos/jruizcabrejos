@@ -89,7 +89,7 @@ I did this in two steps:
 
 - Then, once all the data for each street/number is collected, I geocoded{{< pagenote "gave them a latitude/longitude coordinate" />}} each street name with the OpenStreet Map API, using the httr2 package.
 
-This two-step procedure is [documented in the github for this project](https://github.com/jruizcabrejos/barcelona_trastos).
+This two-step procedure is [documented in the github for this project](https://github.com/jruizcabrejos/barcelona_trastos_eng).
 
 ### It is what it is
 
