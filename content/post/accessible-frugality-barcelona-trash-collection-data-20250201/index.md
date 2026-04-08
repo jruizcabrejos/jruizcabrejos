@@ -107,3 +107,9 @@ As of April 5, 2026, I can call this done.
 Did you know, read, or heard about _frugality_ before?
 
 {{< youtube RoP5MdpMBc4 >}}
+
+
+By the way: _Land doesn't vote_... dots do (?)
+
+<img src="./eng_dots_Barcelona_Furniture_Junk_Map_days.png" alt="barcelona_map_trastos">
+
