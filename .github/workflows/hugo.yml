@@ -9,6 +9,10 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
+  # Rebuild when the button maker repository announces an update.
+  repository_dispatch:
+    types: [buttonmaker-updated]
+
 # Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
 permissions:
   contents: read
@@ -43,6 +47,28 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
+      - name: Checkout button maker
+        uses: actions/checkout@v4
+        with:
+          repository: jruizcabrejos/slop-buttonmaker
+          ref: main-slop
+          path: .buttonmaker-source
+      - name: Stage button maker
+        run: |
+          rm -rf static/buttonmaker
+          mkdir -p static/buttonmaker
+          rsync -a --delete \
+            --exclude='.git/' \
+            --exclude='.github/' \
+            --exclude='.tmp/' \
+            --exclude='.agents/' \
+            --exclude='AGENTS.md' \
+            .buttonmaker-source/ static/buttonmaker/
+      - name: Set button maker production URLs
+        run: |
+          sed -i \
+            's#https://jruizcabrejos.github.io/slop-buttonmaker/#https://jruizcabrejos.com/buttonmaker/#g' \
+            static/buttonmaker/index.html
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
