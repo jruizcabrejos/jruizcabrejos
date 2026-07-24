@@ -55,20 +55,20 @@ jobs:
           path: .buttonmaker-source
       - name: Stage button maker
         run: |
-          rm -rf static/buttonmaker
-          mkdir -p static/buttonmaker
+          rm -rf static/buttonbuilder
+          mkdir -p static/buttonbuilder
           rsync -a --delete \
             --exclude='.git/' \
             --exclude='.github/' \
             --exclude='.tmp/' \
             --exclude='.agents/' \
             --exclude='AGENTS.md' \
-            .buttonmaker-source/ static/buttonmaker/
+            .buttonmaker-source/ static/buttonbuilder/
       - name: Set button maker production URLs
         run: |
           sed -i \
-            's#https://jruizcabrejos.github.io/slop-buttonmaker/#https://jruizcabrejos.com/buttonmaker/#g' \
-            static/buttonmaker/index.html
+            's#https://jruizcabrejos.github.io/slop-buttonmaker/#https://jruizcabrejos.com/buttonbuilder/#g' \
+            static/buttonbuilder/index.html
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v5
