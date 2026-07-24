@@ -89,10 +89,15 @@ profiles:
   url: https://bsky.app/profile/jruizcabrejos.bsky.social
 - icon: brands/linkedin
   url: https://www.linkedin.com/in/jorge-ruiz-cabrejos-4a3230a1/
-- icon: academicons/google-scholar
+- icon: brands/google-scholar
   url: https://scholar.google.es/citations?user=lQnRBGcAAAAJ
 - icon: academicons/orcid
   url: https://orcid.org/0000-0002-2055-3396
+badges:
+# Add image files under static/badges, then list one path per badge here.
+# `url` is optional; omit it to display a badge without a link.
+- image: badges/RProgrammer3.gif
+  alt: R Programmer
 role: PhD Student
 skills:
 - items:

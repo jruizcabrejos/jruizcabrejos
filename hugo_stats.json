@@ -429,6 +429,8 @@
       "pr-4",
       "pr-[calc(env(safe-area-inset-right)-1.5rem)]",
       "print:hidden",
+      "profile-badge",
+      "profile-badges",
       "prose",
       "prose-slate",
       "pt-1",
