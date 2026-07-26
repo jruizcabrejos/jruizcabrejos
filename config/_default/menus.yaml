@@ -16,9 +16,6 @@ main:
   - name: Projects
     url: projects/
     weight: 20
-  - name: Button Builder
-    url: buttonbuilder/
-    weight: 25
   - name: Collections
     url: collections/
     weight: 30
