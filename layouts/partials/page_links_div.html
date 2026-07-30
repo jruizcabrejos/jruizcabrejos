@@ -1,0 +1,17 @@
+{{/* Div wrapper around page links. */}}
+{{/* The wrapper is hidden when the page has no link buttons. */}}
+
+{{ $has_attachments := partial "functions/has_attachments" . }}
+{{ if $has_attachments | or .Params.external_link }}
+<div class="">
+  {{ if and (eq .Section "project") .Params.external_link }}
+    <div class="mb-3">
+      {{ partial "record-info-box.html" (dict "kind" "project") }}
+    </div>
+  {{ end }}
+  {{ with .Params.external_link }}
+  <a class="btn btn-outline-primary my-1" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "open_project_site" }}</a>
+  {{ end }}
+  {{ partial "page_links" (dict "page" . "is_list" 0) }}
+</div>
+{{ end }}

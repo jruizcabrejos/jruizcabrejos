@@ -79,10 +79,7 @@
           {{ end }}
         </div>
 
-        <div class="publication-hero-note mt-5 rounded-2xl p-4 text-sm leading-6">
-          <p class="font-semibold">This page is a publication record.</p>
-          <p class="mt-1">The full article lives on the journal or source site. Use the main button below to open it directly, or contact me if you want a full copy.</p>
-        </div>
+        {{ partial "record-info-box.html" (dict "kind" "publication") }}
 
         {{ with $overview }}
           <div class="mt-6">

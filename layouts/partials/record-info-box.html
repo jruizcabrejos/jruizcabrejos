@@ -1,0 +1,14 @@
+{{- $kind := .kind | default "publication" -}}
+{{- $widthClass := "max-w-2xl" -}}
+{{- if eq $kind "publication" -}}
+  {{- $widthClass = "w-full" -}}
+{{- end -}}
+<div class="record-info-box mt-5 {{ $widthClass }} rounded-2xl p-4 text-sm leading-6">
+  {{- if eq $kind "project" }}
+    <p class="font-semibold">This page is a project record.</p>
+    <p class="mt-1">The project itself lives on its external site. Use the button below to open it directly.</p>
+  {{- else }}
+    <p class="font-semibold">This page is a publication record.</p>
+    <p class="mt-1">The full article lives on the journal or source site. Use the main button below to open it directly, or contact me if you want a full copy.</p>
+  {{- end }}
+</div>

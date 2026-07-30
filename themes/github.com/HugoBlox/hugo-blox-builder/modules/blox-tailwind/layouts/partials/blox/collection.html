@@ -99,9 +99,20 @@
     {{ if eq $item.Section "publications" }}
       {{/* --- Custom layout for publications --- */}}
       {{ $featured := $item.Resources.GetMatch "featured*" }}
+      {{ $publication_link := $item.RelPermalink }}
+      {{ $publication_link_attributes := "" }}
+      {{ with $item.Params.url_source }}
+        {{ $publication_link = . }}
+        {{ $publication_link_attributes = `target="_blank" rel="noopener noreferrer"` }}
+      {{ end }}
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         {{ with $featured }}
-          <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" class="w-24 h-24 object-cover rounded-md">
+          <a
+            href="{{ $publication_link }}"
+            {{ $publication_link_attributes | safeHTMLAttr }}
+            class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
+            <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" class="h-full w-full object-cover">
+          </a>
         {{ else }}
           <div class="w-24 h-24 bg-gray-200 rounded-md flex items-center justify-center text-gray-500 text-sm">
             No image
@@ -110,13 +121,9 @@
 
         <div class="flex flex-col justify-center">
           <p class="text-lg font-semibold mb-1">
-            {{ with $item.Params.url_source }}
-              <a href="{{ . }}" target="_blank" rel="noopener noreferrer" class="text-blue-700 hover:underline">
-                {{ $item.Title }}
-              </a>
-            {{ else }}
+            <a href="{{ $publication_link }}" {{ $publication_link_attributes | safeHTMLAttr }} class="text-blue-700 hover:underline">
               {{ $item.Title }}
-            {{ end }}
+            </a>
           </p>
 
           <p class="text-sm text-gray-600">

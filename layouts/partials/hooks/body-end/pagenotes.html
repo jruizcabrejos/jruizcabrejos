@@ -1,0 +1,38 @@
+<script>
+  (() => {
+    const setupPagenotes = () => {
+      const desktop = window.matchMedia('(min-width: 1280px)');
+      const notes = Array.from(document.querySelectorAll('.post-body .page-note-anchor'))
+        .map((anchor) => ({
+          anchor,
+          note: anchor.querySelector('.page-note'),
+          container: anchor.closest('p, li'),
+        }))
+        .filter(({ note, container }) => note && container);
+
+      if (!notes.length) {
+        return;
+      }
+
+      const placeNotes = () => {
+        notes.forEach(({ anchor, note, container }) => {
+          if (desktop.matches) {
+            anchor.append(note);
+          } else {
+            container.append(note);
+          }
+        });
+      };
+
+      placeNotes();
+
+      if (desktop.addEventListener) {
+        desktop.addEventListener('change', placeNotes);
+      } else {
+        desktop.addListener(placeNotes);
+      }
+    };
+
+    setupPagenotes();
+  })();
+</script>

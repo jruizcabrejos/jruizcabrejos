@@ -11,3 +11,4 @@ summary.md
 tmp/*
 /.buttonmaker-source/
 /static/buttonbuilder/
+/public/pagefind/

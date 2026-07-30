@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: April 8, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: July 30, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -66,7 +66,7 @@
 
   
     
-    <link href="/css/custom.min.e51141259bea3fde2e1443155add49162eef28cede60b6bfa1a60c28414abe55.css" rel="stylesheet" />
+    <link href="/css/custom.min.4fd853c24102fc0cdd4e00c458f389d542606d45b14c1d0eb59b2ab2746bd615.css" rel="stylesheet" />
   
 
   <script>
@@ -909,6 +909,52 @@
 
 
 
+
+  
+    
+      
+      <script>
+  (() => {
+    const setupPagenotes = () => {
+      const desktop = window.matchMedia('(min-width: 1280px)');
+      const notes = Array.from(document.querySelectorAll('.post-body .page-note-anchor'))
+        .map((anchor) => ({
+          anchor,
+          note: anchor.querySelector('.page-note'),
+          container: anchor.closest('p, li'),
+        }))
+        .filter(({ note, container }) => note && container);
+
+      if (!notes.length) {
+        return;
+      }
+
+      const placeNotes = () => {
+        notes.forEach(({ anchor, note, container }) => {
+          if (desktop.matches) {
+            anchor.append(note);
+          } else {
+            container.append(note);
+          }
+        });
+      };
+
+      placeNotes();
+
+      if (desktop.addEventListener) {
+        desktop.addEventListener('change', placeNotes);
+      } else {
+        desktop.addListener(placeNotes);
+      }
+    };
+
+    setupPagenotes();
+  })();
+</script>
+
+      
+    
+  
 
 
 

@@ -82,6 +82,10 @@ jobs:
           hugo \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Build search index
+        run: |
+          npx --yes pagefind@1.5.2 --site public
+          test -f public/pagefind/pagefind.js
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:

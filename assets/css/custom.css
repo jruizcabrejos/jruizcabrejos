@@ -193,13 +193,18 @@ a.profile-badge:focus-visible {
   color: rgb(226 232 240);
 }
 
-.publication-hero-note {
-  background: linear-gradient(135deg, rgb(var(--color-primary-50)) 0%, rgb(248 250 252) 100%);
+.record-info-box {
+  background-color: rgb(var(--color-primary-50));
   color: rgb(51 65 85);
 }
 
-.dark .publication-hero-note {
-  background: linear-gradient(135deg, rgb(var(--color-primary-900) / 0.45) 0%, rgb(23 23 23) 100%);
+.recent-research-image-link:focus-visible {
+  outline: 2px solid rgb(var(--color-primary-500));
+  outline-offset: 3px;
+}
+
+.dark .record-info-box {
+  background-color: rgb(var(--color-primary-900) / 0.45);
   color: rgb(226 232 240);
 }
 
@@ -461,7 +466,6 @@ a.profile-badge:focus-visible {
 
 .post-body .page-note-ref {
   display: inline-block;
-  margin-left: 0.18rem;
   color: rgb(100 116 139);
   font-weight: 700;
   line-height: 1;
@@ -486,34 +490,28 @@ a.profile-badge:focus-visible {
 }
 
 .post-body .page-note {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.45rem;
-  margin-left: 0.35rem;
-  padding: 0.18rem 0.55rem;
-  border: 1px solid rgb(226 232 240);
-  border-radius: 0.8rem;
-  background-color: rgb(248 250 252);
-  color: rgb(71 85 105);
-  font-size: 0.77em;
-  line-height: 1.35;
-  vertical-align: middle;
+  display: block;
+  margin: 0.5em 0 0;
+  padding: 0;
+  border: 0;
+  border-radius: 0;
+  background: none;
+  color: rgb(100 116 139);
+  font-size: 0.8em;
+  line-height: 1.5;
 }
 
 .post-body .page-note-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-width: 1.35rem;
-  height: 1.35rem;
-  padding: 0 0.3rem;
-  border-radius: 9999px;
-  background-color: rgb(226 232 240);
-  color: rgb(51 65 85);
-  font-size: 0.88em;
+  display: inline;
+  padding: 0;
+  border-radius: 0;
+  background: none;
+  color: inherit;
+  font-size: 0.72em;
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
+  vertical-align: super;
 }
 
 .post-body .page-note-content {
@@ -521,24 +519,21 @@ a.profile-badge:focus-visible {
 }
 
 .dark .post-body .page-note {
-  border-color: rgb(71 85 105 / 0.85);
-  background-color: rgb(30 41 59 / 0.42);
-  color: rgb(226 232 240);
+  background: none;
+  color: rgb(148 163 184);
 }
 
 .dark .post-body .page-note-number {
-  background-color: rgb(71 85 105);
-  color: rgb(248 250 252);
+  background: none;
+  color: inherit;
 }
 
 @media (min-width: 1280px) {
   .post-body .page-note {
-    display: flex;
+    display: block;
     float: left;
     clear: left;
     width: 10rem;
-    align-items: flex-start;
-    gap: 0.6rem;
     margin-top: 0.2rem;
     margin-right: 1rem;
     margin-left: -11.25rem;
@@ -553,17 +548,26 @@ a.profile-badge:focus-visible {
   }
 
   .post-body .page-note-number {
-    flex-shrink: 0;
-    margin-top: 0.05rem;
+    display: inline;
+    min-width: 0;
+    height: auto;
+    padding: 0;
+    border-radius: 0;
+    background: none;
+    color: inherit;
+    font-size: 0.72em;
+    line-height: inherit;
+    vertical-align: super;
   }
 
-  .post-body .page-note-content {
-    display: block;
-  }
-
-.dark .post-body .page-note {
+  .dark .post-body .page-note {
     background: none;
     color: rgb(148 163 184);
+  }
+
+  .dark .post-body .page-note-number {
+    background: none;
+    color: inherit;
   }
 }
 
@@ -698,4 +702,38 @@ a.profile-badge:focus-visible {
   height: 0.4rem;
   border-radius: 9999px;
   background-color: rgb(var(--color-primary-500));
+}
+
+.collections-body .spoiler.collections-accordion > div > ul > li > ul {
+  margin-top: 0.45rem;
+  padding-left: 0.25rem;
+}
+
+.collections-body .spoiler.collections-accordion > div > ul > li > ul > li {
+  margin-top: 0.45rem;
+  padding-left: 1.35rem;
+  color: rgb(100 116 139);
+  font-size: 0.92em;
+}
+
+.collections-body .spoiler.collections-accordion > div > ul > li > ul > li::before {
+  content: "↳";
+  top: 0;
+  left: 0;
+  width: auto;
+  height: auto;
+  border-radius: 0;
+  background: transparent;
+  color: rgb(var(--color-primary-600));
+  font-size: 0.95em;
+  font-weight: 600;
+  line-height: 1.85;
+}
+
+.dark .collections-body .spoiler.collections-accordion > div > ul > li > ul > li {
+  color: rgb(var(--color-neutral-400));
+}
+
+.dark .collections-body .spoiler.collections-accordion > div > ul > li > ul > li::before {
+  color: rgb(var(--color-primary-300));
 }

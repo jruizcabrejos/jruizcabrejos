@@ -31,7 +31,7 @@ I am also a big fan of using diagrams to describe stuff in general.
 <img src="./methods_slide_lshtm.png" alt="Slide">
 <figcaption>Figure 1. Slide from a presentation for the course 'Data Challenge', as part of my MSc programme. Map on the right is my own. Diagram on the left probably not.</figcaption>
 
-My documentation problem comes down to my "personal" projects {{< pagenote "[_pet projects_ (?)](https://www.urbandictionary.com/define.php?term=pet%20project)"/>}}. Over the years I have written code in R for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
+My documentation problem comes down to my "personal" projects{{< pagenote "[_pet projects_ (?)](https://www.urbandictionary.com/define.php?term=pet%20project)"/>}}. Over the years I have written code in R for several tools to process, scrap, or extract data. I have generated data visualizations (most terrible, some great) that are located *somewhere* in the many virtual files I possess, but none of it has been publicly posted anywhere.
 
 Some fragments of code lost to time are not impressive (or at least I would not call them as such), but I always think of them whenever I am asked for examples of previous work I have done.
 
