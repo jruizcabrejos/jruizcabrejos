@@ -1,0 +1,5 @@
+{{- $neko := resources.Get "js/neko.js" | minify | fingerprint "sha256" -}}
+<script
+  src="{{ $neko.RelPermalink }}"
+  integrity="{{ $neko.Data.Integrity }}"
+  data-neko-sprite="{{ "vendor/neko/neko.png" | relURL }}"></script>

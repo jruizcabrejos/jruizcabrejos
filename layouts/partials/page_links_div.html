@@ -3,14 +3,21 @@
 
 {{ $has_attachments := partial "functions/has_attachments" . }}
 {{ if $has_attachments | or .Params.external_link }}
-<div class="">
+<div{{ if eq .Section "project" }} class="project-record-links"{{ end }}>
   {{ if and (eq .Section "project") .Params.external_link }}
     <div class="mb-3">
       {{ partial "record-info-box.html" (dict "kind" "project") }}
     </div>
   {{ end }}
   {{ with .Params.external_link }}
-  <a class="btn btn-outline-primary my-1" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "open_project_site" }}</a>
+    {{ if eq $.Section "project" }}
+      <a class="publication-primary-action my-1" href="{{ . }}" target="_blank" rel="noopener noreferrer">
+        {{ partial "functions/get_icon" (dict "name" "arrow-top-right-on-square" "attributes" "style=\"height: 1em\" class='inline-block'") }}
+        Open Project
+      </a>
+    {{ else }}
+      <a class="btn btn-outline-primary my-1" href="{{ . }}" target="_blank" rel="noopener">{{ i18n "open_project_site" }}</a>
+    {{ end }}
   {{ end }}
   {{ partial "page_links" (dict "page" . "is_list" 0) }}
 </div>

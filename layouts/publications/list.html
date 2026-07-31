@@ -1,0 +1,56 @@
+{{ define "main" }}
+<section id="publications" class="max-w-3xl mx-auto px-4 py-8">
+  <h1 class="text-3xl font-bold mb-6">{{ .Title }}</h1>
+
+  {{ range .Pages.ByDate.Reverse }}
+    {{ $page := . }}
+    {{ $publication_link := $page.RelPermalink }}
+    {{ $publication_link_attributes := "" }}
+    {{ with $page.Params.url_source }}
+      {{ $publication_link = . }}
+      {{ $publication_link_attributes = `target="_blank" rel="noopener noreferrer"` }}
+    {{ end }}
+    {{ $image_alt := $page.Title }}
+    {{ with $page.Params.image.alt_text }}
+      {{ $image_alt = . }}
+    {{ end }}
+
+    <div class="flex gap-4 mb-4 border-b border-gray-300 pb-2">
+      {{ with $page.Resources.GetMatch "featured*" }}
+        <a
+          href="{{ $publication_link }}"
+          {{ $publication_link_attributes | safeHTMLAttr }}
+          class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded">
+          <img src="{{ .RelPermalink }}" class="h-full w-full object-cover" alt="{{ $image_alt }}">
+        </a>
+      {{ end }}
+
+      <div>
+        <p class="text-lg font-semibold">
+          <a href="{{ $publication_link }}" {{ $publication_link_attributes | safeHTMLAttr }} class="text-blue-700 hover:underline">
+            {{ $page.Title }}
+          </a>
+        </p>
+
+        <p class="text-sm text-gray-600">
+          {{ with $page.Params.authors }}{{ delimit . ", " }}{{ end }}<br>
+          <em>{{ $page.Params.publication }}</em>, {{ $page.Date.Format "2006" }}
+        </p>
+
+        <p class="text-sm">
+          {{ if or $page.Params.doi $page.Params.url_pdf }}
+            {{ with $page.Params.doi }}
+              <a href="https://doi.org/{{ . }}" class="text-blue-600 hover:underline">DOI</a>
+            {{ end }}
+            {{ with $page.Params.url_pdf }}
+              | <a href="{{ . }}" class="text-blue-600 hover:underline">PDF</a>
+            {{ end }}
+          {{ else }}
+            <span class="italic text-gray-500">IN PRESS</span>
+          {{ end }}
+        </p>
+      </div>
+    </div>
+  {{ end }}
+</section>
+{{ end }}

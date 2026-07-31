@@ -1,0 +1,34 @@
+# Social sharing links.
+# This local file overrides the Hugo Blox defaults so the set can include Bluesky.
+
+links:
+  - id: x
+    url: 'https://twitter.com/intent/tweet?url={url}&text={title}'
+    title: X
+    icon: brands/x
+    enable: true
+  - id: facebook
+    url: 'https://www.facebook.com/sharer.php?u={url}&t={title}'
+    title: Facebook
+    icon: brands/facebook
+    enable: true
+  - id: email
+    url: 'mailto:?subject={title}&body={url}'
+    title: Email
+    icon: hero/at-symbol
+    enable: true
+  - id: linkedin
+    url: 'https://www.linkedin.com/shareArticle?url={url}&title={title}'
+    title: LinkedIn
+    icon: brands/linkedin
+    enable: true
+  - id: whatsapp
+    url: 'whatsapp://send?text={title}%20{url}'
+    title: WhatsApp
+    icon: brands/whatsapp
+    enable: true
+  - id: bluesky
+    url: 'https://bsky.app/intent/compose?text={title}%0A{url}'
+    title: Share on Bluesky
+    icon: brands/bluesky
+    enable: true

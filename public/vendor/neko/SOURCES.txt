@@ -1,0 +1,7 @@
+Neko sprite sheet
+Source: https://github.com/crgimenes/neko/blob/c4780b65541a426dc8a927fe00e9816bb8996af5/assets/neko.png
+License: BSD-2-Clause (LICENSE.txt)
+
+Browser animation behavior
+Adapted from: https://github.com/adryd325/oneko.js/blob/5281d057c4ea9bd4f6f997ee96ba30491aed16c0/oneko.js
+License: MIT (LICENSE-oneko.txt)
