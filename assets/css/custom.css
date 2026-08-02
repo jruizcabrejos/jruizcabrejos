@@ -387,6 +387,34 @@ main:has(.project-record-links) > .featured-image-wrapper {
   margin-bottom: 1.35em;
 }
 
+.post-body blockquote.thought-quote {
+  border-left-color: rgb(var(--color-primary-500));
+  background: none;
+  box-shadow: none;
+  color: rgb(var(--color-neutral-700));
+  font-size: 1.08em;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 1.7;
+}
+
+.post-body blockquote.thought-quote p:first-of-type::before,
+.post-body blockquote.thought-quote p:last-of-type::after {
+  color: rgb(var(--color-primary-600));
+  font-style: normal;
+  font-weight: 600;
+}
+
+.dark .post-body blockquote.thought-quote {
+  border-left-color: rgb(var(--color-primary-400));
+  color: rgb(var(--color-neutral-200));
+}
+
+.dark .post-body blockquote.thought-quote p:first-of-type::before,
+.dark .post-body blockquote.thought-quote p:last-of-type::after {
+  color: rgb(var(--color-primary-300));
+}
+
 .post-body h2,
 .post-body h3,
 .post-body h4 {
