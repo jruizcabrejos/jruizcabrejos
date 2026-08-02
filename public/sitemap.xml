@@ -2,6 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://jruizcabrejos.com/post/humor-as-a-service-20260801/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/tags/pet-project/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/post/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
+    <loc>https://jruizcabrejos.com/tags/</loc>
+    <lastmod>2026-08-01T00:00:00+00:00</lastmod>
+    <changefreq>weekly</changefreq>
+  </url><url>
     <loc>https://jruizcabrejos.com/publications/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -15,10 +31,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://jruizcabrejos.com/publications/journal-article-9/</loc>
-    <lastmod>2026-01-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://jruizcabrejos.com/tags/</loc>
     <lastmod>2026-01-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
@@ -66,10 +78,6 @@
     <lastmod>2025-04-15T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>
-    <loc>https://jruizcabrejos.com/post/</loc>
-    <lastmod>2025-04-15T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
     <loc>https://jruizcabrejos.com/post/subverting-and-exploiting-artificial-intelligence-20250410/</loc>
     <lastmod>2025-04-10T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
@@ -83,10 +91,6 @@
     <changefreq>weekly</changefreq>
   </url><url>
     <loc>https://jruizcabrejos.com/tags/me/</loc>
-    <lastmod>2025-02-01T00:00:00+00:00</lastmod>
-    <changefreq>weekly</changefreq>
-  </url><url>
-    <loc>https://jruizcabrejos.com/tags/pet-project/</loc>
     <lastmod>2025-02-01T00:00:00+00:00</lastmod>
     <changefreq>weekly</changefreq>
   </url><url>

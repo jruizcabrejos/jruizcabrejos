@@ -32,6 +32,7 @@ layout: "collections"
 - ["Someone Dead Ruined My Life... Again" - CGP Grey](https://www.youtube.com/watch?v=qEV9qoup2mQ)
 - ["The Archeology Iceberg Explained" - TREY the Explainer](https://www.youtube.com/watch?v=1o2fnTNxE_Q)
 - ["Disney Channel's Theme: A History Mystery - Defunctland"](https://www.youtube.com/watch?v=b_rjBWmc1iQ)
+- ["The Player Who Broke Competitive Yo-Yo - RESPRiT"](https://www.youtube.com/watch?v=A4UbOxXegqA)
 
 {{< /spoiler >}}
 

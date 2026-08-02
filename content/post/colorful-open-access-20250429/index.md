@@ -27,14 +27,14 @@ But neither you nor the person who shared it with you paid for it. It was obtain
 <img src="./buhonero_resident_evil_4_offering_shadow_libraries_with_free_paper_access.png" alt="Favicon">
 <figcaption>Figure 1. "Got something that might interest ya!" - Quote from the first time you meet The Buhonero's (Merchant) in the videogame Resident Evil 4. The Buhonero sells weapons. </figcaption>
 
-In this post, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about the platforms and tools that have been (and are still) used to access articles and books _unconventionally_ and for free (as of Jan 2026).
+In this post, I [yap](https://dictionary.cambridge.org/dictionary/english/yap) about the platforms and tools that have been (and are still) used to access articles and books _unconventionally_ and for free{{< pagenote "As of August 2026"/>}}.
 
 More specifically, I will describe how to use:
 
 - [Sci-Hub](#sci-hub)
 - [Nexus Project](#nexus-project)
 - [Wosonhj / SmartQuantAi / Pidantuan](#wosonhj--smartquantai--pidantuan)
-- [Sci-Net](#sci-net)
+- [Sci-Net](#sci-net){{< pagenote "Technically not 'free', but extremely useful."/>}}
 - [Anna's Archive](#annas-archive)
 
 This list is somewhat arranged in order, from "easiest platform to use" to "you need to read a little bit to properly use this".
@@ -47,7 +47,8 @@ This list is somewhat arranged in order, from "easiest platform to use" to "you 
 
 Needless to say, this text is for educational and research purposes only, similar to the many articles discussing this topic in prestigious journals such as [Nature](https://www.nature.com/articles/nature.2016.19841), [Science](https://www.science.org/doi/10.1126/science.aaf9419), [Lancet](https://www.thelancet.com/journals/langlo/article/PIIS2214-109X(16)30188-7/fulltext), and many more.
 
-You won't find here a direct link towards these website. However, it is fairly easy to search for them on normal Search Engines (e.g. Google). The focus of this text is on how to use each platform.
+The focus of this text is on how to use each platform. You won't find here a direct link towards these website. If what you are looking for are the direct links, try adding the keyword "mirror" to your Google search, or look through [some of the lists that compile this information](https://www.shadowlibraries.github.io).
+In some countries, you might require a VPN to access them.
 
 <img src="./references_discussing_scihub_and_shadow_libraries.png" alt="Favicon">
 <figcaption>Figure 2. References I make in the text, because God knows you probably won't click them. Note that most of them are from 2016.</figcaption>
@@ -208,11 +209,9 @@ Unlike other platforms, here only you (the one requesting the file) will be able
 
 ## Sci-net
 
-The newest platform on this list is Sci-Net, launched as I was writing this post.
+The newest platform on this list is Sci-Net, launched as I was writing this post for the first time.
 
-Think of it as a Sci-Hub 2.0.
-
-It's created by the same person, and it uses cryptocurrency (Sci-Hub coin) as a point system similar to Nexus and Wosonhj.
+Think of it as a Sci-Hub 2.0. It's created by the same person, and it uses cryptocurrency{{< pagenote "Sci-Hub Tokens"/>}} as a point system similar to Nexus and Wosonhj.
 
 The site is "invitation-only". You obtain an invite code by obtaining Sci-Hub tokens first.
 
@@ -232,11 +231,10 @@ The steps you should follow to get an invite code for Sci-Net are on their websi
 
 If you are looking for a broader range of texts (books, comics, magazines, newspapers, etc), Anna's Archive should be your next stop.
 
-[Main image for anna's archive]
+<img src="./msedge_jrdS5Kg6eb.png" alt="Favicon">
+<figcaption> Figure 15. Anna`s Archive. </figcaption>
 
 Anna’s Archive allows keyword and partial title searches, returning a list of matching results.
-
-[Search example]
 
 The platform also has search filters and other search options which makes it handy for text-heavy queries. 
 
@@ -247,7 +245,7 @@ If none if the options above are appealing to you (or somehow they didn't work) 
 Finally, I encourage you to pay for the article if you really want to :)
 
 <img src="./the-growing-inaccessibility-of-science.png" alt="Favicon">
-<figcaption>Figure 15. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
+<figcaption>Figure 16. This meme is satire and the article is, in fact, free for access. Nevertheless, this meme has been shared everywhere and has been widespread on the internet for some years now.</figcaption>
 
 ## Colorful Open Access
 
@@ -258,7 +256,7 @@ I avoid using those terms because they stigmatize and marginalize them into the 
 Elbakyan A (2025) calls for a more vibrant and encompassing definition: A colorful open access framework. Because even black has many shades of grey.
 
 <img src="./graphic_abstract_Elbakyan_2025.png" alt="Favicon">
-<figcaption>Figure 16. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
+<figcaption>Figure 17. Graphical abstract of Elbakyan, A. (2025) paper "From Black Open Access to Open Access of Color: Accepting the Diversity of Approaches towards Free Science".</figcaption>
 
 
 ## Footnote
@@ -268,14 +266,14 @@ Limewire was{{< pagenote "[and now is, again?](https://www.rollingstone.com/musi
 The risk with these platforms is that bad actors could upload malicious files. For example, by inserting hyperlinks leading to pishing websites or other threats.
 
 <img src="./laced_with_drugs.jpg" alt="Favicon">
-<figcaption>Figure 17. Your files could be laced with virus.</figcaption>
+<figcaption>Figure 18. Your files could be laced with virus.</figcaption>
 
 Being a pirate is fun, but it does come with risks.
 
 Be careful out there not to click or download files called "not-a-virus.exe".
 
 <img src="./not_a_virus_dolphin.png" alt="Favicon">
-<figcaption>Figure 18. A dolphin file you can fully trust with your most sensitive files.</figcaption>
+<figcaption>Figure 19. A dolphin file you can fully trust with your most sensitive files.</figcaption>
 
 <br>
 <br>
