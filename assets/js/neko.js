@@ -134,7 +134,7 @@
   function idle() {
     idleTime += 1;
 
-    if (idleTime > 10 && Math.floor(Math.random() * 200) === 0 && idleAnimation === null) {
+    if (idleTime > 10 && Math.floor(Math.random() * 100) === 0 && idleAnimation === null) {
       const animations = ["sleeping", "scratchSelf"];
 
       if (nekoPosX < frameSize) animations.push("scratchWallW");
