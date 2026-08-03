@@ -10,7 +10,7 @@ tags:
 title: "Humor as a Service (HaaS)"
 ---
 
-This story begins with me, once again, completely lost in the _World Wide Web_, ["surfing the internet"](https://web.archive.org/web/20170227142216/http://www.netmom.com/images/stories/file/surfing_the_internet/Surfing_the_Internet%202_02.pdf) {{< pagenote "According to [Hobbes' Internet Timeline](https://www.zakon.org/robert/internet/timeline/), the term 'net-surfing' was used [as early as 1991](https://groups.google.com/g/comp.admin.policy/c/A-JUIeKlPUw/m/RyMspUG7dkwJ)"/>}}. An experience that, I am afraid, is becoming increasingly rare in a centralized web shaped by algorithms {{< pagenote "Algorithmic-driven social media [favor the emergence of echo chambers](https://www.pnas.org/doi/full/10.1073/pnas.2023301118)"/>}}, with only a few comparable activities{{< pagenote "Is [doomscrolling](https://en.wikipedia.org/wiki/Doomscrolling) a modern way of internet surfing?"/>}} still thriving today, such as [getting lost in Wikipedia rabbit hole](https://en.wikipedia.org/wiki/Wiki_rabbit_hole).
+This story begins with me, once again, completely lost in the _World Wide Web_, ["surfing the internet"](https://web.archive.org/web/20170227142216/http://www.netmom.com/images/stories/file/surfing_the_internet/Surfing_the_Internet%202_02.pdf) {{< pagenote "According to [Hobbes' Internet Timeline](https://www.zakon.org/robert/internet/timeline/), the term 'net-surfing' was used [as early as 1991](https://groups.google.com/g/comp.admin.policy/c/A-JUIeKlPUw/m/RyMspUG7dkwJ)"/>}}. An experience that, I am afraid, is becoming increasingly rare in a centralized web shaped by algorithms {{< pagenote "Algorithmic-driven social media [favor the emergence of echo chambers](https://www.pnas.org/doi/full/10.1073/pnas.2023301118)"/>}}, with only a few comparable activities{{< pagenote "Is [doomscrolling](https://en.wikipedia.org/wiki/Doomscrolling) a modern way of internet surfing?"/>}} still thriving today, such as [getting lost in a Wikipedia rabbit hole](https://en.wikipedia.org/wiki/Wiki_rabbit_hole).
 
 <figure>
 <img src="./figure1_surfingtheinternet.jpg" alt="Surfing the Internet" style="width: 60%; height: auto;">
@@ -31,7 +31,7 @@ This post of mine is the result of exploring these two points.
 
 ## 88x31 buttons
 
-The 1990s Internet saw the [rise of browser-based web navigation](https://michal.karzynski.pl/blog/2010/10/10/browser-usage-statistics-past-present-and-future/) we know of today, thanks to [developments](https://www.w3.org/People/Berners-Lee/FAQ.html#browser) that made it possible, and much easier, to display color, and eventually, in-line images.
+The 1990s Internet saw the [rise of the browser-based web navigation](https://michal.karzynski.pl/blog/2010/10/10/browser-usage-statistics-past-present-and-future/) we know of today, thanks to [developments](https://www.w3.org/People/Berners-Lee/FAQ.html#browser) that made it possible, and much easier, to display color, and eventually, in-line images.
 
 Before the popularization and widespread adoption of browsers like Mosaic (1993-1997) and Netscape (1994-2008), most websites were made purely out of text.
 
@@ -56,12 +56,12 @@ Kkul Store: <a href="https://kkul.store/" target="_blank" rel="noopener noreferr
 
 Among these, the 88px wide by 31px high button standard (88x31) is one of the [most enduring formats](https://support.google.com/admanager/answer/1100453?hl=en#other).
 
-Its origin story on how it came to be seems somewhat unclear. Trying to understand it has already taken some hours of my life, and there might be a lot more to document about it{{< pagenote "['Was it Netscape that started it all'](https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html)? Or [was it GeoCities](https://neonaut.neocities.org/cyber/88x31)? I am [unsure](https://88x31.nl/history.html). is there a primary source in the room with us? [Here is an analysis of 88x31 buttons from GeoCities](https://hellnet.work/8831/stats.html)"/>}}. 
+Its origin story on how it came to be seems somewhat unclear. Trying to understand it has already taken some hours of my life, and there might be a lot more to document about it{{< pagenote "[Was it Netscape that started it all](https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html)? Or [was it GeoCities](https://neonaut.neocities.org/cyber/88x31)? I am [unsure](https://88x31.nl/history.html). is there a primary source in the room with us? [Here is an analysis of 88x31 buttons from GeoCities](https://hellnet.work/8831/stats.html)"/>}}. 
 Nevertheless, the most widely known 88x31 button {{< pagenote "And oldest recorded, until proven otherwise"/>}} at some point became the "Netscape button".
 
 <figure>
 <img src="./figure4_netscapenow.png" alt="" style="width: 75%; height: auto;">
-<figcaption>Figure 4. Netscape. Now. Circa 1996. Available at: <a href="https://web.archive.org/web/19961020015116/http://www3.netscape.com/" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/19961020015116/http://www3.netscape.com/</a> If you think about it, the "NOW" sounds a bit aggressive.</figcaption>
+<figcaption>Figure 4. Netscape, Now. Circa 1996. Available at: <a href="https://web.archive.org/web/19961020015116/http://www3.netscape.com/" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/19961020015116/http://www3.netscape.com/</a> If you think about it, the "NOW" sounds a bit aggressive.</figcaption>
 </figure>
 
 The design of many buttons from this era share the same features:
@@ -137,7 +137,7 @@ While searching for different 88x31 buttons (and the means to make them) it beca
 Sam Altman once said that [AI might lead to the end of the world, but in the meantime we will have some great companies](https://www.forbes.com/councils/forbesbusinesscouncil/2026/02/25/why-sam-altmans-famous-quote-should-make-leaders-uneasy/) {{< pagenote "[video](https://www.youtube.com/watch?v=g70KUszkNvQ)"/>}}.
 I want to think that AI won't totally destroy humanity, or the world. If anything, it might [destroy a good chunk environment](https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117). 
 
-And in the meantime, at least we should get some fun out of it, I guess.
+In the meantime, at least we should get some fun out of it, I guess.
 
 <figure>
 <img src="./figure10_kristinmerrilees_meme.png" alt="" style="width: 50%; height: auto;">
@@ -148,7 +148,7 @@ I want to contribute my own share of fun through Humor as a Service (HaaS).
 
 Unlike "Chat LLMs“, which to me are glorified search engines that occasionally help me debug a line or two of code, "Agentic LLMs" seem to be equipped with extensive software development capabilities.
 
-It is with the latter that, taking inspiration from several 88x31 button makers and generators out there, [I adapted my own](https://jruizcabrejos.com/buttonbuilder/) for my needs.
+It is with the latter that, taking inspiration from several other 88x31 button makers and generators out there, [I adapted my own](https://jruizcabrejos.com/buttonbuilder/) for my needs.
 
 <iframe src="https://jruizcabrejos.com/buttonbuilder/" width="105%" height="500px" loading="lazy" title="88x31 Button Builder" style="border:none;"></iframe>
 

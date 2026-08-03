@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 3, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 4, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -420,13 +420,8 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
 
-
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
-
-
-<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+<script>window.hbb.pagefind = {"baseUrl":"/","bundlePath":"/pagefind/","cssIntegrity":"sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=","cssUrl":"/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css","jsIntegrity":"sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF+uBQUK0m0EqPO+U=","jsUrl":"/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js"};</script>
 
 <style>
   html.dark {
@@ -439,38 +434,174 @@
 </style>
 
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      baseUrl: window.hbb.pagefind.baseUrl,
-      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
-    });
-  });
   document.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById('search');
-    let trigger = document.getElementById('search_toggle');
+    const element = document.getElementById('search');
+    const trigger = document.getElementById('search_toggle');
+    const config = window.hbb && window.hbb.pagefind;
 
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        element.classList.toggle('hidden');
-        element.querySelector("input").value = ""
-        element.querySelector("input").focus()
-
-        if (!element.classList.contains('hidden')) {
-          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
-
-          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
-            clear_trigger.setAttribute('listenerOnClick', 'true');
-
-            clear_trigger.addEventListener('click', () => {
-              element.classList.toggle('hidden');
-            });
-          }
-        }
-
-      });
+    if (!element || !trigger || !config) {
+      return;
     }
+
+    let initialized = false;
+    let initializationPromise = null;
+
+    const setExpanded = (expanded) => {
+      element.classList.toggle('hidden', !expanded);
+      trigger.setAttribute('aria-expanded', String(expanded));
+    };
+
+    const removeFailedAsset = (asset) => {
+      asset.remove();
+    };
+
+    const loadStylesheet = () => new Promise((resolve, reject) => {
+      const existing = document.querySelector('link[data-pagefind-ui-styles]');
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI styles failed to load.')), { once: true });
+        return;
+      }
+
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = config.cssUrl;
+      stylesheet.integrity = config.cssIntegrity;
+      stylesheet.dataset.pagefindUiStyles = '';
+      stylesheet.addEventListener('load', () => {
+        stylesheet.dataset.loaded = 'true';
+        resolve();
+      }, { once: true });
+      stylesheet.addEventListener('error', () => {
+        removeFailedAsset(stylesheet);
+        reject(new Error('Pagefind UI styles failed to load.'));
+      }, { once: true });
+      document.head.appendChild(stylesheet);
+    });
+
+    const loadScript = () => new Promise((resolve, reject) => {
+      if (typeof window.PagefindUI === 'function') {
+        resolve();
+        return;
+      }
+
+      const existing = document.querySelector('script[data-pagefind-ui-script]');
+      if (existing) {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI script failed to load.')), { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = config.jsUrl;
+      script.integrity = config.jsIntegrity;
+      script.async = true;
+      script.dataset.pagefindUiScript = '';
+      script.addEventListener('load', () => {
+        if (typeof window.PagefindUI === 'function') {
+          resolve();
+        } else {
+          removeFailedAsset(script);
+          reject(new Error('Pagefind UI did not initialize.'));
+        }
+      }, { once: true });
+      script.addEventListener('error', () => {
+        removeFailedAsset(script);
+        reject(new Error('Pagefind UI script failed to load.'));
+      }, { once: true });
+      document.head.appendChild(script);
+    });
+
+    const closeSearch = () => {
+      setExpanded(false);
+    };
+
+    const attachClearHandler = () => {
+      const clearTrigger = element.querySelector('.pagefind-ui__search-clear');
+      if (!clearTrigger || clearTrigger.dataset.closesSearch === 'true') {
+        return;
+      }
+      clearTrigger.dataset.closesSearch = 'true';
+      clearTrigger.addEventListener('click', closeSearch);
+    };
+
+    const initializeSearch = () => {
+      if (initialized) {
+        return Promise.resolve();
+      }
+      if (initializationPromise) {
+        return initializationPromise;
+      }
+
+      initializationPromise = Promise.all([loadStylesheet(), loadScript()])
+        .then(() => {
+          element.replaceChildren();
+          new window.PagefindUI({
+            element: '#search',
+            showSubResults: true,
+            baseUrl: config.baseUrl,
+            bundlePath: config.bundlePath,
+          });
+          initialized = true;
+          attachClearHandler();
+        })
+        .catch((error) => {
+          initializationPromise = null;
+          throw error;
+        });
+
+      return initializationPromise;
+    };
+
+    const showStatus = (message, role) => {
+      const status = document.createElement('p');
+      status.setAttribute('role', role);
+      status.textContent = message;
+      element.replaceChildren(status);
+    };
+
+    const focusEmptyInput = () => {
+      const input = element.querySelector('input');
+      if (!input) {
+        return;
+      }
+      input.value = '';
+      input.focus();
+    };
+
+    const openSearch = async () => {
+      setExpanded(true);
+
+      if (!initialized) {
+        element.setAttribute('aria-busy', 'true');
+        showStatus('Loading search\u2026', 'status');
+      }
+
+      try {
+        await initializeSearch();
+        element.removeAttribute('aria-busy');
+        if (!element.classList.contains('hidden')) {
+          focusEmptyInput();
+        }
+      } catch (error) {
+        element.removeAttribute('aria-busy');
+        showStatus('Search could not be loaded. Close and reopen it to try again.', 'alert');
+        console.error(error);
+      }
+    };
+
+    trigger.addEventListener('click', () => {
+      if (element.classList.contains('hidden')) {
+        openSearch();
+      } else {
+        focusEmptyInput();
+        closeSearch();
+      }
+    });
   });
 </script>
 
@@ -746,8 +877,11 @@
       
       <button
         aria-label="search"
+        aria-controls="search"
+        aria-expanded="false"
         class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        id="search_toggle">
+        id="search_toggle"
+        type="button">
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
@@ -1380,9 +1514,17 @@
           
             <div class="order-first w-28 h-28 shrink-0 self-start md:order-last">
               <a href="/post/humor-as-a-service-20260801/" class="block w-full h-full overflow-hidden rounded-md">
-                <img src="/post/humor-as-a-service-20260801/featured.png"
-                     alt="Humor as a Service (HaaS)"
-                     class="w-full h-full object-cover">
+                <img
+  src="/post/humor-as-a-service-20260801/featured_hu7670394101152143851.webp"
+  srcset="/post/humor-as-a-service-20260801/featured_hu7670394101152143851.webp 112w, /post/humor-as-a-service-20260801/featured_hu2633622983777517884.webp 224w"
+  sizes="112px"
+  width="112"
+  height="112"
+  alt="Humor as a Service (HaaS)"
+  loading="lazy"
+  decoding="async"
+  class="w-full h-full object-cover">
+
               </a>
             </div>
           
@@ -1416,9 +1558,17 @@
           
             <div class="order-first w-28 h-28 shrink-0 self-start md:order-last">
               <a href="/post/colorful-open-access-20250429/" class="block w-full h-full overflow-hidden rounded-md">
-                <img src="/post/colorful-open-access-20250429/featured.png"
-                     alt="Colorful Open Access: Sci-Hub, Free Libraries, and Their Alternatives"
-                     class="w-full h-full object-cover">
+                <img
+  src="/post/colorful-open-access-20250429/featured_hu1375257247795351910.webp"
+  srcset="/post/colorful-open-access-20250429/featured_hu1375257247795351910.webp 112w, /post/colorful-open-access-20250429/featured_hu14332387331294998704.webp 224w"
+  sizes="112px"
+  width="112"
+  height="112"
+  alt="Colorful Open Access: Sci-Hub, Free Libraries, and Their Alternatives"
+  loading="lazy"
+  decoding="async"
+  class="w-full h-full object-cover">
+
               </a>
             </div>
           
@@ -1452,9 +1602,17 @@
           
             <div class="order-first w-28 h-28 shrink-0 self-start md:order-last">
               <a href="/post/subverting-and-exploiting-artificial-intelligence-20250410/" class="block w-full h-full overflow-hidden rounded-md">
-                <img src="/post/subverting-and-exploiting-artificial-intelligence-20250410/featured.png"
-                     alt="Subverting and exploiting ChatGPT-like applications in a post-LLM world"
-                     class="w-full h-full object-cover">
+                <img
+  src="/post/subverting-and-exploiting-artificial-intelligence-20250410/featured_hu5494984519041345904.webp"
+  srcset="/post/subverting-and-exploiting-artificial-intelligence-20250410/featured_hu5494984519041345904.webp 112w, /post/subverting-and-exploiting-artificial-intelligence-20250410/featured_hu2663805995481067140.webp 224w"
+  sizes="112px"
+  width="112"
+  height="112"
+  alt="Subverting and exploiting ChatGPT-like applications in a post-LLM world"
+  loading="lazy"
+  decoding="async"
+  class="w-full h-full object-cover">
+
               </a>
             </div>
           
@@ -1488,9 +1646,17 @@
           
             <div class="order-first w-28 h-28 shrink-0 self-start md:order-last">
               <a href="/post/accessible-frugality-barcelona-trash-collection-data-20250201/" class="block w-full h-full overflow-hidden rounded-md">
-                <img src="/post/accessible-frugality-barcelona-trash-collection-data-20250201/featured.png"
-                     alt="Accesibble Frugality: Barcelona Trastos Map and Data"
-                     class="w-full h-full object-cover">
+                <img
+  src="/post/accessible-frugality-barcelona-trash-collection-data-20250201/featured_hu7387308044453453183.webp"
+  srcset="/post/accessible-frugality-barcelona-trash-collection-data-20250201/featured_hu7387308044453453183.webp 112w, /post/accessible-frugality-barcelona-trash-collection-data-20250201/featured_hu5929181225634765137.webp 224w"
+  sizes="112px"
+  width="112"
+  height="112"
+  alt="Accesibble Frugality: Barcelona Trastos Map and Data"
+  loading="lazy"
+  decoding="async"
+  class="w-full h-full object-cover">
+
               </a>
             </div>
           
@@ -1524,9 +1690,17 @@
           
             <div class="order-first w-28 h-28 shrink-0 self-start md:order-last">
               <a href="/post/playing-with-colors-20241222/" class="block w-full h-full overflow-hidden rounded-md">
-                <img src="/post/playing-with-colors-20241222/featured.png"
-                     alt="Playing with colors in R"
-                     class="w-full h-full object-cover">
+                <img
+  src="/post/playing-with-colors-20241222/featured_hu7177627629212693419.webp"
+  srcset="/post/playing-with-colors-20241222/featured_hu7177627629212693419.webp 112w, /post/playing-with-colors-20241222/featured_hu9193993860582847410.webp 224w"
+  sizes="112px"
+  width="112"
+  height="112"
+  alt="Playing with colors in R"
+  loading="lazy"
+  decoding="async"
+  class="w-full h-full object-cover">
+
               </a>
             </div>
           
@@ -1762,8 +1936,10 @@
       
       
       
+      
         
         
+      
       
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         
@@ -1771,7 +1947,17 @@
             href="https://doi.org/10.1038/s44360-025-00004-x"
             target="_blank" rel="noopener noreferrer"
             class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
-            <img src="/publications/journal-article-9/featured.png" alt="Rethinking early warning systems for the health effects of extreme heat." class="h-full w-full object-cover">
+            <img
+  src="/publications/journal-article-9/featured_hu3932152961580841303.webp"
+  srcset="/publications/journal-article-9/featured_hu3932152961580841303.webp 96w, /publications/journal-article-9/featured_hu723498258263900577.webp 192w"
+  sizes="96px"
+  width="96"
+  height="96"
+  alt="Rethinking early warning systems for the health effects of extreme heat."
+  loading="lazy"
+  decoding="async"
+  class="h-full w-full object-cover">
+
           </a>
         
 
@@ -1805,8 +1991,10 @@
       
       
       
+      
         
         
+      
       
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         
@@ -1814,7 +2002,17 @@
             href="https://doi.org/10.1016/S0140-6736%2825%2901919-1"
             target="_blank" rel="noopener noreferrer"
             class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
-            <img src="/publications/journal-article-8/featured.png" alt="The 2025 Report of the Lancet Countdown on Health and Climate Change." class="h-full w-full object-cover">
+            <img
+  src="/publications/journal-article-8/featured_hu10820480246357827967.webp"
+  srcset="/publications/journal-article-8/featured_hu10820480246357827967.webp 96w, /publications/journal-article-8/featured_hu6179916260356122214.webp 192w"
+  sizes="96px"
+  width="96"
+  height="96"
+  alt="The 2025 Report of the Lancet Countdown on Health and Climate Change."
+  loading="lazy"
+  decoding="async"
+  class="h-full w-full object-cover">
+
           </a>
         
 
@@ -1848,8 +2046,10 @@
       
       
       
+      
         
         
+      
       
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         
@@ -1857,7 +2057,17 @@
             href="https://doi.org/10.1016/S2214-109X%2825%2900236-0"
             target="_blank" rel="noopener noreferrer"
             class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
-            <img src="/publications/journal-article-7/featured.png" alt="Evidence-based decision making for malaria elimination applying the Freedom From Infection statistical framework in five malaria eliminating countries an observational study" class="h-full w-full object-cover">
+            <img
+  src="/publications/journal-article-7/featured_hu14201773627741794232.webp"
+  srcset="/publications/journal-article-7/featured_hu14201773627741794232.webp 96w, /publications/journal-article-7/featured_hu16287711564500065356.webp 192w"
+  sizes="96px"
+  width="96"
+  height="96"
+  alt="Evidence-based decision making for malaria elimination applying the Freedom From Infection statistical framework in five malaria eliminating countries an observational study"
+  loading="lazy"
+  decoding="async"
+  class="h-full w-full object-cover">
+
           </a>
         
 
@@ -1891,8 +2101,10 @@
       
       
       
+      
         
         
+      
       
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         
@@ -1900,7 +2112,17 @@
             href="https://doi.org/10.1038/s41598-024-52239-5"
             target="_blank" rel="noopener noreferrer"
             class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
-            <img src="/publications/journal-article-6/featured.webp" alt="Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon" class="h-full w-full object-cover">
+            <img
+  src="/publications/journal-article-6/featured_hu4544297834814840032.webp"
+  srcset="/publications/journal-article-6/featured_hu4544297834814840032.webp 96w, /publications/journal-article-6/featured_hu2616061891498166762.webp 192w"
+  sizes="96px"
+  width="96"
+  height="96"
+  alt="Malaria seroepidemiology in very low transmission settings in the Peruvian Amazon"
+  loading="lazy"
+  decoding="async"
+  class="h-full w-full object-cover">
+
           </a>
         
 
@@ -1934,8 +2156,10 @@
       
       
       
+      
         
         
+      
       
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         
@@ -1943,7 +2167,17 @@
             href="https://doi.org/10.1007/s10534-022-00477-3"
             target="_blank" rel="noopener noreferrer"
             class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
-            <img src="/publications/journal-article-5/featured.jpg" alt="Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)" class="h-full w-full object-cover">
+            <img
+  src="/publications/journal-article-5/featured_hu12086394787166882096.webp"
+  srcset="/publications/journal-article-5/featured_hu12086394787166882096.webp 96w, /publications/journal-article-5/featured_hu9520763564898119244.webp 192w"
+  sizes="96px"
+  width="96"
+  height="96"
+  alt="Bovine lactoferrin for the prevention of COVID-19 infection in health care personnel a double-blinded randomized clinical trial (LF-COVID)"
+  loading="lazy"
+  decoding="async"
+  class="h-full w-full object-cover">
+
           </a>
         
 

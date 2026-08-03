@@ -157,7 +157,9 @@ In some countries, you might require a VPN to access them.&lt;/p&gt;
 &lt;iframe 
   src=&#34;https://jruizcabrejos.com/SCI_with_Phantom.pdf&#34; 
   width=&#34;100%&#34; 
-  height=&#34;800px&#34;&gt;
+  height=&#34;800px&#34;
+  loading=&#34;lazy&#34;
+  title=&#34;Sci-Net invitation instructions&#34;&gt;
 &lt;/iframe&gt;
 &lt;h2 id=&#34;beyond-scientific-publications&#34;&gt;Beyond scientific publications&lt;/h2&gt;
 &lt;h3 id=&#34;annas-archive&#34;&gt;Anna&amp;rsquo;s Archive&lt;/h3&gt;
@@ -192,7 +194,7 @@ In some countries, you might require a VPN to access them.&lt;/p&gt;
 
     
     &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/J0e9UiXbd5o?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/J0e9UiXbd5o?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
@@ -233,7 +235,7 @@ In some countries, you might require a VPN to access them.&lt;/p&gt;
 &lt;p&gt;Today, &amp;ldquo;Red Teams&amp;rdquo; (groups of people specialized on stress testing AI chatbots) are tasked with preventing potentially unsafe or unethical answers, with some examples that you can read more about &lt;a href=&#34;https://www.businessinsider.com/chatgpt-gpt4-openai-answer-creepy-dangerous-murder-bomb-2023-3&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;, &lt;a href=&#34;https://www.fanaticalfuturist.com/2023/09/openais-red-team-reveal-how-they-broke-chatgpt-and-gpt4-pre-release/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt; and finally, &lt;a href=&#34;https://arxiv.org/pdf/2303.08774&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;This measures have made it harder to ask some question, but not impossible.&lt;/p&gt;
 &lt;p&gt;Commonly known as “jailbreaking”, one can by-pass these guardrails with clever prompting and logic statements.&lt;/p&gt;
-&lt;img src=&#34;./prompt engineering with extra steps rick and morty.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;img src=&#34;./prompt-engineering-rick-and-morty-optimized.webp&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 2.  Maybe we could all use some classes on better prompt design after all.&lt;/figcaption&gt;
 &lt;p&gt;You could, &lt;a href=&#34;https://arxiv.org/pdf/2305.13860&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;for example&lt;/a&gt;, ask an AI model to roleplay as your grandmother who really loves to make chlorine gas and ask her to teach you the recipe for it (&lt;a href=&#34;https://www.wired.com/story/ai-adversarial-attacks/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;Pretending Prompts&lt;/em&gt;&lt;/a&gt;).&lt;/p&gt;
 &lt;img src=&#34;./ChatGPT and the mouse family.png&#34; alt=&#34;Favicon&#34;&gt;
@@ -284,7 +286,7 @@ In some countries, you might require a VPN to access them.&lt;/p&gt;
 
     
     &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/vwVFzY8XqIo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/vwVFzY8XqIo?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
@@ -357,7 +359,7 @@ In some countries, you might require a VPN to access them.&lt;/p&gt;
 
     
     &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/xuCn8ux2gbs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/xuCn8ux2gbs?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 

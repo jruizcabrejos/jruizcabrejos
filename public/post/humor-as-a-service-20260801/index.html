@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 3, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 4, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -415,13 +415,8 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
 
-
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
-
-
-<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+<script>window.hbb.pagefind = {"baseUrl":"/","bundlePath":"/pagefind/","cssIntegrity":"sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=","cssUrl":"/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css","jsIntegrity":"sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF+uBQUK0m0EqPO+U=","jsUrl":"/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js"};</script>
 
 <style>
   html.dark {
@@ -434,38 +429,174 @@
 </style>
 
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      baseUrl: window.hbb.pagefind.baseUrl,
-      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
-    });
-  });
   document.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById('search');
-    let trigger = document.getElementById('search_toggle');
+    const element = document.getElementById('search');
+    const trigger = document.getElementById('search_toggle');
+    const config = window.hbb && window.hbb.pagefind;
 
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        element.classList.toggle('hidden');
-        element.querySelector("input").value = ""
-        element.querySelector("input").focus()
-
-        if (!element.classList.contains('hidden')) {
-          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
-
-          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
-            clear_trigger.setAttribute('listenerOnClick', 'true');
-
-            clear_trigger.addEventListener('click', () => {
-              element.classList.toggle('hidden');
-            });
-          }
-        }
-
-      });
+    if (!element || !trigger || !config) {
+      return;
     }
+
+    let initialized = false;
+    let initializationPromise = null;
+
+    const setExpanded = (expanded) => {
+      element.classList.toggle('hidden', !expanded);
+      trigger.setAttribute('aria-expanded', String(expanded));
+    };
+
+    const removeFailedAsset = (asset) => {
+      asset.remove();
+    };
+
+    const loadStylesheet = () => new Promise((resolve, reject) => {
+      const existing = document.querySelector('link[data-pagefind-ui-styles]');
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI styles failed to load.')), { once: true });
+        return;
+      }
+
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = config.cssUrl;
+      stylesheet.integrity = config.cssIntegrity;
+      stylesheet.dataset.pagefindUiStyles = '';
+      stylesheet.addEventListener('load', () => {
+        stylesheet.dataset.loaded = 'true';
+        resolve();
+      }, { once: true });
+      stylesheet.addEventListener('error', () => {
+        removeFailedAsset(stylesheet);
+        reject(new Error('Pagefind UI styles failed to load.'));
+      }, { once: true });
+      document.head.appendChild(stylesheet);
+    });
+
+    const loadScript = () => new Promise((resolve, reject) => {
+      if (typeof window.PagefindUI === 'function') {
+        resolve();
+        return;
+      }
+
+      const existing = document.querySelector('script[data-pagefind-ui-script]');
+      if (existing) {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI script failed to load.')), { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = config.jsUrl;
+      script.integrity = config.jsIntegrity;
+      script.async = true;
+      script.dataset.pagefindUiScript = '';
+      script.addEventListener('load', () => {
+        if (typeof window.PagefindUI === 'function') {
+          resolve();
+        } else {
+          removeFailedAsset(script);
+          reject(new Error('Pagefind UI did not initialize.'));
+        }
+      }, { once: true });
+      script.addEventListener('error', () => {
+        removeFailedAsset(script);
+        reject(new Error('Pagefind UI script failed to load.'));
+      }, { once: true });
+      document.head.appendChild(script);
+    });
+
+    const closeSearch = () => {
+      setExpanded(false);
+    };
+
+    const attachClearHandler = () => {
+      const clearTrigger = element.querySelector('.pagefind-ui__search-clear');
+      if (!clearTrigger || clearTrigger.dataset.closesSearch === 'true') {
+        return;
+      }
+      clearTrigger.dataset.closesSearch = 'true';
+      clearTrigger.addEventListener('click', closeSearch);
+    };
+
+    const initializeSearch = () => {
+      if (initialized) {
+        return Promise.resolve();
+      }
+      if (initializationPromise) {
+        return initializationPromise;
+      }
+
+      initializationPromise = Promise.all([loadStylesheet(), loadScript()])
+        .then(() => {
+          element.replaceChildren();
+          new window.PagefindUI({
+            element: '#search',
+            showSubResults: true,
+            baseUrl: config.baseUrl,
+            bundlePath: config.bundlePath,
+          });
+          initialized = true;
+          attachClearHandler();
+        })
+        .catch((error) => {
+          initializationPromise = null;
+          throw error;
+        });
+
+      return initializationPromise;
+    };
+
+    const showStatus = (message, role) => {
+      const status = document.createElement('p');
+      status.setAttribute('role', role);
+      status.textContent = message;
+      element.replaceChildren(status);
+    };
+
+    const focusEmptyInput = () => {
+      const input = element.querySelector('input');
+      if (!input) {
+        return;
+      }
+      input.value = '';
+      input.focus();
+    };
+
+    const openSearch = async () => {
+      setExpanded(true);
+
+      if (!initialized) {
+        element.setAttribute('aria-busy', 'true');
+        showStatus('Loading search\u2026', 'status');
+      }
+
+      try {
+        await initializeSearch();
+        element.removeAttribute('aria-busy');
+        if (!element.classList.contains('hidden')) {
+          focusEmptyInput();
+        }
+      } catch (error) {
+        element.removeAttribute('aria-busy');
+        showStatus('Search could not be loaded. Close and reopen it to try again.', 'alert');
+        console.error(error);
+      }
+    };
+
+    trigger.addEventListener('click', () => {
+      if (element.classList.contains('hidden')) {
+        openSearch();
+      } else {
+        focusEmptyInput();
+        closeSearch();
+      }
+    });
   });
 </script>
 
@@ -743,8 +874,11 @@
       
       <button
         aria-label="search"
+        aria-controls="search"
+        aria-expanded="false"
         class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        id="search_toggle">
+        id="search_toggle"
+        type="button">
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
@@ -1182,7 +1316,7 @@
       
       <div class="post-featured-block article-header article-container featured-image-wrapper mt-4 mb-14" style="max-width: 643px; max-height: 313px;">
         <div style="position: relative">
-          <img src="/post/humor-as-a-service-20260801/featured_hu17628204192352458846.webp" width="643" height="313" alt="" class="featured-image">
+          <img src="/post/humor-as-a-service-20260801/featured_hu7279362646729338200.webp" width="643" height="313" alt="" class="featured-image">
           <span class="article-header-caption">A collection of 88x31 buttons, taken from <a href="https://cyber.dabamos.de/88x31/" target="_blank" rel="noopener">The 88x31 GIF Collection</a>.</span>
         </div>
       </div>
@@ -1190,7 +1324,7 @@
 
       <div class="post-content-shell mx-auto">
         <div class="post-body prose prose-slate dark:prose-invert">
-          <p>This story begins with me, once again, completely lost in the <em>World Wide Web</em>, <a href="https://web.archive.org/web/20170227142216/http://www.netmom.com/images/stories/file/surfing_the_internet/Surfing_the_Internet%202_02.pdf" target="_blank" rel="noopener">&ldquo;surfing the internet&rdquo;</a> <span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-1" href="#page-note-1" aria-label="See note 1"><sup>1</sup></a><span class="page-note" id="page-note-1" role="note"><a class="page-note-number" href="#page-note-ref-1" aria-label="Back to reference 1">1</a> <span class="page-note-content">According to <a href="https://www.zakon.org/robert/internet/timeline/" target="_blank" rel="noopener">Hobbes&rsquo; Internet Timeline</a>, the term &rsquo;net-surfing&rsquo; was used <a href="https://groups.google.com/g/comp.admin.policy/c/A-JUIeKlPUw/m/RyMspUG7dkwJ" target="_blank" rel="noopener">as early as 1991</a></span></span></span>. An experience that, I am afraid, is becoming increasingly rare in a centralized web shaped by algorithms <span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-2" href="#page-note-2" aria-label="See note 2"><sup>2</sup></a><span class="page-note" id="page-note-2" role="note"><a class="page-note-number" href="#page-note-ref-2" aria-label="Back to reference 2">2</a> <span class="page-note-content">Algorithmic-driven social media <a href="https://www.pnas.org/doi/full/10.1073/pnas.2023301118" target="_blank" rel="noopener">favor the emergence of echo chambers</a></span></span></span>, with only a few comparable activities<span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-3" href="#page-note-3" aria-label="See note 3"><sup>3</sup></a><span class="page-note" id="page-note-3" role="note"><a class="page-note-number" href="#page-note-ref-3" aria-label="Back to reference 3">3</a> <span class="page-note-content">Is <a href="https://en.wikipedia.org/wiki/Doomscrolling" target="_blank" rel="noopener">doomscrolling</a> a modern way of internet surfing?</span></span></span> still thriving today, such as <a href="https://en.wikipedia.org/wiki/Wiki_rabbit_hole" target="_blank" rel="noopener">getting lost in Wikipedia rabbit hole</a>.</p>
+          <p>This story begins with me, once again, completely lost in the <em>World Wide Web</em>, <a href="https://web.archive.org/web/20170227142216/http://www.netmom.com/images/stories/file/surfing_the_internet/Surfing_the_Internet%202_02.pdf" target="_blank" rel="noopener">&ldquo;surfing the internet&rdquo;</a> <span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-1" href="#page-note-1" aria-label="See note 1"><sup>1</sup></a><span class="page-note" id="page-note-1" role="note"><a class="page-note-number" href="#page-note-ref-1" aria-label="Back to reference 1">1</a> <span class="page-note-content">According to <a href="https://www.zakon.org/robert/internet/timeline/" target="_blank" rel="noopener">Hobbes&rsquo; Internet Timeline</a>, the term &rsquo;net-surfing&rsquo; was used <a href="https://groups.google.com/g/comp.admin.policy/c/A-JUIeKlPUw/m/RyMspUG7dkwJ" target="_blank" rel="noopener">as early as 1991</a></span></span></span>. An experience that, I am afraid, is becoming increasingly rare in a centralized web shaped by algorithms <span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-2" href="#page-note-2" aria-label="See note 2"><sup>2</sup></a><span class="page-note" id="page-note-2" role="note"><a class="page-note-number" href="#page-note-ref-2" aria-label="Back to reference 2">2</a> <span class="page-note-content">Algorithmic-driven social media <a href="https://www.pnas.org/doi/full/10.1073/pnas.2023301118" target="_blank" rel="noopener">favor the emergence of echo chambers</a></span></span></span>, with only a few comparable activities<span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-3" href="#page-note-3" aria-label="See note 3"><sup>3</sup></a><span class="page-note" id="page-note-3" role="note"><a class="page-note-number" href="#page-note-ref-3" aria-label="Back to reference 3">3</a> <span class="page-note-content">Is <a href="https://en.wikipedia.org/wiki/Doomscrolling" target="_blank" rel="noopener">doomscrolling</a> a modern way of internet surfing?</span></span></span> still thriving today, such as <a href="https://en.wikipedia.org/wiki/Wiki_rabbit_hole" target="_blank" rel="noopener">getting lost in a Wikipedia rabbit hole</a>.</p>
 <figure>
 <img src="./figure1_surfingtheinternet.jpg" alt="Surfing the Internet" style="width: 60%; height: auto;">
 <figcaption>Figure 1. "Welcome to The Internet" is a catchphrase commonly accompanied by a very extravagant, and often somewhat unhinged, image of what people imagine the Internet to be. <a href="https://knowyourmeme.com/memes/welcome-to-the-internet" target="_blank" rel="noopener noreferrer">I think</a>.</figcaption>
@@ -1204,7 +1338,7 @@
 </ul>
 <p>This post of mine is the result of exploring these two points.</p>
 <h2 id="88x31-buttons">88x31 buttons</h2>
-<p>The 1990s Internet saw the <a href="https://michal.karzynski.pl/blog/2010/10/10/browser-usage-statistics-past-present-and-future/" target="_blank" rel="noopener">rise of browser-based web navigation</a> we know of today, thanks to <a href="https://www.w3.org/People/Berners-Lee/FAQ.html#browser" target="_blank" rel="noopener">developments</a> that made it possible, and much easier, to display color, and eventually, in-line images.</p>
+<p>The 1990s Internet saw the <a href="https://michal.karzynski.pl/blog/2010/10/10/browser-usage-statistics-past-present-and-future/" target="_blank" rel="noopener">rise of the browser-based web navigation</a> we know of today, thanks to <a href="https://www.w3.org/People/Berners-Lee/FAQ.html#browser" target="_blank" rel="noopener">developments</a> that made it possible, and much easier, to display color, and eventually, in-line images.</p>
 <p>Before the popularization and widespread adoption of browsers like Mosaic (1993-1997) and Netscape (1994-2008), most websites were made purely out of text.</p>
 <figure>
 <img src="./figure2_aestheticsoftheoldinternet.png" alt="Aesthetics of the Old Internet" style="width: 60%; height: auto;">
@@ -1222,11 +1356,11 @@ Kkul Store: <a href="https://kkul.store/" target="_blank" rel="noopener noreferr
 </figcaption>
 </figure>
 <p>Among these, the 88px wide by 31px high button standard (88x31) is one of the <a href="https://support.google.com/admanager/answer/1100453?hl=en#other" target="_blank" rel="noopener">most enduring formats</a>.</p>
-<p>Its origin story on how it came to be seems somewhat unclear. Trying to understand it has already taken some hours of my life, and there might be a lot more to document about it<span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-8" href="#page-note-8" aria-label="See note 8"><sup>8</sup></a><span class="page-note" id="page-note-8" role="note"><a class="page-note-number" href="#page-note-ref-8" aria-label="Back to reference 8">8</a> <span class="page-note-content"><a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html" target="_blank" rel="noopener">&lsquo;Was it Netscape that started it all&rsquo;</a>? Or <a href="https://neonaut.neocities.org/cyber/88x31" target="_blank" rel="noopener">was it GeoCities</a>? I am <a href="https://88x31.nl/history.html" target="_blank" rel="noopener">unsure</a>. is there a primary source in the room with us? <a href="https://hellnet.work/8831/stats.html" target="_blank" rel="noopener">Here is an analysis of 88x31 buttons from GeoCities</a></span></span></span>.
+<p>Its origin story on how it came to be seems somewhat unclear. Trying to understand it has already taken some hours of my life, and there might be a lot more to document about it<span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-8" href="#page-note-8" aria-label="See note 8"><sup>8</sup></a><span class="page-note" id="page-note-8" role="note"><a class="page-note-number" href="#page-note-ref-8" aria-label="Back to reference 8">8</a> <span class="page-note-content"><a href="https://web.archive.org/web/19990129040545/http://www.geocities.com/NapaValley/2022/88x31.html" target="_blank" rel="noopener">Was it Netscape that started it all</a>? Or <a href="https://neonaut.neocities.org/cyber/88x31" target="_blank" rel="noopener">was it GeoCities</a>? I am <a href="https://88x31.nl/history.html" target="_blank" rel="noopener">unsure</a>. is there a primary source in the room with us? <a href="https://hellnet.work/8831/stats.html" target="_blank" rel="noopener">Here is an analysis of 88x31 buttons from GeoCities</a></span></span></span>.
 Nevertheless, the most widely known 88x31 button <span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-9" href="#page-note-9" aria-label="See note 9"><sup>9</sup></a><span class="page-note" id="page-note-9" role="note"><a class="page-note-number" href="#page-note-ref-9" aria-label="Back to reference 9">9</a> <span class="page-note-content">And oldest recorded, until proven otherwise</span></span></span> at some point became the &ldquo;Netscape button&rdquo;.</p>
 <figure>
 <img src="./figure4_netscapenow.png" alt="" style="width: 75%; height: auto;">
-<figcaption>Figure 4. Netscape. Now. Circa 1996. Available at: <a href="https://web.archive.org/web/19961020015116/http://www3.netscape.com/" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/19961020015116/http://www3.netscape.com/</a> If you think about it, the "NOW" sounds a bit aggressive.</figcaption>
+<figcaption>Figure 4. Netscape, Now. Circa 1996. Available at: <a href="https://web.archive.org/web/19961020015116/http://www3.netscape.com/" target="_blank" rel="noopener noreferrer">https://web.archive.org/web/19961020015116/http://www3.netscape.com/</a> If you think about it, the "NOW" sounds a bit aggressive.</figcaption>
 </figure>
 <p>The design of many buttons from this era share the same features:</p>
 <ul>
@@ -1277,15 +1411,15 @@ Nevertheless, the most widely known 88x31 button <span class="page-note-anchor">
 <p>While searching for different 88x31 buttons (and the means to make them) it became clear that many out there building beautiful handmade <a href="https://maggieappleton.com/garden-history" target="_blank" rel="noopener">digital gardens</a> vehemently oppose any form of coding that involves AI<span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-16" href="#page-note-16" aria-label="See note 16"><sup>16</sup></a><span class="page-note" id="page-note-16" role="note"><a class="page-note-number" href="#page-note-ref-16" aria-label="Back to reference 16">16</a> <span class="page-note-content">In some cases, the same people that aggresively oppose AI won&rsquo;t share their code publicly either; sus,  but I digress</span></span></span>.</p>
 <p>Sam Altman once said that <a href="https://www.forbes.com/councils/forbesbusinesscouncil/2026/02/25/why-sam-altmans-famous-quote-should-make-leaders-uneasy/" target="_blank" rel="noopener">AI might lead to the end of the world, but in the meantime we will have some great companies</a> <span class="page-note-anchor"><a class="page-note-ref" id="page-note-ref-17" href="#page-note-17" aria-label="See note 17"><sup>17</sup></a><span class="page-note" id="page-note-17" role="note"><a class="page-note-number" href="#page-note-ref-17" aria-label="Back to reference 17">17</a> <span class="page-note-content"><a href="https://www.youtube.com/watch?v=g70KUszkNvQ" target="_blank" rel="noopener">video</a></span></span></span>.
 I want to think that AI won&rsquo;t totally destroy humanity, or the world. If anything, it might <a href="https://news.mit.edu/2025/explained-generative-ai-environmental-impact-0117" target="_blank" rel="noopener">destroy a good chunk environment</a>.</p>
-<p>And in the meantime, at least we should get some fun out of it, I guess.</p>
+<p>In the meantime, at least we should get some fun out of it, I guess.</p>
 <figure>
 <img src="./figure10_kristinmerrilees_meme.png" alt="" style="width: 50%; height: auto;">
 <figcaption>Figure 10. Meme from internet culture writer <a href="https://www.phonetime.news/" target="_blank" rel="noopener noreferrer">Kristin Merrilees</a>.</figcaption>
 </figure>
 <p>I want to contribute my own share of fun through Humor as a Service (HaaS).</p>
 <p>Unlike &ldquo;Chat LLMs“, which to me are glorified search engines that occasionally help me debug a line or two of code, &ldquo;Agentic LLMs&rdquo; seem to be equipped with extensive software development capabilities.</p>
-<p>It is with the latter that, taking inspiration from several 88x31 button makers and generators out there, <a href="https://jruizcabrejos.com/buttonbuilder/" target="_blank" rel="noopener">I adapted my own</a> for my needs.</p>
-<iframe src="https://jruizcabrejos.com/buttonbuilder/" width="105%" height="500px" style="border:none;"></iframe>
+<p>It is with the latter that, taking inspiration from several other 88x31 button makers and generators out there, <a href="https://jruizcabrejos.com/buttonbuilder/" target="_blank" rel="noopener">I adapted my own</a> for my needs.</p>
+<iframe src="https://jruizcabrejos.com/buttonbuilder/" width="105%" height="500px" loading="lazy" title="88x31 Button Builder" style="border:none;"></iframe>
 <h2 id="colophon">Colophon</h2>
 <p>How much fun is there in the universe?
 Will we ever run out of fun?
@@ -1315,7 +1449,7 @@ Could we be having more fun?</p>
 
     
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/FJF6wcSYIsw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/FJF6wcSYIsw?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
       ></iframe>
     </div>
 

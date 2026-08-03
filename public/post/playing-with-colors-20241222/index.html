@@ -1,6 +1,6 @@
 <!doctype html>
 <!-- This site was created with Hugo Blox. https://hugoblox.com -->
-<!-- Last Published: August 3, 2026 --><html lang="en-us" dir="ltr"
+<!-- Last Published: August 4, 2026 --><html lang="en-us" dir="ltr"
       data-wc-theme-default="system">
   
 <head>
@@ -415,13 +415,8 @@
 
 
 
-<link type="text/css" rel="stylesheet" href="/dist/pagefind/pagefind-ui.be766eb419317a14ec769d216e9779bfe8f3737c80e780f4ba0dafb57a41a482.css" integrity="sha256-vnZutBkxehTsdp0hbpd5v&#43;jzc3yA54D0ug2vtXpBpII=" />
 
-
-<script src="/dist/pagefind/pagefind-ui.87693d7c6f2b3b347ce359d0ede762c033419f0a32b22ce508c335a81d841f1b.js" integrity="sha256-h2k9fG8rOzR841nQ7ediwDNBnwoysizlCMM1qB2EHxs="></script>
-
-
-<script>window.hbb.pagefind = {"baseUrl":"/"};</script>
+<script>window.hbb.pagefind = {"baseUrl":"/","bundlePath":"/pagefind/","cssIntegrity":"sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=","cssUrl":"/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css","jsIntegrity":"sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF+uBQUK0m0EqPO+U=","jsUrl":"/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js"};</script>
 
 <style>
   html.dark {
@@ -434,38 +429,174 @@
 </style>
 
 <script>
-  window.addEventListener('DOMContentLoaded', (event) => {
-    new PagefindUI({
-      element: "#search",
-      showSubResults: true,
-      baseUrl: window.hbb.pagefind.baseUrl,
-      bundlePath: window.hbb.pagefind.baseUrl + "pagefind/",
-    });
-  });
   document.addEventListener('DOMContentLoaded', () => {
-    let element = document.getElementById('search');
-    let trigger = document.getElementById('search_toggle');
+    const element = document.getElementById('search');
+    const trigger = document.getElementById('search_toggle');
+    const config = window.hbb && window.hbb.pagefind;
 
-    if (trigger) {
-      trigger.addEventListener('click', () => {
-        element.classList.toggle('hidden');
-        element.querySelector("input").value = ""
-        element.querySelector("input").focus()
-
-        if (!element.classList.contains('hidden')) {
-          let clear_trigger = document.querySelector('.pagefind-ui__search-clear');
-
-          if (clear_trigger && !clear_trigger.hasAttribute('listenerOnClick')) {
-            clear_trigger.setAttribute('listenerOnClick', 'true');
-
-            clear_trigger.addEventListener('click', () => {
-              element.classList.toggle('hidden');
-            });
-          }
-        }
-
-      });
+    if (!element || !trigger || !config) {
+      return;
     }
+
+    let initialized = false;
+    let initializationPromise = null;
+
+    const setExpanded = (expanded) => {
+      element.classList.toggle('hidden', !expanded);
+      trigger.setAttribute('aria-expanded', String(expanded));
+    };
+
+    const removeFailedAsset = (asset) => {
+      asset.remove();
+    };
+
+    const loadStylesheet = () => new Promise((resolve, reject) => {
+      const existing = document.querySelector('link[data-pagefind-ui-styles]');
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI styles failed to load.')), { once: true });
+        return;
+      }
+
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = config.cssUrl;
+      stylesheet.integrity = config.cssIntegrity;
+      stylesheet.dataset.pagefindUiStyles = '';
+      stylesheet.addEventListener('load', () => {
+        stylesheet.dataset.loaded = 'true';
+        resolve();
+      }, { once: true });
+      stylesheet.addEventListener('error', () => {
+        removeFailedAsset(stylesheet);
+        reject(new Error('Pagefind UI styles failed to load.'));
+      }, { once: true });
+      document.head.appendChild(stylesheet);
+    });
+
+    const loadScript = () => new Promise((resolve, reject) => {
+      if (typeof window.PagefindUI === 'function') {
+        resolve();
+        return;
+      }
+
+      const existing = document.querySelector('script[data-pagefind-ui-script]');
+      if (existing) {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI script failed to load.')), { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = config.jsUrl;
+      script.integrity = config.jsIntegrity;
+      script.async = true;
+      script.dataset.pagefindUiScript = '';
+      script.addEventListener('load', () => {
+        if (typeof window.PagefindUI === 'function') {
+          resolve();
+        } else {
+          removeFailedAsset(script);
+          reject(new Error('Pagefind UI did not initialize.'));
+        }
+      }, { once: true });
+      script.addEventListener('error', () => {
+        removeFailedAsset(script);
+        reject(new Error('Pagefind UI script failed to load.'));
+      }, { once: true });
+      document.head.appendChild(script);
+    });
+
+    const closeSearch = () => {
+      setExpanded(false);
+    };
+
+    const attachClearHandler = () => {
+      const clearTrigger = element.querySelector('.pagefind-ui__search-clear');
+      if (!clearTrigger || clearTrigger.dataset.closesSearch === 'true') {
+        return;
+      }
+      clearTrigger.dataset.closesSearch = 'true';
+      clearTrigger.addEventListener('click', closeSearch);
+    };
+
+    const initializeSearch = () => {
+      if (initialized) {
+        return Promise.resolve();
+      }
+      if (initializationPromise) {
+        return initializationPromise;
+      }
+
+      initializationPromise = Promise.all([loadStylesheet(), loadScript()])
+        .then(() => {
+          element.replaceChildren();
+          new window.PagefindUI({
+            element: '#search',
+            showSubResults: true,
+            baseUrl: config.baseUrl,
+            bundlePath: config.bundlePath,
+          });
+          initialized = true;
+          attachClearHandler();
+        })
+        .catch((error) => {
+          initializationPromise = null;
+          throw error;
+        });
+
+      return initializationPromise;
+    };
+
+    const showStatus = (message, role) => {
+      const status = document.createElement('p');
+      status.setAttribute('role', role);
+      status.textContent = message;
+      element.replaceChildren(status);
+    };
+
+    const focusEmptyInput = () => {
+      const input = element.querySelector('input');
+      if (!input) {
+        return;
+      }
+      input.value = '';
+      input.focus();
+    };
+
+    const openSearch = async () => {
+      setExpanded(true);
+
+      if (!initialized) {
+        element.setAttribute('aria-busy', 'true');
+        showStatus('Loading search\u2026', 'status');
+      }
+
+      try {
+        await initializeSearch();
+        element.removeAttribute('aria-busy');
+        if (!element.classList.contains('hidden')) {
+          focusEmptyInput();
+        }
+      } catch (error) {
+        element.removeAttribute('aria-busy');
+        showStatus('Search could not be loaded. Close and reopen it to try again.', 'alert');
+        console.error(error);
+      }
+    };
+
+    trigger.addEventListener('click', () => {
+      if (element.classList.contains('hidden')) {
+        openSearch();
+      } else {
+        focusEmptyInput();
+        closeSearch();
+      }
+    });
   });
 </script>
 
@@ -743,8 +874,11 @@
       
       <button
         aria-label="search"
+        aria-controls="search"
+        aria-expanded="false"
         class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
-        id="search_toggle">
+        id="search_toggle"
+        type="button">
         <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
       </button>
       
@@ -1414,7 +1548,7 @@
 
     
     <div style="position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;">
-      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="eager" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NMiQmumW0nI?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
+      <iframe allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen="allowfullscreen" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://www.youtube.com/embed/NMiQmumW0nI?autoplay=0&controls=1&end=0&loop=0&mute=0&start=0" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;" title="YouTube video"
       ></iframe>
     </div>
 

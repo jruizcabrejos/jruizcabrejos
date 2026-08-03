@@ -39,13 +39,11 @@ layout: "collections"
 
 {{< spoiler text="88x31 Buttons" class="collections-accordion" id="buttons" >}}
 
-Some buttons made with the [button builder](https://jruizcabrejos.com/buttonbuilder/), and others that belong to their respective owners.
+Some buttons made with the [button builder](https://jruizcabrejos.com/buttonbuilder/) and others that belong to their respective owners.
 
 - Academic Journals
 
     {{< collection-buttons folder="buttons/journals" label="Academic journal buttons" >}}
-
-These buttons are taken from their respective owners.
 
 - Selection of buttons from [Ky Decker](https://ky.fyi/webrings#badges)
 

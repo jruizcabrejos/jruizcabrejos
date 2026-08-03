@@ -65,7 +65,7 @@
 &lt;p&gt;This two-step procedure is &lt;a href=&#34;https://github.com/jruizcabrejos/barcelona_trastos_eng&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;documented in the github for this project&lt;/a&gt;.&lt;/p&gt;
 &lt;h3 id=&#34;it-is-what-it-is&#34;&gt;It is what it is&lt;/h3&gt;
 &lt;p&gt;And if you are reading this, these maps are now yours too, and I hope you find something nice in the trash.&lt;/p&gt;
-&lt;img src=&#34;./eng_Map_Barcelona_Furniture_Junk_Map_days.png&#34; alt=&#34;barcelona_map_trastos&#34;&gt;
+&lt;img src=&#34;./eng_Map_Barcelona_Furniture_Junk_Map_days-optimized.png&#34; alt=&#34;barcelona_map_trastos&#34;&gt;
 &lt;h3 id=&#34;pithicism&#34;&gt;Pithicism&lt;/h3&gt;
 &lt;p&gt;It took me more than a year to finish writing this blog post properly. The scrapping script went through several iterations until I had something that worked &amp;ldquo;cleanly&amp;rdquo; enough&lt;span class=&#34;page-note-anchor&#34;&gt;&lt;a class=&#34;page-note-ref&#34; id=&#34;page-note-ref-14&#34; href=&#34;#page-note-14&#34; aria-label=&#34;See note 14&#34;&gt;&lt;sup&gt;14&lt;/sup&gt;&lt;/a&gt;&lt;span class=&#34;page-note&#34; id=&#34;page-note-14&#34; role=&#34;note&#34;&gt;&lt;a class=&#34;page-note-number&#34; href=&#34;#page-note-ref-14&#34; aria-label=&#34;Back to reference 14&#34;&gt;14&lt;/a&gt; &lt;span class=&#34;page-note-content&#34;&gt;or that I liked enough&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;.&lt;/p&gt;
 &lt;p&gt;As of April 5, 2026, I can call this done.&lt;/p&gt;
@@ -74,12 +74,12 @@
 
     
     &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/RoP5MdpMBc4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/RoP5MdpMBc4?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
 &lt;p&gt;By the way: &lt;em&gt;Land doesn&amp;rsquo;t vote&lt;/em&gt;&amp;hellip; dots do (?)&lt;/p&gt;
-&lt;img src=&#34;./eng_dots_Barcelona_Furniture_Junk_Map_days.png&#34; alt=&#34;barcelona_map_trastos&#34;&gt;
+&lt;img src=&#34;./eng_dots_Barcelona_Furniture_Junk_Map_days-optimized.png&#34; alt=&#34;barcelona_map_trastos&#34;&gt;
 </description>
     </item>
     
@@ -294,7 +294,7 @@
 
     
     &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/NMiQmumW0nI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/NMiQmumW0nI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
@@ -329,7 +329,7 @@
 &lt;p&gt;A week ago, if you had asked me what I&amp;rsquo;d be writing about, &amp;ldquo;art&amp;rdquo; wouldn&amp;rsquo;t be on my list.&lt;/p&gt;
 &lt;p&gt;If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from &lt;a href=&#34;https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ENDESA website&lt;/a&gt;), or maybe vent about &lt;a href=&#34;https://en.wikipedia.org/wiki/List_of_territorial_disputes&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;&lt;em&gt;undefined&lt;/em&gt; geopolitical areas&lt;/a&gt; and how they keep causing me issues anytime I am plotting stuff on maps.&lt;/p&gt;
 &lt;p&gt;But before I start talking about by-passing Google Authentication as a &amp;ldquo;robot&amp;rdquo; and data gaps, there is something else I want to mention first:
-&lt;img src=&#34;./icon.png&#34; alt=&#34;Favicon&#34;&gt;&lt;/p&gt;
+&lt;img src=&#34;./icon-optimized.webp&#34; alt=&#34;Favicon&#34;&gt;&lt;/p&gt;
 &lt;figcaption&gt;Figure 1. Favicon for this website. Self-made. &lt;/figcaption&gt;
 &lt;p&gt;My favicon (that little icon you see on your browser) for this website was inspired by the workshop &lt;a href=&#34;https://art-from-code.netlify.app/&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;ART FROM CODE from Danielle Navarro&lt;/a&gt;, a course on computer-generated artwork using R which has its entire course material &lt;a href=&#34;https://github.com/rstudio-conf-2022/art-from-code&#34; target=&#34;_blank&#34; rel=&#34;noopener&#34;&gt;posted online&lt;/a&gt;.&lt;/p&gt;
 &lt;p&gt;Mind you, what I produced is the result of 10 minutes of work and reading. Which is nothing compared to the 10+ hours the entire course is supposed to take.&lt;/p&gt;
@@ -453,7 +453,7 @@
 &lt;p&gt;Would the authors of these POI&amp;rsquo;s with graffiti in them be ok with their creations being made as public and as accessible as possible?&lt;/p&gt;
 &lt;p&gt;Who really own these? the artist who made it, the player who submitted it, the community that approved it, or the companies that &amp;lsquo;gatekeep&amp;rsquo; this data?&lt;/p&gt;
 &lt;p&gt;I do not have any answers, only more questions. But I also have 8,000 POI&amp;rsquo;s coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.&lt;/p&gt;
-&lt;img src=&#34;./plot_map1.png&#34; alt=&#34;Favicon&#34;&gt;
+&lt;img src=&#34;./plot_map1-optimized.webp&#34; alt=&#34;Favicon&#34;&gt;
 &lt;figcaption&gt;Figure 9. (Incomplete) Distribution of POI&#39;s across Barcelona from the game &#39;Ingress&#39;.&lt;/figcaption&gt;
 &lt;p&gt;Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).&lt;/p&gt;
 &lt;p&gt;Whether we&amp;rsquo;re talking about scraping data for health research or preserving street art, the topics of accessibility, ethics, and ownership are present.&lt;/p&gt;
@@ -473,7 +473,7 @@
 
     
     &lt;div style=&#34;position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;&#34;&gt;
-      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;eager&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/3F4DZbvqEnI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
+      &lt;iframe allow=&#34;accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share&#34; allowfullscreen=&#34;allowfullscreen&#34; loading=&#34;lazy&#34; referrerpolicy=&#34;strict-origin-when-cross-origin&#34; src=&#34;https://www.youtube.com/embed/3F4DZbvqEnI?autoplay=0&amp;controls=1&amp;end=0&amp;loop=0&amp;mute=0&amp;start=0&#34; style=&#34;position: absolute; top: 0; left: 0; width: 100%; height: 100%; border:0;&#34; title=&#34;YouTube video&#34;
       &gt;&lt;/iframe&gt;
     &lt;/div&gt;
 
