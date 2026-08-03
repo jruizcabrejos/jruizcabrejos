@@ -37,9 +37,9 @@ layout: "collections"
 {{< /spoiler >}}
 
 
-{{< spoiler text="Buttons" class="collections-accordion" id="buttons" >}}
+{{< spoiler text="88x31 Buttons" class="collections-accordion" id="buttons" >}}
 
-These buttons were made by me.
+Some buttons made with the [button builder](https://jruizcabrejos.com/buttonbuilder/), and others that belong to their respective owners.
 
 - Academic Journals
 
@@ -47,7 +47,7 @@ These buttons were made by me.
 
 These buttons are taken from their respective owners.
 
-- Ky Decker
+- Selection of buttons from [Ky Decker](https://ky.fyi/webrings#badges)
 
     {{< collection-buttons folder="buttons/KyDecker" label="Buttons from Ky Decker" >}}
 
