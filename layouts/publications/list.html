@@ -2,8 +2,8 @@
 <section id="publications" class="max-w-3xl mx-auto px-4 py-8">
   <h1 class="text-3xl font-bold mb-6">{{ .Title }}</h1>
 
-  {{ range .Pages.ByDate.Reverse }}
-    {{ $page := . }}
+  {{ range $index, $entry := .Pages.ByDate.Reverse }}
+    {{ $page := $entry }}
     {{ $publication_link := $page.RelPermalink }}
     {{ $publication_link_attributes := "" }}
     {{ with $page.Params.url_source }}
@@ -17,11 +17,20 @@
 
     <div class="flex gap-4 mb-4 border-b border-gray-300 pb-2">
       {{ with $page.Resources.GetMatch "featured*" }}
+        {{ $loading := cond (eq $index 0) "eager" "lazy" }}
+        {{ $fetch_priority := cond (eq $index 0) "high" "auto" }}
         <a
           href="{{ $publication_link }}"
           {{ $publication_link_attributes | safeHTMLAttr }}
           class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded">
-          <img src="{{ .RelPermalink }}" class="h-full w-full object-cover" alt="{{ $image_alt }}">
+          {{ partial "components/card-thumbnail.html" (dict
+            "image" .
+            "alt" $image_alt
+            "display_size" 96
+            "loading" $loading
+            "fetch_priority" $fetch_priority
+            "class" "h-full w-full object-cover"
+          ) }}
         </a>
       {{ end }}
 

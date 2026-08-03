@@ -19,7 +19,7 @@ A week ago, if you had asked me what I'd be writing about, "art" wouldn't be on 
 If anything, I would have guessed I would be writing about my electricity bill (which I downloaded hour-by-hour as a csv from [ENDESA website](https://www.endesa.com/es/te-ayudamos/sobre-tu-factura/ver-factura)), or maybe vent about [*undefined* geopolitical areas](https://en.wikipedia.org/wiki/List_of_territorial_disputes) and how they keep causing me issues anytime I am plotting stuff on maps.
 
 But before I start talking about by-passing Google Authentication as a "robot" and data gaps, there is something else I want to mention first:
-<img src="./icon.png" alt="Favicon">
+<img src="./icon-optimized.webp" alt="Favicon">
 <figcaption>Figure 1. Favicon for this website. Self-made. </figcaption>
 
 My favicon (that little icon you see on your browser) for this website was inspired by the workshop [ART FROM CODE from Danielle Navarro](https://art-from-code.netlify.app/), a course on computer-generated artwork using R which has its entire course material [posted online](https://github.com/rstudio-conf-2022/art-from-code).
@@ -215,7 +215,7 @@ Who really own these? the artist who made it, the player who submitted it, the c
 
 I do not have any answers, only more questions. But I also have 8,000 POI's coordinates from Barcelona (and counting), which I plan to use to explore some of these questions.
 
-<img src="./plot_map1.png" alt="Favicon">
+<img src="./plot_map1-optimized.webp" alt="Favicon">
 <figcaption>Figure 9. (Incomplete) Distribution of POI's across Barcelona from the game 'Ingress'.</figcaption>
 
 Art is theft, said Picasso, allegedly, not referring to the act of stealing itself but rather about stealing inspiration from previous artists (or something like that?).
@@ -240,6 +240,6 @@ The bug was found thanks to the "Grafiti Los conejos traviesos".
 
 This song ("to vanish"?) seems appropriate for talking about the ephemeral and urban art in general.
 
-{{< youtube 3F4DZbvqEnI >}}
+{{< youtube id="3F4DZbvqEnI" loading="lazy" >}}
 
 Alternative footnote song on robots is [here](https://www.youtube.com/watch?v=sqK-jh4TDXo).

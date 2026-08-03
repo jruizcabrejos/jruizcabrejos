@@ -101,9 +101,13 @@
       {{ $featured := $item.Resources.GetMatch "featured*" }}
       {{ $publication_link := $item.RelPermalink }}
       {{ $publication_link_attributes := "" }}
+      {{ $image_alt := $item.Title }}
       {{ with $item.Params.url_source }}
         {{ $publication_link = . }}
         {{ $publication_link_attributes = `target="_blank" rel="noopener noreferrer"` }}
+      {{ end }}
+      {{ with $item.Params.image.alt_text }}
+        {{ $image_alt = . }}
       {{ end }}
       <div class="flex gap-4 mb-6 border-b border-gray-300 pb-4 w-full max-w-3xl">
         {{ with $featured }}
@@ -111,7 +115,13 @@
             href="{{ $publication_link }}"
             {{ $publication_link_attributes | safeHTMLAttr }}
             class="recent-research-image-link block h-24 w-24 shrink-0 overflow-hidden rounded-md">
-            <img src="{{ .RelPermalink }}" alt="{{ $item.Title }}" class="h-full w-full object-cover">
+            {{ partial "components/card-thumbnail.html" (dict
+              "image" .
+              "alt" $image_alt
+              "display_size" 96
+              "loading" "lazy"
+              "class" "h-full w-full object-cover"
+            ) }}
           </a>
         {{ else }}
           <div class="w-24 h-24 bg-gray-200 rounded-md flex items-center justify-center text-gray-500 text-sm">
@@ -155,9 +165,13 @@
           {{ with $featured }}
             <div class="order-first w-28 h-28 shrink-0 self-start md:order-last">
               <a href="{{ $item.RelPermalink }}" class="block w-full h-full overflow-hidden rounded-md">
-                <img src="{{ if .RelPermalink }}{{ .RelPermalink }}{{ else }}{{ . }}{{ end }}"
-                     alt="{{ $item.Title }}"
-                     class="w-full h-full object-cover">
+                {{ partial "components/card-thumbnail.html" (dict
+                  "image" .
+                  "alt" $item.Title
+                  "display_size" 112
+                  "loading" "lazy"
+                  "class" "w-full h-full object-cover"
+                ) }}
               </a>
             </div>
           {{ end }}

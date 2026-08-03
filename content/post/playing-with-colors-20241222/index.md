@@ -275,7 +275,7 @@ It kind of looks like the grey-ish dark mud color you get when mixing too many c
 
 The picture of this post comes from this song:
 
-{{< youtube NMiQmumW0nI >}}
+{{< youtube id="NMiQmumW0nI" loading="lazy" >}}
 
 I couldn't find a single blog post or page that answered and covered everything I needed for me to write the code to work with colors.
 

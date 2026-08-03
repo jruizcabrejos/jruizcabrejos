@@ -95,7 +95,7 @@ This two-step procedure is [documented in the github for this project](https://g
 
 And if you are reading this, these maps are now yours too, and I hope you find something nice in the trash.
 
-<img src="./eng_Map_Barcelona_Furniture_Junk_Map_days.png" alt="barcelona_map_trastos">
+<img src="./eng_Map_Barcelona_Furniture_Junk_Map_days-optimized.png" alt="barcelona_map_trastos">
 
 
 ### Pithicism
@@ -106,10 +106,10 @@ As of April 5, 2026, I can call this done.
 
 Did you know, read, or heard about _frugality_ before?
 
-{{< youtube RoP5MdpMBc4 >}}
+{{< youtube id="RoP5MdpMBc4" loading="lazy" >}}
 
 
 By the way: _Land doesn't vote_... dots do (?)
 
-<img src="./eng_dots_Barcelona_Furniture_Junk_Map_days.png" alt="barcelona_map_trastos">
+<img src="./eng_dots_Barcelona_Furniture_Junk_Map_days-optimized.png" alt="barcelona_map_trastos">
 

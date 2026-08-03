@@ -1,0 +1,264 @@
+{{/* Load Alpine JS extension? */}}
+{{ if (.Page.Store.Get "has_alpine") }}
+  {{ $alpine_js := resources.Get "dist/lib/alpinejs/cdn.min.js" }}
+  {{ $alpine_js = $alpine_js | resources.Fingerprint "sha256" }}
+  <script src="{{ $alpine_js.RelPermalink }}" integrity="{{ $alpine_js.Data.Integrity }}" defer></script>
+{{ end }}
+
+{{/* Show site search? Publish Pagefind UI assets now, but fetch and initialize them only when search first opens. */}}
+{{ $show_search := site.Params.header.navbar.show_search | default false }}
+{{ if $show_search }}
+{{ $pf_css := resources.Get "dist/pagefind/pagefind-ui.css" | resources.Fingerprint "sha256" }}
+{{ $pf_js := resources.Get "dist/pagefind/pagefind-ui.js" | resources.Fingerprint "sha256" }}
+{{ $search_config := dict
+  "baseUrl" (relURL "")
+  "bundlePath" (printf "%spagefind/" (relURL ""))
+  "cssUrl" $pf_css.RelPermalink
+  "cssIntegrity" $pf_css.Data.Integrity
+  "jsUrl" $pf_js.RelPermalink
+  "jsIntegrity" $pf_js.Data.Integrity
+}}
+{{ printf "<script>window.hbb.pagefind = %s;</script>" ($search_config | jsonify) | safeHTML }}
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const element = document.getElementById('search');
+    const trigger = document.getElementById('search_toggle');
+    const config = window.hbb && window.hbb.pagefind;
+
+    if (!element || !trigger || !config) {
+      return;
+    }
+
+    let initialized = false;
+    let initializationPromise = null;
+
+    const setExpanded = (expanded) => {
+      element.classList.toggle('hidden', !expanded);
+      trigger.setAttribute('aria-expanded', String(expanded));
+    };
+
+    const removeFailedAsset = (asset) => {
+      asset.remove();
+    };
+
+    const loadStylesheet = () => new Promise((resolve, reject) => {
+      const existing = document.querySelector('link[data-pagefind-ui-styles]');
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI styles failed to load.')), { once: true });
+        return;
+      }
+
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = config.cssUrl;
+      stylesheet.integrity = config.cssIntegrity;
+      stylesheet.dataset.pagefindUiStyles = '';
+      stylesheet.addEventListener('load', () => {
+        stylesheet.dataset.loaded = 'true';
+        resolve();
+      }, { once: true });
+      stylesheet.addEventListener('error', () => {
+        removeFailedAsset(stylesheet);
+        reject(new Error('Pagefind UI styles failed to load.'));
+      }, { once: true });
+      document.head.appendChild(stylesheet);
+    });
+
+    const loadScript = () => new Promise((resolve, reject) => {
+      if (typeof window.PagefindUI === 'function') {
+        resolve();
+        return;
+      }
+
+      const existing = document.querySelector('script[data-pagefind-ui-script]');
+      if (existing) {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI script failed to load.')), { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = config.jsUrl;
+      script.integrity = config.jsIntegrity;
+      script.async = true;
+      script.dataset.pagefindUiScript = '';
+      script.addEventListener('load', () => {
+        if (typeof window.PagefindUI === 'function') {
+          resolve();
+        } else {
+          removeFailedAsset(script);
+          reject(new Error('Pagefind UI did not initialize.'));
+        }
+      }, { once: true });
+      script.addEventListener('error', () => {
+        removeFailedAsset(script);
+        reject(new Error('Pagefind UI script failed to load.'));
+      }, { once: true });
+      document.head.appendChild(script);
+    });
+
+    const closeSearch = () => {
+      setExpanded(false);
+    };
+
+    const attachClearHandler = () => {
+      const clearTrigger = element.querySelector('.pagefind-ui__search-clear');
+      if (!clearTrigger || clearTrigger.dataset.closesSearch === 'true') {
+        return;
+      }
+      clearTrigger.dataset.closesSearch = 'true';
+      clearTrigger.addEventListener('click', closeSearch);
+    };
+
+    const initializeSearch = () => {
+      if (initialized) {
+        return Promise.resolve();
+      }
+      if (initializationPromise) {
+        return initializationPromise;
+      }
+
+      initializationPromise = Promise.all([loadStylesheet(), loadScript()])
+        .then(() => {
+          element.replaceChildren();
+          new window.PagefindUI({
+            element: '#search',
+            showSubResults: true,
+            baseUrl: config.baseUrl,
+            bundlePath: config.bundlePath,
+          });
+          initialized = true;
+          attachClearHandler();
+        })
+        .catch((error) => {
+          initializationPromise = null;
+          throw error;
+        });
+
+      return initializationPromise;
+    };
+
+    const showStatus = (message, role) => {
+      const status = document.createElement('p');
+      status.setAttribute('role', role);
+      status.textContent = message;
+      element.replaceChildren(status);
+    };
+
+    const focusEmptyInput = () => {
+      const input = element.querySelector('input');
+      if (!input) {
+        return;
+      }
+      input.value = '';
+      input.focus();
+    };
+
+    const openSearch = async () => {
+      setExpanded(true);
+
+      if (!initialized) {
+        element.setAttribute('aria-busy', 'true');
+        showStatus('Loading search\u2026', 'status');
+      }
+
+      try {
+        await initializeSearch();
+        element.removeAttribute('aria-busy');
+        if (!element.classList.contains('hidden')) {
+          focusEmptyInput();
+        }
+      } catch (error) {
+        element.removeAttribute('aria-busy');
+        showStatus('Search could not be loaded. Close and reopen it to try again.', 'alert');
+        console.error(error);
+      }
+    };
+
+    trigger.addEventListener('click', () => {
+      if (element.classList.contains('hidden')) {
+        openSearch();
+      } else {
+        focusEmptyInput();
+        closeSearch();
+      }
+    });
+  });
+</script>
+{{ end }}
+
+{{/* Mermaid */}}
+{{ if (.Page.Store.Get "has_mermaid") }}
+  {{ $mermaid_js := resources.Get "dist/lib/mermaid/mermaid.min.js" }}
+  {{ $mermaid_config_js := resources.Get "js/hb-mermaid-config.js" }}
+  {{ $mermaid_config_js = $mermaid_config_js | resources.Minify }}
+  {{ $mermaid_bundle := slice $mermaid_js $mermaid_config_js | resources.Concat "js/mermaid.bundle.js" | resources.Fingerprint "sha256" }}
+  <script defer src="{{ $mermaid_bundle.RelPermalink }}" integrity="{{ $mermaid_bundle.Data.Integrity }}"></script>
+{{ end }}
+
+{{/* Markmap */}}
+{{ if (.Page.Store.Get "has_markmap") }}
+<style>
+  .markmap > svg {
+    width: 100%;
+    height: 100%;
+  }
+</style>
+<script>
+  window.markmap = {
+    autoLoader: {
+      manual: false,
+      onReady() {
+        const { autoLoader, builtInPlugins } = window.markmap;
+        // Disable Prism highlighting plugin as it conflicts and attempts to re-render code blocks outside of Markmap.
+        autoLoader.transformPlugins = builtInPlugins.filter(plugin => plugin.name !== 'prism');
+      },
+    },
+  };
+</script>
+{{ $markmap_js := resources.Get "dist/lib/markmap/index.js" }}
+{{ $markmap_js = $markmap_js | resources.Minify | resources.Fingerprint "sha256" }}
+<script defer src="{{ $markmap_js.RelPermalink }}" integrity="{{ $markmap_js.Data.Integrity }}"></script>
+{{ end }}
+
+{{/* Katex */}}
+{{ if (.Page.HasShortcode "math") | or .Params.math | or site.Params.features.math.enable }}
+  {{ $katex_css := resources.Get "dist/lib/katex/katex.min.css" }}
+  {{ $katex_css = $katex_css | resources.Fingerprint "sha256" }}
+  <link type="text/css" rel="stylesheet" href="{{ $katex_css.RelPermalink }}" integrity="{{ $katex_css.Data.Integrity }}" />
+  {{ $katex_js := resources.Get "dist/lib/katex/katex.min.js" }}
+  {{ $katex_js = $katex_js | resources.Fingerprint "sha256" }}
+  <script defer src="{{ $katex_js.RelPermalink }}" integrity="{{ $katex_js.Data.Integrity }}"></script>
+  {{ $katex_render_js := resources.Get "dist/lib/katex/auto-render.min.js" }}
+  {{ $katex_config_js := resources.Get "js/katex-config.js" }}
+  {{ $katex_config_js = $katex_config_js | resources.Minify }}
+  {{ $katex_bundle := slice $katex_render_js $katex_config_js | resources.Concat "js/katex-renderer.js" | resources.Fingerprint "sha256" }}
+  <script defer src="{{ $katex_bundle.RelPermalink }}" integrity="{{ $katex_bundle.Data.Integrity }}"></script>
+  {{ $katex_fonts := resources.Match "dist/lib/katex/fonts/*" }}
+  {{ range $katex_fonts }}
+    {{ .Publish }}
+  {{ end }}
+{{ end }}
+
+{{/* Plotly */}}
+{{ if .Page.HasShortcode "chart" }}
+{{ $plotly_js := resources.Get "dist/lib/plotly/plotly.min.js" }}
+{{ $plotly_js = $plotly_js | resources.Fingerprint "sha256" }}
+<script defer src="{{ $plotly_js.RelPermalink }}" integrity="{{ $plotly_js.Data.Integrity }}"></script>
+{{ end }}

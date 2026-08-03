@@ -95,4 +95,4 @@ Some personal websites I looked at for inspiration:
 
 The "[...],I guess" in the title is a reference to this [amazing video from bill wurtz](https://www.youtube.com/watch?v=xuCn8ux2gbs):
 
-{{< youtube xuCn8ux2gbs >}}
+{{< youtube id="xuCn8ux2gbs" loading="lazy" >}}

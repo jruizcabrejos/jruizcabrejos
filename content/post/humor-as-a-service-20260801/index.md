@@ -150,7 +150,7 @@ Unlike "Chat LLMs“, which to me are glorified search engines that occasionally
 
 It is with the latter that, taking inspiration from several 88x31 button makers and generators out there, [I adapted my own](https://jruizcabrejos.com/buttonbuilder/) for my needs.
 
-<iframe src="https://jruizcabrejos.com/buttonbuilder/" width="105%" height="500px" style="border:none;"></iframe>
+<iframe src="https://jruizcabrejos.com/buttonbuilder/" width="105%" height="500px" loading="lazy" title="88x31 Button Builder" style="border:none;"></iframe>
 
 ## Colophon
 
@@ -189,4 +189,4 @@ By coincidence, I finally finished and published it on August 1st, 2026, the [da
 </figure>
 
 
-{{< youtube FJF6wcSYIsw >}}
+{{< youtube id="FJF6wcSYIsw" loading="lazy" >}}

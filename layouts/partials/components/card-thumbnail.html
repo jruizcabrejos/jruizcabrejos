@@ -1,0 +1,17 @@
+{{- $image := .image -}}
+{{- $alt := .alt | default "" -}}
+{{- $displaySize := int (.display_size | default 96) -}}
+{{- $doubleSize := mul $displaySize 2 -}}
+{{- $oneX := $image.Fill (printf "%dx%d Center webp q80" $displaySize $displaySize) -}}
+{{- $twoX := $image.Fill (printf "%dx%d Center webp q80" $doubleSize $doubleSize) -}}
+<img
+  src="{{ $oneX.RelPermalink }}"
+  srcset="{{ $oneX.RelPermalink }} {{ $oneX.Width }}w, {{ $twoX.RelPermalink }} {{ $twoX.Width }}w"
+  sizes="{{ $displaySize }}px"
+  width="{{ $oneX.Width }}"
+  height="{{ $oneX.Height }}"
+  alt="{{ $alt }}"
+  loading="{{ .loading | default "lazy" }}"
+  decoding="async"
+  {{- with .fetch_priority }} fetchpriority="{{ . }}"{{ end }}
+  class="{{ .class }}">

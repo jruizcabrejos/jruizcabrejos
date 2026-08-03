@@ -222,7 +222,9 @@ The steps you should follow to get an invite code for Sci-Net are on their websi
 <iframe 
   src="/SCI_with_Phantom.pdf" 
   width="100%" 
-  height="800px">
+  height="800px"
+  loading="lazy"
+  title="Sci-Net invitation instructions">
 </iframe>
 
 ## Beyond scientific publications
@@ -278,6 +280,6 @@ Be careful out there not to click or download files called "not-a-virus.exe".
 <br>
 <br>
 
-{{< youtube J0e9UiXbd5o >}}
+{{< youtube id="J0e9UiXbd5o" loading="lazy" >}}
 
 
