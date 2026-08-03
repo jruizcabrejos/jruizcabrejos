@@ -1,0 +1,9 @@
+{{- $title := .Get "text" | default "" -}}
+{{- $id := .Get "id" | default (printf "spoiler-%d" .Ordinal) -}}
+
+<details class="spoiler {{ .Get "class" }}" {{ with .Get "style" }}style="{{ . | safeCSS }}"{{ end }} id="{{ $id }}">
+  <summary class="cursor-pointer">{{ $title }}</summary>
+  <div class="rounded-lg bg-neutral-50 dark:bg-neutral-800 p-2">
+    {{ .InnerDeindent | markdownify }}
+  </div>
+</details>

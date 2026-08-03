@@ -1,0 +1,23 @@
+{{- $folder := strings.TrimSuffix "/" (.Get "folder" | default "") -}}
+{{- $label := .Get "label" | default "Button collection" -}}
+{{- $resources := .Page.Resources.Match (printf "%s/*" $folder) -}}
+{{- $images := slice -}}
+
+{{- range $resources -}}
+  {{- if eq .MediaType.MainType "image" -}}
+    {{- $images = $images | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if $images -}}
+<div class="collection-button-strip" role="list" aria-label="{{ $label }}">
+  {{- range sort $images "Name" -}}
+    {{- $baseName := path.BaseName .Name -}}
+    {{- $shortName := replaceRE "\\..*$" "" $baseName -}}
+    {{- $alt := printf "%s button" ($shortName | humanize) -}}
+  <span class="collection-button-item" role="listitem">
+    <img src="{{ .RelPermalink }}" width="88" height="31" loading="lazy" decoding="async" alt="{{ $alt }}">
+  </span>
+  {{- end -}}
+</div>
+{{- end -}}

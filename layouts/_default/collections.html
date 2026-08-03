@@ -10,4 +10,27 @@
     </div>
   </section>
 </article>
+<script>
+  (() => {
+    const openCollectionSection = () => {
+      if (!window.location.hash) return;
+
+      let targetId;
+      try {
+        targetId = decodeURIComponent(window.location.hash.slice(1));
+      } catch {
+        return;
+      }
+
+      const target = document.getElementById(targetId);
+      if (!target?.matches("details.collections-accordion")) return;
+
+      target.open = true;
+      window.requestAnimationFrame(() => target.scrollIntoView({ block: "start" }));
+    };
+
+    openCollectionSection();
+    window.addEventListener("hashchange", openCollectionSection);
+  })();
+</script>
 {{ end }}

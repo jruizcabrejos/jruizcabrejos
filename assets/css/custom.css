@@ -646,6 +646,7 @@ main:has(.project-record-links) > .featured-image-wrapper {
 .collections-body .spoiler.collections-accordion {
   overflow: hidden;
   margin-top: 1.35rem;
+  scroll-margin-top: 6rem;
   border: 1px solid rgb(226 232 240);
   border-radius: 1.25rem;
   background-color: rgb(255 255 255);
@@ -768,6 +769,29 @@ main:has(.project-record-links) > .featured-image-wrapper {
 
 .dark .collections-body .spoiler.collections-accordion > div > ul > li > ul > li::before {
   color: rgb(var(--color-primary-300));
+}
+
+.collections-body .collection-button-strip {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 0.4rem;
+  margin-top: 0.6rem;
+  margin-bottom: 0.15rem;
+}
+
+.collections-body .collection-button-item {
+  display: inline-flex;
+  flex: 0 0 auto;
+  line-height: 0;
+}
+
+.collections-body .collection-button-item img {
+  display: block;
+  width: 88px;
+  height: 31px;
+  max-width: none;
+  margin: 0;
 }
 
 .neko-toggle-wrapper {

@@ -101,6 +101,8 @@
       "border-neutral-300",
       "break-words",
       "chroma",
+      "collection-button-item",
+      "collection-button-strip",
       "collections-accordion",
       "collections-body",
       "collections-page",
@@ -582,6 +584,7 @@
       "art-preservation-data-preservation",
       "beggars-cant-be-choosers",
       "beyond-scientific-publications",
+      "buttons",
       "collections",
       "colophon",
       "colorful-open-access",
@@ -653,6 +656,7 @@
       "page-note-ref-8",
       "page-note-ref-9",
       "perfection-is-the-enemy-of-the-good-and-the-good-is-the-enemy-of-the-slop",
+      "personal-websites",
       "pithicism",
       "playing-with-color-data-in-r",
       "prelude",
@@ -677,17 +681,16 @@
       "share-link-x",
       "show-button",
       "site-header",
-      "spoiler-0",
-      "spoiler-1",
-      "spoiler-2",
       "sun",
       "telegram-bots",
       "there-is-more-than-one-way-to-skin-a-cat",
       "top",
       "why",
       "wosonhj--smartquantai--pidantuan",
+      "writers-and-texts",
       "yes-you",
-      "you-are-a-pirate"
+      "you-are-a-pirate",
+      "youtube-content-creators"
     ]
   }
 }

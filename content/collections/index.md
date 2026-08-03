@@ -4,7 +4,7 @@ summary: "This is a curated list of references, personal sites, creators, and co
 layout: "collections"
 ---
 
-{{< spoiler text="Writers and Texts" class="collections-accordion" >}}
+{{< spoiler text="Writers and Texts" class="collections-accordion" id="writers-and-texts" >}}
 
 - [Brunella Tipismana Urbano](https://www.queverguenza.com/): Writer. Better known for other work, probably.
     - "[terminalmente online](https://www.queverguenza.com/p/harakiri-dox)"
@@ -12,7 +12,7 @@ layout: "collections"
 {{< /spoiler >}}
 
 
-{{< spoiler text="Personal Websites" class="collections-accordion" >}}
+{{< spoiler text="Personal Websites" class="collections-accordion" id="personal-websites" >}}
 
 - [Andrew Heiss](https://www.andrewheiss.com/): Policy Researcher. Really nice and kept-up website + blog. I am particularly interested in the graphics he makes.
     - "[Map Gradients](https://www.andrewheiss.com/blog/2023/07/28/gradient-map-fills-r-sf/)"
@@ -24,7 +24,7 @@ layout: "collections"
 {{< /spoiler >}}
 
 
-{{< spoiler text="YouTube Content Creators" class="collections-accordion" >}}
+{{< spoiler text="YouTube Content Creators" class="collections-accordion" id="youtube-content-creators" >}}
 
 - ["violin plots should not exist"" - Angela Collier](https://www.youtube.com/watch?v=_0QMKFzW9fw)
 - ["The image you can't submit to journals anymore" - BobbyBroccoli](https://www.youtube.com/watch?v=yCdwm2vo09I)
@@ -37,15 +37,19 @@ layout: "collections"
 {{< /spoiler >}}
 
 
-{{< spoiler text="Buttons" class="collections-accordion" >}}
+{{< spoiler text="Buttons" class="collections-accordion" id="buttons" >}}
 
 These buttons were made by me.
 
 - Academic Journals
 
+    {{< collection-buttons folder="buttons/journals" label="Academic journal buttons" >}}
+
 These buttons are taken from their respective owners.
 
 - Ky Decker
+
+    {{< collection-buttons folder="buttons/KyDecker" label="Buttons from Ky Decker" >}}
 
 {{< /spoiler >}}
 
