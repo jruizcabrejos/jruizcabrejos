@@ -37,8 +37,17 @@ layout: "collections"
 {{< /spoiler >}}
 
 
+{{< spoiler text="Buttons" class="collections-accordion" >}}
 
+These buttons were made by me.
 
+- Academic Journals
+
+These buttons are taken from their respective owners.
+
+- Ky Decker
+
+{{< /spoiler >}}
 
 
 
