@@ -98,6 +98,12 @@ badges:
 # `url` is optional; omit it to display a badge without a link.
 - image: badges/RProgrammer3.gif
   alt: R Programmer
+- image: badges/dhmobutton.gif
+  alt: DHMO
+  url: https://www.dhmo.org/faq.html
+- image: badges/webring-badge-tree-night.gif
+  alt: Rewild The Web
+  url: https://rewildtheweb.org/resources/
 role: PhD Student
 skills:
 - items:
