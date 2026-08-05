@@ -8,7 +8,8 @@ layout: "collections"
 
 - [Brunella Tipismana Urbano](https://www.queverguenza.com/): Writer. Better known for other work, probably.
     - "[terminalmente online](https://www.queverguenza.com/p/harakiri-dox)"
-
+- [Kristin Merrilees](https://www.phonetime.news/about): Online subcultures, online niches, and the (old) web
+    - [I like her memes](https://www.phonetime.news/notes)
 {{< /spoiler >}}
 
 
@@ -39,7 +40,7 @@ layout: "collections"
 
 {{< spoiler text="88x31 Buttons" class="collections-accordion" id="buttons" >}}
 
-Some buttons made with the [button builder](https://jruizcabrejos.com/buttonbuilder/) and others that belong to their respective owners.
+Some buttons I made with the [88x31 button builder](https://jruizcabrejos.com/buttonbuilder/), as well as other handpicked buttons that belong to their respective owners.
 
 - Academic Journals
 
@@ -49,7 +50,45 @@ Some buttons made with the [button builder](https://jruizcabrejos.com/buttonbuil
 
     {{< collection-buttons folder="buttons/KyDecker" label="Buttons from Ky Decker" >}}
 
+- Selection of buttons from [Ribose](https://ribo.zone/)
+
+    {{< collection-buttons folder="buttons/ribozone" label="Buttons from Ribose" >}}
+
+- Selection of buttons from [Random Bits](https://randombits.neocities.org/micro/2024/08/edit-gifs)
+
+    {{< collection-buttons folder="buttons/RandomBits" label="Buttons from Random Bits" >}}
+
+- Selection of buttons from [Robb Knight](https://rknight.me/blog/88x31-button-curios/)
+
+    {{< collection-buttons folder="buttons/RobbKnight" label="Buttons from Robb Knight" >}}
+
+- Selection of buttons from [The 88x31 Project](https://auvreil.github.io/88x31/)
+
+    {{< collection-buttons folder="buttons/The88x31Project" label="Buttons from The 88x31 Project" >}}
+
+- Selection of buttons from [yesterweb](https://yesterweb.org/graphics/buttons)
+
+    {{< collection-buttons folder="buttons/yesterweb" label="Buttons from the Yesterweb" >}}
+
+- Selection of buttons from [World of Warcraft: WOTLK Fanlisting](https://wotlk.diletante.net/buttons.php?p=88x31)
+
+    {{< collection-buttons folder="buttons/WorldofWarcraft" label="Buttons from WOTLK Fanlisting" >}}
+
+
+- Collections of buttons
+
+  - ["The 88x31 GIF Collection"](https://cyber.dabamos.de/88x31/index.html)
+  - ["THE 88×31 ARCHIVE"](https://hellnet.work/8831/page1.html)
+  - ["88×31"](https://neonaut.neocities.org/cyber/88x31)
+  - ["A.N. Luca's 88x31 button Collection"](https://anlucas.neocities.org/88x31Buttons)
+  - ["random 88x31"](https://88x31.org/)
+  - ["88x31 Collection"](https://88x31.nl/index.html)
+
 {{< /spoiler >}}
 
 
+{{< spoiler text="Others" class="collections-accordion" id="others" >}}
 
+[If The Moon Were Only 1 Pixel](https://www.joshworth.com/dev/pixelspace/pixelspace_solarsystem.html)
+
+{{< /spoiler >}}
