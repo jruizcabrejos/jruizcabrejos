@@ -144,7 +144,7 @@ In the meantime, at least we should get some fun out of it, I guess.
 <figcaption>Figure 10. Meme from internet culture writer <a href="https://www.phonetime.news/" target="_blank" rel="noopener noreferrer">Kristin Merrilees</a>.</figcaption>
 </figure>
 
-I want to contribute my own share of fun through Humor as a Service (HaaS).
+I want to contribute my own share of fun and laughs. Is this what Yihui Xie meant when he mentions Humor as a Service (HaaS)? I don't know.
 
 Unlike "Chat LLMs“, which to me are glorified search engines that occasionally help me debug a line or two of code, "Agentic LLMs" seem to be equipped with extensive software development capabilities.
 
