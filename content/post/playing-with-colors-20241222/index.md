@@ -28,7 +28,7 @@ You mix *materials*, you get dark. You mix *light*, and you get white.
 
 ## Colors in R
 
-In all of my introductory classes or lectures about R, one of the first documents my students are introduced to is the [2006 R colors cheat-sheet](https://web.archive.org/web/20250207061502/https://sites.stat.columbia.edu/tzheng/files/Rcolor.pdf){{< pagenote "At some point in 2026, the URL for this resource broke. The link is now a mirror from the Internet Archive." />}} by [Ying Wei](https://yingweistat.com/), which neatly displays the 657 available colors in R base (`colors()`) in *only* 7 pages.
+In all of my introductory classes or lectures about R, one of the first documents my students are introduced to is the [2006 R colors cheat-sheet](https://web.archive.org/web/20250207061502/https://sites.stat.columbia.edu/tzheng/files/Rcolor.pdf){{< pagenote "At some point in 2026, the URL for this resource broke. The link is now a mirror from the Internet Archive" />}} by [Ying Wei](https://yingweistat.com/), which neatly displays the 657 available colors in R base (`colors()`) in *only* 7 pages.
 
 
 For a more diverse selection of colors, palettes, and themes, there is a [Comprehensive list of color palettes in R](https://github.com/EmilHvitfeldt/r-color-palettes) by [Emil Hvitfeldt](https://github.com/EmilHvitfeldt), which  provides an extensive compilation of packages and resources for colors (in R).
@@ -267,7 +267,7 @@ There is a surprising amount of [environmental information you can extract from 
 
 For example, [paintings by Turner and Monet can tell us a lot about trends in 19th century air pollution](https://www.pnas.org/doi/10.1073/pnas.2219118120).
 
-Cath Sleeman did an [amazing visualization](https://web.archive.org/web/20260423003812/https://lab.sciencemuseum.org.uk/colour-shape-using-computer-vision-to-explore-the-science-museum-c4b4f1cbd72c?gi=0bd5eedb2bae){{< pagenote "At some point in 2026, the URL for this resource broke. The link is now a mirror from the Internet Archive. I hate it here." />}} on how the colors used in every day objects has evolved over the past 2 centuries. Spoilers: [Life is getting grey](https://www.thecollector.com/minimalism-color-grey/).
+Cath Sleeman did an [amazing visualization](https://web.archive.org/web/20260423003812/https://lab.sciencemuseum.org.uk/colour-shape-using-computer-vision-to-explore-the-science-museum-c4b4f1cbd72c?gi=0bd5eedb2bae) on how the colors used in every day objects has evolved over the past 2 centuries. Spoilers: [Life is getting grey](https://web.archive.org/web/20250207170117/https://www.thecollector.com/minimalism-color-grey/).
 
 It kind of looks like the grey-ish dark mud color you get when mixing too many colors.
 
