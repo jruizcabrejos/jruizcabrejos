@@ -9,7 +9,7 @@ on:
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
-  # Rebuild when the button maker repository announces an update.
+  # Rebuild when the button builder repository announces an update.
   repository_dispatch:
     types: [buttonmaker-updated]
 
@@ -47,13 +47,13 @@ jobs:
         uses: actions/checkout@v4
         with:
           submodules: recursive
-      - name: Checkout button maker
+      - name: Checkout button builder
         uses: actions/checkout@v4
         with:
-          repository: jruizcabrejos/slop-buttonmaker
+          repository: jruizcabrejos/buttonbuilder
           ref: main-slop
-          path: .buttonmaker-source
-      - name: Stage button maker
+          path: .buttonbuilder-source
+      - name: Stage button builder
         run: |
           rm -rf static/buttonbuilder
           mkdir -p static/buttonbuilder
@@ -63,11 +63,12 @@ jobs:
             --exclude='.tmp/' \
             --exclude='.agents/' \
             --exclude='AGENTS.md' \
-            .buttonmaker-source/ static/buttonbuilder/
-      - name: Set button maker production URLs
+            .buttonbuilder-source/ static/buttonbuilder/
+      - name: Set button builder production URLs
         run: |
           sed -i \
-            's#https://jruizcabrejos.github.io/slop-buttonmaker/#https://jruizcabrejos.com/buttonbuilder/#g' \
+            -e 's#https://jruizcabrejos.github.io/buttonbuilder/#https://jruizcabrejos.com/buttonbuilder/#g' \
+            -e 's#jruizcabrejos/slop-buttonmaker#jruizcabrejos/buttonbuilder#g' \
             static/buttonbuilder/index.html
       - name: Setup Pages
         id: pages
