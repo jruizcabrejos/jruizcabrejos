@@ -17,6 +17,8 @@ layout: "collections"
 
 - [Andrew Heiss](https://www.andrewheiss.com/): Policy Researcher. Really nice and kept-up website + blog. I am particularly interested in the graphics he makes.
     - "[Map Gradients](https://www.andrewheiss.com/blog/2023/07/28/gradient-map-fills-r-sf/)"
+- [Danielle Navarro](https://djnavarro.net/): Data scientist, recovering academic, and generative artist. Their blog entries on Generative Art with R inspired my favicon.
+    - "[Art from code](https://art-from-code.netlify.app/) [I](https://blog.djnavarro.net/posts/2024-12-18_art-from-code-1/), [II](https://blog.djnavarro.net/posts/2024-12-19_art-from-code-2/), [III](https://blog.djnavarro.net/posts/2024-12-20_art-from-code-3/), [IV](https://blog.djnavarro.net/posts/2024-12-21_art-from-code-4/), [V](https://blog.djnavarro.net/posts/2024-12-22_art-from-code-5/), [VI](https://blog.djnavarro.net/posts/2024-12-23_art-from-code-6/), [VII](https://blog.djnavarro.net/posts/2024-12-24_art-from-code-7/)"
 - [Levi Villarreal](https://leviv.cool/): Software Engineer. I took the idea of having a Github Comments section in my blog from him. Big fan of some of his projects.
     - "[Pocket WIFI Portal](https://leviv.cool/projects/2024/10/05/creating-a-pocket-wifi-portal.html)"
 - [nearcyan](https://near.blog/): Programmer and AI researcher. I used to follow their tweets in the platform formerly known as Twitter.
