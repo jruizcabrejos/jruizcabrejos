@@ -1,7 +1,7 @@
 ---
 abstract: "Driven by human-caused greenhouse gas emissions, climate change is increasingly claiming lives and harming people's health worldwide. Mean annual temperatures exceeded 1·5°C above those of pre-industrial times for the first time in 2024. Despite ever more urgent calls to tackle climate change, greenhouse gas emissions rose to record levels that same year. Climate change is increasingly destabilising the planetary systems and environmental conditions on which human life depends."
 authors:
--  Romanello, M., Walawender, M., Hsu, S.-C., Moskeland, A., Palmeiro-Silva, Y., Scamman, D., Smallcombe, J.W., Ballester, J., Basagaña, X., Ruiz-Cabrejos, J. et al.
+-  Romanello M, Walawender M, Hsu SC, Moskeland A, Palmeiro-Silva Y, Scamman D, Smallcombe JW, Ballester J, Basagaña X, Ruiz-Cabrejos J, et al.
 date: "2025-10-29T00:00:00Z"
 publishDate: "2025-01-01T00:00:00Z"
 doi: ""

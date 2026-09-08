@@ -1,7 +1,7 @@
 ---
 abstract: Developing innovative tools for the real-time monitoring and forecasting of heat-related health outcomes is critical for effective public-health protection and resource allocation.
 authors:
-- Ballester, J., Royé, D., Janoš, T., Paniello-Castillo, B., Chen, Z.-y., Thompson, A., Ruiz-Cabrejos, J., et al.
+- Ballester J, Royé D, Janoš T, Paniello-Castillo B, Chen ZY, Thompson A, Ruiz-Cabrejos J, et al.
 date: "2026-01-15T00:00:00Z"
 publishDate: "2026-01-15T00:00:00Z"
 doi: ""

@@ -1,7 +1,7 @@
 ---
 abstract: Despite progress towards malaria reduction in Peru, measuring exposure in low transmission areas is crucial for achieving elimination. This study focuses on two very low transmission areas in Loreto (Peruvian Amazon) and aims to determine the relationship between malaria exposure and proximity to health facilities.
 authors:
--  Fernandez-Camacho, B., Peña-Calero, B., Guillermo-Roman, Ruiz-Cabrejos J, M. et al. 
+-  Fernandez-Camacho B, Peña-Calero B, Guillermo-Roman M, Ruiz-Cabrejos J. et al. 
 date: "2024-02-02T00:00:00Z"
 doi: ""
 featured: false
