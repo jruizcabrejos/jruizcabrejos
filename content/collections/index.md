@@ -6,9 +6,11 @@ layout: "collections"
 
 {{< spoiler text="Writers and Texts" class="collections-accordion" id="writers-and-texts" >}}
 
+- [Michael Friendly](https://www.datavis.ca/books/#TOGS): His work, and knowledge, on the history of data visualization is impressive.
+    - [His posts at Bluesky never dissapoint](https://bsky.app/profile/datavisfriendly.bsky.social)
 - [Brunella Tipismana Urbano](https://www.queverguenza.com/): Writer. Better known for other work, probably.
     - "[terminalmente online](https://www.queverguenza.com/p/harakiri-dox)"
-- [Kristin Merrilees](https://www.phonetime.news/about): Online subcultures, online niches, and the (old) web
+- [Kristin Merrilees](https://www.phonetime.news/about): Online subcultures, online niches, and the (old) web.
     - [I like her memes](https://www.phonetime.news/notes)
 {{< /spoiler >}}
 
