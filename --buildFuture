@@ -4,12 +4,12 @@ hugo v0.139.3-2f6864387cd31b975914e8373d4bf38bddbd47bc+extended windows/amd64 Bu
 
                    | EN   
 -------------------+------
-  Pages            |  74  
-  Paginator pages  |   0  
-  Non-page files   | 189  
+  Pages            |  76  
+  Paginator pages  |   1  
+  Non-page files   | 193  
   Static files     |   8  
-  Processed images | 137  
+  Processed images | 149  
   Aliases          |  19  
   Cleaned          |   0  
 
-Total in 4762 ms
+Total in 5873 ms

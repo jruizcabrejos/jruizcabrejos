@@ -1,0 +1,1196 @@
+<!doctype html>
+<!-- This site was created with Hugo Blox. https://hugoblox.com -->
+<!-- Last Published: November 9, 2026 --><html lang="en-us" dir="ltr"
+      data-wc-theme-default="system">
+  
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="generator" content="Hugo Blox Builder 0.3.1" />
+
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+    
+    
+    
+  
+  
+
+  
+
+  
+  
+  
+    
+  
+  <meta name="description" content="Jorge Ruiz-Cabrejos, Health Data Scientist" />
+
+  
+  <link rel="alternate" hreflang="en-us" href="https://jruizcabrejos.com/publication_types/article-journal/" />
+
+  
+  
+  
+  
+    
+    <link rel="stylesheet" href="/css/themes/indigo.min.css" />
+  
+
+  
+  
+    
+    <link href="/dist/wc.min.css" rel="stylesheet" />
+  
+
+  
+  
+  
+
+  
+    
+    <link href="/css/custom.min.42768e00782cd03d8ec22eb44b7ea213e843bdb838ceb7616ba19e5638f1a80c.css" rel="stylesheet" />
+  
+
+  <script>
+     
+    window.hbb = {
+       defaultTheme: document.documentElement.dataset.wcThemeDefault,
+       setDarkTheme: () => {
+        document.documentElement.classList.add("dark");
+        document.documentElement.style.colorScheme = "dark";
+      },
+       setLightTheme: () => {
+        document.documentElement.classList.remove("dark");
+        document.documentElement.style.colorScheme = "light";
+      }
+    }
+
+    console.debug(`Default Hugo Blox Builder theme is ${window.hbb.defaultTheme}`);
+
+    if ("wc-color-theme" in localStorage) {
+      localStorage.getItem("wc-color-theme") === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+    } else {
+      window.hbb.defaultTheme === "dark" ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      if (window.hbb.defaultTheme === "system") {
+        window.matchMedia("(prefers-color-scheme: dark)").matches ? window.hbb.setDarkTheme() : window.hbb.setLightTheme();
+      }
+    }
+  </script>
+
+  <script>
+    
+    document.addEventListener('DOMContentLoaded', function () {
+      
+      let checkboxes = document.querySelectorAll('li input[type=\'checkbox\'][disabled]');
+      checkboxes.forEach(e => {
+        e.parentElement.parentElement.classList.add('task-list');
+      });
+
+      
+      const liNodes = document.querySelectorAll('.task-list li');
+      liNodes.forEach(nodes => {
+        let textNodes = Array.from(nodes.childNodes).filter(node => node.nodeType === 3 && node.textContent.trim().length > 1);
+        if (textNodes.length > 0) {
+          const span = document.createElement('label');
+          textNodes[0].after(span);  
+          span.appendChild(nodes.querySelector('input[type=\'checkbox\']'));
+          span.appendChild(textNodes[0]);
+        }
+      });
+    });
+  </script>
+
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-1G3L1R16MX"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+      dataLayer.push(arguments);
+  }
+
+  function trackOutboundLink(url, target) {
+    gtag('event', 'click', {
+         'event_category': 'outbound',
+         'event_label': url,
+         'transport_type': 'beacon',
+         'event_callback': function () {
+           if (target !== '_blank') {
+             document.location = url;
+           }
+         }
+    });
+    console.debug("Outbound link clicked: " + url);
+  }
+
+  function onClickCallback(event) {
+    if ((event.target.tagName !== 'A') || (event.target.host === window.location.host)) {
+      return;
+    }
+    trackOutboundLink(event.target, event.target.getAttribute('target'));  
+  }
+
+  gtag('js', new Date());
+  gtag('config', 'G-1G3L1R16MX', {});
+  gtag('set', {'cookie_flags': 'SameSite=None;Secure'});
+
+  
+  document.addEventListener('click', onClickCallback, false);
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+    <link rel="alternate" href="/publication_types/article-journal/index.xml" type="application/rss+xml" title="Jorge Ruiz-Cabrejos" />
+  
+
+  
+  <link rel="icon" type="image/png" href="/media/icon_hu2056443408962411704.png" />
+  <link rel="apple-touch-icon" type="image/png" href="/media/icon_hu12196561082040145508.png" />
+
+  <link rel="canonical" href="https://jruizcabrejos.com/publication_types/article-journal/" />
+
+  
+  
+  
+  
+  
+  
+  
+  
+    
+    
+  
+  
+
+  
+  
+    
+    
+  
+  <meta property="twitter:card" content="summary" />
+  
+    <meta property="twitter:site" content="@jruizcabrejos" />
+    <meta property="twitter:creator" content="@jruizcabrejos" />
+  
+  <meta property="og:site_name" content="Jorge Ruiz-Cabrejos" />
+  <meta property="og:url" content="https://jruizcabrejos.com/publication_types/article-journal/" />
+  <meta property="og:title" content="Article-Journal | Jorge Ruiz-Cabrejos" />
+  <meta property="og:description" content="Jorge Ruiz-Cabrejos, Health Data Scientist" /><meta property="og:image" content="https://jruizcabrejos.com/media/icon_hu17613129387521664874.png" />
+    <meta property="twitter:image" content="https://jruizcabrejos.com/media/icon_hu17613129387521664874.png" /><meta property="og:locale" content="en-us" />
+  
+    
+      <meta property="og:updated_time" content="2026-11-04T00:00:00&#43;00:00" />
+    
+  
+
+  
+
+
+
+
+  <title>Article-Journal | Jorge Ruiz-Cabrejos</title>
+
+  
+  
+  
+  
+  
+    
+    
+  
+  
+  <style>
+    @font-face {
+      font-family: 'Inter var';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url(/dist/font/Inter.var.woff2) format(woff2);
+    }
+  </style>
+
+  
+
+  
+  
+
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+      
+      
+        
+        
+          
+        
+          
+        
+          
+        
+          
+        
+          
+        
+        
+        
+      
+    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+<script>window.hbb.pagefind = {"baseUrl":"/","bundlePath":"/pagefind/","cssIntegrity":"sha256-r4d7tma06cy51pJfMiljzmZi4KDVn9EF326/LWUJzoU=","cssUrl":"/dist/pagefind/pagefind-ui.af877bb666b4e9ccb9d6925f322963ce6662e0a0d59fd105df6ebf2d6509ce85.css","jsIntegrity":"sha256-IQ8tsMThSVVlZ6KJFjwbUAiHHgBF+uBQUK0m0EqPO+U=","jsUrl":"/dist/pagefind/pagefind-ui.210f2db0c4e149556567a289163c1b5008871e0045fae05050ad26d04a8f3be5.js"};</script>
+
+<style>
+  html.dark {
+    --pagefind-ui-primary: #eeeeee;
+    --pagefind-ui-text: #eeeeee;
+    --pagefind-ui-background: #152028;
+    --pagefind-ui-border: #152028;
+    --pagefind-ui-tag: #152028;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const element = document.getElementById('search');
+    const trigger = document.getElementById('search_toggle');
+    const config = window.hbb && window.hbb.pagefind;
+
+    if (!element || !trigger || !config) {
+      return;
+    }
+
+    let initialized = false;
+    let initializationPromise = null;
+
+    const setExpanded = (expanded) => {
+      element.classList.toggle('hidden', !expanded);
+      trigger.setAttribute('aria-expanded', String(expanded));
+    };
+
+    const removeFailedAsset = (asset) => {
+      asset.remove();
+    };
+
+    const loadStylesheet = () => new Promise((resolve, reject) => {
+      const existing = document.querySelector('link[data-pagefind-ui-styles]');
+      if (existing) {
+        if (existing.dataset.loaded === 'true') {
+          resolve();
+          return;
+        }
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI styles failed to load.')), { once: true });
+        return;
+      }
+
+      const stylesheet = document.createElement('link');
+      stylesheet.rel = 'stylesheet';
+      stylesheet.href = config.cssUrl;
+      stylesheet.integrity = config.cssIntegrity;
+      stylesheet.dataset.pagefindUiStyles = '';
+      stylesheet.addEventListener('load', () => {
+        stylesheet.dataset.loaded = 'true';
+        resolve();
+      }, { once: true });
+      stylesheet.addEventListener('error', () => {
+        removeFailedAsset(stylesheet);
+        reject(new Error('Pagefind UI styles failed to load.'));
+      }, { once: true });
+      document.head.appendChild(stylesheet);
+    });
+
+    const loadScript = () => new Promise((resolve, reject) => {
+      if (typeof window.PagefindUI === 'function') {
+        resolve();
+        return;
+      }
+
+      const existing = document.querySelector('script[data-pagefind-ui-script]');
+      if (existing) {
+        existing.addEventListener('load', resolve, { once: true });
+        existing.addEventListener('error', () => reject(new Error('Pagefind UI script failed to load.')), { once: true });
+        return;
+      }
+
+      const script = document.createElement('script');
+      script.src = config.jsUrl;
+      script.integrity = config.jsIntegrity;
+      script.async = true;
+      script.dataset.pagefindUiScript = '';
+      script.addEventListener('load', () => {
+        if (typeof window.PagefindUI === 'function') {
+          resolve();
+        } else {
+          removeFailedAsset(script);
+          reject(new Error('Pagefind UI did not initialize.'));
+        }
+      }, { once: true });
+      script.addEventListener('error', () => {
+        removeFailedAsset(script);
+        reject(new Error('Pagefind UI script failed to load.'));
+      }, { once: true });
+      document.head.appendChild(script);
+    });
+
+    const closeSearch = () => {
+      setExpanded(false);
+    };
+
+    const attachClearHandler = () => {
+      const clearTrigger = element.querySelector('.pagefind-ui__search-clear');
+      if (!clearTrigger || clearTrigger.dataset.closesSearch === 'true') {
+        return;
+      }
+      clearTrigger.dataset.closesSearch = 'true';
+      clearTrigger.addEventListener('click', closeSearch);
+    };
+
+    const initializeSearch = () => {
+      if (initialized) {
+        return Promise.resolve();
+      }
+      if (initializationPromise) {
+        return initializationPromise;
+      }
+
+      initializationPromise = Promise.all([loadStylesheet(), loadScript()])
+        .then(() => {
+          element.replaceChildren();
+          new window.PagefindUI({
+            element: '#search',
+            showSubResults: true,
+            baseUrl: config.baseUrl,
+            bundlePath: config.bundlePath,
+          });
+          initialized = true;
+          attachClearHandler();
+        })
+        .catch((error) => {
+          initializationPromise = null;
+          throw error;
+        });
+
+      return initializationPromise;
+    };
+
+    const showStatus = (message, role) => {
+      const status = document.createElement('p');
+      status.setAttribute('role', role);
+      status.textContent = message;
+      element.replaceChildren(status);
+    };
+
+    const focusEmptyInput = () => {
+      const input = element.querySelector('input');
+      if (!input) {
+        return;
+      }
+      input.value = '';
+      input.focus();
+    };
+
+    const openSearch = async () => {
+      setExpanded(true);
+
+      if (!initialized) {
+        element.setAttribute('aria-busy', 'true');
+        showStatus('Loading search\u2026', 'status');
+      }
+
+      try {
+        await initializeSearch();
+        element.removeAttribute('aria-busy');
+        if (!element.classList.contains('hidden')) {
+          focusEmptyInput();
+        }
+      } catch (error) {
+        element.removeAttribute('aria-busy');
+        showStatus('Search could not be loaded. Close and reopen it to try again.', 'alert');
+        console.error(error);
+      }
+    };
+
+    trigger.addEventListener('click', () => {
+      if (element.classList.contains('hidden')) {
+        openSearch();
+      } else {
+        focusEmptyInput();
+        closeSearch();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+  
+  
+  <script
+    defer
+    src="/js/hugo-blox-en.min.8c8ea06bd0420f5067e52fa727b9f92303757322ba4431774153d59a9735eadb.js"
+    integrity="sha256-jI6ga9BCD1Bn5S&#43;nJ7n5IwN1cyK6RDF3QVPVmpc16ts="
+  ></script>
+
+  
+  
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script>
+  document.addEventListener('DOMContentLoaded', function () {
+    const links = Array.from(
+      document.querySelectorAll('.hb-toc a[href^="#"], .hb-sidebar-mobile-toc a[href^="#"]')
+    );
+
+    if (!links.length) {
+      return;
+    }
+
+    const groups = new Map();
+    const orderedIds = [];
+
+    links.forEach((link) => {
+      const id = decodeURIComponent(link.getAttribute('href').slice(1));
+      const target = document.getElementById(id);
+
+      if (!target) {
+        return;
+      }
+
+      if (!groups.has(id)) {
+        groups.set(id, { target, links: [] });
+        orderedIds.push(id);
+      }
+
+      groups.get(id).links.push(link);
+    });
+
+    if (!orderedIds.length) {
+      return;
+    }
+
+    const setActive = (id) => {
+      links.forEach((link) => {
+        const linkId = decodeURIComponent(link.getAttribute('href').slice(1));
+        link.classList.toggle('is-active', linkId === id);
+      });
+    };
+
+    const visibleIds = new Set();
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            visibleIds.add(entry.target.id);
+          } else {
+            visibleIds.delete(entry.target.id);
+          }
+        });
+
+        const currentId = orderedIds.find((id) => visibleIds.has(id));
+        if (currentId) {
+          setActive(currentId);
+        }
+      },
+      {
+        rootMargin: '0px 0px -70% 0px',
+        threshold: [0, 1],
+      }
+    );
+
+    orderedIds.forEach((id) => {
+      observer.observe(groups.get(id).target);
+    });
+
+    const syncHash = () => {
+      const id = decodeURIComponent(window.location.hash.replace(/^#/, ''));
+      if (id && groups.has(id)) {
+        setActive(id);
+      }
+    };
+
+    window.addEventListener('hashchange', syncHash);
+
+    if (window.location.hash) {
+      syncHash();
+    } else {
+      setActive(orderedIds[0]);
+    }
+  });
+</script>
+
+      
+    
+  
+
+
+
+
+</head>
+
+  <body class="dark:bg-hb-dark dark:text-white page-wrapper" id="top">
+    <div id="page-bg"></div>
+    <div class="page-header sticky top-0 z-30">
+      
+      
+      
+        
+        
+        
+          <header id="site-header" class="header">
+  <nav class="navbar px-3 flex justify-left">
+    <div class="order-0 h-100">
+      
+      <a class="navbar-brand" href="/" title="Jorge Ruiz-Cabrejos">
+        Jorge R.
+      </a>
+    </div>
+    
+    <input id="nav-toggle" type="checkbox" class="hidden" />
+    <label
+      for="nav-toggle"
+      class="order-3 cursor-pointer flex items-center lg:hidden text-dark dark:text-white lg:order-1">
+      <svg id="show-button" class="h-6 fill-current block" viewBox="0 0 20 20">
+        <title>Open Menu</title>
+        <path d="M0 3h20v2H0V3z m0 6h20v2H0V9z m0 6h20v2H0V0z"></path>
+      </svg>
+      <svg id="hide-button" class="h-6 fill-current hidden" viewBox="0 0 20 20">
+        <title>Close Menu</title>
+        <polygon
+          points="11 9 22 9 22 11 11 11 11 22 9 22 9 11 -2 11 -2 9 9 9 9 -2 11 -2"
+          transform="rotate(45 10 10)"></polygon>
+      </svg>
+    </label>
+    
+
+    
+    
+    <ul
+      id="nav-menu"
+      class="navbar-nav order-3 hidden lg:flex w-full pb-6 lg:order-1 lg:w-auto lg:space-x-2 lg:pb-0 xl:space-x-8 justify-left
+      ">
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/"
+        >Me</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/publications/"
+        >Research</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/post/"
+        >Posts</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/projects/"
+        >Projects</a
+        >
+      </li>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      <li class="nav-item">
+        <a
+          class="nav-link "
+          
+          href="/collections/"
+        >Collections</a
+        >
+      </li>
+      
+      
+      
+    </ul>
+
+    <div class="order-1 ml-auto flex items-center md:order-2 lg:ml-0">
+
+      
+      
+      
+      <button
+        aria-label="search"
+        aria-controls="search"
+        aria-expanded="false"
+        class="text-black hover:text-primary  inline-block px-3 text-xl dark:text-white"
+        id="search_toggle"
+        type="button">
+        <svg xmlns="http://www.w3.org/2000/svg" height="16" width="16" viewBox="0 0 512 512" fill="currentColor"><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+      </button>
+      
+
+      <div class="neko-toggle-wrapper px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300">
+        <button
+          id="neko-toggle"
+          class="neko-toggle mt-1"
+          type="button"
+          aria-label="Enable Neko"
+          aria-pressed="false"
+          title="Enable Neko">
+          <svg width="18" height="18" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 256 256"><path d="M96,140a12,12,0,1,1-12-12A12,12,0,0,1,96,140Zm76-12a12,12,0,1,0,12,12A12,12,0,0,0,172,128Zm60-80v88c0,52.93-46.65,96-104,96S24,188.93,24,136V48A16,16,0,0,1,51.31,36.69c.14.14.26.27.38.41L69,57a111.22,111.22,0,0,1,118.1,0L204.31,37.1c.12-.14.24-.27.38-.41A16,16,0,0,1,232,48Zm-16,0-21.56,24.8A8,8,0,0,1,183.63,74,88.86,88.86,0,0,0,168,64.75V88a8,8,0,1,1-16,0V59.05a97.43,97.43,0,0,0-16-2.72V88a8,8,0,1,1-16,0V56.33a97.43,97.43,0,0,0-16,2.72V88a8,8,0,1,1-16,0V64.75A88.86,88.86,0,0,0,72.37,74a8,8,0,0,1-10.81-1.17L40,48v88c0,41.66,35.21,76,80,79.67V195.31l-13.66-13.66a8,8,0,0,1,11.32-11.31L128,180.68l10.34-10.34a8,8,0,0,1,11.32,11.31L136,195.31v20.36c44.79-3.69,80-38,80-79.67Z"></path></svg>
+        </button>
+      </div>
+
+      
+      
+      <div class="px-3 text-black hover:text-primary-700 dark:text-white dark:hover:text-primary-300
+            [&.active]:font-bold [&.active]:text-black/90 dark:[&.active]:text-white">
+        <button class="theme-toggle mt-1" accesskey="t" title="appearance">
+          <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class="dark:hidden">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+          </svg>
+          <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
+               fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+               stroke-linejoin="round" class=" dark:block [&:not(dark)]:hidden">
+            <circle cx="12" cy="12" r="5"></circle>
+            <line x1="12" y1="1" x2="12" y2="3"></line>
+            <line x1="12" y1="21" x2="12" y2="23"></line>
+            <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+            <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+            <line x1="1" y1="12" x2="3" y2="12"></line>
+            <line x1="21" y1="12" x2="23" y2="12"></line>
+            <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+            <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+          </svg>
+        </button>
+      </div>
+      
+
+      
+      
+
+      
+      
+    </div>
+  </nav>
+</header>
+
+
+<div id="search" class="hidden p-3"></div>
+
+
+        
+      
+    </div>
+    <div class="page-body  my-10">
+      
+
+<div class="max-w-prose mx-auto flex justify-center">
+  <article class="prose prose-slate lg:prose-xl dark:prose-invert">
+    <h1 class="lg:text-6xl">Article-Journal</h1>
+    
+  </article>
+</div>
+
+
+
+
+<div class="flex flex-col items-center">
+
+  <div class="container max-w-[65ch] mx-auto bg-white dark:bg-zinc-900 rounded-xl border-gray-100 dark:border-gray-700 border shadow-md overflow-hidden my-5">
+
+
+  
+  
+  
+
+
+
+
+
+
+
+
+<a href="/publications/journal-article-1/"  class="mb-5">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0 overflow-hidden">
+      
+        
+        
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/publications/journal-article-1/featured_hu17072345158689526506.webp" height="655" width="655" alt="High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery">
+      
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">High-accuracy detection of malaria vector larval habitats using drone-based multispectral imagery</div>
+      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
+        The study demonstrates the use of drone-based multispectral imaging to identify malaria vector larval habitats with high accuracy. This innovative approach supports targeted interventions, improving resource allocation for malaria control efforts.</p>
+      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Jan 17, 2019</p>
+    </div>
+  </div>
+</a>
+
+  
+  
+
+
+
+
+
+
+
+
+<a href="/publications/journal-article-0/"  class="mb-5">
+  <div class="md:flex">
+    <div class="md:flex-shrink-0 overflow-hidden">
+      
+        
+        
+      <img class="h-48 w-full object-cover md:w-48 hover:scale-125 transition duration-500 cursor-pointer object-cover" loading="lazy" src="/publications/journal-article-0/featured_hu8688428492960226788.webp" height="655" width="655" alt="Strengthening Immunization Records in Peru with the ODK Mobile App">
+      
+    </div>
+    <div class="p-8">
+      <div class="uppercase tracking-wide text-md text-primary-700 dark:text-primary-200 font-semibold">Strengthening Immunization Records in Peru with the ODK Mobile App</div>
+      <p class="block mt-1 text-sm leading-tight font-medium text-black dark:text-white">
+        Peru’s Ministry of Health and the region of Junin’s government joined efforts to improve the quality of immunization registries in the campaign against yellow fever, oriented to protect susceptible populations in the provinces of Chanchamayo and Satipo (where an outbreak had occurred), using an application in Open Data Kit (ODK) on Android mobile devices.</p>
+      <p class="mt-2 text-gray-500 dark:text-gray-400 text-sm">Dec 1, 2016</p>
+    </div>
+  </div>
+</a>
+
+  
+
+  </div>
+
+
+  
+<nav class="mt-1">
+  <ul class="container mx-auto flex justify-center">
+    
+    <li class="p-5"><a class="page-link" href="/publication_types/article-journal/">&laquo; Previous</a></li>
+    
+    
+  </ul>
+</nav>
+
+
+
+</div>
+
+
+    </div>
+    <div class="page-footer">
+      <footer class="container mx-auto flex flex-col justify-items-center text-sm leading-6 mt-24 mb-4 text-slate-700 dark:text-slate-200">
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  
+
+  
+  
+    
+  
+  
+    
+  
+
+  
+
+  
+  <p class="powered-by text-center">
+    © 2026 Jorge Ruiz-Cabrejos. This work is licensed under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank">CC BY NC ND 4.0</a>
+  </p>
+  
+
+  <p class="powered-by footer-license-icons">
+    <a href="https://creativecommons.org/licenses/by-nc-nd/4.0" rel="noopener noreferrer" target="_blank" aria-label="Creative Commons">
+      <i class="fab fa-creative-commons fa-2x" aria-hidden="true"></i>
+      <i class="fab fa-creative-commons-by fa-2x" aria-hidden="true"></i>
+      
+        <i class="fab fa-creative-commons-nc fa-2x" aria-hidden="true"></i>
+      
+      
+        <i class="fab fa-creative-commons-nd fa-2x" aria-hidden="true"></i>
+      
+    </a>
+  </p>
+
+
+
+
+
+  <p class="powered-by text-center">
+    
+    
+    
+      
+      
+      
+      
+      
+      
+      Published with <a href="https://hugoblox.com/?utm_campaign=poweredby" target="_blank" rel="noopener">Hugo Blox Builder</a> — the free, <a href="https://github.com/HugoBlox/hugo-blox-builder" target="_blank" rel="noopener">open source</a> website builder that empowers creators.
+    
+  </p>
+
+</footer>
+
+    </div>
+
+    
+    
+
+
+
+
+
+
+
+
+  
+    
+      
+      <script
+  src="/js/neko.min.dc2c5518191f1cb9362083f637e533a1df22cbf29331f4079b4fbb71dd0719d7.js"
+  integrity="sha256-3CxVGBkfHLk2IIP2N&#43;Uzod8iy/KTMfQHm0&#43;7cd0HGdc="
+  data-neko-sprite="/vendor/neko/neko.png"></script>
+
+      
+    
+  
+    
+      
+      <script>
+  (() => {
+    const setupPagenotes = () => {
+      const desktop = window.matchMedia('(min-width: 1280px)');
+      const notes = Array.from(document.querySelectorAll('.post-body .page-note-anchor'))
+        .map((anchor) => ({
+          anchor,
+          note: anchor.querySelector('.page-note'),
+          container: anchor.closest('p, li'),
+        }))
+        .filter(({ note, container }) => note && container);
+
+      if (!notes.length) {
+        return;
+      }
+
+      const placeNotes = () => {
+        notes.forEach(({ anchor, note, container }) => {
+          if (desktop.matches) {
+            anchor.append(note);
+          } else {
+            container.append(note);
+          }
+        });
+      };
+
+      placeNotes();
+
+      if (desktop.addEventListener) {
+        desktop.addEventListener('change', placeNotes);
+      } else {
+        desktop.addListener(placeNotes);
+      }
+    };
+
+    setupPagenotes();
+  })();
+</script>
+
+      
+    
+  
+
+
+
+
+  </body>
+</html>
